@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b14">
+  <meta name="color-scheme" content="dark">
+  <meta name="author" content="Jordan Ronald">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Arquivo de projetos autorais de Jordan Ronald: aplicaÃ§Ãµes desktop, servidor FTP, downloader, experiÃªncia web e diagnÃ³stico de mÃ­dias removÃ­veis.">
+  <title>Projetos â€” Jordan Ronald</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Projetos â€” Jordan Ronald">
+  <meta property="og:description" content="Cinco projetos autorais, cinco problemas reais e soluÃ§Ãµes construÃ­das de ponta a ponta.">
+  <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:image:alt" content="Retrato de Jordan Ronald">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projetos â€” Jordan Ronald">
+  <meta name="twitter:description" content="Cinco projetos autorais, cinco problemas reais e soluÃ§Ãµes construÃ­das de ponta a ponta.">
+  <meta name="twitter:image" content="assets/profile.jpg">
+
+  <script>
+    document.documentElement.classList.remove('no-js');
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Projetos de Jordan Ronald",
+      "description": "Arquivo dos cinco projetos autorais de Jordan Ronald.",
+      "inLanguage": "pt-BR",
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 5,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "VIKO COMPRESSOR E CONVERSOR" },
+          { "@type": "ListItem", "position": 2, "name": "FASTCLOUD // FTP NATIVE" },
+          { "@type": "ListItem", "position": 3, "name": "D2 DOWNLOAD" },
+          { "@type": "ListItem", "position": 4, "name": "BODAS DE PAPEL" },
+          { "@type": "ListItem", "position": 5, "name": "ANÃLISE DE MÃDIAS REMOVÃVEIS" }
+        ]
+      }
+    }
+  </script>
+</head>
+<body data-page="projetos">
+  <a class="skip-link" href="#conteudo">Pular para o conteÃºdo</a>
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="icon-viko" viewBox="0 0 32 32">
+      <rect x="5" y="4" width="22" height="24" fill="#0a101c" stroke="#00f0ff" stroke-width="2"/>
+      <rect x="7" y="7" width="2" height="2" fill="#00f0ff"/>
+      <rect x="7" y="12" width="2" height="2" fill="#00f0ff"/>
+      <rect x="7" y="17" width="2" height="2" fill="#00f0ff"/>
+      <rect x="7" y="22" width="2" height="2" fill="#00f0ff"/>
+      <rect x="23" y="7" width="2" height="2" fill="#00f0ff"/>
+      <rect x="23" y="12" width="2" height="2" fill="#00f0ff"/>
+      <rect x="23" y="17" width="2" height="2" fill="#00f0ff"/>
+      <rect x="23" y="22" width="2" height="2" fill="#00f0ff"/>
+      <path d="M13 10l8 6-8 6z" fill="#ffe600"/>
+      <path d="M11 26h10" stroke="#ff2e88" stroke-width="2"/>
+    </symbol>
+    <symbol id="icon-fastcloud" viewBox="0 0 32 32">
+      <path d="M8 21h16a5 5 0 0 0 0-10 7 7 0 0 0-13-2 5 5 0 0 0-3 12z" fill="#0a101c" stroke="#00f0ff" stroke-width="2"/>
+      <path d="M12 17l4-4 4 4" fill="none" stroke="#ff2e88" stroke-width="2"/>
+      <path d="M16 13v8" fill="none" stroke="#ffe600" stroke-width="2"/>
+      <path d="M9 25h14" stroke="#7dff5b" stroke-width="2"/>
+    </symbol>
+    <symbol id="icon-d2" viewBox="0 0 32 32">
+      <rect x="3" y="5" width="26" height="18" fill="#0a101c" stroke="#00f0ff" stroke-width="2"/>
+      <path d="M16 9v9" stroke="#ffe600" stroke-width="2"/>
+      <path d="M12 14l4 4 4-4" fill="none" stroke="#ffe600" stroke-width="2"/>
+      <path d="M10 26h12" stroke="#ff2e88" stroke-width="2"/>
+      <path d="M14 23v3m4-3v3" stroke="#7dff5b" stroke-width="2"/>
+    </symbol>
+    <symbol id="icon-bodas" viewBox="0 0 32 32">
+      <rect x="4" y="8" width="24" height="18" fill="#0a101c" stroke="#00f0ff" stroke-width="2"/>
+      <path d="M4 8l12 9 12-9" fill="none" stroke="#ff2e88" stroke-width="2"/>
+      <path d="M16 23l-3-3a2 2 0 0 1 3-3 2 2 0 0 1 3 3z" fill="#ff2e88"/>
+      <path d="M9 13h3M20 13h3" stroke="#ffe600" stroke-width="2"/>
+    </symbol>
+    <symbol id="icon-analise" viewBox="0 0 32 32">
+      <rect x="10" y="7" width="12" height="20" fill="#0a101c" stroke="#00f0ff" stroke-width="2"/>
+      <rect x="13" y="3" width="6" height="4" fill="#ffe600"/>
+      <path d="M13 12h6M13 16h6M13 20h4" stroke="#7dff5b" stroke-width="2"/>
+      <circle cx="23" cy="23" r="5" fill="none" stroke="#ff2e88" stroke-width="2"/>
+      <path d="M27 27l3 3" stroke="#ff2e88" stroke-width="2"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="topo">
+    <div class="system-strip">
+      <div class="system-strip__left">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>JORDAN.SYS // ONLINE</span>
+        <span class="divider hide-xs" aria-hidden="true">/</span>
+        <span class="hide-xs">BRASIL // UTC-3</span>
+      </div>
+      <div class="system-strip__right">
+        <span class="credit hide-sm">PLAYER 01</span>
+        <span class="divider hide-sm" aria-hidden="true">/</span>
+        <time id="system-clock">00:00:00</time>
+        <button class="audio-toggle" id="audio-toggle" type="button" aria-pressed="false" aria-label="Ativar som ambiente">SOM: OFF</button>
+      </div>
+    </div>
+    <div class="nav-bar">
+      <a class="brand" href="index.html" aria-label="Jordan Ronald â€” inÃ­cio">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false">
+            <path d="M11 7h11v13h-3v4H10v-4h6V11h-5z" fill="none" stroke="currentColor" stroke-width="3"/>
+            <rect x="6" y="6" width="2" height="2" fill="#ff2e88"/>
+            <rect x="24" y="24" width="2" height="2" fill="#7dff5b"/>
+          </svg>
+        </span>
+        <span class="brand__text">JORDAN RONALD<small>ENGENHEIRO DE SOFTWARE // DEVOPS</small></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="NavegaÃ§Ã£o principal">
+        <a href="sobre.html" data-nav>SOBRE</a>
+        <a href="projetos.html" data-nav>PROJETOS</a>
+        <a href="laboratorio.html" data-nav>LAB</a><a href="carteira.html" data-nav>CARTEIRA</a>
+        <a href="arsenal.html" data-nav>ARSENAL</a>
+        <a href="trajetoria.html" data-nav>TRAJETÃ“RIA</a>
+        <a href="contato.html" data-nav>CONTATO</a>
+      </nav>
+      <a class="btn btn--ghost btn--small nav-cta" href="contato.html">FALAR COMIGO</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">MENU</button>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  </header>
+
+  <div class="site-shell">
+    <main id="conteudo">
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="container page-hero__grid">
+          <div class="page-hero__copy">
+            <nav class="breadcrumb" aria-label="Trilha de navegaÃ§Ã£o">
+              <a href="index.html">HOME</a>
+              <span class="breadcrumb__sep" aria-hidden="true">/</span>
+              <span aria-current="page">PROJETOS</span>
+            </nav>
+            <span class="eyebrow">ARQUIVO 02 // MISSION SELECT</span>
+            <h1 class="page-hero__title" id="page-title">MISSÃ•ES <em>AUTORAIS</em></h1>
+            <p class="page-hero__lead">Cinco projetos, cinco problemas reais. Selecione um cartucho para abrir o dossiÃª, filtrar por tipo ou entrar na pÃ¡gina completa de cada missÃ£o.</p>
+            <div class="page-hero__actions">
+              <a class="btn btn--cyan" href="#arquivo">ABRIR ARQUIVO <span aria-hidden="true">â†“</span></a>
+              <a class="btn btn--ghost" href="contato.html">PROPOR UMA MISSÃƒO <span aria-hidden="true">â†’</span></a>
+            </div>
+            <dl class="page-hero__stats">
+              <div><dt>PROJETOS</dt><dd>05</dd></div>
+              <div><dt>DESKTOP</dt><dd>04</dd></div>
+              <div><dt>WEB</dt><dd>02</dd></div>
+              <div><dt>AUTORAL</dt><dd>100%</dd></div>
+            </dl>
+          </div>
+
+          <aside class="page-hero__aside" aria-label="Ãndice de missÃµes">
+            <div class="terminal terminal--page">
+              <div class="terminal__bar">
+                <span>jordan@dev: ~/missions</span>
+                <span class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <div class="terminal__body">
+                <p><span class="prompt">&gt;</span> mission.index --list</p>
+                <p><span class="prompt">[01]</span> viko // compressor e conversor</p>
+                <p><span class="prompt">[02]</span> fastcloud // ftp native</p>
+                <p><span class="prompt">[03]</span> d2 // download</p>
+                <p><span class="prompt">[04]</span> bodas // experiÃªncia web</p>
+                <p><span class="prompt">[05]</span> analise // mÃ­dias removÃ­veis</p>
+                <p><span class="prompt">&gt;</span> aguardando seleÃ§Ã£o <span class="cursor">_</span></p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--line" id="arquivo" aria-labelledby="archive-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="section-kicker">01 // MISSION SELECT</p>
+              <h2 class="section-title" id="archive-title">ESCOLHA UM <em>CARTUCHO</em></h2>
+            </div>
+            <span class="section-head__meta"><span id="project-count">05</span> CARTUCHOS ONLINE</span>
+          </div>
+
+          <div class="archive-intro reveal">
+            <div class="archive-intro__copy">
+              <p>Cada projeto nasceu de uma necessidade concreta: organizar arquivos, reduzir tempo, testar mÃ­dia, contar uma histÃ³ria ou simplificar uma tarefa repetitiva. O dossiÃª mostra o problema, a soluÃ§Ã£o e as decisÃµes tÃ©cnicas por trÃ¡s de cada um.</p>
+              <p>Use os filtros para navegar por formato. O cartucho selecionado abre a ficha completa; o botÃ£o <strong>abrir pÃ¡gina completa</strong> leva ao dossiÃª estendido com desafio, soluÃ§Ã£o, papel e aprendizados.</p>
+            </div>
+            <div class="page-callout page-callout--cyan">
+              <strong>NavegaÃ§Ã£o por teclado:</strong> use as setas para percorrer os cartuchos e <kbd>Enter</kbd> para abrir o dossiÃª. Os filtros tambÃ©m respondem a teclado.
+            </div>
+          </div>
+
+          <div class="project-toolbar reveal">
+            <div class="filter-group" role="group" aria-label="Filtrar projetos">
+              <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">TODOS</button>
+              <button class="filter-btn" type="button" data-filter="desktop" aria-pressed="false">DESKTOP</button>
+              <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">WEB</button>
+              <button class="filter-btn" type="button" data-filter="ferramenta" aria-pressed="false">FERRAMENTAS</button>
+              <button class="filter-btn" type="button" data-filter="midia" aria-pressed="false">MÃDIA</button>
+            </div>
+            <span class="project-toolbar__hint">â†‘â†“â†â†’ NAVEGAR // ENTER ABRIR</span>
+          </div>
+
+          <div class="roster reveal" role="tablist" aria-label="Projetos">
+            <button class="roster-card" type="button" role="tab" id="tab-viko" aria-controls="project-dossier" aria-selected="true" data-project="viko" data-tags="desktop midia ferramenta">
+              <span class="roster-card__top">
+                <span class="roster-card__stage">STAGE 01</span>
+                <span class="roster-card__rank">S</span>
+              </span>
+              <span class="roster-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false"><use href="#icon-viko"></use></svg>
+              </span>
+              <span class="roster-card__title">VIKO COMPRESSOR E CONVERSOR</span>
+              <span class="roster-card__type">AplicaÃ§Ã£o desktop</span>
+              <span class="roster-card__meta"><span>2026</span><b>ATIVO</b></span>
+            </button>
+
+            <button class="roster-card" type="button" role="tab" id="tab-fastcloud" aria-controls="project-dossier" aria-selected="false" data-project="fastcloud" data-tags="desktop web ferramenta" tabindex="-1">
+              <span class="roster-card__top">
+                <span class="roster-card__stage">STAGE 02</span>
+                <span class="roster-card__rank">A</span>
+              </span>
+              <span class="roster-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false"><use href="#icon-fastcloud"></use></svg>
+              </span>
+              <span class="roster-card__title">FASTCLOUD // FTP NATIVE</span>
+              <span class="roster-card__type">Servidor FTP + painel web</span>
+              <span class="roster-card__meta"><span>2026</span><b>ATIVO</b></span>
+            </button>
+
+            <button class="roster-card" type="button" role="tab" id="tab-d2" aria-controls="project-dossier" aria-selected="false" data-project="d2" data-tags="desktop midia" tabindex="-1">
+              <span class="roster-card__top">
+                <span class="roster-card__stage">STAGE 03</span>
+                <span class="roster-card__rank">A</span>
+              </span>
+              <span class="roster-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false"><use href="#icon-d2"></use></svg>
+              </span>
+              <span class="roster-card__title">D2 DOWNLOAD</span>
+              <span class="roster-card__type">Aplicativo desktop</span>
+              <span class="roster-card__meta"><span>2026</span><b>CONCLUÃDO</b></span>
+            </button>
+
+            <button class="roster-card" type="button" role="tab" id="tab-bodas" aria-controls="project-dossier" aria-selected="false" data-project="bodas" data-tags="web experiencia" tabindex="-1">
+              <span class="roster-card__top">
+                <span class="roster-card__stage">STAGE 04</span>
+                <span class="roster-card__rank">S</span>
+              </span>
+              <span class="roster-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false"><use href="#icon-bodas"></use></svg>
+              </span>
+              <span class="roster-card__title">BODAS DE PAPEL</span>
+              <span class="roster-card__type">ExperiÃªncia web</span>
+              <span class="roster-card__meta"><span>2026</span><b>CONCLUÃDO</b></span>
+            </button>
+
+            <button class="roster-card" type="button" role="tab" id="tab-analise" aria-controls="project-dossier" aria-selected="false" data-project="analise" data-tags="ferramenta desktop" tabindex="-1">
+              <span class="roster-card__top">
+                <span class="roster-card__stage">STAGE 05</span>
+                <span class="roster-card__rank">A</span>
+              </span>
+              <span class="roster-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false"><use href="#icon-analise"></use></svg>
+              </span>
+              <span class="roster-card__title">ANÃLISE DE MÃDIAS REMOVÃVEIS</span>
+              <span class="roster-card__type">Ferramenta de diagnÃ³stico</span>
+              <span class="roster-card__meta"><span>2026</span><b>CONCLUÃDO</b></span>
+            </button>
+          </div>
+
+          <p class="project-empty" id="project-empty" hidden>Nenhum cartucho encontrado para este filtro.</p>
+          <span class="sr-only" id="project-announcer" aria-live="polite"></span>
+
+          <div class="dossier reveal" id="project-dossier" role="tabpanel" aria-labelledby="tab-viko" tabindex="0">
+            <div class="dossier__chrome">
+              <div class="dossier__chrome-left">
+                <span class="dossier__chrome-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span>DOSSIÃŠ // <span id="dossier-id">PROJ_001</span></span>
+              </div>
+              <span class="dossier__live">DADOS VERIFICADOS</span>
+            </div>
+
+            <div class="dossier__grid">
+              <div class="dossier__visual">
+                <div class="dossier__visual-top">
+                  <span class="dossier__tier">CLASSE // <span id="dossier-tier">DESKTOP // MÃDIA</span></span>
+                  <span class="dossier__rank" id="dossier-rank">S</span>
+                </div>
+                <div class="dossier__art">
+                  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use id="dossier-art-use" href="#icon-viko"></use></svg>
+                </div>
+                <div class="dossier__core">CORE: <span id="dossier-core">FFMPEG + .NET 8</span></div>
+                <div class="dossier__metrics">
+                  <div class="metric"><span>FORMATO</span><b>DESKTOP</b></div>
+                  <div class="metric"><span>STACK</span><b>.NET 8</b></div>
+                  <div class="metric"><span>FOCO</span><b>MÃDIA</b></div>
+                  <div class="metric"><span>STATUS</span><b>CONCLUÃDO</b></div>
+                </div>
+              </div>
+
+              <div class="dossier__main">
+                <p class="dossier__eyebrow">MISSÃƒO 01 // <span id="dossier-year">2026</span></p>
+                <h3 class="dossier__title" id="dossier-title">VIKO COMPRESSOR E CONVERSOR</h3>
+                <p class="dossier__summary" id="dossier-summary">AplicaÃ§Ã£o desktop para comprimir e converter vÃ­deos, Ã¡udios, imagens e PDFs em um fluxo guiado, com processamento assÃ­ncrono e histÃ³rico de operaÃ§Ãµes.</p>
+                <ul class="dossier__highlights" id="dossier-highlights">
+                  <li>CompressÃ£o e conversÃ£o de vÃ­deo, Ã¡udio, imagem e PDF em uma Ãºnica interface.</li>
+                  <li>Processamento em lote com FFmpeg em background e progresso em tempo real.</li>
+                  <li>Wizard em trÃªs etapas, histÃ³rico persistente e feedback claro de economia de espaÃ§o.</li>
+                </ul>
+                <div class="dossier__stack" id="dossier-stack">
+                  <span class="stack-chip">C#</span>
+                  <span class="stack-chip">.NET 8</span>
+                  <span class="stack-chip">WPF</span>
+                  <span class="stack-chip">XAML</span>
+                  <span class="stack-chip">FFmpeg</span>
+                  <span class="stack-chip">Ghostscript</span>
+                </div>
+              </div>
+
+              <div class="dossier__side">
+                <span class="dossier__side-label">LOG DE SISTEMA</span>
+                <div class="dossier__logs" id="dossier-logs" aria-live="polite">
+                  <p>&gt; load mission/viko</p>
+                  <p>[ok] ffmpeg bridge: online</p>
+                  <p>[ok] batch queue: ready</p>
+                  <p>&gt; output: -72% de tamanho</p>
+                </div>
+                <div class="dossier__actions">
+                  <a class="btn btn--cyan btn--small" id="dossier-link" href="https://github.com/RONALDJORDAN/Compress" target="_blank" rel="noopener">VER NO GITHUB</a>
+                  <a class="btn btn--ghost btn--small btn--page" id="dossier-page" href="projeto.html?p=viko">ABRIR PÃGINA COMPLETA</a>
+                  <button class="btn btn--ghost btn--small" id="dossier-copy" type="button">COPIAR RESUMO</button>
+                  <a class="btn btn--ghost btn--small" id="dossier-mail" href="mailto:ronaldjordan.dev@gmail.com?subject=Sobre%20o%20projeto%3A%20VIKO%20COMPRESSOR%20E%20CONVERSOR">PERGUNTAR SOBRE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <noscript>
+            <div class="terminal" style="margin-top: 1.25rem">
+              <div class="terminal__body">
+                <p><span class="prompt">[!]</span> O dossiÃª interativo precisa de JavaScript. Os cinco projetos estÃ£o listados acima e as pÃ¡ginas completas tambÃ©m estÃ£o disponÃ­veis: <a href="projeto.html?p=viko">Viko</a>, <a href="projeto.html?p=fastcloud">FastCloud</a>, <a href="projeto.html?p=d2">D2</a>, <a href="projeto.html?p=bodas">Bodas de Papel</a> e <a href="projeto.html?p=analise">AnÃ¡lise de MÃ­dias</a>.</p>
+              </div>
+            </div>
+          </noscript>
+        </div>
+      </section>
+
+      <section class="section section--line" aria-labelledby="legend-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="section-kicker">02 // COMO LER</p>
+              <h2 class="section-title" id="legend-title">ENTENDA O <em>DOSSIÃŠ</em></h2>
+              <p class="section-lead">O formato Ã© inspirado em fichas de arcade, mas a informaÃ§Ã£o Ã© de engenharia: cada bloco resume uma decisÃ£o real do projeto.</p>
+            </div>
+            <span class="section-head__meta">LEITURA RÃPIDA</span>
+          </div>
+
+          <div class="legend-grid">
+            <article class="legend-card reveal">
+              <span class="legend-card__code">RANK // CLASSE</span>
+              <h3>PRIORIDADE NO ARSENAL</h3>
+              <p>O rank indica o quanto o projeto exercita o repertÃ³rio principal. Classe mostra o formato e o foco: desktop, web, mÃ­dia ou ferramenta.</p>
+            </article>
+            <article class="legend-card reveal" style="--reveal-delay: 90ms">
+              <span class="legend-card__code">CORE // STACK</span>
+              <h3>A BASE TÃ‰CNICA</h3>
+              <p>O core resume a combinaÃ§Ã£o central de tecnologias. A stack lista as ferramentas que participaram da soluÃ§Ã£o, do processamento Ã  interface.</p>
+            </article>
+            <article class="legend-card reveal" style="--reveal-delay: 180ms">
+              <span class="legend-card__code">LOG // STATUS</span>
+              <h3>O QUE ACONTECE POR DENTRO</h3>
+              <p>Os logs sÃ£o uma metÃ¡fora visual do fluxo do sistema. O status real de cada projeto aparece nos cartuchos e na ficha tÃ©cnica.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="page-cta reveal">
+            <div class="page-cta__copy">
+              <h2 class="page-cta__title" id="cta-title">TEM UMA MISSÃƒO <em>PARA MIM</em>?</h2>
+              <p class="page-cta__lead">Se o seu problema pede uma aplicaÃ§Ã£o sob medida, uma automaÃ§Ã£o ou uma experiÃªncia web, vamos conversar sobre o prÃ³ximo projeto.</p>
+            </div>
+            <div class="page-cta__actions">
+              <a class="btn btn--cyan" href="contato.html">ABRIR CONTATO</a>
+              <a class="btn btn--ghost" href="curriculo.html">VER CURRÃCULO</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-labelledby="footer-title">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-block footer-block--brand">
+            <span class="footer-block__label" id="footer-title">JORDAN.SYS</span>
+            <div class="footer-brand">
+              <span class="brand__mark" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false">
+                  <path d="M11 7h11v13h-3v4H10v-4h6V11h-5z" fill="none" stroke="currentColor" stroke-width="3"/>
+                  <rect x="6" y="6" width="2" height="2" fill="#ff2e88"/>
+                  <rect x="24" y="24" width="2" height="2" fill="#7dff5b"/>
+                </svg>
+              </span>
+              <div>
+                <strong>JORDAN RONALD</strong>
+                <small>ENGENHEIRO DE SOFTWARE // DEVOPS</small>
+              </div>
+            </div>
+            <p>PortfÃ³lio autoral construÃ­do com HTML, CSS e JavaScript. Sem templates, sem ruÃ­do â€” sÃ³ cÃ³digo e intenÃ§Ã£o.</p>
+          </div>
+
+          <div class="footer-block footer-block--nav">
+            <span class="footer-block__label">MAPA</span>
+            <div class="footer-links">
+              <a href="sobre.html">Sobre</a>
+              <a href="projetos.html">Projetos</a>
+              <a href="laboratorio.html">LaboratÃ³rio</a>
+              <a href="arsenal.html">Arsenal</a>
+              <a href="trajetoria.html">TrajetÃ³ria</a>
+              <a href="contato.html">Contato</a><a href="carteira.html">Carteira</a>
+              <a href="curriculo.html">CurrÃ­culo</a>
+            </div>
+          </div>
+
+          <div class="footer-block footer-block--social">
+            <span class="footer-block__label">REDES</span>
+            <div class="footer-links">
+              <a href="https://github.com/RONALDJORDAN" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="mailto:ronaldjordan.dev@gmail.com">E-mail</a>
+            </div>
+          </div>
+
+          <div class="footer-block footer-block--build">
+            <span class="footer-block__label">BUILD</span>
+            <p><strong>v2.6.0</strong><br>HTML5 // CSS3 // JS<br>2026</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>Â© <span id="year">2026</span> JORDAN RONALD. TODOS OS DIREITOS RESERVADOS.</span>
+          <span class="footer-bottom__flavor"><span aria-hidden="true">â—†</span> FEITO COM CAFÃ‰ &amp; CÃ“DIGO</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Voltar ao topo">â†‘</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/vendor/anime.min.js"></script>
+  <script src="assets/vendor/vivus.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>
+
+
+
