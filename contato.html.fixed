@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b14">
+  <meta name="color-scheme" content="dark">
+  <meta name="author" content="Jordan Ronald">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Fale com Jordan Ronald sobre projetos, colaboraÃ§Ãµes e oportunidades engenheiro de software // devops. E-mail, GitHub, LinkedIn e formulÃ¡rio direto.">
+  <title>Contato â€” Jordan Ronald</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Contato â€” Jordan Ronald">
+  <meta property="og:description" content="Abra o canal para conversar sobre um projeto, uma colaboraÃ§Ã£o ou uma oportunidade engenheiro de software // devops.">
+  <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:image:alt" content="Retrato de Jordan Ronald">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contato â€” Jordan Ronald">
+  <meta name="twitter:description" content="Abra o canal para conversar sobre um projeto, uma colaboraÃ§Ã£o ou uma oportunidade engenheiro de software // devops.">
+  <meta name="twitter:image" content="assets/profile.jpg">
+
+  <script>
+    document.documentElement.classList.remove('no-js');
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contato â€” Jordan Ronald",
+      "inLanguage": "pt-BR",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Jordan Ronald",
+        "jobTitle": "Desenvolvedor engenheiro de software // devops",
+        "email": "ronaldjordan.dev@gmail.com",
+        "sameAs": [
+          "https://github.com/RONALDJORDAN",
+          "https://linkedin.com/in/ronald-jordan-dev"
+        ]
+      }
+    }
+  </script>
+</head>
+<body data-page="contato">
+  <a class="skip-link" href="#conteudo">Pular para o conteÃºdo</a>
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <header class="site-header" id="topo">
+    <div class="system-strip">
+      <div class="system-strip__left">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>JORDAN.SYS // ONLINE</span>
+        <span class="divider hide-xs" aria-hidden="true">/</span>
+        <span class="hide-xs">BRASIL // UTC-3</span>
+      </div>
+      <div class="system-strip__right">
+        <span class="credit hide-sm">PLAYER 01</span>
+        <span class="divider hide-sm" aria-hidden="true">/</span>
+        <time id="system-clock">00:00:00</time>
+        <button class="audio-toggle" id="audio-toggle" type="button" aria-pressed="false" aria-label="Ativar som ambiente">SOM: OFF</button>
+      </div>
+    </div>
+    <div class="nav-bar">
+      <a class="brand" href="index.html" aria-label="Jordan Ronald â€” inÃ­cio">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false">
+            <path d="M11 7h11v13h-3v4H10v-4h6V11h-5z" fill="none" stroke="currentColor" stroke-width="3"/>
+            <rect x="6" y="6" width="2" height="2" fill="#ff2e88"/>
+            <rect x="24" y="24" width="2" height="2" fill="#7dff5b"/>
+          </svg>
+        </span>
+        <span class="brand__text">JORDAN RONALD<small>ENGENHEIRO DE SOFTWARE // DEVOPS</small></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="NavegaÃ§Ã£o principal">
+        <a href="sobre.html" data-nav>SOBRE</a>
+        <a href="projetos.html" data-nav>PROJETOS</a>
+        <a href="laboratorio.html" data-nav>LAB</a>
+        <a href="arsenal.html" data-nav>ARSENAL</a>
+        <a href="trajetoria.html" data-nav>TRAJETÃ“RIA</a>
+        <a href="contato.html" data-nav>CONTATO</a>
+      </nav>
+      <a class="btn btn--ghost btn--small nav-cta" href="contato.html">FALAR COMIGO</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">MENU</button>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  </header>
+
+  <div class="site-shell">
+    <main id="conteudo">
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="container page-hero__grid">
+          <div class="page-hero__copy">
+            <nav class="breadcrumb" aria-label="Trilha de navegaÃ§Ã£o">
+              <a href="index.html">HOME</a>
+              <span class="breadcrumb__sep" aria-hidden="true">/</span>
+              <span aria-current="page">CONTATO</span>
+            </nav>
+            <span class="eyebrow">ARQUIVO 06 // CONTATO</span>
+            <h1 class="page-hero__title" id="page-title">ABRIR <em>CANAL</em></h1>
+            <p class="page-hero__lead">Tem uma ideia, um processo que precisa de software ou uma vaga engenheiro de software // devops? Escolha o canal e vamos conversar. Respondo em atÃ© 24h Ãºteis.</p>
+            <div class="page-hero__actions">
+              <button class="btn btn--cyan" type="button" data-copy-email>COPIAR E-MAIL <span aria-hidden="true">â§‰</span></button>
+              <a class="btn btn--ghost" href="https://github.com/RONALDJORDAN" target="_blank" rel="noopener">VER GITHUB <span aria-hidden="true">â†—</span></a>
+            </div>
+            <dl class="page-hero__stats">
+              <div><dt>RESPOSTA</dt><dd>24H ÃšTEIS</dd></div>
+              <div><dt>BASE</dt><dd>BRASIL</dd></div>
+              <div><dt>MODELO</dt><dd>REMOTO</dd></div>
+              <div><dt>STATUS</dt><dd>ABERTO</dd></div>
+            </dl>
+          </div>
+
+          <aside class="page-hero__aside" aria-label="Status do canal">
+            <div class="terminal terminal--page">
+              <div class="terminal__bar">
+                <span>jordan@dev: ~/contact</span>
+                <span class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <div class="terminal__body">
+                <p><span class="prompt">&gt;</span> open channel --direct</p>
+                <p><span class="prompt">[ok]</span> email: online</p>
+                <p><span class="prompt">[ok]</span> github: online</p>
+                <p><span class="prompt">[ok]</span> linkedin: online</p>
+                <p><span class="prompt">[ok]</span> availability: open</p>
+                <p><span class="prompt">&gt;</span> aguardando mensagem <span class="cursor">_</span></p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--line" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="section-kicker">01 // CANAIS</p>
+              <h2 class="section-title" id="contact-title">ESCOLHA O <em>CANAL</em></h2>
+              <p class="section-lead">E-mail direto para propostas e conversas longas. GitHub para cÃ³digo. LinkedIn para oportunidades. O formulÃ¡rio abre seu aplicativo de e-mail com a mensagem pronta.</p>
+            </div>
+            <span class="section-head__meta">CANAL ABERTO</span>
+          </div>
+
+          <div class="contact-page__grid">
+            <div class="contact-card reveal">
+              <p class="contact-card__kicker">CANAL DIRETO // PLAYER 01</p>
+              <h2 class="contact-card__title">VAMOS CRIAR ALGO <em>MEMORÃVEL</em>?</h2>
+              <p class="contact-card__lead">Me chama para conversar sobre um projeto, uma colaboraÃ§Ã£o ou uma oportunidade. Quanto mais contexto vocÃª trouxer, melhor a conversa.</p>
+
+              <div class="contact-links">
+                <button class="contact-link" type="button" data-copy-email aria-label="Copiar e-mail ronaldjordan.dev@gmail.com">
+                  <span class="contact-link__label">E-MAIL</span>
+                  <span class="contact-link__value contact-link__value--cyan">ronaldjordan.dev@gmail.com</span>
+                </button>
+                <a class="contact-link" href="https://github.com/RONALDJORDAN" target="_blank" rel="noopener">
+                  <span class="contact-link__label">GITHUB</span>
+                  <span class="contact-link__value">github.com/RONALDJORDAN</span>
+                </a>
+                <a class="contact-link" href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" rel="noopener">
+                  <span class="contact-link__label">LINKEDIN</span>
+                  <span class="contact-link__value">/in/ronald-jordan-dev</span>
+                </a>
+                <div class="contact-link">
+                  <span class="contact-link__label">BASE</span>
+                  <span class="contact-link__value">Brasil // Remoto</span>
+                </div>
+              </div>
+
+              <div class="contact-card__status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>DisponÃ­vel para projetos e oportunidades engenheiro de software // devops.</span>
+              </div>
+            </div>
+
+            <form class="contact-form reveal" id="contact-form" style="--reveal-delay: 120ms" novalidate>
+              <div class="contact-form__head">
+                <span>TRANSMISSÃƒO // FORMULÃRIO</span>
+                <span>CANAL ABERTO</span>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-name">NOME</label>
+                <input id="contact-name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Como devo te chamar?">
+              </div>
+
+              <div class="form-field">
+                <label for="contact-email">E-MAIL</label>
+                <input id="contact-email" name="email" type="email" autocomplete="email" required placeholder="voce@exemplo.com">
+              </div>
+
+              <div class="form-field">
+                <label for="contact-message">MENSAGEM</label>
+                <textarea id="contact-message" name="message" required minlength="10" placeholder="Conte um pouco sobre o projeto ou a oportunidade..."></textarea>
+              </div>
+
+              <button class="btn btn--cyan" type="submit">ENVIAR MENSAGEM <span aria-hidden="true">â†’</span></button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              <p class="form-note">Este formulÃ¡rio abre seu aplicativo de e-mail. Nenhum dado Ã© armazenado neste site.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--line" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="section-kicker">02 // ANTES DE CHAMAR</p>
+              <h2 class="section-title" id="faq-title">PERGUNTAS <em>FREQUENTES</em></h2>
+              <p class="section-lead">Respostas rÃ¡pidas para as dÃºvidas que mais aparecem antes do primeiro contato.</p>
+            </div>
+            <span class="section-head__meta">FAQ // 04</span>
+          </div>
+
+          <div class="faq-list">
+            <details class="note reveal">
+              <summary>Que tipo de projeto vocÃª aceita?</summary>
+              <div class="note__body">
+                <p>AplicaÃ§Ãµes desktop, ferramentas internas, automaÃ§Ãµes, integraÃ§Ãµes com APIs, painÃ©is web e experiÃªncias digitais sob medida. TambÃ©m estou aberto a oportunidades engenheiro de software // devops em times de produto.</p>
+              </div>
+            </details>
+            <details class="note reveal" style="--reveal-delay: 60ms">
+              <summary>VocÃª trabalha remoto?</summary>
+              <div class="note__body">
+                <p>Sim. A base Ã© o Brasil, com trabalho remoto e comunicaÃ§Ã£o assÃ­ncrona. ReuniÃµes sÃ£o bem-vindas quando ajudam a destravar uma decisÃ£o.</p>
+              </div>
+            </details>
+            <details class="note reveal" style="--reveal-delay: 120ms">
+              <summary>Como funciona o processo?</summary>
+              <div class="note__body">
+                <p>ComeÃ§a com uma conversa de contexto: problema, usuÃ¡rios, restriÃ§Ãµes e prazo. Depois vem uma proposta de escopo, um protÃ³tipo ou plano tÃ©cnico e ciclos curtos de entrega com validaÃ§Ã£o.</p>
+              </div>
+            </details>
+            <details class="note reveal" style="--reveal-delay: 180ms">
+              <summary>VocÃª mantÃ©m os projetos depois da entrega?</summary>
+              <div class="note__body">
+                <p>Sim, manutenÃ§Ã£o e evoluÃ§Ã£o fazem parte do ciclo. A entrega inclui documentaÃ§Ã£o e prÃ³ximos passos para que o projeto continue saudÃ¡vel.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--line" aria-labelledby="availability-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="section-kicker">03 // DISPONIBILIDADE</p>
+              <h2 class="section-title" id="availability-title">JANELA <em>ABERTA</em></h2>
+            </div>
+            <span class="section-head__meta">STATUS ATUAL</span>
+          </div>
+
+          <div class="availability">
+            <article class="availability__item reveal">
+              <span>PROJETOS</span>
+              <strong>ACEITANDO</strong>
+              <p>Projetos sob medida, automaÃ§Ãµes e ferramentas internas.</p>
+            </article>
+            <article class="availability__item reveal" style="--reveal-delay: 80ms">
+              <span>OPORTUNIDADES</span>
+              <strong>ABERTO</strong>
+              <p>Vagas engenheiro de software // devops, produto e times que valorizam clareza.</p>
+            </article>
+            <article class="availability__item reveal" style="--reveal-delay: 160ms">
+              <span>RESPOSTA</span>
+              <strong>24H ÃšTEIS</strong>
+              <p>Retorno por e-mail ou LinkedIn com prÃ³ximos passos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="page-cta reveal">
+            <div class="page-cta__copy">
+              <h2 class="page-cta__title" id="cta-title">PREFERE VER <em>PRIMEIRO</em>?</h2>
+              <p class="page-cta__lead">Explore os projetos e o currÃ­culo antes de abrir o canal. Contexto ajuda a conversa a comeÃ§ar melhor.</p>
+            </div>
+            <div class="page-cta__actions">
+              <a class="btn btn--cyan" href="projetos.html">VER PROJETOS</a>
+              <a class="btn btn--ghost" href="curriculo.html">VER CURRÃCULO</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-labelledby="footer-title">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-block footer-block--brand">
+            <span class="footer-block__label" id="footer-title">JORDAN.SYS</span>
+            <div class="footer-brand">
+              <span class="brand__mark" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false">
+                  <path d="M11 7h11v13h-3v4H10v-4h6V11h-5z" fill="none" stroke="currentColor" stroke-width="3"/>
+                  <rect x="6" y="6" width="2" height="2" fill="#ff2e88"/>
+                  <rect x="24" y="24" width="2" height="2" fill="#7dff5b"/>
+                </svg>
+              </span>
+              <div>
+                <strong>JORDAN RONALD</strong>
+                <small>ENGENHEIRO DE SOFTWARE // DEVOPS</small>
+              </div>
+            </div>
+            <p>PortfÃ³lio autoral construÃ­do com HTML, CSS e JavaScript. Sem templates, sem ruÃ­do â€” sÃ³ cÃ³digo e intenÃ§Ã£o.</p>
+          </div>
+
+          <div class="footer-block footer-block--nav">
+            <span class="footer-block__label">MAPA</span>
+            <div class="footer-links">
+              <a href="sobre.html">Sobre</a>
+              <a href="projetos.html">Projetos</a>
+              <a href="laboratorio.html">LaboratÃ³rio</a>
+              <a href="arsenal.html">Arsenal</a>
+              <a href="trajetoria.html">TrajetÃ³ria</a>
+              <a href="contato.html">Contato</a>
+              <a href="curriculo.html">CurrÃ­culo</a>
+            </div>
+          </div>
+
+          <div class="footer-block footer-block--social">
+            <span class="footer-block__label">REDES</span>
+            <div class="footer-links">
+              <a href="https://github.com/RONALDJORDAN" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="mailto:ronaldjordan.dev@gmail.com">E-mail</a>
+            </div>
+          </div>
+
+          <div class="footer-block footer-block--build">
+            <span class="footer-block__label">BUILD</span>
+            <p><strong>v2.6.0</strong><br>HTML5 // CSS3 // JS<br>2026</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>Â© <span id="year">2026</span> JORDAN RONALD. TODOS OS DIREITOS RESERVADOS.</span>
+          <span class="footer-bottom__flavor"><span aria-hidden="true">â—†</span> FEITO COM CAFÃ‰ &amp; CÃ“DIGO</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Voltar ao topo">â†‘</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/vendor/anime.min.js"></script>
+  <script src="assets/vendor/vivus.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>
+
+
+

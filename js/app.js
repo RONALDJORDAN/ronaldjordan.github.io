@@ -956,9 +956,79 @@
     refreshReveal: observeReveals,
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
+  /* Pixel-fall background behind transparent portrait. */
+  function initPortraitFx() {
+    const canvas = $(".player-card__fx");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const colors = ["#00f0ff", "#ff2e88", "#7dff5b", "#ffe94a", "#a855f7"];
+    const size = 12;
+    let w = 0, h = 0, cols = 0, rows = 0, grid = [], cur = null;
+    function resize() {
+      const r = canvas.parentElement.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = Math.floor(r.width); h = Math.floor(r.height);
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      canvas.style.width = w + "px"; canvas.style.height = h + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cols = Math.max(1, Math.floor(w / size));
+      rows = Math.max(1, Math.floor(h / size));
+      grid = Array.from({ length: rows }, () => Array(cols).fill(null));
+      cur = spawn();
+    }
+    function spawn() {
+      return { x: Math.floor(Math.random() * cols), y: 0, color: colors[Math.floor(Math.random() * colors.length)] };
+    }
+    resize();
+    window.addEventListener("resize", resize);
+    let acc = 0, last = performance.now();
+    function tick(now) {
+      const dt = now - last; last = now; acc += dt;
+      if (acc > 1) {
+        acc = 0;
+         if (cur) {
+            if (cur.y + 1 < rows && !grid[cur.y + 1][cur.x]) cur.y++;
+           else { grid[cur.y][cur.x] = cur.color; cur = spawn(); clearRows(); }
+         }
+      }
+      ctx.fillStyle = "#0a0a0f";
+      ctx.fillRect(0, 0, w, h);
+      for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+        if (grid[r][c]) { ctx.fillStyle = grid[r][c]; ctx.fillRect(c * size + 1, r * size + 1, size - 2, size - 2); }
+      }
+      if (cur) { ctx.fillStyle = cur.color; ctx.fillRect(cur.x * size + 1, cur.y * size + 1, size - 2, size - 2); }
+      requestAnimationFrame(tick);
+    }
+    function clearRows() {
+      for (let r = rows - 1; r >= 0; r--) {
+        if (grid[r].every(v => v)) {
+          grid.splice(r, 1);
+          grid.unshift(Array(cols).fill(null));
+          r++;
+        }
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* Global 8-bit pixel rain background for all pages. */
+  function initGlobal8Bit() {
+    const c = document.createElement("canvas");
+    c.id = "bg8bit";
+    c.style.cssText = "position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.35;";
+    document.body.prepend(c);
+    const ctx = c.getContext("2d");
+    const colors = ["#00f0ff","#ff2e88","#7dff5b","#ffe94a","#a855f7"];
+    const size = 4;
+    let w,h,cols,drops;
+    function resize(){w=innerWidth;h=innerHeight;c.width=w;c.height=h;cols=Math.ceil(w/size);drops=Array.from({length:cols},()=>Math.random()*-h/size);}
+    resize(); addEventListener("resize",resize);
+    (function tick(){ctx.fillStyle="rgba(10,10,15,0.2)";ctx.fillRect(0,0,w,h);for(let i=0;i<cols;i++){ctx.fillStyle=colors[i%colors.length];ctx.fillRect(i*size,drops[i]*size,size-1,size-1);drops[i]++;if(drops[i]*size>h&&Math.random()>0.98)drops[i]=Math.random()*-20;}requestAnimationFrame(tick);})();
+  }
+  initGlobal8Bit();
+    document.addEventListener("DOMContentLoaded", () => { init(); setTimeout(initPortraitFx, 120); });
   } else {
     init();
+    setTimeout(initPortraitFx, 120);
   }
 })();
