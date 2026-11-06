@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal do Servidor | SEMED São Miguel dos Campos - AL</title>
+  <meta name="description" content="Central do servidor da educação de São Miguel dos Campos - AL: manuais técnicos, jornal interno, formulários funcionais, contracheque e autoatendimento." />
+  <link rel="icon" type="image/png" href="assets/images/brasao.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/servidor.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= HEADER GOVERNAMENTAL ================= -->
+  <header class="gov-header" id="site-header">
+    <div class="gov-topbar">
+      <div class="container gov-topbar__inner">
+        <div class="gov-topbar__left">
+          <a class="gov-brand" href="index.html" aria-label="Governo Municipal de São Miguel dos Campos">
+            <img class="gov-brand__crest" src="assets/images/brasil_logo.png" alt="" />
+            <span>BRASIL<small>Governo Municipal</small></span>
+          </a>
+          <nav class="gov-links" aria-label="Links institucionais">
+            <a href="lgpd.html">Acesso à Informação</a>
+            <a href="noticias.html">Comunica BR</a>
+            <a href="documentos.html">Órgãos do Governo</a>
+          </nav>
+        </div>
+        <div class="gov-topbar__right">
+          <div class="gov-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          </div>
+          <div class="a11y-wrap">
+            <button class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+              <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+              Acessibilidade
+            </button>
+            <div class="a11y-panel" id="a11y-panel" hidden>
+              <h2>Recursos de acessibilidade</h2>
+              <div class="a11y-row">
+                <span>Tamanho do texto</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="font-decrease" aria-label="Diminuir texto">A−</button>
+                  <button type="button" id="font-reset" aria-label="Texto normal">A</button>
+                  <button type="button" id="font-increase" aria-label="Aumentar texto">A+</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Alto contraste</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="contrast-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Links sublinhados</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="underline-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#mapa">Mapa do site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main__inner">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+
+        <form class="header-search" action="documentos.html" method="get" role="search">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <label class="sr-only" for="site-search">Buscar no portal</label>
+          <input type="search" id="site-search" name="q" placeholder="Buscar escolas, editais, documentos..." autocomplete="off" />
+          <kbd>Ctrl K</kbd>
+        </form>
+
+        <div class="header-actions">
+          <a href="servidor.html" class="btn btn--primary">
+            <span class="material-symbols-outlined icon-sm">account_circle</span>
+            Portal do Servidor
+          </a>
+          <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-drawer">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="container main-nav__inner">
+        <a href="index.html" class="main-nav__link">Início</a>
+        <a href="noticias.html" class="main-nav__link">Notícias</a>
+        <a href="institucional/institucional.html" class="main-nav__link">Institucional</a>
+        </div>
+        <a href="index.html#programas" class="main-nav__link">Educação</a>
+        <a href="index.html#servicos" class="main-nav__link">Estudante</a>
+        <a href="index.html#escola" class="main-nav__link">Escola</a>
+        <a href="documentos.html" class="main-nav__link">Documentos e Editais</a>
+        <a href="lgpd.html" class="main-nav__link">LGPD &amp; Transparência</a>
+        <a href="servidor.html" class="main-nav__link is-active" aria-current="page">Servidor</a>
+        <a href="noticias.html#avisos" class="main-nav__link">Avisos</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="mobile-drawer" id="mobile-drawer" hidden>
+    <div class="mobile-drawer__overlay" data-close-drawer></div>
+    <aside class="mobile-drawer__panel" aria-label="Menu de navegação móvel">
+      <div class="mobile-drawer__head">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+        <button class="mobile-drawer__close" id="mobile-menu-close" aria-label="Fechar menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav" aria-label="Menu de navegação móvel">
+        <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+        <a href="noticias.html"><span class="material-symbols-outlined">newspaper</span>Notícias</a>
+                <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span>Institucional</a>
+        <div class="mobile-drawer__dropdown" aria-expanded="false">
+          <button class="mobile-drawer__dropdown-trigger" aria-label="Submódulos Institucionais" type="button">
+            
+          </button>
+          <div class="mobile-drawer__dropdown__menu" style="padding-left:1rem">
+            <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span> Institucional</a>
+            <a href="institucional/quem-somos.html"><span class="material-symbols-outlined">info</span> Quem Somos</a>
+            <a href="institucional/galeria-funcionarios.html"><span class="material-symbols-outlined">people</span> Galeria de Funcionários</a>
+            <a href="institucional/contatos.html"><span class="material-symbols-outlined">contact_page</span> Contatos</a>
+            <a href="institucional/biblioteca.html"><span class="material-symbols-outlined">books</span> Biblioteca Digital</a>
+          </div>
+        </div>
+        <a href="index.html#programas"><span class="material-symbols-outlined">auto_stories</span>Educação</a>
+        <a href="index.html#servicos"><span class="material-symbols-outlined">backpack</span>Estudante</a>
+        <a href="index.html#escola"><span class="material-symbols-outlined">school</span>Escola</a>
+        <a href="documentos.html"><span class="material-symbols-outlined">folder_managed</span>Documentos e Editais</a>
+        <a href="lgpd.html"><span class="material-symbols-outlined">shield_person</span>LGPD &amp; Transparência</a>
+        <a href="servidor.html"><span class="material-symbols-outlined">account_circle</span>Servidor</a>
+        <a href="noticias.html#avisos"><span class="material-symbols-outlined">campaign</span>Avisos</a>
+      </nav>
+      <div class="mobile-drawer__footer">
+        <a href="servidor.html" class="btn btn--primary btn--block">
+          <span class="material-symbols-outlined icon-sm">login</span>
+          Acessar Portal do Servidor
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ================= FAIXA DE CONTEXTO ================= -->
+    <section class="srv-context">
+      <div class="container srv-context__inner">
+        <nav class="breadcrumb" aria-label="Trilha de navegação">
+          <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span aria-current="page">Portal do Servidor</span>
+        </nav>
+        <div class="srv-context__meta">
+          <span><span class="material-symbols-outlined icon-sm">verified</span> Ambiente Oficial do Servidor Municipal</span>
+          <span class="srv-context__dot" aria-hidden="true">•</span>
+          <span><span class="material-symbols-outlined icon-sm">domain</span> SEMED / Departamento de Recursos Humanos</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HERO DO SERVIDOR ================= -->
+    <section class="srv-hero">
+      <div class="container srv-hero__grid">
+        <div class="srv-hero__copy">
+          <span class="srv-hero__eyebrow">
+            <span class="material-symbols-outlined icon-sm">badge</span>
+            Área Restrita &amp; Transparência Funcional
+          </span>
+          <h1>Espaço do Servidor da Educação</h1>
+          <p>Central unificada de suporte técnico, publicações pedagógicas, expedientes de pessoal e solicitações funcionais para docentes, gestores e servidores de apoio de São Miguel dos Campos.</p>
+          <div class="srv-hero__actions">
+            <a href="#documentos-servidor" class="btn btn--white">
+              <span class="material-symbols-outlined icon-sm">folder_open</span>
+              Acessar Formulários &amp; Requerimentos
+            </a>
+            <a href="#comunica-seduc" class="btn btn--ghost">
+              <span class="material-symbols-outlined icon-sm">newspaper</span>
+              Ler Jornal Comunica SEMED
+            </a>
+          </div>
+        </div>
+
+        <aside class="srv-quick" aria-label="Acessos rápidos do servidor">
+          <div class="srv-quick__head">
+            <div>
+              <span class="material-symbols-outlined">bolt</span>
+              <h2>Acessos Rápidos do Servidor</h2>
+            </div>
+            <span class="srv-quick__badge">24 Horas</span>
+          </div>
+
+          <div class="srv-quick__grid">
+            <a href="https://contracheque.saomigueldoscampos.al.gov.br" target="_blank" rel="noopener noreferrer" class="srv-quick__item">
+              <span class="srv-quick__top">
+                <span class="material-symbols-outlined">payments</span>
+                <span class="material-symbols-outlined srv-quick__external">open_in_new</span>
+              </span>
+              <strong>Contracheque Online</strong>
+              <small>SEPLAG / Folha</small>
+            </a>
+
+            <a href="#documentos-servidor" class="srv-quick__item">
+              <span class="srv-quick__top">
+                <span class="material-symbols-outlined">receipt_long</span>
+                <span class="material-symbols-outlined srv-quick__external">arrow_downward</span>
+              </span>
+              <strong>Informe Rendimentos</strong>
+              <small>Exercício IRPF 2025</small>
+            </a>
+
+            <a href="#documentos-servidor" class="srv-quick__item">
+              <span class="srv-quick__top">
+                <span class="material-symbols-outlined">menu_book</span>
+                <span class="material-symbols-outlined srv-quick__external">arrow_downward</span>
+              </span>
+              <strong>Diário SAGEAL</strong>
+              <small>Lançamento de Notas</small>
+            </a>
+
+            <a href="#documentos-servidor" class="srv-quick__item">
+              <span class="srv-quick__top">
+                <span class="material-symbols-outlined">task</span>
+                <span class="material-symbols-outlined srv-quick__external">arrow_downward</span>
+              </span>
+              <strong>Processo Digital SEI</strong>
+              <small>Abertura de Protocolos</small>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= NAVEGAÇÃO FIXA DOS MÓDULOS ================= -->
+    <nav class="srv-subnav" id="srv-subnav" aria-label="Módulos principais do servidor">
+      <div class="container srv-subnav__inner">
+        <span class="srv-subnav__label">Módulos Principais do Servidor</span>
+        <div class="srv-subnav__links">
+          <a href="#guias-manuais" class="is-active" data-section="guias-manuais">
+            <span class="material-symbols-outlined icon-sm">menu_book</span>
+            Guia Manuais Técnicos
+          </a>
+          <a href="#comunica-seduc" data-section="comunica-seduc">
+            <span class="material-symbols-outlined icon-sm">newspaper</span>
+            Jornal Comunica SEMED
+          </a>
+          <a href="#documentos-servidor" data-section="documentos-servidor">
+            <span class="material-symbols-outlined icon-sm">description</span>
+            Documentos Servidor
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="srv-content container">
+
+      <!-- ================= GUIAS E MANUAIS ================= -->
+      <section class="srv-section" id="guias-manuais" aria-labelledby="guias-title">
+        <div class="srv-section__head">
+          <div>
+            <span class="srv-kicker"><span class="dot dot--primary"></span> Eixo Técnico &amp; Normativo</span>
+            <h2 id="guias-title">
+              <span class="srv-section__icon"><span class="material-symbols-outlined">auto_stories</span></span>
+              Guia Manuais Técnicos
+            </h2>
+            <p>Protocolos operacionais padronizados, manuais de sistemas de escrituração e diretrizes administrativas para aplicação na rotina das 24 unidades escolares da rede municipal.</p>
+          </div>
+          <div class="srv-revision">
+            <span>Última revisão geral:</span>
+            <strong>Fevereiro / 2025</strong>
+          </div>
+        </div>
+
+        <div class="srv-manuals">
+          <article class="srv-manual">
+            <div class="srv-manual__top">
+              <span class="srv-manual__icon"><span class="material-symbols-outlined">developer_board</span></span>
+              <span class="srv-manual__code">POP-ED 01</span>
+            </div>
+            <h3>Procedimentos Operacionais Padrão (POP)</h3>
+            <p>Rotinas de matrícula, transferência, registro de frequência e guarda de documentação do arquivo escolar.</p>
+            <div class="srv-manual__meta">
+              <span><span class="material-symbols-outlined">schedule</span> Atualizado 2025</span>
+              <span>PDF • 4.2 MB</span>
+            </div>
+            <div class="srv-manual__actions">
+              <button type="button" class="btn btn--primary btn--block btn-download" data-file="Manual POP-ED 01 — Procedimentos Operacionais Padrão (PDF 4.2 MB)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar
+              </button>
+              <button type="button" class="srv-icon-btn" data-preview="Manual POP-ED 01 — Procedimentos Operacionais Padrão" aria-label="Visualizar prévia do manual POP-ED 01">
+                <span class="material-symbols-outlined">visibility</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="srv-manual">
+            <div class="srv-manual__top">
+              <span class="srv-manual__icon"><span class="material-symbols-outlined">laptop_mac</span></span>
+              <span class="srv-manual__code">SISTEMAS</span>
+            </div>
+            <h3>Guia do SAGEAL &amp; Diário Eletrônico</h3>
+            <p>Instruções passo a passo para fechamento bimestral, lançamento de notas, faltas e relatórios descritivos.</p>
+            <div class="srv-manual__meta">
+              <span><span class="material-symbols-outlined">devices</span> Multiplataforma</span>
+              <span>PDF • 8.1 MB</span>
+            </div>
+            <div class="srv-manual__actions">
+              <button type="button" class="btn btn--primary btn--block btn-download" data-file="Guia do SAGEAL e Diário Eletrônico (PDF 8.1 MB)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar
+              </button>
+              <button type="button" class="srv-icon-btn" data-preview="Guia do SAGEAL &amp; Diário Eletrônico" aria-label="Visualizar prévia do guia do SAGEAL">
+                <span class="material-symbols-outlined">visibility</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="srv-manual">
+            <div class="srv-manual__top">
+              <span class="srv-manual__icon"><span class="material-symbols-outlined">account_balance_wallet</span></span>
+              <span class="srv-manual__code">FINANCEIRO</span>
+            </div>
+            <h3>PDDE Municipal &amp; Caixa Escolar</h3>
+            <p>Execução de despesas, emissão de notas fiscais, cotação prévia e conciliação bancária dos recursos da escola.</p>
+            <div class="srv-manual__meta">
+              <span><span class="material-symbols-outlined">verified_user</span> FNDE/SEMED</span>
+              <span>PDF • 3.5 MB</span>
+            </div>
+            <div class="srv-manual__actions">
+              <button type="button" class="btn btn--primary btn--block btn-download" data-file="Manual PDDE Municipal e Caixa Escolar (PDF 3.5 MB)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar
+              </button>
+              <button type="button" class="srv-icon-btn" data-preview="Manual PDDE Municipal &amp; Caixa Escolar" aria-label="Visualizar prévia do manual do PDDE">
+                <span class="material-symbols-outlined">visibility</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="srv-manual">
+            <div class="srv-manual__top">
+              <span class="srv-manual__icon"><span class="material-symbols-outlined">trending_up</span></span>
+              <span class="srv-manual__code">CARREIRA</span>
+            </div>
+            <h3>Guia de Evolução Funcional e Titulação</h3>
+            <p>Critérios para progressão horizontal e vertical, averbação de diplomas de pós-graduação e avaliação periódica.</p>
+            <div class="srv-manual__meta">
+              <span><span class="material-symbols-outlined">military_tech</span> Lei Municipal</span>
+              <span>PDF • 2.9 MB</span>
+            </div>
+            <div class="srv-manual__actions">
+              <button type="button" class="btn btn--primary btn--block btn-download" data-file="Guia de Evolução Funcional e Titulação (PDF 2.9 MB)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar
+              </button>
+              <button type="button" class="srv-icon-btn" data-preview="Guia de Evolução Funcional e Titulação" aria-label="Visualizar prévia do guia de evolução funcional">
+                <span class="material-symbols-outlined">visibility</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="srv-note">
+          <div class="srv-note__main">
+            <span class="srv-note__icon"><span class="material-symbols-outlined">help_center</span></span>
+            <div>
+              <strong>Dúvidas sobre os fluxos operacionais nas escolas?</strong>
+              <span>A Gerência de Supervisão Escolar da SEMED realiza plantões de assessoria técnica semanal via Google Meet ou presencial.</span>
+            </div>
+          </div>
+          <a href="#contato-rh" class="btn btn--primary">
+            <span class="material-symbols-outlined icon-sm">support_agent</span>
+            Solicitar Apoio Pedagógico
+          </a>
+        </div>
+      </section>
+
+      <!-- ================= JORNAL COMUNICA SEMED ================= -->
+      <section class="srv-section" id="comunica-seduc" aria-labelledby="comunica-title">
+        <div class="srv-section__head">
+          <div>
+            <span class="srv-kicker srv-kicker--secondary"><span class="dot"></span> Comunicação Interna &amp; Pedagogia</span>
+            <h2 id="comunica-title">
+              <span class="srv-section__icon srv-section__icon--secondary"><span class="material-symbols-outlined">feed</span></span>
+              Jornal Comunica SEMED
+            </h2>
+            <p>Informativo oficial dos profissionais da educação municipal de São Miguel dos Campos. Projetos inovadores, relatos de sala de aula e prestação de contas pedagógica.</p>
+          </div>
+          <span class="badge badge--sky">
+            <span class="material-symbols-outlined icon-sm">history_edu</span>
+            Edição Mensal Informativa
+          </span>
+        </div>
+
+        <div class="srv-journal">
+          <article class="srv-feature">
+            <div class="srv-feature__media">
+              <img src="assets/images/servidor-jornal.jpg" alt="Professores da rede municipal reunidos em formação continuada com livros e tablets" loading="lazy" />
+              <span class="srv-feature__hot"><span class="material-symbols-outlined icon-sm">local_fire_department</span> Destaque do Mês</span>
+              <div class="srv-feature__edition">
+                <span>Edição Nº 42 • Ano VII</span>
+                <span>Fevereiro 2025</span>
+              </div>
+            </div>
+
+            <div class="srv-feature__body">
+              <span class="srv-feature__official"><span class="material-symbols-outlined icon-sm">verified</span> Publicação Oficial SEMED • São Miguel dos Campos</span>
+              <h3>Jornal Comunica SEMED: Valorização do Magistério e Inovações no Ano Letivo</h3>
+              <p>Nesta edição especial: os novos laboratórios de ciências inaugurados no bairro Fátima, o plano de formação continuada para os 480 docentes municipais e a premiação dos projetos de leitura da Escola Noêmia Cavalcanti.</p>
+
+              <div class="srv-tags">
+                <span>Alfabetização na Idade Certa</span>
+                <span>Educação Integral</span>
+                <span>Gestão Democrática</span>
+              </div>
+
+              <div class="srv-feature__actions">
+                <button type="button" class="btn btn--secondary btn-download" data-file="Jornal Comunica SEMED — Edição Nº 42 (PDF 14 MB)">
+                  <span class="material-symbols-outlined icon-sm">download</span>
+                  Baixar Edição Digital (PDF - 14 MB)
+                </button>
+                <button type="button" class="btn btn--soft" data-journal="Edição Nº 42 • Ano VII — Fevereiro 2025">
+                  <span class="material-symbols-outlined icon-sm">chrome_reader_mode</span>
+                  Ler na Tela
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <aside class="srv-contribute">
+            <span class="srv-contribute__icon"><span class="material-symbols-outlined">draw</span></span>
+            <span class="srv-contribute__kicker">Espaço do Educador</span>
+            <h3>Envie o Relato da sua Sala de Aula</h3>
+            <p>Desenvolveu uma metodologia ativa ou projeto exemplar em sua escola? Seu artigo ou experiência pedagógica pode ser publicado na próxima edição do Comunica SEMED.</p>
+
+            <div class="srv-contribute__deadline">
+              <small>Prazo de submissão Edição Nº 43:</small>
+              <strong><span class="material-symbols-outlined icon-sm">event</span> Até 25 de Março de 2025</strong>
+            </div>
+
+            <a href="mailto:comunicacao.semed@saomigueldoscampos.al.gov.br?subject=Submissão%20de%20experi%C3%AAncia%20docente%20-%20Comunica%20SEMED" class="btn btn--primary btn--block">
+              <span class="material-symbols-outlined icon-sm">upload_file</span>
+              Submeter Experiência Docente
+            </a>
+          </aside>
+        </div>
+
+        <div class="srv-archive">
+          <div class="srv-archive__head">
+            <div>
+              <span class="material-symbols-outlined">folder_zip</span>
+              <h3>Acervo de Edições Anteriores</h3>
+            </div>
+            <span>Exibindo 4 edições recentes</span>
+          </div>
+
+          <div class="srv-archive__grid">
+            <article class="srv-edition">
+              <div class="srv-edition__meta"><span>Edição Nº 41</span><span>Jan / 2025</span></div>
+              <h4>Jornada Pedagógica &amp; Planejamento Anual</h4>
+              <p>As novas diretrizes da BNCC municipal e as metas de proficiência para o SAEB no ensino fundamental.</p>
+              <button type="button" class="srv-edition__link btn-download" data-file="Jornal Comunica SEMED — Edição Nº 41 (PDF 9.4 MB)">
+                <span>Baixar PDF (9.4 MB)</span>
+                <span class="material-symbols-outlined icon-sm">download</span>
+              </button>
+            </article>
+
+            <article class="srv-edition">
+              <div class="srv-edition__meta"><span>Edição Nº 40</span><span>Dez / 2024</span></div>
+              <h4>Prêmio Professor Inovador &amp; Mostra de Ciências</h4>
+              <p>Conheça os 12 projetos premiados e o balanço dos avanços de infraestrutura das unidades da zona rural.</p>
+              <button type="button" class="srv-edition__link btn-download" data-file="Jornal Comunica SEMED — Edição Nº 40 (PDF 11.8 MB)">
+                <span>Baixar PDF (11.8 MB)</span>
+                <span class="material-symbols-outlined icon-sm">download</span>
+              </button>
+            </article>
+
+            <article class="srv-edition">
+              <div class="srv-edition__meta"><span>Edição Nº 39</span><span>Nov / 2024</span></div>
+              <h4>Educação Inclusiva na Prática Miguelense</h4>
+              <p>O fortalecimento das Salas de Recursos Multifuncionais e o trabalho dos cuidadores pedagógicos.</p>
+              <button type="button" class="srv-edition__link btn-download" data-file="Jornal Comunica SEMED — Edição Nº 39 (PDF 8.7 MB)">
+                <span>Baixar PDF (8.7 MB)</span>
+                <span class="material-symbols-outlined icon-sm">download</span>
+              </button>
+            </article>
+
+            <article class="srv-edition">
+              <div class="srv-edition__meta"><span>Edição Nº 38</span><span>Out / 2024</span></div>
+              <h4>Dia do Professor: Histórias que Transformam</h4>
+              <p>Homenagem aos 30 anos de docência e o impacto da educação nas comunidades ribeirinhas de São Miguel.</p>
+              <button type="button" class="srv-edition__link btn-download" data-file="Jornal Comunica SEMED — Edição Nº 38 (PDF 10.2 MB)">
+                <span>Baixar PDF (10.2 MB)</span>
+                <span class="material-symbols-outlined icon-sm">download</span>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DOCUMENTOS DO SERVIDOR ================= -->
+      <section class="srv-section" id="documentos-servidor" aria-labelledby="documentos-title">
+        <div class="srv-section__head srv-section__head--docs">
+          <div>
+            <span class="srv-kicker srv-kicker--tertiary"><span class="dot"></span> Atendimento Funcional &amp; Repositório</span>
+            <h2 id="documentos-title">
+              <span class="srv-section__icon srv-section__icon--tertiary"><span class="material-symbols-outlined">folder_shared</span></span>
+              Documentos Servidor
+            </h2>
+            <p>Repositório padronizado com formulários funcionais editáveis, solicitações de direitos estatutários, certidões e legislação do magistério de São Miguel dos Campos.</p>
+          </div>
+
+          <div class="srv-search">
+            <span class="material-symbols-outlined">search</span>
+            <label class="sr-only" for="srv-doc-search">Filtrar documento ou formulário</label>
+            <input type="search" id="srv-doc-search" placeholder="Filtrar documento, formulário..." autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="srv-tabs" role="tablist" aria-label="Categorias de documentos do servidor">
+          <button type="button" class="srv-tab is-active" id="srv-tab-reqs" role="tab" aria-selected="true" aria-controls="srv-panel-reqs" data-tab="reqs">
+            <span class="material-symbols-outlined icon-sm">assignment</span>
+            Requerimentos &amp; Formulários Funcionais (8)
+          </button>
+          <button type="button" class="srv-tab" id="srv-tab-declaracoes" role="tab" aria-selected="false" aria-controls="srv-panel-declaracoes" data-tab="declaracoes">
+            <span class="material-symbols-outlined icon-sm">verified</span>
+            Declarações &amp; Certidões (5)
+          </button>
+          <button type="button" class="srv-tab" id="srv-tab-legislacao" role="tab" aria-selected="false" aria-controls="srv-panel-legislacao" data-tab="legislacao">
+            <span class="material-symbols-outlined icon-sm">gavel</span>
+            Legislação &amp; PCCR Municipal (6)
+          </button>
+        </div>
+
+        <div class="srv-panel" id="srv-panel-reqs" role="tabpanel" aria-labelledby="srv-tab-reqs">
+          <div class="srv-panel__scroll">
+            <table class="srv-table">
+              <thead>
+                <tr>
+                  <th scope="col">Título do Documento / Finalidade</th>
+                  <th scope="col">Público / Setor</th>
+                  <th scope="col">Atualização</th>
+                  <th scope="col">Formato</th>
+                  <th scope="col" class="is-right">Downloads</th>
+                </tr>
+              </thead>
+              <tbody id="srv-docs-list">
+                <tr data-search="licença prêmio assiduidade magistério apoio">
+                  <td>
+                    <div class="srv-doc-type">
+                      <span class="material-symbols-outlined">description</span>
+                      <div>
+                        <strong>Requerimento Padrão de Licença Prêmio por Assiduidade</strong>
+                        <small>Para servidores estatutários que completaram 5 anos ininterruptos de efetivo exercício.</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Magistério &amp; Apoio</td>
+                  <td>Jan/2025</td>
+                  <td><span class="srv-format srv-format--primary">PDF + DOCX</span></td>
+                  <td>
+                    <div class="srv-doc-actions">
+                      <button type="button" class="srv-file srv-file--pdf btn-download" data-file="Requerimento de Licença Prêmio (PDF)">
+                        <span class="material-symbols-outlined icon-sm">picture_as_pdf</span> PDF
+                      </button>
+                      <button type="button" class="srv-file srv-file--docx btn-download" data-file="Requerimento de Licença Prêmio (DOCX editável)">
+                        <span class="material-symbols-outlined icon-sm">edit_document</span> DOCX
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr data-search="progressão titulação pccr professores efetivos especialização mestrado doutorado">
+                  <td>
+                    <div class="srv-doc-type">
+                      <span class="material-symbols-outlined">description</span>
+                      <div>
+                        <strong>Formulário de Progressão por Titulação (PCCR)</strong>
+                        <small>Averbação de Especialização, Mestrado e Doutorado para mudança de nível funcional.</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Professores Efetivos</td>
+                  <td>Fev/2025</td>
+                  <td><span class="srv-format srv-format--primary">PDF + DOCX</span></td>
+                  <td>
+                    <div class="srv-doc-actions">
+                      <button type="button" class="srv-file srv-file--pdf btn-download" data-file="Formulário de Progressão por Titulação (PDF)">
+                        <span class="material-symbols-outlined icon-sm">picture_as_pdf</span> PDF
+                      </button>
+                      <button type="button" class="srv-file srv-file--docx btn-download" data-file="Formulário de Progressão por Titulação (DOCX editável)">
+                        <span class="material-symbols-outlined icon-sm">edit_document</span> DOCX
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr data-search="abono falta justificativa ponto exames júri doação sangue todos servidores">
+                  <td>
+                    <div class="srv-doc-type">
+                      <span class="material-symbols-outlined">description</span>
+                      <div>
+                        <strong>Requerimento de Abono de Falta e Justificativa de Ponto</strong>
+                        <small>Comprovante de comparecimento a exames, júri popular ou doação de sangue.</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Todos os Servidores</td>
+                  <td>Nov/2024</td>
+                  <td><span class="srv-format">PDF</span></td>
+                  <td>
+                    <div class="srv-doc-actions">
+                      <button type="button" class="srv-file srv-file--pdf btn-download" data-file="Requerimento de Abono de Falta (PDF)">
+                        <span class="material-symbols-outlined icon-sm">picture_as_pdf</span> PDF
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr data-search="férias escala recesso escolar equipes gestoras">
+                  <td>
+                    <div class="srv-doc-type">
+                      <span class="material-symbols-outlined">description</span>
+                      <div>
+                        <strong>Solicitação de Férias e Escala de Recesso Escolar</strong>
+                        <small>Programação regulamentar de período de fruição de férias individuais ou coletivas.</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Equipes Gestoras</td>
+                  <td>Dez/2024</td>
+                  <td><span class="srv-format srv-format--primary">PDF + DOCX</span></td>
+                  <td>
+                    <div class="srv-doc-actions">
+                      <button type="button" class="srv-file srv-file--pdf btn-download" data-file="Solicitação de Férias e Escala de Recesso (PDF)">
+                        <span class="material-symbols-outlined icon-sm">picture_as_pdf</span> PDF
+                      </button>
+                      <button type="button" class="srv-file srv-file--docx btn-download" data-file="Solicitação de Férias e Escala de Recesso (DOCX editável)">
+                        <span class="material-symbols-outlined icon-sm">edit_document</span> DOCX
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="srv-empty" data-empty hidden>Nenhum formulário corresponde ao termo pesquisado.</p>
+
+          <div class="srv-panel__foot">
+            <span>Apresentando 4 formulários oficiais vigentes da Secretaria Municipal</span>
+            <span class="srv-panel__seal"><span class="material-symbols-outlined icon-sm">verified</span> Modelos homologados pela Procuradoria Geral do Município (PGM)</span>
+          </div>
+        </div>
+
+        <div class="srv-panel srv-panel--cards" id="srv-panel-declaracoes" role="tabpanel" aria-labelledby="srv-tab-declaracoes" hidden>
+          <h3 class="srv-panel__title">Declarações e Certidões Emitidas pela SEMED</h3>
+          <div class="srv-panel__grid">
+            <article class="srv-card-doc" data-search="certidão tempo contribuição serviço cts aposentadoria sampprev">
+              <div>
+                <h4>Certidão de Tempo de Contribuição e Serviço (CTS)</h4>
+                <p>Documento comprobatório para fins de aposentadoria junto ao Instituto de Previdência Municipal (SAMPPREV).</p>
+              </div>
+              <div class="srv-card-doc__foot">
+                <span>Prazo: 5 a 10 dias úteis</span>
+                <button type="button" class="srv-file srv-file--solid btn-download" data-file="Formulário de Solicitação da CTS (PDF)">
+                  <span class="material-symbols-outlined icon-sm">download</span> Solicitar Formulário
+                </button>
+              </div>
+            </article>
+
+            <article class="srv-card-doc" data-search="declaração regência classe carga horária adicionais magistério pós-graduação">
+              <div>
+                <h4>Declaração de Regência de Classe e Carga Horária</h4>
+                <p>Comprovação de atuação em sala para fins de adicionais de magistério e pós-graduação.</p>
+              </div>
+              <div class="srv-card-doc__foot">
+                <span>Prazo: 48h úteis</span>
+                <button type="button" class="srv-file srv-file--solid btn-download" data-file="Formulário de Declaração de Regência (PDF)">
+                  <span class="material-symbols-outlined icon-sm">download</span> Solicitar Formulário
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <p class="srv-empty" data-empty hidden>Nenhuma declaração corresponde ao termo pesquisado.</p>
+        </div>
+
+        <div class="srv-panel srv-panel--cards" id="srv-panel-legislacao" role="tabpanel" aria-labelledby="srv-tab-legislacao" hidden>
+          <h3 class="srv-panel__title">Marcos Legais do Magistério Municipal</h3>
+          <div class="srv-panel__grid srv-panel__grid--three">
+            <article class="srv-law-card" data-search="lei municipal 1.482 estatuto magistério direitos deveres licenças disciplinar">
+              <span>Lei Municipal Nº 1.482</span>
+              <h4>Estatuto do Magistério Público de São Miguel dos Campos</h4>
+              <p>Regime jurídico, direitos, deveres, licenças e regime disciplinar docente.</p>
+              <button type="button" class="srv-law-card__link btn-download" data-file="Lei Municipal Nº 1.482 — Estatuto do Magistério (PDF)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar Lei Integral (PDF)
+              </button>
+            </article>
+
+            <article class="srv-law-card" data-search="lei complementar 034 pccr plano cargos carreiras remuneração vencimentos titulação">
+              <span>Lei Complementar Nº 034</span>
+              <h4>Plano de Cargos, Carreiras e Remuneração (PCCR da Educação)</h4>
+              <p>Tabela de vencimentos, enquadramento de classes e coeficientes de titulação.</p>
+              <button type="button" class="srv-law-card__link btn-download" data-file="Lei Complementar Nº 034 — PCCR da Educação (PDF)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar Tabela &amp; PCCR
+              </button>
+            </article>
+
+            <article class="srv-law-card" data-search="decreto 2.901 2024 hora-atividade planejamento jornada formação">
+              <span>Decreto Nº 2.901/2024</span>
+              <h4>Regulamentação da Hora-Atividade e Planejamento</h4>
+              <p>Distribuição de 1/3 da jornada de trabalho para planejamento e formação.</p>
+              <button type="button" class="srv-law-card__link btn-download" data-file="Decreto Nº 2.901/2024 — Hora-Atividade (PDF)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar Decreto (PDF)
+              </button>
+            </article>
+          </div>
+
+          <p class="srv-empty" data-empty hidden>Nenhum marco legal corresponde ao termo pesquisado.</p>
+        </div>
+      </section>
+
+      <!-- ================= AUTOATENDIMENTO ================= -->
+      <section class="srv-section" id="autoatendimento" aria-labelledby="atendimento-title">
+        <div class="srv-section__head">
+          <div>
+            <span class="srv-kicker"><span class="dot dot--primary"></span> Suporte Administrativo &amp; Cuidados com o Servidor</span>
+            <h2 id="atendimento-title">
+              <span class="srv-section__icon"><span class="material-symbols-outlined">support</span></span>
+              Autoatendimento e Atendimento ao Servidor
+            </h2>
+          </div>
+        </div>
+
+        <div class="srv-support">
+          <article class="srv-support__card">
+            <span class="srv-support__icon"><span class="material-symbols-outlined">receipt</span></span>
+            <h3>Primeiro Acesso ao Contracheque</h3>
+            <p>Servidores recém-empossados devem utilizar a matrícula funcional e o CPF para o primeiro cadastro de senha na folha de pagamento municipal.</p>
+            <div class="srv-support__info">
+              <strong class="text-primary">Calendário de Pagamento:</strong>
+              <span>Até o último dia útil de cada mês de competência.</span>
+            </div>
+            <a href="https://contracheque.saomigueldoscampos.al.gov.br" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--block">
+              Acessar Portal da Folha
+              <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+            </a>
+          </article>
+
+          <article class="srv-support__card">
+            <span class="srv-support__icon srv-support__icon--neutral"><span class="material-symbols-outlined">medical_services</span></span>
+            <h3>Perícia Médica e Atestados</h3>
+            <p>Atestados com afastamento superior a 3 (três) dias devem ser homologados perante a Junta Médica Oficial do Município de São Miguel dos Campos.</p>
+            <div class="srv-support__info">
+              <strong class="text-secondary">Prazo de Envio:</strong>
+              <span>Até 48 horas úteis após a emissão médica original.</span>
+            </div>
+            <a href="#contato-rh" class="btn btn--soft btn--block">
+              <span class="material-symbols-outlined icon-sm">calendar_month</span>
+              Agendar Junta Médica
+            </a>
+          </article>
+
+          <article class="srv-support__card" id="contato-rh">
+            <span class="srv-support__icon"><span class="material-symbols-outlined">contact_phone</span></span>
+            <h3>Gestão de Pessoas da SEMED</h3>
+            <p>Dúvidas sobre lotação, férias, remoção e processos funcionais com a equipe de Recursos Humanos da Secretaria de Educação.</p>
+            <ul class="srv-support__contacts">
+              <li><span class="material-symbols-outlined icon-sm">mail</span> rh.educacao@saomigueldoscampos.al.gov.br</li>
+              <li><span class="material-symbols-outlined icon-sm">call</span> (82) 3271-1234 • Ramal 204</li>
+              <li><span class="material-symbols-outlined icon-sm">schedule</span> Atendimento: 08h às 14h (Seg a Sex)</li>
+            </ul>
+            <a href="mailto:rh.educacao@saomigueldoscampos.al.gov.br" class="btn btn--primary btn--block">
+              <span class="material-symbols-outlined icon-sm">outgoing_mail</span>
+              Enviar Mensagem ao RH
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= FAIXA LGPD ================= -->
+      <section class="srv-privacy" aria-labelledby="privacidade-title">
+        <div class="srv-privacy__main">
+          <span class="srv-privacy__icon"><span class="material-symbols-outlined">policy</span></span>
+          <div>
+            <h2 id="privacidade-title">Proteção de Dados do Servidor Público (LGPD)</h2>
+            <p>Todas as solicitações funcionais e formulários submetidos neste portal são tratados sob estrita conformidade com a Lei Federal nº 13.709/2018. Seus dados estão seguros e vinculados unicamente ao seu dossiê administrativo.</p>
+          </div>
+        </div>
+        <div class="srv-privacy__actions">
+          <a href="lgpd.html" class="btn btn--soft">Política de Privacidade</a>
+          <a href="lgpd.html#dpo" class="btn btn--primary">Falar com o DPO / Encarregado</a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ================= MODAL DE PRÉVIA ================= -->
+    <div class="modal" id="srv-modal" hidden role="dialog" aria-modal="true" aria-labelledby="srv-modal-title">
+      <div class="modal__card">
+        <div class="modal__head">
+          <div>
+            <span class="srv-modal-kicker"><span class="material-symbols-outlined icon-sm">description</span> Repositório Oficial SEMED</span>
+            <h2 id="srv-modal-title">Prévia do documento</h2>
+          </div>
+          <button type="button" class="modal__close" id="srv-modal-close" aria-label="Fechar prévia">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+
+        <p class="srv-modal-text" id="srv-modal-text">Documento institucional de uso interno e orientação aos servidores da rede municipal de ensino de São Miguel dos Campos - AL.</p>
+
+        <dl class="srv-modal-meta">
+          <div><dt>Órgão Emissor</dt><dd>SEMED / Recursos Humanos</dd></div>
+          <div><dt>Revisão</dt><dd>Fevereiro de 2025</dd></div>
+          <div><dt>Disponibilidade</dt><dd class="text-success">Acesso do Servidor</dd></div>
+        </dl>
+
+        <div class="srv-modal-actions">
+          <button type="button" class="btn btn--secondary" id="srv-modal-cancel">Fechar</button>
+          <button type="button" class="btn btn--primary btn-download" id="srv-modal-download" data-file="Documento SEMED (PDF)">
+            <span class="material-symbols-outlined icon-sm">download</span>
+            Baixar Arquivo PDF
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <img class="brand__crest" src="assets/images/brasao.png" alt="" />
+          <span class="brand__text">
+            <strong>SEMED</strong>
+            <small>Secretaria Municipal de Educação<br />São Miguel dos Campos - AL</small>
+          </span>
+        </a>
+        <p>Promovendo uma educação pública, inclusiva e transformadora, valorizando os profissionais do magistério e ampliando as oportunidades de aprendizagem para crianças, jovens e adultos miguelenses.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+          <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          <a href="#" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3>Ensino &amp; Ofertas</h3>
+        <ul>
+          <li><a href="index.html#programas">Educação Infantil</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental I</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental II</a></li>
+          <li><a href="index.html#programas">Educação de Jovens e Adultos</a></li>
+          <li><a href="index.html#programas">Educação Especial &amp; Inclusão</a></li>
+          <li><a href="index.html#programas">Programa Escola 10</a></li>
+          <li><a href="index.html#programas">IDEB</a></li>
+          <li><a href="index.html#programas">Grêmios Estudantis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Transparência</h3>
+        <ul>
+          <li><a href="lgpd.html">Serviço de Informação ao Cidadão (e-SIC)</a></li>
+          <li><a href="lgpd.html">Portal da Transparência</a></li>
+          <li><a href="lgpd.html">Ouvidoria Municipal</a></li>
+          <li><a href="documentos.html">Editais &amp; Licitações</a></li>
+          <li><a href="documentos.html">Prestação de Contas</a></li>
+          <li><a href="servidor.html">Contracheque</a></li>
+          <li><a href="lgpd.html">LGPD &amp; Privacidade</a></li>
+          <li><a href="documentos.html">Legislação</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__contact">
+        <h3>Sede &amp; Contato</h3>
+        <p>
+          <span class="material-symbols-outlined">place</span>
+          <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL<br />CEP 57240-000</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">schedule</span>
+          <span>Segunda a sexta, das 07h30 às 13h30</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">phone</span>
+          <span>(82) 3271-1234 | (82) 3271-1250</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">mail</span>
+          <span>semed@saomigueldoscampos.al.gov.br</span>
+        </p>
+        <a class="footer__access-btn" href="lgpd.html">
+          <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+          Acessibilidade Presencial e Digital
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__institutional">
+      <div class="container footer__institutional-inner">
+        <a class="footer__semed-logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img src="assets/images/semed_logo_branca.png" alt="SEMED - Secretaria Municipal de Educação de São Miguel dos Campos" />
+        </a>
+        <div class="footer__gov-logos" aria-label="Governos parceiros">
+          <figure class="footer__gov-logo">
+            <img src="assets/images/brasil_logo.png" alt="Bandeira do Brasil" />
+            <figcaption>Governo Federal</figcaption>
+          </figure>
+          <figure class="footer__gov-logo">
+            <img src="assets/images/bandeira-alagoas.png" alt="Bandeira do Estado de Alagoas" />
+            <figcaption>Governo de Alagoas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 SEMED — Secretaria Municipal de Educação de São Miguel dos Campos - AL. Todos os direitos reservados.</p>
+        <nav class="footer__bottom-links" aria-label="Links legais">
+          <a href="#">Portal Fale.BR</a><span>|</span>
+          <a href="termos-de-uso.html">Termos de Uso</a><span>|</span>
+          <a href="politica-privacidade.html">Política de Privacidade</a><span>|</span>
+          <a href="index.html#mapa">Mapa do site</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast hidden" id="toast-notification" aria-live="polite" aria-atomic="true">
+    <div class="toast-content">
+      <span class="toast-icon">check_circle</span>
+      <div class="toast-body">
+        <span class="toast-title" id="toast-title">Aviso</span>
+        <span class="toast-msg" id="toast-msg"></span>
+      </div>
+      <button class="toast-close" aria-label="Fechar notificação"><span class="material-symbols-outlined">close</span></button>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/servidor.js"></script>
+</body>
+</html>
+
+
+
+

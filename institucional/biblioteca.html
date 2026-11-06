@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca Digital | SEMED São Miguel dos Campos - AL</title>
+  <meta name="description"
+    content="Galeria de materiais pedagógicos, livros digitais, manuais e cartilhas da Secretaria Municipal de Educação de São Miguel dos Campos - AL." />
+  <link rel="icon" type="image/png" href="../assets/images/brasao.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/biblioteca.css" />
+</head>
+
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= HEADER GOVERNAMENTAL ================= -->
+  <header class="gov-header" id="site-header">
+    <div class="gov-topbar">
+      <div class="container gov-topbar__inner">
+        <div class="gov-topbar__left">
+          <a class="gov-brand" href="../index.html" aria-label="Governo Municipal de São Miguel dos Campos">
+            <img class="gov-brand__crest" src="../assets/images/brasil_logo.png" alt="" />
+            <span>BRASIL<small>Governo Municipal</small></span>
+          </a>
+          <nav class="gov-links" aria-label="Links institucionais">
+            <a href="../lgpd.html">Acesso à Informação</a>
+            <a href="../noticias.html">Comunica BR</a>
+            <a href="../documentos.html">Órgãos do Governo</a>
+          </nav>
+        </div>
+        <div class="gov-topbar__right">
+          <div class="gov-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          </div>
+          <div class="a11y-wrap">
+            <button class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+              <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+              Acessibilidade
+            </button>
+            <div class="a11y-panel" id="a11y-panel" hidden>
+              <h2>Recursos de acessibilidade</h2>
+              <div class="a11y-row">
+                <span>Tamanho do texto</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="font-decrease" aria-label="Diminuir texto">A−</button>
+                  <button type="button" id="font-reset" aria-label="Texto normal">A</button>
+                  <button type="button" id="font-increase" aria-label="Aumentar texto">A+</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Alto contraste</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="contrast-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Links sublinhados</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="underline-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="../index.html#mapa">Mapa do site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main__inner">
+        <a class="brand brand--logo" href="../index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="../assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+
+        <form class="header-search" action="../documentos.html" method="get" role="search">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <label class="sr-only" for="site-search">Buscar no portal</label>
+          <input type="search" id="site-search" name="q" placeholder="Buscar escolas, editais, documentos..."
+            autocomplete="off" />
+          <kbd>Ctrl K</kbd>
+        </form>
+
+        <div class="header-actions">
+          <a href="../servidor.html" class="btn btn--primary">
+            <span class="material-symbols-outlined icon-sm">account_circle</span>
+            Portal do Servidor
+          </a>
+          <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false"
+            aria-controls="mobile-drawer">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="container main-nav__inner">
+        <a href="../index.html" class="main-nav__link">Início</a>
+        <a href="../noticias.html" class="main-nav__link">Notícias</a>
+        <a href="institucional.html" class="main-nav__link">Institucional</a>
+        </div>
+        <a href="../index.html#programas" class="main-nav__link">Educação</a>
+        <a href="../index.html#servicos" class="main-nav__link">Estudante</a>
+        <a href="../index.html#escola" class="main-nav__link">Escola</a>
+        <a href="../documentos.html" class="main-nav__link">Documentos e Editais</a>
+        <a href="../lgpd.html" class="main-nav__link">LGPD &amp; Transparência</a>
+        <a href="../servidor.html" class="main-nav__link">Servidor</a>
+        <a href="../noticias.html#avisos" class="main-nav__link">Avisos</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="mobile-drawer" id="mobile-drawer" hidden>
+    <div class="mobile-drawer__overlay" data-close-drawer></div>
+    <aside class="mobile-drawer__panel" aria-label="Menu de navegação móvel">
+      <div class="mobile-drawer__head">
+        <a class="brand brand--logo" href="../index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="../assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+        <button class="mobile-drawer__close" id="mobile-menu-close" aria-label="Fechar menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav" aria-label="Menu de navegação móvel">
+        <a href="../index.html"><span class="material-symbols-outlined">home</span>Início</a>
+        <a href="../noticias.html"><span class="material-symbols-outlined">newspaper</span>Notícias</a>
+        <a href="institucional.html"><span class="material-symbols-outlined">verified_user</span>Institucional</a>
+        <div class="mobile-drawer__dropdown" aria-expanded="false">
+          <button class="mobile-drawer__dropdown-trigger" aria-label="Submódulos Institucionais" type="button">
+            <span class="material-symbols-outlined" style="font-size:0.7rem">arrow_drop_down</span>
+          </button>
+          <div class="mobile-drawer__dropdown__menu" style="padding-left:1rem">
+            <a href="institucional.html"><span class="material-symbols-outlined">verified_user</span> Institucional</a>
+            <a href="quem-somos.html"><span class="material-symbols-outlined">info</span> Quem Somos</a>
+            <a href="galeria-funcionarios.html"><span class="material-symbols-outlined">people</span> Galeria de Funcionários</a>
+            <a href="contatos.html"><span class="material-symbols-outlined">contact_page</span> Contatos</a>
+            <a href="biblioteca.html" aria-current="page"><span class="material-symbols-outlined">books</span> Biblioteca Digital</a>
+          </div>
+        </div>
+        <a href="../index.html#programas"><span class="material-symbols-outlined">auto_stories</span>Educação</a>
+        <a href="../index.html#servicos"><span class="material-symbols-outlined">backpack</span>Estudante</a>
+        <a href="../index.html#escola"><span class="material-symbols-outlined">school</span>Escola</a>
+        <a href="../documentos.html"><span class="material-symbols-outlined">folder_managed</span>Documentos e Editais</a>
+        <a href="../lgpd.html"><span class="material-symbols-outlined">shield_person</span>LGPD &amp; Transparência</a>
+        <a href="../servidor.html"><span class="material-symbols-outlined">account_circle</span>Servidor</a>
+        <a href="../noticias.html#avisos"><span class="material-symbols-outlined">campaign</span>Avisos</a>
+      </nav>
+      <div class="mobile-drawer__footer">
+        <a href="../servidor.html" class="btn btn--primary btn--block">
+          <span class="material-symbols-outlined icon-sm">login</span>
+          Acessar Portal do Servidor
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ================= HERO BIBLIOTECA ================= -->
+    <section class="biblioteca-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação">
+          <a href="../index.html"><span class="material-symbols-outlined">home</span>Início</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span aria-current="page">Biblioteca Digital</span>
+        </nav>
+
+        <div class="biblioteca-hero__grid">
+          <div class="biblioteca-hero__copy">
+            <span class="badge badge--blue">
+              <span class="material-symbols-outlined icon-sm">library_books</span>
+              Submódulo 04 • Acervo Pedagógico
+            </span>
+            <h1>Biblioteca Digital</h1>
+            <p>Consulte o acervo de materiais pedagógicos, livros digitais, manuais e cartilhas da rede municipal de
+              São Miguel dos Campos. Selecione um submódulo ao lado para visualizar seu conteúdo.</p>
+          </div>
+
+          <div class="biblioteca-hero__side">
+            <div class="bib-card bib-card--stat">
+              <span class="bib-icon"><span class="material-symbols-outlined">library_books</span></span>
+              <div>
+                <small>Acervo Total</small>
+                <strong>124 títulos</strong>
+                <span>Livros e manuais digitais</span>
+              </div>
+            </div>
+            <div class="bib-card bib-card--stat">
+              <span class="bib-icon bib-icon--secondary"><span class="material-symbols-outlined">menu_book</span></span>
+              <div>
+                <small>Submódulos</small>
+                <strong>06 áreas</strong>
+                <span>Por etapa e modalidade</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SUBMENU LATERAL + CONTEÚDO ================= -->
+    <section class="section section--canvas biblioteca-conteudo" id="biblioteca-conteudo">
+      <div class="container biblioteca-layout">
+        <!-- Submenu lateral (galeria de livros) -->
+        <aside class="biblioteca-sidebar" aria-label="Submódulos da biblioteca">
+          <div class="biblioteca-sidebar__head">
+            <span class="material-symbols-outlined">library_books</span>
+            <h2>Submódulos</h2>
+          </div>
+
+          <nav class="biblioteca-sidebar__nav" role="tablist" aria-label="Escolher submódulo">
+            <button type="button" class="bib-submenu-item is-active" role="tab" aria-selected="true"
+              data-sub="infantil" aria-controls="sub-infantil">
+              <span class="bib-submenu__icon"><span class="material-symbols-outlined">child_care</span></span>
+              <div class="bib-submenu__info">
+                <strong>Educação Infantil</strong>
+                <span>Livros didáticos 0 a 5 anos</span>
+              </div>
+              <span class="bib-submenu__chevron"><span class="material-symbols-outlined">chevron_right</span></span>
+            </button>
+
+            <button type="button" class="bib-submenu-item" role="tab" aria-selected="false"
+              data-sub="fundamental1" aria-controls="sub-fundamental1">
+              <span class="bib-submenu__icon"><span class="material-symbols-outlined">school</span></span>
+              <div class="bib-submenu__info">
+                <strong>Ensino Fundamental I</strong>
+                <span>1º ao 5º ano</span>
+              </div>
+              <span class="bib-submenu__chevron"><span class="material-symbols-outlined">chevron_right</span></span>
+            </button>
+
+            <button type="button" class="bib-submenu-item" role="tab" aria-selected="false"
+              data-sub="fundamental2" aria-controls="sub-fundamental2">
+              <span class="bib-submenu__icon"><span class="material-symbols-outlined">class</span></span>
+              <div class="bib-submenu__info">
+                <strong>Ensino Fundamental II</strong>
+                <span>6º ao 9º ano</span>
+              </div>
+              <span class="bib-submenu__chevron"><span class="material-symbols-outlined">chevron_right</span></span>
+            </button>
+
+            <button type="button" class="bib-submenu-item" role="tab" aria-selected="false"
+              data-sub="eja" aria-controls="sub-eja">
+              <span class="bib-submenu__icon"><span class="material-symbols-outlined">workspace_premium</span></span>
+              <div class="bib-submenu__info">
+                <strong>EJA</strong>
+                <span>Jovens e Adultos</span>
+              </div>
+              <span class="bib-submenu__chevron"><span class="material-symbols-outlined">chevron_right</span></span>
+            </button>
+
+            <button type="button" class="bib-submenu-item" role="tab" aria-selected="false"
+              data-sub="aee" aria-controls="sub-aee">
+              <span class="bib-submenu__icon"><span class="material-symbols-outlined">accessibility_new</span></span>
+              <div class="bib-submenu__info">
+                <strong>Educação Especial</strong>
+                <span>Materiais AEE e inclusão</span>
+              </div>
+              <span class="bib-submenu__chevron"><span class="material-symbols-outlined">chevron_right</span></span>
+            </button>
+
+            <button type="button" class="bib-submenu-item" role="tab" aria-selected="false"
+              data-sub="gestores" aria-controls="sub-gestores">
+              <span class="bib-submenu__icon"><span class="material-symbols-outlined">admin_panel_settings</span></span>
+              <div class="bib-submenu__info">
+                <strong>Gestores</strong>
+                <span>Manuais e cartilhas gestão</span>
+              </div>
+              <span class="bib-submenu__chevron"><span class="material-symbols-outlined">chevron_right</span></span>
+            </button>
+          </nav>
+
+          <div class="biblioteca-sidebar__foot">
+            <p>Total de <strong>124</strong> títulos disponíveis para consulta online.</p>
+          </div>
+        </aside>
+
+        <!-- Área de conteúdo principal (alterna entre submódulos) -->
+        <div class="biblioteca-main" role="tabpanel" aria-labelledby="biblioteca-sub-title">
+
+          <!-- Submódulo: Educação Infantil (ativo por padrão) -->
+          <article class="bib-submodulo is-active" id="sub-infantil" aria-labelledby="sub-infantil-title">
+            <div class="bib-submodulo__head">
+              <span class="bib-submodulo__badge">Submódulo 01</span>
+              <h2 id="sub-infantil-title">Educação Infantil</h2>
+              <p>Livros didáticos, cartilhas e materiais para crianças de 0 a 5 anos nas creches e pré-escolas
+                municipais.</p>
+            </div>
+
+            <div class="bib-grid">
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Livro Didático</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Primeiros Passos na Leitura</h3>
+                  <p>Coleção de alfabetização para a Educação Infantil, com foco em letramento inicial e
+                    conscientização fonêmica.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> Autora: M. Silva</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2026</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Primeiros Passos na Leitura (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Cartilha</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Brincando e Aprendendo</h3>
+                  <p>Cartilha lúdica com atividades de matemática e português para turmas de creche e pré-escola.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> Equipe SEMED</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2025</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Brincando e Aprendendo (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Manual</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Guia do Professor - Infantil</h3>
+                  <p>Orientações pedagógicas para docentes da Educação Infantil, incluindo planejamento anual e
+                    avaliação.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> SEMED / CME</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2026</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Guia do Professor Infantil (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <!-- Submódulo: Ensino Fundamental I -->
+          <article class="bib-submodulo" id="sub-fundamental1" aria-labelledby="sub-fundamental1-title" hidden>
+            <div class="bib-submodulo__head">
+              <span class="bib-submodulo__badge">Submódulo 02</span>
+              <h2 id="sub-fundamental1-title">Ensino Fundamental I</h2>
+              <p>Materiais didáticos para o 1º ao 5º ano, alinhados à BNCC e ao currículo municipal de Alagoas.</p>
+            </div>
+
+            <div class="bib-grid">
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Livro Didático</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Língua Portuguesa - 1º ao 3º ano</h3>
+                  <p>Coleção completa de leitura, interpretação de texto e produção escrita para os anos iniciais.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> M. Santos</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2026</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Portugues EFI (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Livro Didático</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Matemática - 1º ao 3º ano</h3>
+                  <p>Atividades de raciocínio lógico, numeração e resolução de problemas para o Ensino Fundamental I.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> Equipe SEMED</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2025</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Matematica EFI (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Livro Didático</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Ciências da Natureza - 4º e 5º ano</h3>
+                  <p>Exploração do meio ambiente, seres vivos e práticas sustentáveis para os anos finais do EF I.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> SEMED / CME</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2026</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Ciencias EFII (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <!-- Submódulo: Ensino Fundamental II -->
+          <article class="bib-submodulo" id="sub-fundamental2" aria-labelledby="sub-fundamental2-title" hidden>
+            <div class="bib-submodulo__head">
+              <span class="bib-submodulo__badge">Submódulo 03</span>
+              <h2 id="sub-fundamental2-title">Ensino Fundamental II</h2>
+              <p>Materiais para o 6º ao 9º ano, incluindo disciplinas específicas e preparação para o SAEB.</p>
+            </div>
+
+            <div class="bib-grid">
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Livro Didático</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Língua Portuguesa - 6º ao 9º ano</h3>
+                  <p>Gramática, literatura e interpretação de textos para os anos finais do Ensino Fundamental.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> M. Santos</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2026</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Portugues EFII (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Livro Didático</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Matemática - 6º ao 9º ano</h3>
+                  <p>Álgebra, geometria, estatística e resolução de problemas avançados para o Ensino Fundamental II.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> Equipe SEMED</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2025</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Matematica EFII (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Livro Didático</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>História e Geografia do Brasil</h3>
+                  <p>Estudo do território brasileiro, suas regiões, história e formação cultural para o EF II.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> SEMED / CME</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2026</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Historia Geografia Brasil (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <!-- Submódulo: EJA -->
+          <article class="bib-submodulo" id="sub-eja" aria-labelledby="sub-eja-title" hidden>
+            <div class="bib-submodulo__head">
+              <span class="bib-submodulo__badge">Submódulo 04</span>
+              <h2 id="sub-eja-title">Educação de Jovens e Adultos (EJA)</h2>
+              <p>Materiais contextualizados para jovens e adultos que buscam concluir o Ensino Fundamental.</p>
+            </div>
+
+            <div class="bib-grid">
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Material EJA</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Leitura e Escrita para Adultos</h3>
+                  <p>Metodologia acelerada de alfabetização para jovens e adultos em situação de vulnerabilidade
+                    educacional.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> Equipe SEMED</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2026</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Leitura Escrita Adultos (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Material EJA</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Matemática para a Vida Cotidiana</h3>
+                  <p>Conteúdo matemático aplicado à rotina de trabalho e vida cotidiana de jovens e adultos.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> SEMED / CME</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2025</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Matematica Vida Cotidiana (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <!-- Submódulo: Educação Especial -->
+          <article class="bib-submodulo" id="sub-aee" aria-labelledby="sub-aee-title" hidden>
+            <div class="bib-submodulo__head">
+              <span class="bib-submodulo__badge">Submódulo 05</span>
+              <h2 id="sub-aee-title">Educação Especial e Inclusiva</h2>
+              <p>Materiais adaptados e recursos para o Atendimento Educacional Especializado (AEE).</p>
+            </div>
+
+            <div class="bib-grid">
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Material AEE</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Guia de Atendimento Educacional Especializado</h3>
+                  <p>Orientações para professores do AEE sobre sala de recursos multifuncionais e tecnologias
+                    assistivas.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> Equipe SEMED</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2026</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Guia AEE (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Material AEE</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Comunicação Alternativa - Libras</h3>
+                  <p>Material introdutório de Libras para professores e alunos com surdez na rede municipal.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> SEMED / CME</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2025</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Libras Inicial (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <!-- Submódulo: Gestores -->
+          <article class="bib-submodulo" id="sub-gestores" aria-labelledby="sub-gestores-title" hidden>
+            <div class="bib-submodulo__head">
+              <span class="bib-submodulo__badge">Submódulo 06</span>
+              <h2 id="sub-gestores-title">Gestores Escolares</h2>
+              <p>Manuais, cartilhas e materiais de apoio para diretores e coordenadores pedagógicos.</p>
+            </div>
+
+            <div class="bib-grid">
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Manual</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Gestão Escolar e Planejamento</h3>
+                  <p>Manual de gestão para diretores, incluindo planejamento anual, acompanhamento e avaliação
+                    institucional.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> SEMED / CME</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2026</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Gestao Escolar (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+
+              <article class="bib-livro">
+                <div class="bib-livro__capa">
+                  <span class="material-symbols-outlined">menu_book</span>
+                  <span class="bib-livro__tipo">Cartilha</span>
+                </div>
+                <div class="bib-livro__info">
+                  <h3>Cartilha do Coordenador Pedagógico</h3>
+                  <p>Orientações para o acompanhamento docente, formação continuada e supervisão de
+                    sala de aula.</p>
+                  <div class="bib-livro__meta">
+                    <span><span class="material-symbols-outlined icon-sm">person</span> Equipe SEMED</span>
+                    <span><span class="material-symbols-outlined icon-sm">event</span> 2025</span>
+                  </div>
+                </div>
+                <div class="bib-livro__acao">
+                  <button type="button" class="btn btn--soft btn-download" data-file="Cartilha Coordenador (PDF)">
+                    <span class="material-symbols-outlined icon-sm">download</span> Baixar
+                  </button>
+                </div>
+              </article>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="../index.html">
+          <img class="brand__crest" src="../assets/images/brasao.png" alt="" />
+          <span class="brand__text">
+            <strong>SEMED</strong>
+            <small>Secretaria Municipal de Educação<br />São Miguel dos Campos - AL</small>
+          </span>
+        </a>
+        <p>Promovendo uma educação pública, inclusiva e transformadora, valorizando os profissionais do magistério e
+          ampliando as oportunidades de aprendizagem para crianças, jovens e adultos miguelenses.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+          <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          <a href="#" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3>Ensino &amp; Ofertas</h3>
+        <ul>
+          <li><a href="../index.html#programas">Educação Infantil</a></li>
+          <li><a href="../index.html#programas">Ensino Fundamental I</a></li>
+          <li><a href="../index.html#programas">Ensino Fundamental II</a></li>
+          <li><a href="../index.html#programas">Educação de Jovens e Adultos</a></li>
+          <li><a href="../index.html#programas">Educação Especial &amp; Inclusão</a></li>
+          <li><a href="../index.html#programas">Programa Escola 10</a></li>
+          <li><a href="../index.html#programas">IDEB</a></li>
+          <li><a href="../index.html#programas">Grêmios Estudantis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Transparência</h3>
+        <ul>
+          <li><a href="../lgpd.html">Serviço de Informação ao Cidadão (e-SIC)</a></li>
+          <li><a href="../lgpd.html">Portal da Transparência</a></li>
+          <li><a href="../lgpd.html">Ouvidoria Municipal</a></li>
+          <li><a href="../documentos.html">Editais &amp; Licitações</a></li>
+          <li><a href="../documentos.html">Prestação de Contas</a></li>
+          <li><a href="../servidor.html">Contracheque</a></li>
+          <li><a href="../lgpd.html">LGPD &amp; Privacidade</a></li>
+          <li><a href="../documentos.html">Legislação</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__contact">
+        <h3>Sede &amp; Contato</h3>
+        <p>
+          <span class="material-symbols-outlined">place</span>
+          <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL<br />CEP 57240-000</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">schedule</span>
+          <span>Segunda a sexta, das 07h30 às 13h30</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">phone</span>
+          <span>(82) 3271-1234 | (82) 3271-1250</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">mail</span>
+          <span>semed@saomigueldoscampos.al.gov.br</span>
+        </p>
+        <a class="footer__access-btn" href="../lgpd.html">
+          <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+          Acessibilidade Presencial e Digital
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__institutional">
+      <div class="container footer__institutional-inner">
+        <a class="footer__semed-logo" href="../index.html" aria-label="SEMED - Página inicial">
+          <img src="../assets/images/semed_logo_branca.png" alt="SEMED - Secretaria Municipal de Educação de São Miguel dos Campos" />
+        </a>
+        <div class="footer__gov-logos" aria-label="Governos parceiros">
+          <figure class="footer__gov-logo">
+            <img src="../assets/images/brasil_logo.png" alt="Bandeira do Brasil" />
+            <figcaption>Governo Federal</figcaption>
+          </figure>
+          <figure class="footer__gov-logo">
+            <img src="../assets/images/bandeira-alagoas.png" alt="Bandeira do Estado de Alagoas" />
+            <figcaption>Governo de Alagoas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 SEMED — Secretaria Municipal de Educação de São Miguel dos Campos - AL. Todos os direitos reservados.</p>
+        <nav class="footer__bottom-links" aria-label="Links legais">
+          <a href="#">Portal Fale.BR</a><span>|</span>
+          <a href="termos-de-uso.html">Termos de Uso</a><span>|</span>
+          <a href="politica-privacidade.html">Política de Privacidade</a><span>|</span>
+          <a href="../index.html#mapa">Mapa do site</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast hidden" id="toast-notification" aria-live="polite" aria-atomic="true">
+    <div class="toast-content">
+      <span class="toast-icon">check_circle</span>
+      <div class="toast-body">
+        <span class="toast-title" id="toast-title">Aviso</span>
+        <span class="toast-msg" id="toast-msg"></span>
+      </div>
+      <button class="toast-close" aria-label="Fechar notificação"><span class="material-symbols-outlined">close</span></button>
+    </div>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/biblioteca.js"></script>
+</body>
+
+</html>
+
+

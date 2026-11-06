@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos de Uso | SEMED São Miguel dos Campos - AL</title>
+  <meta name="description"
+    content="Termos de Uso do Portal Institucional da Secretaria Municipal de Educação de São Miguel dos Campos - AL. Regras de acesso, responsabilidades, propriedade intelectual, lei aplicável e foro. Resguarda o criador do site e a SEMED São Miguel dos Campos - AL." />
+  <link rel="icon" type="image/png" href="assets/images/brasao.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/termos-de-uso.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= HEADER GOVERNAMENTAL ================= -->
+  <header class="gov-header" id="site-header">
+    <div class="gov-topbar">
+      <div class="container gov-topbar__inner">
+        <div class="gov-topbar__left">
+          <a class="gov-brand" href="index.html" aria-label="Governo Municipal de São Miguel dos Campos">
+            <img class="gov-brand__crest" src="assets/images/brasil_logo.png" alt="" />
+            <span>BRASIL<small>Governo Municipal</small></span>
+          </a>
+          <nav class="gov-links" aria-label="Links institucionais">
+            <a href="lgpd.html">Acesso à Informação</a>
+            <a href="noticias.html">Comunica BR</a>
+            <a href="documentos.html">Órgãos do Governo</a>
+          </nav>
+        </div>
+        <div class="gov-topbar__right">
+          <div class="gov-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          </div>
+          <div class="a11y-wrap">
+            <button class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+              <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+              Acessibilidade
+            </button>
+            <div class="a11y-panel" id="a11y-panel" hidden>
+              <h2>Recursos de acessibilidade</h2>
+              <div class="a11y-row">
+                <span>Tamanho do texto</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="font-decrease" aria-label="Diminuir texto">A−</button>
+                  <button type="button" id="font-reset" aria-label="Texto normal">A</button>
+                  <button type="button" id="font-increase" aria-label="Aumentar texto">A+</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Alto contraste</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="contrast-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Links sublinhados</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="underline-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#mapa">Mapa do site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main__inner">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+
+        <form class="header-search" action="documentos.html" method="get" role="search">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <label class="sr-only" for="site-search">Buscar no portal</label>
+          <input type="search" id="site-search" name="q" placeholder="Buscar escolas, editais, documentos..."
+            autocomplete="off" />
+          <kbd>Ctrl K</kbd>
+        </form>
+
+        <div class="header-actions">
+          <a href="servidor.html" class="btn btn--primary">
+            <span class="material-symbols-outlined icon-sm">account_circle</span>
+            Portal do Servidor
+          </a>
+          <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false"
+            aria-controls="mobile-drawer">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="container main-nav__inner">
+        <a href="index.html" class="main-nav__link">Início</a>
+        <a href="noticias.html" class="main-nav__link">Notícias</a>
+        <a href="/institucional/institucional.html" class="main-nav__link">Institucional</a>
+        </div>
+        <a href="index.html#programas" class="main-nav__link">Educação</a>
+        <a href="index.html#servicos" class="main-nav__link">Estudante</a>
+        <a href="index.html#escola" class="main-nav__link">Escola</a>
+        <a href="documentos.html" class="main-nav__link">Documentos e Editais</a>
+        <a href="lgpd.html" class="main-nav__link">LGPD &amp; Transparência</a>
+        <a href="servidor.html" class="main-nav__link">Servidor</a>
+        <a href="noticias.html#avisos" class="main-nav__link">Avisos</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="mobile-drawer" id="mobile-drawer" hidden>
+    <div class="mobile-drawer__overlay" data-close-drawer></div>
+    <aside class="mobile-drawer__panel" aria-label="Menu de navegação móvel">
+      <div class="mobile-drawer__head">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+        <button class="mobile-drawer__close" id="mobile-menu-close" aria-label="Fechar menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav" aria-label="Menu de navegação móvel">
+        <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+        <a href="noticias.html"><span class="material-symbols-outlined">newspaper</span>Notícias</a>
+                <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span>Institucional</a>
+        <div class="mobile-drawer__dropdown" aria-expanded="false">
+          <button class="mobile-drawer__dropdown-trigger" aria-label="Submódulos Institucionais" type="button">
+            
+          </button>
+          <div class="mobile-drawer__dropdown__menu" style="padding-left:1rem">
+            <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span> Institucional</a>
+            <a href="institucional/quem-somos.html"><span class="material-symbols-outlined">info</span> Quem Somos</a>
+            <a href="institucional/galeria-funcionarios.html"><span class="material-symbols-outlined">people</span> Galeria de Funcionários</a>
+            <a href="institucional/contatos.html"><span class="material-symbols-outlined">contact_page</span> Contatos</a>
+            <a href="institucional/biblioteca.html"><span class="material-symbols-outlined">books</span> Biblioteca Digital</a>
+          </div>
+        </div>
+        <a href="index.html#programas"><span class="material-symbols-outlined">auto_stories</span>Educação</a>
+        <a href="index.html#servicos"><span class="material-symbols-outlined">backpack</span>Estudante</a>
+        <a href="index.html#escola"><span class="material-symbols-outlined">school</span>Escola</a>
+        <a href="documentos.html"><span class="material-symbols-outlined">folder_managed</span>Documentos e Editais</a>
+        <a href="lgpd.html"><span class="material-symbols-outlined">shield_person</span>LGPD &amp; Transparência</a>
+        <a href="servidor.html"><span class="material-symbols-outlined">account_circle</span>Servidor</a>
+        <a href="noticias.html#avisos"><span class="material-symbols-outlined">campaign</span>Avisos</a>
+      </nav>
+      <div class="mobile-drawer__footer">
+        <a href="servidor.html" class="btn btn--primary btn--block">
+          <span class="material-symbols-outlined icon-sm">login</span>
+          Acessar Portal do Servidor
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ================= HERO TERMOS DE USO ================= -->
+    <section class="termos-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação">
+          <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span aria-current="page">Termos de Uso</span>
+        </nav>
+
+        <div class="termos-hero__grid">
+          <div class="termos-hero__copy">
+            <span class="badge badge--blue">
+              <span class="material-symbols-outlined icon-sm">description</span>
+              Portal Institucional SEMED • São Miguel dos Campos - AL
+            </span>
+            <h1>Termos de Uso do Portal</h1>
+            <p>Estes Termos de Uso regulam o acesso e a utilização do portal institucional da Secretaria Municipal de
+              Educação de São Miguel dos Campos - AL (SEMED). Ao navegar neste site, o usuário declara ciência e
+              concordância integral com as regras abaixo, resguardados o criador do site e a SEMED São Miguel dos Campos
+              - AL.</p>
+          </div>
+
+          <div class="termos-hero__side">
+            <div class="termos-card termos-card--stat">
+              <span class="termos-icon"><span class="material-symbols-outlined">gavel</span></span>
+              <div>
+                <small>Âmbito</small>
+                <strong>Usuários do Portal</strong>
+                <span>Visitantes, estudantes, responsáveis e servidores</span>
+              </div>
+            </div>
+            <div class="termos-card termos-card--stat">
+              <span class="termos-icon termos-icon--secondary"><span class="material-symbols-outlined">schedule</span></span>
+              <div>
+                <small>Versão</small>
+                <strong>1.0 — 2026</strong>
+                <span>Última atualização: novembro de 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTEÚDO DOS TERMOS ================= -->
+    <section class="section section--surface termos-conteudo">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="section-kicker">
+              <span class="material-symbols-outlined icon-sm">article</span>
+              Disposições Contratuais
+            </span>
+            <h2 class="section-title">Termos de Uso da SEMED São Miguel dos Campos - AL</h2>
+            <p class="section-subtitle">Leia atentamente antes de utilizar os serviços e conteúdos do portal institucional.</p>
+          </div>
+        </div>
+
+        <div class="termos-grid">
+
+          <article class="termo-card">
+            <div class="termo-card__head">
+              <span class="termo-badge"><span class="material-symbols-outlined">person_add</span></span>
+              <h3>1. Objeto e Aceitação</h3>
+            </div>
+            <p>Estes Termos de Uso têm por objeto estabelecer as condições de acesso e uso do portal institucional da
+              SEMED São Miguel dos Campos - AL, disponível em endereço eletrônico mantido pelo Município de São Miguel
+              dos Campos - AL. Ao acessar ou utilizar qualquer funcionalidade do portal, o usuário manifesta expressa
+              e tácita concordância com todos os dispositivos aqui contidos, bem como com a <a
+                href="politica-privacidade.html">Política de Privacidade</a> e com a <a href="lgpd.html">LGPD &
+              Transparência</a>. Caso não concorde com qualquer cláusula, deverá abster-se de utilizar o portal.</p>
+          </article>
+
+          <article class="termo-card">
+            <div class="termo-card__head">
+              <span class="termo-badge termo-badge--blue"><span class="material-symbols-outlined">public</span></span>
+              <h3>2. Uso Permitido do Portal</h3>
+            </div>
+            <p>O uso do portal destina-se a consultar informações institucionais da educação municipal de São Miguel dos
+              Campos - AL, incluindo notícias, editais, documentos, programas educacionais e serviços oferecidos à
+              comunidade escolar. É permitido o uso para fins pessoais, educacionais e institucionais, vedada qualquer
+              exploração comercial, revenda ou utilização não autorizada dos conteúdos, sob responsabilidade civil e
+              criminal do infrator.</p>
+          </article>
+
+          <article class="termo-card">
+            <div class="termo-card__head">
+              <span class="termo-badge termo-badge--sky"><span class="material-symbols-outlined">block</span></span>
+              <h3>3. Condutas Proibidas</h3>
+            </div>
+            <p>É expressamente proibido ao usuário: (i) publicar ou transmitir conteúdos ilegais, ofensivos,
+              discriminatórios, pornográficos ou que violem direitos de terceiros; (ii) tentar acessar áreas restritas,
+              invadir sistemas ou interferir no funcionamento do portal; (iii) coletar dados de outros usuários sem
+              consentimento; (iv) reproduzir, modificar ou distribuir conteúdos sem citação da fonte e autorização
+              prévia; (v) utilizar robôs, scrapers ou qualquer meio automatizado de extração de dados; e (vi) praticar
+              atos que caracterizem crime contra a honra, a fé pública ou o patrimônio.</p>
+          </article>
+
+          <article class="termo-card">
+            <div class="termo-card__head">
+              <span class="termo-badge termo-badge--neutral"><span class="material-symbols-outlined">copyright</span></span>
+              <h3>4. Propriedade Intelectual</h3>
+            </div>
+            <p>Todos os conteúdos do portal — textos, imagens, logotipos, brasões, documentos, layouts, softwares e
+              bases de dados — são de propriedade exclusiva da SEMED São Miguel dos Campos - AL, do Município de São
+              Miguel dos Campos - AL ou de terceiros por elas autorizados. A reprodução total ou parcial somente é
+              permitida com prévia autorização por escrito e devida atribuição de autoria, ressalvado o uso privado e
+              não comercial previsto em lei.</p>
+          </article>
+
+          <article class="termo-card">
+            <div class="termo-card__head">
+              <span class="termo-badge"><span class="material-symbols-outlined">shield</span></span>
+              <h3>5. Limitação de Responsabilidade da SEMED e do Criador do Site</h3>
+            </div>
+            <p>A SEMED São Miguel dos Campos - AL e o criador/desenvolvedor do site se esforçam para manter as
+              informações atualizadas e precisas, mas não garantem a ausência de erros, omissões ou interrupções
+            temporárias decorrentes de manutenção, falhas técnicas ou fatores alheios à sua vontade. O uso do portal é
+            por conta e risco exclusivo do usuário. Não se responsabilizam por danos diretos ou indiretos decorrentes
+            do uso indevido das informações, de acessos não autorizados a contas de usuários, de falhas de conexão ou
+            de indisponibilidade do servidor.</p>
+          </article>
+
+          <article class="termo-card">
+            <div class="termo-card__head">
+              <span class="termo-badge termo-badge--blue"><span class="material-symbols-outlined">update</span></span>
+              <h3>6. Alterações nos Termos de Uso</h3>
+            </div>
+            <p>A SEMED poderá revisar estes Termos de Uso a qualquer momento, mediante publicação da nova versão neste
+              portal com a respectiva data de atualização. A utilização contínua do portal após tais alterações
+              implicará aceitação tácita dos novos termos. Recomenda-se consulta periódica desta página.</p>
+          </article>
+
+          <article class="termo-card">
+            <div class="termo-card__head">
+              <span class="termo-badge termo-badge--sky"><span class="material-symbols-outlined">location_city</span></span>
+              <h3>7. Lei Aplicável e Foro</h3>
+            </div>
+            <p>Estes termos são regidos pela legislação da República Federativa do Brasil, em especial a Constituição
+              Federal, a Lei de Diretrizes e Bases da Educação (Lei nº 9.394/96), a Lei de Acesso à Informação (Lei
+              nº 12.527/11), o Marco Civil da Internet (Lei nº 12.965/14), a Lei Geral de Proteção de Dados Pessoais
+              (Lei nº 13.709/18) e a legislação municipal aplicável. Para dirimir quaisquer controvérsias decorrentes
+              do uso do portal, eleito o foro da Comarca de São Miguel dos Campos - AL, com renúncia de qualquer outro,
+              por mais privilegiado que seja.</p>
+          </article>
+
+          <article class="termo-card termo-card--contato">
+            <div class="termo-card__head">
+              <span class="termo-badge termo-badge--neutral"><span class="material-symbols-outlined">contact_support</span></span>
+              <h3>8. Contato e Encarregado (DPO)</h3>
+            </div>
+            <p>Dúvidas, sugestões ou reclamações sobre estes Termos de Uso podem ser encaminhadas à Secretaria
+              Municipal de Educação de São Miguel dos Campos - AL.</p>
+            <ul class="termo-contato">
+              <li><span class="material-symbols-outlined">place</span> Rua Deputado José Medeiros, s/n, Centro — São Miguel dos Campos - AL, CEP 57240-000</li>
+              <li><span class="material-symbols-outlined">schedule</span> Segunda a sexta-feira, das 07h30 às 13h30</li>
+              <li><span class="material-symbols-outlined">phone</span> (82) 3271-1234 | Ramal 204 (Ouvidoria)</li>
+              <li><span class="material-symbols-outlined">mail</span> semed@saomigueldoscampos.al.gov.br</li>
+              <li><span class="material-symbols-outlined">alternate_email</span> encarregado.lgpd@semed.saomigueldoscampos.al.gov.br (DPO)</li>
+            </ul>
+            <a href="lgpd.html" class="btn btn--soft btn--block" style="margin-top:1rem;">
+              <span class="material-symbols-outlined icon-sm">shield_person</span> Página LGPD &amp; Transparência
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <img class="brand__crest" src="assets/images/brasao.png" alt="" />
+          <span class="brand__text">
+            <strong>SEMED</strong>
+            <small>Secretaria Municipal de Educação<br />São Miguel dos Campos - AL</small>
+          </span>
+        </a>
+        <p>Promovendo uma educação pública, inclusiva e transformadora, valorizando os profissionais do magistério e
+          ampliando as oportunidades de aprendizagem para crianças, jovens e adultos miguelenses.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+          <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          <a href="#" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3>Ensino &amp; Ofertas</h3>
+        <ul>
+          <li><a href="index.html#programas">Educação Infantil</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental I</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental II</a></li>
+          <li><a href="index.html#programas">Educação de Jovens e Adultos</a></li>
+          <li><a href="index.html#programas">Educação Especial &amp; Inclusão</a></li>
+          <li><a href="index.html#programas">Programa Escola 10</a></li>
+          <li><a href="index.html#programas">IDEB</a></li>
+          <li><a href="index.html#programas">Grêmios Estudantis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Transparência</h3>
+        <ul>
+          <li><a href="lgpd.html">Serviço de Informação ao Cidadão (e-SIC)</a></li>
+          <li><a href="lgpd.html">Portal da Transparência</a></li>
+          <li><a href="lgpd.html">Ouvidoria Municipal</a></li>
+          <li><a href="documentos.html">Editais &amp; Licitações</a></li>
+          <li><a href="documentos.html">Prestação de Contas</a></li>
+          <li><a href="servidor.html">Contracheque</a></li>
+          <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+          <li><a href="documentos.html">Legislação</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__contact">
+        <h3>Sede &amp; Contato</h3>
+        <p>
+          <span class="material-symbols-outlined">place</span>
+          <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL<br />CEP 57240-000</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">schedule</span>
+          <span>Segunda a sexta, das 07h30 às 13h30</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">phone</span>
+          <span>(82) 3271-1234 | (82) 3271-1250</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">mail</span>
+          <span>semed@saomigueldoscampos.al.gov.br</span>
+        </p>
+        <a class="footer__access-btn" href="lgpd.html">
+          <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+          Acessibilidade Presencial e Digital
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__institutional">
+      <div class="container footer__institutional-inner">
+        <a class="footer__semed-logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img src="assets/images/semed_logo_branca.png" alt="SEMED - Secretaria Municipal de Educação de São Miguel dos Campos" />
+        </a>
+        <div class="footer__gov-logos" aria-label="Governos parceiros">
+          <figure class="footer__gov-logo">
+            <img src="assets/images/brasil_logo.png" alt="Bandeira do Brasil" />
+            <figcaption>Governo Federal</figcaption>
+          </figure>
+          <figure class="footer__gov-logo">
+            <img src="assets/images/bandeira-alagoas.png" alt="Bandeira do Estado de Alagoas" />
+            <figcaption>Governo de Alagoas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 SEMED — Secretaria Municipal de Educação de São Miguel dos Campos - AL. Todos os direitos reservados.</p>
+        <nav class="footer__bottom-links" aria-label="Links legais">
+          <a href="#">Portal Fale.BR</a><span>|</span>
+          <a href="termos-de-uso.html" class="is-active" aria-current="page">Termos de Uso</a><span>|</span>
+          <a href="politica-privacidade.html">Política de Privacidade</a><span>|</span>
+          <a href="index.html#mapa">Mapa do site</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast hidden" id="toast-notification" aria-live="polite" aria-atomic="true">
+    <div class="toast-content">
+      <span class="toast-icon">check_circle</span>
+      <div class="toast-body">
+        <span class="toast-title" id="toast-title">Aviso</span>
+        <span class="toast-msg" id="toast-msg"></span>
+      </div>
+      <button class="toast-close" aria-label="Fechar notificação"><span class="material-symbols-outlined">close</span></button>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/termos-de-uso.js"></script>
+</body>
+
+</html>
+
+

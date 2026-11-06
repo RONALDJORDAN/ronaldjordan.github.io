@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LGPD &amp; Transparência | SEMED São Miguel dos Campos - AL</title>
+  <meta name="description" content="Política de privacidade, encarregado de dados (DPO), canais de atendimento ao titular, legislação e documentos da LGPD na SEMED de São Miguel dos Campos - AL." />
+  <link rel="icon" type="image/png" href="assets/images/brasao.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/lgpd.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= HEADER GOVERNAMENTAL ================= -->
+  <header class="gov-header" id="site-header">
+    <div class="gov-topbar">
+      <div class="container gov-topbar__inner">
+        <div class="gov-topbar__left">
+          <a class="gov-brand" href="index.html" aria-label="Governo Municipal de São Miguel dos Campos">
+            <img class="gov-brand__crest" src="assets/images/brasil_logo.png" alt="" />
+            <span>BRASIL<small>Governo Municipal</small></span>
+          </a>
+          <nav class="gov-links" aria-label="Links institucionais">
+            <a href="lgpd.html">Acesso à Informação</a>
+            <a href="noticias.html">Comunica BR</a>
+            <a href="documentos.html">Órgãos do Governo</a>
+          </nav>
+        </div>
+        <div class="gov-topbar__right">
+          <div class="gov-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          </div>
+          <div class="a11y-wrap">
+            <button class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+              <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+              Acessibilidade
+            </button>
+            <div class="a11y-panel" id="a11y-panel" hidden>
+              <h2>Recursos de acessibilidade</h2>
+              <div class="a11y-row">
+                <span>Tamanho do texto</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="font-decrease" aria-label="Diminuir texto">A−</button>
+                  <button type="button" id="font-reset" aria-label="Texto normal">A</button>
+                  <button type="button" id="font-increase" aria-label="Aumentar texto">A+</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Alto contraste</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="contrast-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Links sublinhados</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="underline-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#mapa">Mapa do site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main__inner">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+
+        <form class="header-search" action="documentos.html" method="get" role="search">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <label class="sr-only" for="site-search">Buscar no portal</label>
+          <input type="search" id="site-search" name="q" placeholder="Buscar escolas, editais, documentos..." autocomplete="off" />
+          <kbd>Ctrl K</kbd>
+        </form>
+
+        <div class="header-actions">
+          <a href="servidor.html" class="btn btn--primary">
+            <span class="material-symbols-outlined icon-sm">account_circle</span>
+            Portal do Servidor
+          </a>
+          <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-drawer">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="container main-nav__inner">
+        <a href="index.html" class="main-nav__link">Início</a>
+        <a href="noticias.html" class="main-nav__link">Notícias</a>
+        <a href="institucional/institucional.html" class="main-nav__link">Institucional</a>
+        </div>
+        <a href="index.html#programas" class="main-nav__link">Educação</a>
+        <a href="index.html#servicos" class="main-nav__link">Estudante</a>
+        <a href="index.html#escola" class="main-nav__link">Escola</a>
+        <a href="documentos.html" class="main-nav__link">Documentos e Editais</a>
+        <a href="lgpd.html" class="main-nav__link is-active" aria-current="page">LGPD &amp; Transparência</a>
+        <a href="servidor.html" class="main-nav__link">Servidor</a>
+        <a href="noticias.html#avisos" class="main-nav__link">Avisos</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="mobile-drawer" id="mobile-drawer" hidden>
+    <div class="mobile-drawer__overlay" data-close-drawer></div>
+    <aside class="mobile-drawer__panel" aria-label="Menu de navegação móvel">
+      <div class="mobile-drawer__head">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+        <button class="mobile-drawer__close" id="mobile-menu-close" aria-label="Fechar menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav" aria-label="Menu de navegação móvel">
+        <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+        <a href="noticias.html"><span class="material-symbols-outlined">newspaper</span>Notícias</a>
+                <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span>Institucional</a>
+        <div class="mobile-drawer__dropdown" aria-expanded="false">
+          <button class="mobile-drawer__dropdown-trigger" aria-label="Submódulos Institucionais" type="button">
+            
+          </button>
+          <div class="mobile-drawer__dropdown__menu" style="padding-left:1rem">
+            <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span> Institucional</a>
+            <a href="institucional/quem-somos.html"><span class="material-symbols-outlined">info</span> Quem Somos</a>
+            <a href="institucional/galeria-funcionarios.html"><span class="material-symbols-outlined">people</span> Galeria de Funcionários</a>
+            <a href="institucional/contatos.html"><span class="material-symbols-outlined">contact_page</span> Contatos</a>
+            <a href="institucional/biblioteca.html"><span class="material-symbols-outlined">books</span> Biblioteca Digital</a>
+          </div>
+        </div>
+        <a href="index.html#programas"><span class="material-symbols-outlined">auto_stories</span>Educação</a>
+        <a href="index.html#servicos"><span class="material-symbols-outlined">backpack</span>Estudante</a>
+        <a href="index.html#escola"><span class="material-symbols-outlined">school</span>Escola</a>
+        <a href="documentos.html"><span class="material-symbols-outlined">folder_managed</span>Documentos e Editais</a>
+        <a href="lgpd.html"><span class="material-symbols-outlined">shield_person</span>LGPD &amp; Transparência</a>
+        <a href="servidor.html"><span class="material-symbols-outlined">account_circle</span>Servidor</a>
+        <a href="noticias.html#avisos"><span class="material-symbols-outlined">campaign</span>Avisos</a>
+      </nav>
+      <div class="mobile-drawer__footer">
+        <a href="servidor.html" class="btn btn--primary btn--block">
+          <span class="material-symbols-outlined icon-sm">login</span>
+          Acessar Portal do Servidor
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ================= HERO INSTITUCIONAL ================= -->
+    <section class="lgpd-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação">
+          <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <a href="index.html#transparencia">LGPD &amp; Transparência</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span aria-current="page">Proteção de Dados Pessoais</span>
+        </nav>
+
+        <div class="lgpd-hero__grid">
+          <div class="lgpd-hero__copy">
+            <span class="badge badge--blue">
+              <span class="material-symbols-outlined icon-sm">verified_user</span>
+              Programa Municipal de Conformidade Regulatória • Lei Federal 13.709/2018
+            </span>
+            <h1>Privacidade e Proteção de Dados Pessoais (LGPD)</h1>
+            <p>A Secretaria Municipal de Educação (SEMED) de São Miguel dos Campos - AL assegura a salvaguarda rigorosa, integridade e transparência no tratamento dos dados pessoais de estudantes, responsáveis legais, docentes e servidores da rede pública de ensino.</p>
+          </div>
+
+          <div class="lgpd-hero__side">
+            <div class="lgpd-hero__mini">
+              <span class="lgpd-hero__mini-icon"><span class="material-symbols-outlined">family_restroom</span></span>
+              <div>
+                <small>Prioridade Absoluta</small>
+                <strong>Art. 14 da LGPD</strong>
+                <span>Melhor interesse do menor</span>
+              </div>
+            </div>
+            <div class="lgpd-hero__mini">
+              <span class="lgpd-hero__mini-icon lgpd-hero__mini-icon--secondary"><span class="material-symbols-outlined">shield_person</span></span>
+              <div>
+                <small>Encarregado Designado</small>
+                <strong>DPO Ativo</strong>
+                <span>Portaria Municipal 084/2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NAVEGAÇÃO FIXA DOS MÓDULOS ================= -->
+    <nav class="lgpd-subnav" id="lgpd-subnav" aria-label="Módulos de proteção de dados">
+      <div class="container lgpd-subnav__inner">
+        <a href="#dpo" class="is-active" data-section="dpo"><span class="material-symbols-outlined icon-sm">badge</span> 1. Encarregado (DPO)</a>
+        <a href="#politica" data-section="politica"><span class="material-symbols-outlined icon-sm">policy</span> 2. Política da SEMED</a>
+        <a href="#canais-titular" data-section="canais-titular"><span class="material-symbols-outlined icon-sm">contact_support</span> 3. Canais &amp; Requerimentos</a>
+        <a href="#legislacao" data-section="legislacao"><span class="material-symbols-outlined icon-sm">gavel</span> 4. Legislação</a>
+        <a href="#modelos" data-section="modelos"><span class="material-symbols-outlined icon-sm">folder_open</span> 5. Modelos</a>
+        <a href="#cartilhas" data-section="cartilhas"><span class="material-symbols-outlined icon-sm">menu_book</span> 6. Cartilhas &amp; Manuais</a>
+        <a href="#faq" data-section="faq"><span class="material-symbols-outlined icon-sm">help_center</span> 7. FAQ</a>
+      </div>
+    </nav>
+
+    <div class="lgpd-content container">
+
+      <!-- ================= 1. DPO ================= -->
+      <section class="lgpd-section" id="dpo" aria-labelledby="dpo-title">
+        <div class="lgpd-section__head">
+          <div>
+            <span class="lgpd-kicker">Submódulo 01</span>
+            <h2 id="dpo-title">Encarregado pelo Tratamento de Dados (DPO)</h2>
+          </div>
+          <span class="badge badge--blue"><span class="material-symbols-outlined icon-sm">check_circle</span> Portaria Vigente</span>
+        </div>
+
+        <div class="lgpd-dpo">
+          <article class="lgpd-card lgpd-dpo__main">
+            <div class="lgpd-dpo__identity">
+              <span class="lgpd-dpo__avatar"><span class="material-symbols-outlined">account_balance</span></span>
+              <div>
+                <span class="badge badge--blue">Nomeação Oficial Municipal</span>
+                <h3>Dra. Mariana Albuquerque Cavalcante</h3>
+                <p>Procuradoria Jurídica Municipal / Encarregada de Dados Pessoais (DPO - SEMED)</p>
+                <strong>Portaria de Nomeação Municipal nº 084/2024</strong>
+              </div>
+            </div>
+
+            <div class="lgpd-attributions">
+              <h4><span class="material-symbols-outlined icon-sm">verified</span> Atribuições Regulamentares (Art. 41, §2º da Lei Federal nº 13.709/2018)</h4>
+              <ul>
+                <li>Aceitar reclamações e comunicações dos titulares de dados (pais, alunos e servidores);</li>
+                <li>Prestar esclarecimentos e adotar providências imediatas relativas à segurança da informação;</li>
+                <li>Receber comunicações da Autoridade Nacional de Proteção de Dados (ANPD) e orientar a SEMED;</li>
+                <li>Orientar os funcionários e prestadores de serviços quanto às boas práticas escolares de sigilo.</li>
+              </ul>
+            </div>
+
+            <div class="lgpd-dpo__footer">
+              <div>
+                <small>Atendimento Presencial Oficial</small>
+                <strong>Segunda a Sexta-feira: 07h30 às 13h30</strong>
+                <span>Sede da SEMED • Gabinete de Transparência e Governança</span>
+              </div>
+              <a href="mailto:encarregado.lgpd@semed.saomigueldoscampos.al.gov.br" class="btn btn--primary">
+                <span class="material-symbols-outlined icon-sm">mail</span> Contatar DPO
+              </a>
+            </div>
+          </article>
+
+          <article class="lgpd-card lgpd-dpo__cycle">
+            <div class="lgpd-dpo__cycle-head">
+              <span>Monitoramento de Requisições</span>
+              <span class="badge badge--success">100% no prazo legal</span>
+            </div>
+            <h3>Ciclo de Resposta ao Cidadão</h3>
+            <p>Prazos regulamentares rigorosos assegurados para solicitações feitas por responsáveis ou profissionais da rede municipal.</p>
+
+            <ul class="lgpd-cycle">
+              <li>
+                <span class="lgpd-cycle__time">15d</span>
+                <div><strong>Declaração Completa</strong><small>Prazo máximo regulamentar</small></div>
+                <span class="material-symbols-outlined">alarm</span>
+              </li>
+              <li>
+                <span class="lgpd-cycle__time lgpd-cycle__time--sky">03d</span>
+                <div><strong>Confirmação Simples</strong><small>Atestado de tratamento de dados</small></div>
+                <span class="material-symbols-outlined">done_all</span>
+              </li>
+              <li>
+                <span class="lgpd-cycle__time lgpd-cycle__time--secondary">24h</span>
+                <div><strong>Triagem Inicial</strong><small>Protocolo automático de recepção</small></div>
+                <span class="material-symbols-outlined">inbox</span>
+              </li>
+            </ul>
+
+            <p class="lgpd-dpo__phone">Canal telefônico direto da Ouvidoria Escolar: <strong>(82) 3271-1250 - Ramal 204</strong></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= 2. POLÍTICA ================= -->
+      <section class="lgpd-section" id="politica" aria-labelledby="politica-title">
+        <div class="lgpd-section__head lgpd-section__head--stack">
+          <div>
+            <span class="lgpd-kicker">Submódulo 02</span>
+            <h2 id="politica-title">Política Institucional de Privacidade &amp; Proteção de Dados</h2>
+            <p>Diretrizes aplicadas em todas as 28 unidades escolares municipais, creches e departamentos administrativos da SEMED São Miguel dos Campos.</p>
+          </div>
+        </div>
+
+        <div class="lgpd-policy">
+          <article class="lgpd-card lgpd-policy__card">
+            <span class="lgpd-policy__icon"><span class="material-symbols-outlined">child_care</span></span>
+            <span class="lgpd-policy__kicker">Proteção à Criança e ao Adolescente</span>
+            <h3>Melhor Interesse do Menor</h3>
+            <p>Em estrita conformidade com o Art. 14 da Lei 13.709/2018, todos os dados cadastrais, pedagógicos e de saúde (como laudos de Educação Especial) são tratados com salvaguardas reforçadas de confidencialidade e consentimento específico dos pais ou responsáveis quando exigível.</p>
+            <span class="lgpd-policy__check"><span class="material-symbols-outlined icon-sm">check_circle</span> Sem compartilhamento com fins comerciais</span>
+          </article>
+
+          <article class="lgpd-card lgpd-policy__card">
+            <span class="lgpd-policy__icon lgpd-policy__icon--secondary"><span class="material-symbols-outlined">assignment_turned_in</span></span>
+            <span class="lgpd-policy__kicker lgpd-policy__kicker--secondary">Bases Legais de Atuação</span>
+            <h3>Políticas Públicas e Obrigação Legal</h3>
+            <p>A coleta de matrículas, dados do Censo Escolar (INEP) e acompanhamento do Programa Bolsa Família ampara-se no cumprimento de obrigação legal e regulatória (Art. 7º, II) e execução de políticas públicas educacionais pelo Poder Executivo Municipal (Art. 7º, III).</p>
+            <span class="lgpd-policy__check"><span class="material-symbols-outlined icon-sm">check_circle</span> Integração segura via Gov.br / INEP</span>
+          </article>
+
+          <article class="lgpd-policy__download">
+            <span class="badge badge--blue"><span class="material-symbols-outlined icon-sm">new_releases</span> Versão Atualizada 2026</span>
+            <h3>Documento Integral da Política de Privacidade</h3>
+            <p>Faça o download do documento oficial consolidado contendo os 10 capítulos normativos, tabela de retenção de dados escolares e matriz de riscos da SEMED.</p>
+            <div class="lgpd-policy__download-meta">
+              <span>Formato: PDF Assinado Digitalmente</span>
+              <span>4.2 MB</span>
+            </div>
+            <button type="button" class="btn btn--light btn--block btn-download" data-file="Política Integral de Privacidade SEMED 2026 (PDF 4.2 MB)">
+              <span class="material-symbols-outlined icon-sm">download</span> Baixar Política Integral (PDF)
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= 3. CANAIS E REQUERIMENTOS ================= -->
+      <section class="lgpd-section" id="canais-titular" aria-labelledby="canais-title">
+        <div class="lgpd-section__head lgpd-section__head--stack">
+          <div>
+            <span class="lgpd-kicker">Submódulo 03</span>
+            <h2 id="canais-title">Canais de Comunicação &amp; Exercício de Direitos do Titular</h2>
+            <p>Você tem direito de saber como seus dados ou de seus dependentes são tratados pela Secretaria. Conheça seus direitos fundamentais (Art. 18 da LGPD) e registre sua demanda.</p>
+          </div>
+        </div>
+
+        <div class="lgpd-rights" aria-label="Direitos do titular">
+          <div class="lgpd-right"><span class="lgpd-right__icon"><span class="material-symbols-outlined">visibility</span></span><strong>1. Confirmação</strong><small>Existência de dados</small></div>
+          <div class="lgpd-right"><span class="lgpd-right__icon"><span class="material-symbols-outlined">folder_shared</span></span><strong>2. Acesso</strong><small>Cópia das informações</small></div>
+          <div class="lgpd-right"><span class="lgpd-right__icon"><span class="material-symbols-outlined">edit_note</span></span><strong>3. Correção</strong><small>Dados inexatos ou desatualizados</small></div>
+          <div class="lgpd-right"><span class="lgpd-right__icon"><span class="material-symbols-outlined">cancel</span></span><strong>4. Revogação</strong><small>De consentimento de imagem</small></div>
+          <div class="lgpd-right"><span class="lgpd-right__icon"><span class="material-symbols-outlined">delete_sweep</span></span><strong>5. Eliminação</strong><small>Tratamento excessivo</small></div>
+        </div>
+
+        <div class="lgpd-channels">
+          <div class="lgpd-card lgpd-form-card">
+            <div class="lgpd-form-card__head">
+              <span class="lgpd-form-card__icon"><span class="material-symbols-outlined">contact_mail</span></span>
+              <div>
+                <h3>Requerimento Eletrônico do Titular de Dados</h3>
+                <p>Protocolo com resposta oficial registrada no sistema municipal.</p>
+              </div>
+            </div>
+
+            <form class="lgpd-form" id="lgpd-request-form">
+              <div class="lgpd-form__grid">
+                <div class="field">
+                  <label for="lgpd-name">Nome Completo do Solicitante *</label>
+                  <input class="input" id="lgpd-name" name="nome" type="text" placeholder="Ex.: Maria dos Santos" required />
+                </div>
+                <div class="field">
+                  <label for="lgpd-cpf">CPF do Solicitante *</label>
+                  <input class="input" id="lgpd-cpf" name="cpf" type="text" placeholder="000.000.000-00" inputmode="numeric" required />
+                </div>
+                <div class="field">
+                  <label for="lgpd-profile">Perfil do Titular *</label>
+                  <select class="select" id="lgpd-profile" name="perfil" required>
+                    <option value="">Selecione o vínculo...</option>
+                    <option value="responsavel">Mãe / Pai / Responsável Legal de Aluno</option>
+                    <option value="aluno_maior">Estudante Maior de Idade (EJA / Ensino Médio)</option>
+                    <option value="servidor">Professor / Servidor Público Efetivo ou Contratado</option>
+                    <option value="fornecedor">Colaborador de Empresa Terceirizada</option>
+                    <option value="cidadao">Cidadão Geral</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="lgpd-request-type">Tipo de Solicitação *</label>
+                  <select class="select" id="lgpd-request-type" name="tipo" required>
+                    <option value="">Selecione o direito pretendido...</option>
+                    <option value="confirmacao">Confirmação da existência de tratamento</option>
+                    <option value="acesso">Acesso aos dados arquivados</option>
+                    <option value="correcao">Correção de dados incompletos ou errados</option>
+                    <option value="revogacao">Revogação de termo de uso de imagem</option>
+                    <option value="eliminacao">Eliminação de dados desnecessários</option>
+                    <option value="esclarecimento">Dúvida / Esclarecimento sobre segurança</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="lgpd-email">E-mail para Resposta *</label>
+                  <input class="input" id="lgpd-email" name="email" type="email" placeholder="seu.email@exemplo.com" required />
+                </div>
+                <div class="field">
+                  <label for="lgpd-phone">Telefone / WhatsApp com DDD *</label>
+                  <input class="input" id="lgpd-phone" name="telefone" type="tel" placeholder="(82) 90000-0000" required />
+                </div>
+                <div class="field field--full">
+                  <label for="lgpd-details">Descrição Detalhada do Requerimento *</label>
+                  <textarea class="textarea" id="lgpd-details" name="detalhes" placeholder="Informe a escola municipal em que o aluno está matriculado, ano letivo e os detalhes do dado a ser consultado ou retificado..." required></textarea>
+                </div>
+              </div>
+
+              <div class="checkbox-row">
+                <input type="checkbox" id="lgpd-term" required />
+                <label for="lgpd-term">Declaro que as informações prestadas são verídicas e autorizo a SEMED São Miguel dos Campos a tratar estes dados estritamente para a resposta a este requerimento.</label>
+              </div>
+
+              <div class="lgpd-form__foot">
+                <span>* Campos obrigatórios</span>
+                <button type="submit" class="btn btn--primary">
+                  <span class="material-symbols-outlined icon-sm">send</span> Enviar Requerimento Oficial
+                </button>
+              </div>
+            </form>
+
+            <div class="lgpd-success" id="lgpd-success" hidden role="status">
+              <span class="material-symbols-outlined">task_alt</span>
+              <div>
+                <strong>Requerimento Protocolado com Sucesso!</strong>
+                <p id="lgpd-protocol">Protocolo nº LGPD-2026-08942 gerado. A resposta oficial será enviada em até 15 dias úteis para o e-mail informado.</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="lgpd-channels__side">
+            <div class="lgpd-card lgpd-contacts">
+              <h3>Canais Oficiais Diretos</h3>
+
+              <div class="lgpd-contact">
+                <span class="lgpd-contact__icon"><span class="material-symbols-outlined">alternate_email</span></span>
+                <div>
+                  <small>E-mail Institucional do DPO</small>
+                  <a href="mailto:encarregado.lgpd@semed.saomigueldoscampos.al.gov.br">encarregado.lgpd@semed.saomigueldoscampos.al.gov.br</a>
+                  <span>Comunicações formais e notificações jurídicas</span>
+                </div>
+              </div>
+
+              <div class="lgpd-contact">
+                <span class="lgpd-contact__icon lgpd-contact__icon--blue"><span class="material-symbols-outlined">public</span></span>
+                <div>
+                  <small>Sistema e-SIC Municipal</small>
+                  <strong>Ouvidoria Geral / Acesso à Informação</strong>
+                  <span>Plataforma Fala.BR integrada da Prefeitura de São Miguel dos Campos</span>
+                  <a href="lgpd.html" class="lgpd-contact__link">Acessar portal Fala.BR Miguelense <span class="material-symbols-outlined icon-sm">arrow_outward</span></a>
+                </div>
+              </div>
+
+              <div class="lgpd-contact">
+                <span class="lgpd-contact__icon lgpd-contact__icon--secondary"><span class="material-symbols-outlined">pin_drop</span></span>
+                <div>
+                  <small>Setor de Atendimento Físico</small>
+                  <strong>SEMED - Recepção de Protocolos</strong>
+                  <span>Rua Deputado José Medeiros, s/n, Centro - São Miguel dos Campos - AL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lgpd-secrecy">
+              <span class="material-symbols-outlined">lock</span>
+              <p><strong>Garantia de Sigilo:</strong> O fornecimento de dados a terceiros não autorizados ou sem representação legal documentada é terminantemente proibido.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ================= 4. LEGISLAÇÃO ================= -->
+      <section class="lgpd-section" id="legislacao" aria-labelledby="legislacao-title">
+        <div class="lgpd-section__head">
+          <div>
+            <span class="lgpd-kicker">Submódulo 04</span>
+            <h2 id="legislacao-title">Legislação e Marcos Regulatórios</h2>
+          </div>
+          <a href="documentos.html" class="lgpd-section__link">Ver Diário Oficial Municipal <span class="material-symbols-outlined icon-sm">chevron_right</span></a>
+        </div>
+
+        <div class="lgpd-laws">
+          <article class="lgpd-law">
+            <span class="lgpd-law__icon"><span class="material-symbols-outlined">balance</span></span>
+            <small>Legislação Federal</small>
+            <h3>Lei Federal nº 13.709/2018 (LGPD)</h3>
+            <p>Dispõe sobre o tratamento de dados pessoais, inclusive nos meios digitais, por pessoa natural ou pessoa jurídica de direito público.</p>
+            <div class="lgpd-law__foot">
+              <span>Planalto Federal</span>
+              <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Ler Íntegra <span class="material-symbols-outlined icon-sm">open_in_new</span></a>
+            </div>
+          </article>
+
+          <article class="lgpd-law">
+            <span class="lgpd-law__icon lgpd-law__icon--secondary"><span class="material-symbols-outlined">location_city</span></span>
+            <small>Âmbito Municipal</small>
+            <h3>Decreto Municipal nº 1.420/2023</h3>
+            <p>Regulamenta a aplicação da LGPD na administração pública direta e indireta do Município de São Miguel dos Campos - AL.</p>
+            <div class="lgpd-law__foot">
+              <span>DOM São Miguel</span>
+              <button type="button" class="btn-download" data-file="Decreto Municipal 1.420/2023 (PDF)">Baixar PDF <span class="material-symbols-outlined icon-sm">download</span></button>
+            </div>
+          </article>
+
+          <article class="lgpd-law">
+            <span class="lgpd-law__icon lgpd-law__icon--neutral"><span class="material-symbols-outlined">wifi_protected_setup</span></span>
+            <small>Direito Digital</small>
+            <h3>Lei Federal nº 12.965/2014</h3>
+            <p>Marco Civil da Internet: Estabelece princípios, garantias, direitos e deveres para o uso da rede e guarda de registros no Brasil.</p>
+            <div class="lgpd-law__foot">
+              <span>Legislação Federal</span>
+              <a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm" target="_blank" rel="noopener noreferrer">Consultar <span class="material-symbols-outlined icon-sm">open_in_new</span></a>
+            </div>
+          </article>
+
+          <article class="lgpd-law">
+            <span class="lgpd-law__icon lgpd-law__icon--blue"><span class="material-symbols-outlined">school</span></span>
+            <small>Normativa Escolar</small>
+            <h3>Resolução SEMED / CME nº 05/2024</h3>
+            <p>Diretrizes de sigilo dos prontuários de matrículas, fotos e registros acadêmicos nas escolas públicas de São Miguel dos Campos.</p>
+            <div class="lgpd-law__foot">
+              <span>Conselho Municipal</span>
+              <button type="button" class="btn-download" data-file="Resolução SEMED/CME 05/2024 (PDF)">Baixar Resolução <span class="material-symbols-outlined icon-sm">download</span></button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= 5. MODELOS ================= -->
+      <section class="lgpd-section" id="modelos" aria-labelledby="modelos-title">
+        <div class="lgpd-section__head lgpd-section__head--stack">
+          <div>
+            <span class="lgpd-kicker">Submódulo 05</span>
+            <h2 id="modelos-title">Modelos de Documentos &amp; Formulários Oficiais</h2>
+            <p>Arquivos padronizados para download destinados a gestores escolares, docentes, prestadores de serviços e famílias miguelenses.</p>
+          </div>
+        </div>
+
+        <div class="lgpd-models">
+          <div class="lgpd-model">
+            <div class="lgpd-model__main">
+              <span class="lgpd-model__icon"><span class="material-symbols-outlined">photo_camera_front</span></span>
+              <div>
+                <div class="lgpd-model__title">
+                  <h3>Termo de Consentimento para Uso de Imagem e Voz do Estudante</h3>
+                  <span class="badge badge--blue">Obrigatório</span>
+                </div>
+                <p>Utilizado no ato da matrícula e renovação escolar para registro audiovisual em eventos pedagógicos, desfiles cívicos e projetos culturais.</p>
+              </div>
+            </div>
+            <div class="lgpd-model__actions">
+              <button type="button" class="lgpd-file-btn btn-download" data-file="Termo de Consentimento de Imagem (PDF 340 KB)">
+                <span class="material-symbols-outlined icon-sm">picture_as_pdf</span> PDF (340 KB)
+              </button>
+              <button type="button" class="lgpd-file-btn lgpd-file-btn--docx btn-download" data-file="Termo de Consentimento de Imagem (DOCX editável)">
+                <span class="material-symbols-outlined icon-sm">description</span> DOCX Editável
+              </button>
+            </div>
+          </div>
+
+          <div class="lgpd-model">
+            <div class="lgpd-model__main">
+              <span class="lgpd-model__icon"><span class="material-symbols-outlined">drafts</span></span>
+              <div>
+                <div class="lgpd-model__title">
+                  <h3>Requerimento Físico de Acesso e Retificação de Dados</h3>
+                  <span class="badge badge--neutral">Cidadão</span>
+                </div>
+                <p>Formulário para preenchimento manual e protocolo físico nas secretarias das escolas ou na recepção geral da SEMED.</p>
+              </div>
+            </div>
+            <div class="lgpd-model__actions">
+              <button type="button" class="lgpd-file-btn btn-download" data-file="Requerimento de Acesso e Retificação (PDF 210 KB)">
+                <span class="material-symbols-outlined icon-sm">picture_as_pdf</span> PDF (210 KB)
+              </button>
+              <button type="button" class="lgpd-file-btn lgpd-file-btn--docx btn-download" data-file="Requerimento de Acesso e Retificação (DOCX editável)">
+                <span class="material-symbols-outlined icon-sm">description</span> DOCX Editável
+              </button>
+            </div>
+          </div>
+
+          <div class="lgpd-model">
+            <div class="lgpd-model__main">
+              <span class="lgpd-model__icon"><span class="material-symbols-outlined">handshake</span></span>
+              <div>
+                <div class="lgpd-model__title">
+                  <h3>Termo de Confidencialidade e Sigilo para Prestadores de Serviços</h3>
+                  <span class="badge badge--sky">Contratos</span>
+                </div>
+                <p>Anexo contratual obrigatório para empresas de transporte escolar, alimentação, tecnologia da informação e manutenção predial.</p>
+              </div>
+            </div>
+            <div class="lgpd-model__actions">
+              <button type="button" class="lgpd-file-btn btn-download" data-file="Termo de Confidencialidade para Prestadores (PDF 480 KB)">
+                <span class="material-symbols-outlined icon-sm">picture_as_pdf</span> PDF (480 KB)
+              </button>
+              <button type="button" class="lgpd-file-btn lgpd-file-btn--docx btn-download" data-file="Termo de Confidencialidade para Prestadores (DOCX editável)">
+                <span class="material-symbols-outlined icon-sm">description</span> DOCX Editável
+              </button>
+            </div>
+          </div>
+
+          <div class="lgpd-model">
+            <div class="lgpd-model__main">
+              <span class="lgpd-model__icon"><span class="material-symbols-outlined">analytics</span></span>
+              <div>
+                <div class="lgpd-model__title">
+                  <h3>Modelo de Relatório de Impacto à Proteção de Dados Pessoais (RIPD)</h3>
+                  <span class="badge badge--neutral">Gestão Interna</span>
+                </div>
+                <p>Template oficial para avaliação preliminar de risco em novos sistemas de software ou projetos pedagógicos que processem biometria ou dados sensíveis.</p>
+              </div>
+            </div>
+            <div class="lgpd-model__actions">
+              <button type="button" class="lgpd-file-btn btn-download" data-file="Relatório de Impacto à Proteção de Dados (PDF 890 KB)">
+                <span class="material-symbols-outlined icon-sm">picture_as_pdf</span> PDF (890 KB)
+              </button>
+              <button type="button" class="lgpd-file-btn lgpd-file-btn--docx btn-download" data-file="Relatório de Impacto à Proteção de Dados (DOCX editável)">
+                <span class="material-symbols-outlined icon-sm">description</span> DOCX Editável
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 6. CARTILHAS ================= -->
+      <section class="lgpd-section" id="cartilhas" aria-labelledby="cartilhas-title">
+        <div class="lgpd-section__head lgpd-section__head--stack">
+          <div>
+            <span class="lgpd-kicker">Submódulo 06</span>
+            <h2 id="cartilhas-title">Cartilhas, Manuais e Guias de Boas Práticas</h2>
+            <p>Materiais didáticos produzidos pela SEMED São Miguel dos Campos para promover a cultura de privacidade e segurança digital no cotidiano escolar.</p>
+          </div>
+        </div>
+
+        <div class="lgpd-guides">
+          <article class="lgpd-guide">
+            <div class="lgpd-guide__cover lgpd-guide__cover--primary">
+              <div class="lgpd-guide__cover-top">
+                <span class="material-symbols-outlined">admin_panel_settings</span>
+                <span>Para Diretores e Coordenadores</span>
+              </div>
+              <small>Manual 01 / SEMED</small>
+              <h3>Guia Prático da LGPD para Gestores Escolares</h3>
+            </div>
+            <div class="lgpd-guide__body">
+              <p>Instruções passo a passo sobre guarda física de diários de classe, uso seguro de grupos de WhatsApp institucionais e descarte correto de avaliações antigas.</p>
+              <div class="lgpd-guide__meta"><span>Edição 2025/2026</span><span>36 Páginas</span></div>
+              <button type="button" class="btn btn--soft btn--block btn-download" data-file="Guia Prático da LGPD para Gestores Escolares (PDF)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar Guia (Alta Resolução)
+              </button>
+            </div>
+          </article>
+
+          <article class="lgpd-guide">
+            <div class="lgpd-guide__cover lgpd-guide__cover--secondary">
+              <div class="lgpd-guide__cover-top">
+                <span class="material-symbols-outlined">groups</span>
+                <span>Famílias &amp; Alunos</span>
+              </div>
+              <small>Cartilha 02 / Cidadã</small>
+              <h3>Cartilha da Privacidade para Pais e Estudantes Miguelenses</h3>
+            </div>
+            <div class="lgpd-guide__body">
+              <p>Linguagem ilustrada e acessível orientando sobre os direitos dos estudantes, cuidados com exposição em redes sociais e segurança no ambiente digital.</p>
+              <div class="lgpd-guide__meta"><span>Edição Colorida Ilustrada</span><span>20 Páginas</span></div>
+              <button type="button" class="btn btn--soft btn--block btn-download" data-file="Cartilha da Privacidade para Pais e Estudantes (PDF)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar Cartilha Ilustrada
+              </button>
+            </div>
+          </article>
+
+          <article class="lgpd-guide">
+            <div class="lgpd-guide__cover lgpd-guide__cover--dark">
+              <div class="lgpd-guide__cover-top">
+                <span class="material-symbols-outlined">shield</span>
+                <span>Corpo Docente &amp; Apoio</span>
+              </div>
+              <small>Manual 03 / Técnico</small>
+              <h3>Boas Práticas no Tratamento de Dados de Crianças</h3>
+            </div>
+            <div class="lgpd-guide__body">
+              <p>Protocolos de segurança da informação em laboratórios de informática, plataformas de diário eletrônico escolar e proteção a dados médicos de alunos especiais.</p>
+              <div class="lgpd-guide__meta"><span>Diretriz Pedagógica</span><span>28 Páginas</span></div>
+              <button type="button" class="btn btn--soft btn--block btn-download" data-file="Manual Técnico de Boas Práticas em Dados de Crianças (PDF)">
+                <span class="material-symbols-outlined icon-sm">download</span> Baixar Manual Técnico
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= 7. FAQ ================= -->
+      <section class="lgpd-section" id="faq" aria-labelledby="faq-title">
+        <div class="lgpd-section__head lgpd-section__head--stack">
+          <div>
+            <span class="lgpd-kicker">Submódulo 07</span>
+            <h2 id="faq-title">Perguntas Frequentes sobre Dados na Educação (FAQ)</h2>
+            <p>Tire suas dúvidas sobre o tratamento de dados de estudantes, boletins, fotos e matrículas na rede municipal de ensino.</p>
+          </div>
+        </div>
+
+        <div class="lgpd-faq" id="lgpd-faq">
+          <div class="lgpd-faq__item">
+            <h3>
+              <button type="button" class="lgpd-faq__question" aria-expanded="false" aria-controls="faq-1">
+                <span>1. A escola pública municipal precisa de autorização para coletar os dados do meu filho no ato da matrícula?</span>
+                <span class="lgpd-faq__icon"><span class="material-symbols-outlined">expand_more</span></span>
+              </button>
+            </h3>
+            <div class="lgpd-faq__answer" id="faq-1" hidden>
+              <p><strong>Não para dados cadastrais básicos.</strong> A coleta de dados essenciais (nome, certidão de nascimento, CPF, endereço e filiação) ampara-se no cumprimento de obrigação legal e execução de políticas públicas pelo Município (Art. 7º, II e III da LGPD, em harmonia com a Lei de Diretrizes e Bases da Educação - LDB). O consentimento específico dos pais só é exigido para finalidades não essenciais, tais como publicação de fotos do aluno em canais institucionais ou redes sociais.</p>
+            </div>
+          </div>
+
+          <div class="lgpd-faq__item">
+            <h3>
+              <button type="button" class="lgpd-faq__question" aria-expanded="false" aria-controls="faq-2">
+                <span>2. Como são protegidas as fotos e vídeos tirados em eventos pedagógicos escolares?</span>
+                <span class="lgpd-faq__icon"><span class="material-symbols-outlined">expand_more</span></span>
+              </button>
+            </h3>
+            <div class="lgpd-faq__answer" id="faq-2" hidden>
+              <p>A divulgação de imagens de alunos nas redes sociais oficiais da SEMED ou da escola segue rígido controle pedagógico e <strong>depende de autorização formal prévia</strong> (Termo de Consentimento de Imagem assinado pelo responsável). É proibida a marcação individual do nome completo das crianças nas fotos e qualquer uso que possa expor a intimidade ou segurança física do estudante miguelense.</p>
+            </div>
+          </div>
+
+          <div class="lgpd-faq__item">
+            <h3>
+              <button type="button" class="lgpd-faq__question" aria-expanded="false" aria-controls="faq-3">
+                <span>3. Quem tem acesso às notas, boletins e dados pedagógicos do estudante?</span>
+                <span class="lgpd-faq__icon"><span class="material-symbols-outlined">expand_more</span></span>
+              </button>
+            </h3>
+            <div class="lgpd-faq__answer" id="faq-3" hidden>
+              <p>Apenas os próprios estudantes (quando capazes), seus pais ou responsáveis legais legalmente constituídos, e a equipe pedagógica autorizada daquela unidade escolar. Nenhuma nota ou avaliação individual é divulgada publicamente ou fornecida a terceiros sem ordem judicial fundamentada ou estrita autorização legal.</p>
+            </div>
+          </div>
+
+          <div class="lgpd-faq__item">
+            <h3>
+              <button type="button" class="lgpd-faq__question" aria-expanded="false" aria-controls="faq-4">
+                <span>4. Como posso solicitar a retificação de dados incorretos no cadastro escolar?</span>
+                <span class="lgpd-faq__icon"><span class="material-symbols-outlined">expand_more</span></span>
+              </button>
+            </h3>
+            <div class="lgpd-faq__answer" id="faq-4" hidden>
+              <p>O responsável legal pode comparecer diretamente à secretaria da escola onde o estudante estuda portando os documentos comprobatórios atualizados (comprovante de residência, certidão ou decisão de guarda) ou preencher o nosso <a href="#canais-titular">Formulário Eletrônico do Titular</a> nesta página. A retificação nos sistemas municipais é realizada em até 48 horas úteis.</p>
+            </div>
+          </div>
+
+          <div class="lgpd-faq__item">
+            <h3>
+              <button type="button" class="lgpd-faq__question" aria-expanded="false" aria-controls="faq-5">
+                <span>5. O que fazer se suspeitar de vazamento ou uso indevido de informações escolares?</span>
+                <span class="lgpd-faq__icon"><span class="material-symbols-outlined">expand_more</span></span>
+              </button>
+            </h3>
+            <div class="lgpd-faq__answer" id="faq-5" hidden>
+              <p>Notifique imediatamente o Encarregado de Dados da SEMED (DPO) através do e-mail <strong>encarregado.lgpd@semed.saomigueldoscampos.al.gov.br</strong> ou pelo telefone <strong>(82) 3271-1250</strong>. Todo incidente de segurança é averiguado com rigor pelo Comitê de Segurança da Informação do Município, com abertura de processo apuratório e comunicação formal aos responsáveis afetados e à ANPD se constatado risco aos direitos fundamentais.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FAIXA INSTITUCIONAL ================= -->
+      <section class="lgpd-strip">
+        <div class="lgpd-strip__info">
+          <span class="lgpd-strip__icon"><span class="material-symbols-outlined">security</span></span>
+          <div>
+            <strong>Compromisso Ético e Governança Pública</strong>
+            <span>A SEMED São Miguel dos Campos segue o Código de Integridade da ANPD e da Rede Nacional de Governo Digital.</span>
+          </div>
+        </div>
+        <div class="lgpd-strip__actions">
+          <a href="#dpo" class="btn btn--secondary">Subir ao Topo</a>
+          <a href="mailto:encarregado.lgpd@semed.saomigueldoscampos.al.gov.br" class="btn btn--primary">
+            <span class="material-symbols-outlined icon-sm">help</span> Falar com o DPO
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <img class="brand__crest" src="assets/images/brasao.png" alt="" />
+          <span class="brand__text">
+            <strong>SEMED</strong>
+            <small>Secretaria Municipal de Educação<br />São Miguel dos Campos - AL</small>
+          </span>
+        </a>
+        <p>Promovendo uma educação pública, inclusiva e transformadora, valorizando os profissionais do magistério e ampliando as oportunidades de aprendizagem para crianças, jovens e adultos miguelenses.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+          <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          <a href="#" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3>Ensino &amp; Ofertas</h3>
+        <ul>
+          <li><a href="index.html#programas">Educação Infantil</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental I</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental II</a></li>
+          <li><a href="index.html#programas">Educação de Jovens e Adultos</a></li>
+          <li><a href="index.html#programas">Educação Especial &amp; Inclusão</a></li>
+          <li><a href="index.html#programas">Programa Escola 10</a></li>
+          <li><a href="index.html#programas">IDEB</a></li>
+          <li><a href="index.html#programas">Grêmios Estudantis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Transparência</h3>
+        <ul>
+          <li><a href="lgpd.html">Serviço de Informação ao Cidadão (e-SIC)</a></li>
+          <li><a href="lgpd.html">Portal da Transparência</a></li>
+          <li><a href="lgpd.html">Ouvidoria Municipal</a></li>
+          <li><a href="documentos.html">Editais &amp; Licitações</a></li>
+          <li><a href="documentos.html">Prestação de Contas</a></li>
+          <li><a href="servidor.html">Contracheque</a></li>
+          <li><a href="lgpd.html">LGPD &amp; Privacidade</a></li>
+          <li><a href="documentos.html">Legislação</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__contact">
+        <h3>Sede &amp; Contato</h3>
+        <p>
+          <span class="material-symbols-outlined">place</span>
+          <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL<br />CEP 57240-000</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">schedule</span>
+          <span>Segunda a sexta, das 07h30 às 13h30</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">phone</span>
+          <span>(82) 3271-1234 | (82) 3271-1250</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">mail</span>
+          <span>semed@saomigueldoscampos.al.gov.br</span>
+        </p>
+        <a class="footer__access-btn" href="lgpd.html">
+          <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+          Acessibilidade Presencial e Digital
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__institutional">
+      <div class="container footer__institutional-inner">
+        <a class="footer__semed-logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img src="assets/images/semed_logo_branca.png" alt="SEMED - Secretaria Municipal de Educação de São Miguel dos Campos" />
+        </a>
+        <div class="footer__gov-logos" aria-label="Governos parceiros">
+          <figure class="footer__gov-logo">
+            <img src="assets/images/brasil_logo.png" alt="Bandeira do Brasil" />
+            <figcaption>Governo Federal</figcaption>
+          </figure>
+          <figure class="footer__gov-logo">
+            <img src="assets/images/bandeira-alagoas.png" alt="Bandeira do Estado de Alagoas" />
+            <figcaption>Governo de Alagoas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 SEMED — Secretaria Municipal de Educação de São Miguel dos Campos - AL. Todos os direitos reservados.</p>
+        <nav class="footer__bottom-links" aria-label="Links legais">
+          <a href="#">Portal Fale.BR</a><span>|</span>
+          <a href="termos-de-uso.html">Termos de Uso</a><span>|</span>
+          <a href="politica-privacidade.html">Política de Privacidade</a><span>|</span>
+          <a href="index.html#mapa">Mapa do site</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast hidden" id="toast-notification" aria-live="polite" aria-atomic="true">
+    <div class="toast-content">
+      <span class="toast-icon">check_circle</span>
+      <div class="toast-body">
+        <span class="toast-title" id="toast-title">Aviso</span>
+        <span class="toast-msg" id="toast-msg"></span>
+      </div>
+      <button class="toast-close" aria-label="Fechar notificação"><span class="material-symbols-outlined">close</span></button>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/lgpd.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Página de erro — não indexar
+Disallow: /404.html

@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícias | SEMED São Miguel dos Campos - AL</title>
+  <meta name="description" content="Acompanhe comunicados, ações pedagógicas, investimentos em infraestrutura e conquistas da educação de São Miguel dos Campos - AL." />
+  <link rel="icon" type="image/png" href="assets/images/brasao.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/noticias.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= HEADER GOVERNAMENTAL ================= -->
+  <header class="gov-header" id="site-header">
+    <div class="gov-topbar">
+      <div class="container gov-topbar__inner">
+        <div class="gov-topbar__left">
+          <a class="gov-brand" href="index.html" aria-label="Governo Municipal de São Miguel dos Campos">
+            <img class="gov-brand__crest" src="assets/images/brasil_logo.png" alt="" />
+            <span>BRASIL<small>Governo Municipal</small></span>
+          </a>
+          <nav class="gov-links" aria-label="Links institucionais">
+            <a href="lgpd.html">Acesso à Informação</a>
+            <a href="noticias.html">Comunica BR</a>
+            <a href="documentos.html">Órgãos do Governo</a>
+          </nav>
+        </div>
+        <div class="gov-topbar__right">
+          <div class="gov-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          </div>
+          <div class="a11y-wrap">
+            <button class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+              <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+              Acessibilidade
+            </button>
+            <div class="a11y-panel" id="a11y-panel" hidden>
+              <h2>Recursos de acessibilidade</h2>
+              <div class="a11y-row">
+                <span>Tamanho do texto</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="font-decrease" aria-label="Diminuir texto">A−</button>
+                  <button type="button" id="font-reset" aria-label="Texto normal">A</button>
+                  <button type="button" id="font-increase" aria-label="Aumentar texto">A+</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Alto contraste</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="contrast-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Links sublinhados</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="underline-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#mapa">Mapa do site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main__inner">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+
+        <form class="header-search" action="documentos.html" method="get" role="search">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <label class="sr-only" for="site-search">Buscar no portal</label>
+          <input type="search" id="site-search" name="q" placeholder="Buscar escolas, editais, documentos..." autocomplete="off" />
+          <kbd>Ctrl K</kbd>
+        </form>
+
+        <div class="header-actions">
+          <a href="servidor.html" class="btn btn--primary">
+            <span class="material-symbols-outlined icon-sm">account_circle</span>
+            Portal do Servidor
+          </a>
+          <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-drawer">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="container main-nav__inner">
+        <a href="index.html" class="main-nav__link">Início</a>
+        <a href="noticias.html" class="main-nav__link is-active" aria-current="page">Notícias</a>
+        <a href="institucional/institucional.html" class="main-nav__link">Institucional</a>
+        </div>
+        <a href="index.html#programas" class="main-nav__link">Educação</a>
+        <a href="index.html#servicos" class="main-nav__link">Estudante</a>
+        <a href="index.html#escola" class="main-nav__link">Escola</a>
+        <a href="documentos.html" class="main-nav__link">Documentos e Editais</a>
+        <a href="lgpd.html" class="main-nav__link">LGPD &amp; Transparência</a>
+        <a href="servidor.html" class="main-nav__link">Servidor</a>
+        <a href="noticias.html#avisos" class="main-nav__link">Avisos</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="mobile-drawer" id="mobile-drawer" hidden>
+    <div class="mobile-drawer__overlay" data-close-drawer></div>
+    <aside class="mobile-drawer__panel" aria-label="Menu de navegação móvel">
+      <div class="mobile-drawer__head">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+        <button class="mobile-drawer__close" id="mobile-menu-close" aria-label="Fechar menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav" aria-label="Menu de navegação móvel">
+        <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+        <a href="noticias.html"><span class="material-symbols-outlined">newspaper</span>Notícias</a>
+                <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span>Institucional</a>
+        <div class="mobile-drawer__dropdown" aria-expanded="false">
+          <button class="mobile-drawer__dropdown-trigger" aria-label="Submódulos Institucionais" type="button">
+            
+          </button>
+          <div class="mobile-drawer__dropdown__menu" style="padding-left:1rem">
+            <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span> Institucional</a>
+            <a href="institucional/quem-somos.html"><span class="material-symbols-outlined">info</span> Quem Somos</a>
+            <a href="institucional/galeria-funcionarios.html"><span class="material-symbols-outlined">people</span> Galeria de Funcionários</a>
+            <a href="institucional/contatos.html"><span class="material-symbols-outlined">contact_page</span> Contatos</a>
+            <a href="institucional/biblioteca.html"><span class="material-symbols-outlined">books</span> Biblioteca Digital</a>
+          </div>
+        </div>
+        <a href="index.html#programas"><span class="material-symbols-outlined">auto_stories</span>Educação</a>
+        <a href="index.html#servicos"><span class="material-symbols-outlined">backpack</span>Estudante</a>
+        <a href="index.html#escola"><span class="material-symbols-outlined">school</span>Escola</a>
+        <a href="documentos.html"><span class="material-symbols-outlined">folder_managed</span>Documentos e Editais</a>
+        <a href="lgpd.html"><span class="material-symbols-outlined">shield_person</span>LGPD &amp; Transparência</a>
+        <a href="servidor.html"><span class="material-symbols-outlined">account_circle</span>Servidor</a>
+        <a href="noticias.html#avisos"><span class="material-symbols-outlined">campaign</span>Avisos</a>
+      </nav>
+      <div class="mobile-drawer__footer">
+        <a href="servidor.html" class="btn btn--primary btn--block">
+          <span class="material-symbols-outlined icon-sm">login</span>
+          Acessar Portal do Servidor
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ================= CABEÇALHO DA PÁGINA ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação">
+          <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span aria-current="page">Notícias da Educação</span>
+        </nav>
+
+        <div class="page-hero__grid">
+          <div class="page-hero__copy">
+            <span class="page-hero__eyebrow">
+              <span class="dot dot--primary"></span>
+              Assessoria de Comunicação e Transparência
+            </span>
+            <h1>Notícias da Rede Municipal de Ensino</h1>
+            <p>Acompanhe comunicados, ações pedagógicas, investimentos em infraestrutura e conquistas da educação de São Miguel dos Campos - AL.</p>
+          </div>
+
+          <div class="page-hero__tools">
+            <div class="search-field search-field--wide">
+              <span class="material-symbols-outlined">search</span>
+              <label class="sr-only" for="news-search">Buscar notícias</label>
+              <input type="search" id="news-search" placeholder="Buscar por palavras-chave ou edital..." autocomplete="off" />
+            </div>
+            <div class="sort-field">
+              <span class="material-symbols-outlined">sort</span>
+              <label class="sr-only" for="news-sort">Ordenar notícias</label>
+              <select id="news-sort">
+                <option value="recentes">Mais recentes</option>
+                <option value="antigas">Mais antigas</option>
+                <option value="relevantes">Mais acessadas</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-bar" id="category-bar" role="tablist" aria-label="Filtrar por categoria">
+          <button class="category-pill is-active" data-category="todas" role="tab" aria-selected="true">
+            Todas <span class="category-pill__count">48</span>
+          </button>
+          <button class="category-pill" data-category="programas" role="tab" aria-selected="false">
+            Programas Pedagógicos <span class="category-pill__count">14</span>
+          </button>
+          <button class="category-pill" data-category="infraestrutura" role="tab" aria-selected="false">
+            Infraestrutura &amp; Obras <span class="category-pill__count">9</span>
+          </button>
+          <button class="category-pill" data-category="formacao" role="tab" aria-selected="false">
+            Formação de Professores <span class="category-pill__count">11</span>
+          </button>
+          <button class="category-pill" data-category="editais" role="tab" aria-selected="false">
+            Editais &amp; Chamadas <span class="category-pill__count">8</span>
+          </button>
+          <button class="category-pill" data-category="eventos" role="tab" aria-selected="false">
+            Eventos &amp; Esportes <span class="category-pill__count">6</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTEÚDO ================= -->
+    <section class="section section--surface news-page">
+      <div class="container">
+
+        <!-- Carrossel de destaques -->
+        <div class="news-carousel" id="news-carousel" aria-roledescription="carrossel" aria-label="Notícias em destaque">
+          <div class="news-carousel__progress"><span id="news-progress"></span></div>
+          <div class="news-carousel__slides" id="news-slides">
+            <article class="news-carousel__slide is-active" data-slide="0">
+              <div class="news-carousel__media">
+                <img src="assets/images/noticia-maratona.jpg" alt="Estudantes da rede municipal com medalhas de honra ao mérito" />
+                <span class="badge badge--warm news-carousel__tag"><span class="material-symbols-outlined icon-sm">stars</span> Destaque</span>
+              </div>
+              <div class="news-carousel__body">
+                <div class="news-carousel__meta">
+                  <span class="news-carousel__source"><span class="material-symbols-outlined icon-sm">domain</span> SEMED Comunicação</span>
+                  <span class="meta-dot">•</span>
+                  <time datetime="2026-10-28"><span class="material-symbols-outlined icon-sm">calendar_today</span> 28 de outubro de 2026</time>
+                  <span class="meta-dot">•</span>
+                  <span class="news-carousel__views"><span class="material-symbols-outlined icon-sm">visibility</span> 1.420 leituras</span>
+                </div>
+                <h2>Rede Municipal de São Miguel dos Campos alcança resultado histórico na Maratona de Raciocínio Lógico e Avaliações Diagnósticas</h2>
+                <p>Com avanço expressivo de 34% nos índices de proficiência de matemática e língua portuguesa no Ensino Fundamental, estudantes de 22 escolas municipais superam metas projetadas pelo IDEB.</p>
+                <div class="news-carousel__foot">
+                  <a href="#" class="btn btn--primary">
+                    Ler notícia completa <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+                  </a>
+                  <span class="news-carousel__counter">Notícia 1 de 3</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-carousel__slide" data-slide="1">
+              <div class="news-carousel__media">
+                <img src="assets/images/noticia-laboratorios.jpg" alt="Entrega de laboratórios móveis de informática em escola do campo" />
+                <span class="badge badge--sky news-carousel__tag"><span class="material-symbols-outlined icon-sm">devices</span> Infraestrutura</span>
+              </div>
+              <div class="news-carousel__body">
+                <div class="news-carousel__meta">
+                  <span class="news-carousel__source"><span class="material-symbols-outlined icon-sm">domain</span> SEMED Comunicação</span>
+                  <span class="meta-dot">•</span>
+                  <time datetime="2026-10-25"><span class="material-symbols-outlined icon-sm">calendar_today</span> 25 de outubro de 2026</time>
+                  <span class="meta-dot">•</span>
+                  <span class="news-carousel__views"><span class="material-symbols-outlined icon-sm">visibility</span> 1.190 leituras</span>
+                </div>
+                <h2>SEMED entrega kits escolares e novos laboratórios móveis de informática em escolas do campo</h2>
+                <p>Mais de 2.000 alunos dos povoados e áreas rurais recebem novos equipamentos com conexão via satélite, garantindo equidade de oportunidades de aprendizado digital na rede.</p>
+                <div class="news-carousel__foot">
+                  <a href="#" class="btn btn--primary">
+                    Ler notícia completa <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+                  </a>
+                  <span class="news-carousel__counter">Notícia 2 de 3</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-carousel__slide" data-slide="2">
+              <div class="news-carousel__media">
+                <img src="assets/images/hero-noticia-jornada.jpg" alt="Auditório municipal com professores na Jornada Pedagógica" />
+                <span class="badge badge--blue news-carousel__tag"><span class="material-symbols-outlined icon-sm">school</span> Formação Docente</span>
+              </div>
+              <div class="news-carousel__body">
+                <div class="news-carousel__meta">
+                  <span class="news-carousel__source"><span class="material-symbols-outlined icon-sm">domain</span> SEMED Comunicação</span>
+                  <span class="meta-dot">•</span>
+                  <time datetime="2026-10-24"><span class="material-symbols-outlined icon-sm">calendar_today</span> 24 de outubro de 2026</time>
+                  <span class="meta-dot">•</span>
+                  <span class="news-carousel__views"><span class="material-symbols-outlined icon-sm">visibility</span> 980 leituras</span>
+                </div>
+                <h2>Jornada Pedagógica reúne mais de 600 educadores com foco em inovação e práticas inclusivas</h2>
+                <p>Ciclo formativo aborda neurociência aplicada à sala de aula, ferramentas de inteligência artificial assistiva e novas diretrizes para o Atendimento Educacional Especializado (AEE).</p>
+                <div class="news-carousel__foot">
+                  <a href="#" class="btn btn--primary">
+                    Ler notícia completa <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+                  </a>
+                  <span class="news-carousel__counter">Notícia 3 de 3</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="news-carousel__controls">
+            <div class="news-carousel__dots" id="news-dots" role="tablist" aria-label="Selecionar destaque">
+              <button class="news-carousel__dot is-active" data-slide-to="0" role="tab" aria-label="Destaque 1" aria-selected="true"></button>
+              <button class="news-carousel__dot" data-slide-to="1" role="tab" aria-label="Destaque 2" aria-selected="false"></button>
+              <button class="news-carousel__dot" data-slide-to="2" role="tab" aria-label="Destaque 3" aria-selected="false"></button>
+            </div>
+            <span class="news-carousel__timer">
+              <span class="material-symbols-outlined icon-sm">timer</span>
+              Alternância automática a cada 15s
+            </span>
+            <div class="news-carousel__arrows">
+              <button id="news-prev" aria-label="Notícia anterior"><span class="material-symbols-outlined">chevron_left</span></button>
+              <button id="news-next" aria-label="Próxima notícia"><span class="material-symbols-outlined">chevron_right</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layout principal -->
+        <div class="news-layout">
+          <div class="news-main">
+            <div class="news-main__bar">
+              <div>
+                <span class="material-symbols-outlined">newspaper</span>
+                <h2>Últimas Publicações Oficiais</h2>
+              </div>
+              <span>Atualizado há 18 minutos</span>
+            </div>
+
+            <div class="news-list" id="news-list">
+              <article class="news-item" data-category="programas" data-date="2026-10-27" data-views="1320">
+                <div class="news-item__media">
+                  <img src="assets/images/noticia-intercambio.jpg" alt="Estudantes miguelenses com passaportes e mochilas para intercâmbio" loading="lazy" />
+                  <span class="badge badge--blue news-item__tag">Programas</span>
+                </div>
+                <div class="news-item__body">
+                  <div class="news-item__meta">
+                    <span class="material-symbols-outlined icon-sm">calendar_month</span>
+                    <time datetime="2026-10-27">27/10/2026</time>
+                    <span class="meta-dot">•</span>
+                    <span>SEMED Comunicação</span>
+                  </div>
+                  <h3>Daqui pra o Mundo: projeto de intercâmbio cultural e letramento conecta estudantes ao Reino Unido</h3>
+                  <p>Primeira delegação estudantil da rede pública miguelense embarca para imersão linguística após certificação em inglês intensivo na Escola do Futuro.</p>
+                  <div class="news-item__foot">
+                    <a href="#">Leia mais <span class="material-symbols-outlined icon-sm">arrow_right_alt</span></a>
+                    <button class="share-btn" type="button" aria-label="Compartilhar notícia" data-title="Daqui pra o Mundo"><span class="material-symbols-outlined icon-sm">share</span></button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="news-item" data-category="infraestrutura" data-date="2026-10-25" data-views="1190">
+                <div class="news-item__media">
+                  <img src="assets/images/noticia-laboratorios.jpg" alt="Laboratórios móveis de informática em escola rural" loading="lazy" />
+                  <span class="badge badge--sky news-item__tag">Infraestrutura</span>
+                </div>
+                <div class="news-item__body">
+                  <div class="news-item__meta">
+                    <span class="material-symbols-outlined icon-sm">calendar_month</span>
+                    <time datetime="2026-10-25">25/10/2026</time>
+                    <span class="meta-dot">•</span>
+                    <span>SEMED Comunicação</span>
+                  </div>
+                  <h3>SEMED entrega kits escolares e novos laboratórios móveis de informática em escolas do campo</h3>
+                  <p>Mais de 2.000 alunos dos povoados e áreas rurais recebem novos equipamentos com conexão via satélite, garantindo equidade de oportunidades de aprendizado digital.</p>
+                  <div class="news-item__foot">
+                    <a href="#">Leia mais <span class="material-symbols-outlined icon-sm">arrow_right_alt</span></a>
+                    <button class="share-btn" type="button" aria-label="Compartilhar notícia" data-title="Kits escolares e laboratórios móveis"><span class="material-symbols-outlined icon-sm">share</span></button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="news-item" data-category="formacao" data-date="2026-10-24" data-views="980">
+                <div class="news-item__media">
+                  <img src="assets/images/hero-noticia-jornada.jpg" alt="Professores na Jornada Pedagógica 2026" loading="lazy" />
+                  <span class="badge badge--blue news-item__tag">Formação</span>
+                </div>
+                <div class="news-item__body">
+                  <div class="news-item__meta">
+                    <span class="material-symbols-outlined icon-sm">calendar_month</span>
+                    <time datetime="2026-10-24">24/10/2026</time>
+                    <span class="meta-dot">•</span>
+                    <span>SEMED Comunicação</span>
+                  </div>
+                  <h3>Jornada Pedagógica 2026 reúne mais de 600 educadores com foco em inovação e práticas inclusivas</h3>
+                  <p>Ciclo formativo aborda neurociência aplicada à sala de aula, ferramentas de inteligência artificial assistiva e novas diretrizes para o Atendimento Educacional Especializado (AEE).</p>
+                  <div class="news-item__foot">
+                    <a href="#">Leia mais <span class="material-symbols-outlined icon-sm">arrow_right_alt</span></a>
+                    <button class="share-btn" type="button" aria-label="Compartilhar notícia" data-title="Jornada Pedagógica 2026"><span class="material-symbols-outlined icon-sm">share</span></button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="news-item" id="avisos" data-category="editais" data-date="2026-10-23" data-views="860">
+                <div class="news-item__media">
+                  <img src="assets/images/noticia-comunicado.jpg" alt="Fachada de escola pública municipal com comunicado oficial" loading="lazy" />
+                  <span class="badge badge--error news-item__tag">Comunicados</span>
+                </div>
+                <div class="news-item__body">
+                  <div class="news-item__meta">
+                    <span class="material-symbols-outlined icon-sm">calendar_month</span>
+                    <time datetime="2026-10-23">23/10/2026</time>
+                    <span class="meta-dot">•</span>
+                    <span>SEMED Comunicação</span>
+                  </div>
+                  <h3>Comunicado oficial: Escolas polos com seções eleitorais terão cronograma de reposição homologado</h3>
+                  <p>Portaria conjunta normatiza a higienização dos prédios e assegura o cumprimento integral dos 200 dias letivos previstos na Lei de Diretrizes e Bases da Educação.</p>
+                  <div class="news-item__foot">
+                    <a href="#">Leia mais <span class="material-symbols-outlined icon-sm">arrow_right_alt</span></a>
+                    <button class="share-btn" type="button" aria-label="Compartilhar notícia" data-title="Comunicado oficial sobre seções eleitorais"><span class="material-symbols-outlined icon-sm">share</span></button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="news-item" data-category="eventos" data-date="2026-10-21" data-views="1540">
+                <div class="news-item__media">
+                  <img src="assets/images/noticia-jeal.jpg" alt="Atletas escolares no pódio com medalhas de ouro e prata" loading="lazy" />
+                  <span class="badge badge--warm news-item__tag">Eventos &amp; Esportes</span>
+                </div>
+                <div class="news-item__body">
+                  <div class="news-item__meta">
+                    <span class="material-symbols-outlined icon-sm">calendar_month</span>
+                    <time datetime="2026-10-21">21/10/2026</time>
+                    <span class="meta-dot">•</span>
+                    <span>SEMED Comunicação</span>
+                  </div>
+                  <h3>Estudantes da rede municipal conquistam 18 medalhas nos Jogos Escolares de Alagoas (JEAL)</h3>
+                  <p>Destaques nas modalidades de atletismo, xadrez e futsal garantem a classificação miguelense para a etapa nacional dos Jogos da Juventude em Brasília.</p>
+                  <div class="news-item__foot">
+                    <a href="#">Leia mais <span class="material-symbols-outlined icon-sm">arrow_right_alt</span></a>
+                    <button class="share-btn" type="button" aria-label="Compartilhar notícia" data-title="18 medalhas nos Jogos Escolares de Alagoas"><span class="material-symbols-outlined icon-sm">share</span></button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="news-item" data-category="programas" data-date="2026-10-19" data-views="1120">
+                <div class="news-item__media">
+                  <img src="assets/images/noticia-alimentacao.jpg" alt="Nutricionista escolar e produtores rurais com frutas e hortaliças" loading="lazy" />
+                  <span class="badge badge--success news-item__tag">Alimentação Escolar</span>
+                </div>
+                <div class="news-item__body">
+                  <div class="news-item__meta">
+                    <span class="material-symbols-outlined icon-sm">calendar_month</span>
+                    <time datetime="2026-10-19">19/10/2026</time>
+                    <span class="meta-dot">•</span>
+                    <span>SEMED Comunicação</span>
+                  </div>
+                  <h3>Programa de Alimentação Escolar fortalece compras da agricultura familiar miguelense</h3>
+                  <p>Com mais de 45% dos gêneros alimentícios oriundos do campo local, o município supera determinação federal do PNAE e garante refeições nutricionais diárias.</p>
+                  <div class="news-item__foot">
+                    <a href="#">Leia mais <span class="material-symbols-outlined icon-sm">arrow_right_alt</span></a>
+                    <button class="share-btn" type="button" aria-label="Compartilhar notícia" data-title="Alimentação escolar e agricultura familiar"><span class="material-symbols-outlined icon-sm">share</span></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <p class="news-empty" id="news-empty" hidden>Nenhuma notícia encontrada para os filtros selecionados.</p>
+
+            <div class="news-pagination">
+              <span>Mostrando <strong>1 – 6</strong> de <strong>48</strong> notícias publicadas</span>
+              <nav class="pagination" aria-label="Paginação de notícias">
+                <button class="pagination__btn" disabled aria-label="Página anterior"><span class="material-symbols-outlined icon-sm">chevron_left</span><span class="pagination__label">Anterior</span></button>
+                <button class="pagination__page is-active" aria-current="page">1</button>
+                <button class="pagination__page">2</button>
+                <button class="pagination__page">3</button>
+                <button class="pagination__page">4</button>
+                <span class="pagination__ellipsis">...</span>
+                <button class="pagination__page">8</button>
+                <button class="pagination__btn" aria-label="Próxima página"><span class="pagination__label">Próximo</span><span class="material-symbols-outlined icon-sm">chevron_right</span></button>
+              </nav>
+            </div>
+          </div>
+
+          <aside class="news-sidebar" aria-label="Conteúdo complementar">
+            <div class="sidebar-card">
+              <div class="sidebar-card__head">
+                <span class="material-symbols-outlined">trending_up</span>
+                <h2>Mais Lidas do Mês</h2>
+              </div>
+              <ol class="most-read">
+                <li>
+                  <span class="most-read__rank">01</span>
+                  <div>
+                    <a href="#">Cronograma de Matrículas e Renovação da Rede Municipal para o Ano Letivo 2027</a>
+                    <span class="most-read__views"><span class="material-symbols-outlined icon-sm">local_fire_department</span> 3.810 acessos</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="most-read__rank">02</span>
+                  <div>
+                    <a href="#">Divulgado o resultado final do Processo Seletivo Simplificado (PSS) para Mediadores Escolares</a>
+                    <span class="most-read__views"><span class="material-symbols-outlined icon-sm">local_fire_department</span> 2.940 acessos</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="most-read__rank">03</span>
+                  <div>
+                    <a href="#">Prefeitura antecipa pagamento do 14º salário aos servidores das escolas premiadas pelo IDEB</a>
+                    <span class="most-read__views"><span class="material-symbols-outlined icon-sm">local_fire_department</span> 2.180 acessos</span>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="sidebar-card sidebar-card--media">
+              <div class="sidebar-card__head sidebar-card__head--media">
+                <div>
+                  <span class="material-symbols-outlined">smart_display</span>
+                  <h2>Canais Multimídia</h2>
+                </div>
+                <span class="sidebar-card__tag">Oficial</span>
+              </div>
+              <p>Conteúdos audiovisuais pedagógicos, documentários e gravações de palestras produzidos por professores e estudantes.</p>
+              <a href="#" class="media-link">
+                <span class="media-link__icon"><span class="material-symbols-outlined">podcasts</span></span>
+                <span class="media-link__text"><strong>EDUCAST SEMED</strong><small>Episódio #24: Letramento na Primeira Infância</small></span>
+                <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+              </a>
+              <a href="#" class="media-link">
+                <span class="media-link__icon"><span class="material-symbols-outlined">video_library</span></span>
+                <span class="media-link__text"><strong>TV SEMED Miguelense</strong><small>Cobertura em vídeo da Feira de Ciências</small></span>
+                <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+              </a>
+            </div>
+
+            <div class="sidebar-card">
+              <div class="sidebar-card__head sidebar-card__head--split">
+                <div>
+                  <span class="material-symbols-outlined">gavel</span>
+                  <h2>Editais &amp; Portarias</h2>
+                </div>
+                <a href="documentos.html">Ver todos</a>
+              </div>
+              <ul class="side-docs">
+                <li>
+                  <span class="material-symbols-outlined">description</span>
+                  <div>
+                    <a href="documentos.html">Portaria SEMED Nº 142/2026 — Calendário de Provas Finais</a>
+                    <small>Publicado em 26/10/2026 • PDF (240 KB)</small>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">description</span>
+                  <div>
+                    <a href="documentos.html">Chamada Pública Nº 08/2026 — Alimentos da Agricultura Familiar</a>
+                    <small>Publicado em 22/10/2026 • PDF (1.1 MB)</small>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">description</span>
+                  <div>
+                    <a href="documentos.html">Edital Nº 03/2026 — Concurso Literário de Poesia Infanto-Juvenil</a>
+                    <small>Publicado em 18/10/2026 • PDF (580 KB)</small>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card sidebar-card--suggest">
+              <div class="suggest-head">
+                <span class="suggest-icon"><span class="material-symbols-outlined">forward_to_inbox</span></span>
+                <div>
+                  <h2>Sugira uma Pauta</h2>
+                  <span>Assessoria de Imprensa SEMED</span>
+                </div>
+              </div>
+              <p>Desenvolveu um projeto exemplar na sua escola municipal ou tem uma conquista para divulgar à comunidade? Entre em contato com nossa redação.</p>
+              <a href="mailto:comunicacao.semed@saomigueldoscampos.al.gov.br" class="btn btn--primary btn--block">
+                <span class="material-symbols-outlined icon-sm">send</span>
+                Enviar sugestão de matéria
+              </a>
+              <small>Atendimento à imprensa: (82) 3271-1250 ramal 204</small>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <img class="brand__crest" src="assets/images/brasao.png" alt="" />
+          <span class="brand__text">
+            <strong>SEMED</strong>
+            <small>Secretaria Municipal de Educação<br />São Miguel dos Campos - AL</small>
+          </span>
+        </a>
+        <p>Promovendo uma educação pública, inclusiva e transformadora, valorizando os profissionais do magistério e ampliando as oportunidades de aprendizagem para crianças, jovens e adultos miguelenses.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+          <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          <a href="#" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3>Ensino &amp; Ofertas</h3>
+        <ul>
+          <li><a href="index.html#programas">Educação Infantil</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental I</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental II</a></li>
+          <li><a href="index.html#programas">Educação de Jovens e Adultos</a></li>
+          <li><a href="index.html#programas">Educação Especial &amp; Inclusão</a></li>
+          <li><a href="index.html#programas">Programa Escola 10</a></li>
+          <li><a href="index.html#programas">IDEB</a></li>
+          <li><a href="index.html#programas">Grêmios Estudantis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Transparência</h3>
+        <ul>
+          <li><a href="lgpd.html">Serviço de Informação ao Cidadão (e-SIC)</a></li>
+          <li><a href="lgpd.html">Portal da Transparência</a></li>
+          <li><a href="lgpd.html">Ouvidoria Municipal</a></li>
+          <li><a href="documentos.html">Editais &amp; Licitações</a></li>
+          <li><a href="documentos.html">Prestação de Contas</a></li>
+          <li><a href="servidor.html">Contracheque</a></li>
+          <li><a href="lgpd.html">LGPD &amp; Privacidade</a></li>
+          <li><a href="documentos.html">Legislação</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__contact">
+        <h3>Sede &amp; Contato</h3>
+        <p>
+          <span class="material-symbols-outlined">place</span>
+          <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL<br />CEP 57240-000</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">schedule</span>
+          <span>Segunda a sexta, das 07h30 às 13h30</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">phone</span>
+          <span>(82) 3271-1234 | (82) 3271-1250</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">mail</span>
+          <span>semed@saomigueldoscampos.al.gov.br</span>
+        </p>
+        <a class="footer__access-btn" href="lgpd.html">
+          <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+          Acessibilidade Presencial e Digital
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__institutional">
+      <div class="container footer__institutional-inner">
+        <a class="footer__semed-logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img src="assets/images/semed_logo_branca.png" alt="SEMED - Secretaria Municipal de Educação de São Miguel dos Campos" />
+        </a>
+        <div class="footer__gov-logos" aria-label="Governos parceiros">
+          <figure class="footer__gov-logo">
+            <img src="assets/images/brasil_logo.png" alt="Bandeira do Brasil" />
+            <figcaption>Governo Federal</figcaption>
+          </figure>
+          <figure class="footer__gov-logo">
+            <img src="assets/images/bandeira-alagoas.png" alt="Bandeira do Estado de Alagoas" />
+            <figcaption>Governo de Alagoas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 SEMED — Secretaria Municipal de Educação de São Miguel dos Campos - AL. Todos os direitos reservados.</p>
+        <nav class="footer__bottom-links" aria-label="Links legais">
+          <a href="#">Portal Fale.BR</a><span>|</span>
+          <a href="termos-de-uso.html">Termos de Uso</a><span>|</span>
+          <a href="politica-privacidade.html">Política de Privacidade</a><span>|</span>
+          <a href="index.html#mapa">Mapa do site</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast hidden" id="toast-notification" aria-live="polite" aria-atomic="true">
+    <div class="toast-content">
+      <span class="toast-icon">check_circle</span>
+      <div class="toast-body">
+        <span class="toast-title" id="toast-title">Aviso</span>
+        <span class="toast-msg" id="toast-msg"></span>
+      </div>
+      <button class="toast-close" aria-label="Fechar notificação"><span class="material-symbols-outlined">close</span></button>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/noticias.js"></script>
+</body>
+</html>
+
+
+
+

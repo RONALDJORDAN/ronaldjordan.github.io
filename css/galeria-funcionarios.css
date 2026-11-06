@@ -1,0 +1,249 @@
+/* ============================================================
+   SEMED — Galeria de Funcionários
+   ============================================================ */
+
+.galeria-hero {
+  background: var(--surface-card);
+  border-bottom: 1px solid var(--neutral-border);
+  padding-block: 3.5rem 4rem;
+}
+
+.galeria-hero .breadcrumb {
+  margin-bottom: 1.75rem;
+}
+
+.galeria-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.galeria-hero__copy h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--on-surface);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.galeria-hero__copy p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--on-surface-variant);
+  max-width: 42rem;
+  margin-bottom: 1.75rem;
+}
+
+.galeria-hero__side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gs-card {
+  display: flex;
+  gap: 0.875rem;
+  padding: 1.25rem;
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  background: var(--surface-card);
+}
+
+.gs-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  background: var(--gov-sky-subtle);
+  color: var(--primary-ink);
+  flex-shrink: 0;
+}
+
+.gs-icon--secondary {
+  background: var(--surface-container);
+  color: var(--on-surface);
+}
+
+.gs-card > div {
+  min-width: 0;
+}
+
+.gs-card small {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--primary-ink);
+}
+
+.gs-card strong {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 0.25rem;
+}
+
+.gs-card span:last-child {
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+}
+
+/* ---------- Estrutura Organizacional ---------- */
+.estrutura__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.estrutura-card {
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.estrutura-card__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  background: var(--gov-sky-subtle);
+  color: var(--primary-ink);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.estrutura-chip {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.estrutura-chip--blue {
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+}
+
+.estrutura-chip--sky {
+  background: var(--gov-sky-subtle);
+  color: var(--primary-ink);
+}
+
+.estrutura-chip--neutral {
+  background: var(--surface-container);
+  color: var(--on-surface-variant);
+}
+
+.estrutura-card h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 0.5rem;
+}
+
+.estrutura-card p {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+  margin-top: auto;
+}
+
+/* ---------- Galeria de Funcionários ---------- */
+.galeria-equipe__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.funcionario-card {
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.funcionario-card__foto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: var(--gov-sky-subtle);
+  color: var(--primary-ink);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.funcionario-card__cargo {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+  margin-bottom: 0.5rem;
+}
+
+.funcionario-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 0.5rem;
+}
+
+.funcionario-card p {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .galeria-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .estrutura__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galeria-equipe__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .estrutura__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-equipe__grid {
+    grid-template-columns: 1fr;
+  }
+}

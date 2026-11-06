@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEMED - Secretaria Municipal de Educação | São Miguel dos Campos - AL</title>
+  <meta name="description"
+    content="Portal institucional da Secretaria Municipal de Educação de São Miguel dos Campos - AL. Programas, serviços, notícias, documentos e transparência." />
+  <link rel="icon" type="image/png" href="assets/images/brasao.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= HEADER GOVERNAMENTAL ================= -->
+  <header class="gov-header" id="site-header">
+    <div class="gov-topbar">
+      <div class="container gov-topbar__inner">
+        <div class="gov-topbar__left">
+          <a class="gov-brand" href="index.html" aria-label="Governo Municipal de São Miguel dos Campos">
+            <img class="gov-brand__crest" src="assets/images/brasil_logo.png" alt="" />
+            <span>BRASIL<small>Governo Municipal</small></span>
+          </a>
+          <nav class="gov-links" aria-label="Links institucionais">
+            <a href="lgpd.html">Acesso à Informação</a>
+            <a href="noticias.html">Comunica BR</a>
+            <a href="documentos.html">Órgãos do Governo</a>
+          </nav>
+        </div>
+        <div class="gov-topbar__right">
+          <div class="gov-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          </div>
+          <div class="a11y-wrap">
+            <button class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+              <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+              Acessibilidade
+            </button>
+            <div class="a11y-panel" id="a11y-panel" hidden>
+              <h2>Recursos de acessibilidade</h2>
+              <div class="a11y-row">
+                <span>Tamanho do texto</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="font-decrease" aria-label="Diminuir texto">A−</button>
+                  <button type="button" id="font-reset" aria-label="Texto normal">A</button>
+                  <button type="button" id="font-increase" aria-label="Aumentar texto">A+</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Alto contraste</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="contrast-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Links sublinhados</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="underline-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#mapa">Mapa do site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main__inner">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+
+        <form class="header-search" action="documentos.html" method="get" role="search">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <label class="sr-only" for="site-search">Buscar no portal</label>
+          <input type="search" id="site-search" name="q" placeholder="Buscar escolas, editais, documentos..."
+            autocomplete="off" />
+          <kbd>Ctrl K</kbd>
+        </form>
+
+        <div class="header-actions">
+          <a href="servidor.html" class="btn btn--primary">
+            <span class="material-symbols-outlined icon-sm">account_circle</span>
+            Portal do Servidor
+          </a>
+          <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false"
+            aria-controls="mobile-drawer">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="container main-nav__inner">
+        <a href="index.html" class="main-nav__link is-active" aria-current="page">Início</a>
+        <a href="noticias.html" class="main-nav__link">Notícias</a>
+        <a href="institucional/institucional.html" class="main-nav__link">Institucional</a>
+        <a href="index.html#programas" class="main-nav__link">Educação</a>
+        <a href="index.html#servicos" class="main-nav__link">Estudante</a>
+        <a href="index.html#escola" class="main-nav__link">Escola</a>
+        <a href="documentos.html" class="main-nav__link">Documentos e Editais</a>
+        <a href="lgpd.html" class="main-nav__link">LGPD &amp; Transparência</a>
+        <a href="servidor.html" class="main-nav__link">Servidor</a>
+        <a href="noticias.html#avisos" class="main-nav__link">Avisos</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="mobile-drawer" id="mobile-drawer" hidden>
+    <div class="mobile-drawer__overlay" data-close-drawer></div>
+    <aside class="mobile-drawer__panel" aria-label="Menu de navegação móvel">
+      <div class="mobile-drawer__head">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+        <button class="mobile-drawer__close" id="mobile-menu-close" aria-label="Fechar menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav" aria-label="Menu de navegação móvel">
+        <a href="index.html" aria-current="page"><span class="material-symbols-outlined">home</span>Início</a>
+        <a href="noticias.html"><span class="material-symbols-outlined">newspaper</span>Notícias</a>
+        <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span>Institucional</a>
+        <div class="mobile-drawer__dropdown" aria-expanded="false">
+          <button class="mobile-drawer__dropdown-trigger" aria-label="Submódulos Institucionais" type="button">
+            <span class="material-symbols-outlined" style="font-size:0.7rem">arrow_drop_down</span>
+          </button>
+          <div class="mobile-drawer__dropdown__menu" style="padding-left:1rem">
+            <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span> Institucional</a>
+            <a href="institucional/quem-somos.html"><span class="material-symbols-outlined">info</span> Quem Somos</a>
+            <a href="institucional/galeria-funcionarios.html"><span class="material-symbols-outlined">people</span> Galeria de Funcionários</a>
+            <a href="institucional/contatos.html"><span class="material-symbols-outlined">contact_page</span> Contatos</a>
+            <a href="institucional/biblioteca.html"><span class="material-symbols-outlined">books</span> Biblioteca Digital</a>
+          </div>
+        </div>
+        <a href="index.html#programas"><span class="material-symbols-outlined">auto_stories</span>Educação</a>
+        <a href="index.html#servicos"><span class="material-symbols-outlined">backpack</span>Estudante</a>
+        <a href="index.html#escola"><span class="material-symbols-outlined">school</span>Escola</a>
+        <a href="documentos.html"><span class="material-symbols-outlined">folder_managed</span>Documentos e Editais</a>
+        <a href="lgpd.html"><span class="material-symbols-outlined">shield_person</span>LGPD &amp; Transparência</a>
+        <a href="servidor.html"><span class="material-symbols-outlined">account_circle</span>Servidor</a>
+        <a href="noticias.html#avisos"><span class="material-symbols-outlined">campaign</span>Avisos</a>
+      </nav>
+      <div class="mobile-drawer__footer">
+        <a href="servidor.html" class="btn btn--primary btn--block">
+          <span class="material-symbols-outlined icon-sm">login</span>
+          Acessar Portal do Servidor
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ================= HERO / CARROSSEL ================= -->
+    <section class="hero" aria-label="Destaques da educação municipal">
+      <div class="container">
+        <div class="hero__frame">
+          <div class="hero__slides" id="hero-slides">
+            <!-- Slide 1 -->
+            <article class="hero__slide is-active" data-slide="0" aria-hidden="false">
+              <div class="hero__copy">
+                <span class="badge badge--blue">
+                  <span class="material-symbols-outlined icon-sm">menu_book</span>
+                  Compromisso Nacional Criança Alfabetizada
+                </span>
+                <h1 class="hero__title">Alfabetização na Idade Certa para Toda Criança Miguelense</h1>
+                <p class="hero__text">A Rede Municipal de Ensino de São Miguel dos Campos fortalece as práticas de
+                  letramento, materiais pedagógicos estruturados e avaliação diagnóstica contínua no 1º e 2º ano do
+                  Ensino Fundamental.</p>
+                <div class="hero__actions">
+                  <a href="#programas" class="btn btn--primary">
+                    Conheça o Programa
+                    <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+                  </a>
+                  <a href="#servicos" class="btn btn--soft">
+                    <span class="material-symbols-outlined icon-sm">school</span>
+                    Guia Pedagógico
+                  </a>
+                </div>
+              </div>
+              <figure class="hero__figure">
+                <img src="assets/images/hero-alfabetizacao.jpg"
+                  alt="Estudantes do ensino fundamental em sala de aula com a professora" />
+                <figcaption>Metas 2026: 94% Letramento Pleno</figcaption>
+              </figure>
+            </article>
+
+            <!-- Slide 2 -->
+            <article class="hero__slide" data-slide="1" aria-hidden="true">
+              <div class="hero__copy">
+                <span class="badge badge--neutral">
+                  <span class="material-symbols-outlined icon-sm">how_to_reg</span>
+                  Busca Ativa &amp; Permanência Escolar
+                </span>
+                <h2 class="hero__title">Programa Vem Que Dá Tempo: O Futuro Começa na Sala de Aula</h2>
+                <p class="hero__text">Oportunidade para jovens e adultos completarem o Ensino Fundamental através da
+                  modalidade EJA flexibilizada, com acompanhamento psicossocial, auxílio transporte e qualificação
+                  cidadã.</p>
+                <div class="hero__actions">
+                  <a href="#mapa" class="btn btn--primary">
+                    Inscreva-se na EJA
+                    <span class="material-symbols-outlined icon-sm">east</span>
+                  </a>
+                  <span class="hero__note">
+                    <span class="material-symbols-outlined icon-sm text-success">verified</span>
+                    Vagas Noturnas Disponíveis
+                  </span>
+                </div>
+              </div>
+              <figure class="hero__figure">
+                <img src="assets/images/hero-eja.jpg" alt="Jovens e adultos em sala de aula no período noturno" />
+                <figcaption>Educação de Jovens e Adultos - Noturno</figcaption>
+              </figure>
+            </article>
+
+            <!-- Slide 3 -->
+            <article class="hero__slide" data-slide="2" aria-hidden="true">
+              <div class="hero__copy">
+                <span class="badge badge--blue">
+                  <span class="material-symbols-outlined icon-sm">stars</span>
+                  Reconhecimento Estadual e IDEB
+                </span>
+                <h2 class="hero__title">Programa Escola 10: Excelência Pedagógica em São Miguel</h2>
+                <p class="hero__text">Alinhamento com as diretrizes educacionais de Alagoas, capacitação contínua de
+                  mais de 1.200 docentes e incentivo à melhoria contínua dos índices de proficiência em língua
+                  portuguesa e matemática.</p>
+                <div class="hero__actions">
+                  <a href="noticias.html" class="btn btn--primary">
+                    Resultados &amp; Indicadores
+                    <span class="material-symbols-outlined icon-sm">insights</span>
+                  </a>
+                </div>
+              </div>
+              <figure class="hero__figure">
+                <img src="assets/images/hero-escola10.jpg"
+                  alt="Equipe de professores e coordenadores pedagógicos em planejamento" />
+                <figcaption>São Miguel dos Campos em Destaque no IDEB</figcaption>
+              </figure>
+            </article>
+
+            <!-- Slide 4 -->
+            <article class="hero__slide" data-slide="3" aria-hidden="true">
+              <div class="hero__copy">
+                <span class="badge badge--blue">
+                  <span class="material-symbols-outlined icon-sm">query_stats</span>
+                  Censo da Educação Básica
+                </span>
+                <h2 class="hero__title">Censo Escolar: Indicadores e Dados Oficiais</h2>
+                <p class="hero__text">Acompanhamento sistemático dos dados educacionais da Rede Municipal de Ensino de
+                  São Miguel dos Campos, com transparência e planejamento estratégico contínuo.</p>
+                <div class="hero__actions">
+                  <a href="#programas" class="btn btn--primary">
+                    <span class="material-symbols-outlined icon-sm">bar_chart</span>
+                    Consultar Indicadores
+                  </a>
+                  <span class="hero__note">Atualizado para o ano letivo de 2026</span>
+                </div>
+              </div>
+              <figure class="hero__figure">
+                <img src="assets/images/hero-censo.jpg"
+                  alt="Equipe técnica educacional analisando dados do Censo Escolar" />
+                <figcaption>Dados Oficiais da Educação Municipal</figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="hero__controls">
+            <div class="hero__controls-left">
+              <button class="hero__arrow" id="hero-prev" aria-label="Slide anterior">
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+              <button class="hero__arrow" id="hero-next" aria-label="Próximo slide">
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+              <div class="hero__dots" id="hero-dots" role="tablist" aria-label="Selecionar destaque"></div>
+            </div>
+            <div class="hero__status">
+              <span class="hero__status-item"><span class="dot dot--success"></span> Rede Integrada SAGEAL</span>
+              <span class="hero__status-divider">|</span>
+              <span class="hero__status-item">Edição Letiva 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVIÇOS ================= -->
+    <section class="section section--canvas services" id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="section-kicker">
+              <span class="material-symbols-outlined icon-sm">school</span>
+              Serviços da rede municipal
+            </span>
+            <h2 class="section-title">Serviços &amp; Canais ao Cidadão</h2>
+            <p class="section-subtitle">Serviços, publicações e canais de atendimento da SEMED de São Miguel dos Campos
+              para estudantes, famílias, servidores e toda a comunidade escolar.</p>
+          </div>
+          <div class="search-field">
+            <span class="material-symbols-outlined">search</span>
+            <label class="sr-only" for="services-filter">Filtrar serviços</label>
+            <input type="search" id="services-filter" placeholder="Filtrar serviços..." autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="services__grid" id="services-grid">
+          <a href="#mapa" class="service-card" id="escola">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">school</span></span>
+              <h3>Localize uma Escola</h3>
+              <p>Consulte escolas municipais, creches e anexos rurais de São Miguel dos Campos por bairro e modalidade
+                de ensino.</p>
+            </div>
+            <span class="service-card__link">Consultar unidades <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="documentos.html" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">gavel</span></span>
+              <h3>Legislação</h3>
+              <p>Leis, decretos, portarias e resoluções que orientam a rede municipal de ensino.</p>
+            </div>
+            <span class="service-card__link">Consultar legislação <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="documentos.html" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">newspaper</span></span>
+              <h3>Publicações</h3>
+              <p>Atos oficiais, comunicados e publicações da SEMED no Diário Oficial do Município.</p>
+            </div>
+            <span class="service-card__link">Ver publicações <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="#programas" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">query_stats</span></span>
+              <h3>Censo</h3>
+              <p>Dados oficiais do Censo Escolar, matrículas e indicadores da Educação Básica municipal.</p>
+            </div>
+            <span class="service-card__link">Consultar indicadores <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="documentos.html" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">description</span></span>
+              <h3>Carta de Serviços</h3>
+              <p>Prazos, requisitos e canais de atendimento dos serviços educacionais oferecidos à população.</p>
+            </div>
+            <span class="service-card__link">Acessar carta <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="noticias.html" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">auto_stories</span></span>
+              <h3>Revista Eletrônica</h3>
+              <p>REDUC: artigos, relatos de prática e produções científicas dos educadores da rede miguelense.</p>
+            </div>
+            <span class="service-card__link">Ler edições <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="noticias.html#avisos" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">workspace_premium</span></span>
+              <h3>Certificação Encceja</h3>
+              <p>Orientações sobre inscrição, provas e certificação do Ensino Fundamental e do Ensino Médio.</p>
+            </div>
+            <span class="service-card__link">Ver orientações <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="#mapa" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">location_city</span></span>
+              <h3>Centros de Atendimento</h3>
+              <p>Endereços, horários e canais de atendimento da sede da SEMED e dos polos educacionais.</p>
+            </div>
+            <span class="service-card__link">Localizar atendimento <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="noticias.html#avisos" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">how_to_reg</span></span>
+              <h3>Matrícula da Rede Estadual</h3>
+              <p>Informações e prazos para matrícula e transferência na rede estadual de ensino de Alagoas.</p>
+            </div>
+            <span class="service-card__link">Consultar matrícula <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="documentos.html?q=curriculares" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">library_books</span></span>
+              <h3>Referencial Curricular</h3>
+              <p>Currículo de Alagoas e diretrizes pedagógicas para a Educação Infantil e o Ensino Fundamental.</p>
+            </div>
+            <span class="service-card__link">Consultar referencial <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="documentos.html?q=edital" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">campaign</span></span>
+              <h3>Editais</h3>
+              <p>Editais de seleção, chamamentos públicos, licitações e processos seletivos da SEMED.</p>
+            </div>
+            <span class="service-card__link">Abrir editais <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="#mapa" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">restaurant</span></span>
+              <h3>Alimentação Escolar</h3>
+              <p>Cardápios, Programa Nacional de Alimentação Escolar (PNAE) e acompanhamento nutricional.</p>
+            </div>
+            <span class="service-card__link">Ver alimentação <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="documentos.html?q=matriz" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">schema</span></span>
+              <h3>Matrizes Escolares</h3>
+              <p>Matrizes curriculares por etapa e modalidade, com cargas horárias e componentes obrigatórios.</p>
+            </div>
+            <span class="service-card__link">Consultar matrizes <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="noticias.html" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">nights_stay</span></span>
+              <h3>Observatório Astronômico</h3>
+              <p>Projeto de astronomia e ciências que aproxima estudantes miguelenses da observação do céu.</p>
+            </div>
+            <span class="service-card__link">Conhecer projeto <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="lgpd.html" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">devices</span></span>
+              <h3>Guia sobre uso de dispositivos digitais</h3>
+              <p>Orientações para o uso seguro, crítico e pedagógico de celulares, tablets e computadores.</p>
+            </div>
+            <span class="service-card__link">Acessar guia <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="documentos.html" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">event_note</span></span>
+              <h3>Caderno Orientador ano letivo 2026</h3>
+              <p>Diretrizes, calendário e orientações pedagógicas para o ano letivo de 2026 na rede municipal.</p>
+            </div>
+            <span class="service-card__link">Consultar caderno <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="documentos.html?q=edital" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">person_search</span></span>
+              <h3>Seleções</h3>
+              <p>Processos seletivos, chamadas públicas e cadastros de reserva vinculados à SEMED.</p>
+            </div>
+            <span class="service-card__link">Ver seleções <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="documentos.html?q=transporte" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">directions_bus</span></span>
+              <h3>Transporte Escolar</h3>
+              <p>Itinerários, rotas rurais e emissão da carteirinha do estudante da rede municipal.</p>
+            </div>
+            <span class="service-card__link">Rotas e carteirinha <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+
+          <a href="servidor.html" class="service-card">
+            <div>
+              <span class="icon-box icon-box--soft"><span class="material-symbols-outlined">badge</span></span>
+              <h3>Portal do Servidor</h3>
+              <p>Contracheque digital, informes de rendimentos, tramitação SEI e requerimentos docentes.</p>
+            </div>
+            <span class="service-card__link">Acessar portal <span
+                class="material-symbols-outlined icon-sm">arrow_forward</span></span>
+          </a>
+
+          <a href="documentos.html?q=calendário" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">calendar_month</span></span>
+              <h3>Calendário Escolar 2026</h3>
+              <p>Datas de bimestres, recessos, jornadas pedagógicas e 200 dias letivos homologados.</p>
+            </div>
+            <span class="service-card__link">Baixar calendário <span
+                class="material-symbols-outlined icon-sm">download</span></span>
+          </a>
+
+          <a href="#mapa" class="service-card">
+            <div>
+              <span class="icon-box"><span class="material-symbols-outlined">support_agent</span></span>
+              <h3>Central &amp; Ouvidoria</h3>
+              <p>Canal de escuta da comunidade escolar, elogios, sugestões e suporte direto ao cidadão.</p>
+            </div>
+            <span class="service-card__link">Abrir chamado <span
+                class="material-symbols-outlined icon-sm">chevron_right</span></span>
+          </a>
+        </div>
+
+        <p class="empty-state" id="services-empty" hidden>Nenhum serviço encontrado para o termo pesquisado.</p>
+      </div>
+    </section>
+
+    <!-- ================= NOTÍCIAS ================= -->
+    <section class="section section--surface news-home" id="noticias">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="section-kicker">
+              <span class="material-symbols-outlined icon-sm">newspaper</span>
+              Informativo oficial
+            </span>
+            <h2 class="section-title">Últimas Notícias da Educação</h2>
+            <p class="section-subtitle">Acompanhe ações, investimentos e projetos pedagógicos em São Miguel dos Campos.
+            </p>
+          </div>
+          <a href="noticias.html" class="btn btn--soft">
+            Ver todas as notícias
+            <span class="material-symbols-outlined icon-sm">arrow_right_alt</span>
+          </a>
+        </div>
+
+        <div class="news-home__grid">
+          <article class="news-card">
+            <div class="news-card__media">
+              <img src="assets/images/noticia-kits.jpg" alt="Estudantes recebendo kits de material escolar"
+                loading="lazy" />
+              <span class="badge badge--blue news-card__tag"><span
+                  class="material-symbols-outlined icon-sm">school</span>Ensino Fundamental</span>
+            </div>
+            <div class="news-card__body">
+              <div class="news-card__meta">
+                <span class="material-symbols-outlined icon-sm">calendar_today</span>
+                <time datetime="2026-10-28">28 de outubro de 2026</time>
+              </div>
+              <h3>SEMED amplia distribuição de kits escolares e uniformes em todas as escolas da rede</h3>
+              <p>Mais de 12 mil alunos da rede pública municipal foram contemplados com o kit pedagógico completo,
+                fortalecendo a igualdade em sala de aula desde o primeiro dia de aula.</p>
+              <a href="noticias.html" class="news-card__more">Ler notícia completa <span
+                  class="material-symbols-outlined icon-sm">chevron_right</span></a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-card__media">
+              <img src="assets/images/noticia-formacao.jpg" alt="Professores em oficina de formação continuada"
+                loading="lazy" />
+              <span class="badge badge--blue news-card__tag"><span
+                  class="material-symbols-outlined icon-sm">psychology</span>Formação Continuada</span>
+            </div>
+            <div class="news-card__body">
+              <div class="news-card__meta">
+                <span class="material-symbols-outlined icon-sm">calendar_today</span>
+                <time datetime="2026-10-25">25 de outubro de 2026</time>
+              </div>
+              <h3>Professores participam da Jornada Pedagógica com foco em metodologias ativas e IA</h3>
+              <p>Encontro reuniu especialistas em educação inclusiva e inovação para preparar docentes nas novas
+                competências digitais da Base Nacional Comum Curricular.</p>
+              <a href="noticias.html" class="news-card__more">Ler notícia completa <span
+                  class="material-symbols-outlined icon-sm">chevron_right</span></a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-card__media">
+              <img src="assets/images/noticia-jogos.jpg" alt="Estudantes atletas com medalhas em ginásio municipal"
+                loading="lazy" />
+              <span class="badge badge--blue news-card__tag"><span
+                  class="material-symbols-outlined icon-sm">sports_soccer</span>Esporte e Conhecimento</span>
+            </div>
+            <div class="news-card__body">
+              <div class="news-card__meta">
+                <span class="material-symbols-outlined icon-sm">calendar_today</span>
+                <time datetime="2026-10-22">22 de outubro de 2026</time>
+              </div>
+              <h3>Estudantes da rede se preparam para os Jogos Escolares e Olimpíadas de Matemática</h3>
+              <p>Com suporte de clubes de robótica e treinos esportivos no contraturno escolar, delegações miguelenses
+                ampliam participação em disputas regionais e nacionais.</p>
+              <a href="noticias.html" class="news-card__more">Ler notícia completa <span
+                  class="material-symbols-outlined icon-sm">chevron_right</span></a>
+            </div>
+          </article>
+        </div>
+
+        <!-- EDUCAST -->
+        <div class="educast">
+          <div class="educast__info">
+            <span class="educast__icon"><span class="material-symbols-outlined">podcasts</span></span>
+            <div>
+              <span class="educast__eyebrow">Podcast oficial da educação <span class="dot dot--success"></span></span>
+              <h3>EDUCAST SEMED — Ep. 24: Desafios e Conquistas da Alfabetização Infantil</h3>
+              <p>Entrevista especial com a Coordenação de Anos Iniciais e gestores de creches sobre o projeto Leitura em
+                Família.</p>
+            </div>
+          </div>
+          <div class="educast__actions">
+            <button type="button" class="btn btn--light" id="educast-btn">
+              <span class="material-symbols-outlined icon-sm">play_arrow</span>
+              <span id="educast-state">Ouvir agora (32 min)</span>
+            </button>
+            <a href="noticias.html" class="educast__all">Todos os episódios</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROGRAMAS ================= -->
+    <section class="section section--canvas programs" id="programas">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="section-kicker">
+            <span class="material-symbols-outlined icon-sm">auto_stories</span>
+            Diretrizes pedagógicas
+          </span>
+          <h2 class="section-title">Programas e Modalidades de Ensino</h2>
+          <p class="section-subtitle">Atendimento integrado desde a primeira infância até a preparação pré-vestibular e
+            produção acadêmica municipal.</p>
+        </div>
+
+        <div class="programs__grid">
+          <article class="program-card">
+            <div class="program-card__top">
+              <span class="badge badge--sky">Primeira Infância</span>
+              <span class="icon-box icon-box--sm"><span class="material-symbols-outlined">child_care</span></span>
+            </div>
+            <h3>Educação Infantil &amp; Creches</h3>
+            <p>Atendimento lúdico e afetuoso em tempo integral e parcial para crianças de 0 a 5 anos, estimulando
+              coordenação, cognição e sociabilidade nas creches municipais.</p>
+            <div class="program-card__foot">
+              <span>22 unidades em operação</span>
+              <a href="#">Saiba mais <span class="material-symbols-outlined icon-sm">arrow_forward</span></a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card__top">
+              <span class="badge badge--sky">Anos Iniciais &amp; Finais</span>
+              <span class="icon-box icon-box--sm"><span class="material-symbols-outlined">auto_stories</span></span>
+            </div>
+            <h3>Ensino Fundamental I e II</h3>
+            <p>Fortalecimento das bases de leitura e cálculo matemático com apoio de laboratórios móveis de informática
+              e projetos interdisciplinares de ciências e meio ambiente.</p>
+            <div class="program-card__foot">
+              <span>Anos Iniciais e Finais</span>
+              <a href="#">Saiba mais <span class="material-symbols-outlined icon-sm">arrow_forward</span></a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card__top">
+              <span class="badge badge--tertiary">Turno Noturno</span>
+              <span class="icon-box icon-box--sm icon-box--tertiary"><span
+                  class="material-symbols-outlined">workspace_premium</span></span>
+            </div>
+            <h3>Educação de Jovens e Adultos (EJA)</h3>
+            <p>Acesso à escolarização com dignidade e currículo contextualizado para quem não pôde concluir os estudos
+              na idade convencional, preparando para o mercado regional.</p>
+            <div class="program-card__foot">
+              <span>Certificação modular</span>
+              <a href="#" class="program-card__link--tertiary">Saiba mais <span
+                  class="material-symbols-outlined icon-sm">arrow_forward</span></a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card__top">
+              <span class="badge badge--sky">Protagonismo Juvenil</span>
+              <span class="icon-box icon-box--sm"><span class="material-symbols-outlined">psychology</span></span>
+            </div>
+            <h3>Foca no ENEM &amp; Grêmio Estudantil</h3>
+            <p>Ciclos de simulados, redação nota 1000 e fomento à liderança representativa estudantil através de
+              eleições democráticas nos grêmios das unidades municipais.</p>
+            <div class="program-card__foot">
+              <span>Aulões aos sábados</span>
+              <a href="#">Saiba mais <span class="material-symbols-outlined icon-sm">arrow_forward</span></a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card__top">
+              <span class="badge badge--sky">Produção Científica</span>
+              <span class="icon-box icon-box--sm"><span class="material-symbols-outlined">library_books</span></span>
+            </div>
+            <h3>REDUC — Revista Eletrônica SEMED</h3>
+            <p>Periódico semestral dedicado a artigos de práticas exitosas dos professores da rede miguelense,
+              dissertações pedagógicas e relatos de experiência institucional.</p>
+            <div class="program-card__foot">
+              <span>ISSN Digital ativo</span>
+              <a href="#">Acessar edições <span class="material-symbols-outlined icon-sm">arrow_forward</span></a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="program-card__top">
+              <span class="badge badge--sky">Acessibilidade Universal</span>
+              <span class="icon-box icon-box--sm"><span
+                  class="material-symbols-outlined">accessibility_new</span></span>
+            </div>
+            <h3>Atendimento Educacional Especializado (AEE)</h3>
+            <p>Salas de recursos multifuncionais com equipe multidisciplinar de psicopedagogos, terapeutas e cuidadores
+              para estudantes com deficiência e altas habilidades.</p>
+            <div class="program-card__foot">
+              <span>Rede 100% Inclusiva</span>
+              <a href="#">Ver rede <span class="material-symbols-outlined icon-sm">arrow_forward</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRANSPARÊNCIA ================= -->
+    <section class="section section--surface transparency" id="transparencia">
+      <div class="container">
+        <div class="transparency__panel">
+          <div class="transparency__head">
+            <div>
+              <span class="section-kicker">
+                <span class="material-symbols-outlined icon-sm">verified_user</span>
+                Governança &amp; conformidade legal
+              </span>
+              <h2 class="section-title">Transparência Pública e Proteção de Dados (LGPD)</h2>
+              <p class="section-subtitle">Em conformidade com a Lei Federal nº 12.527/2011 (LAI) e a Lei nº 13.709/2018
+                (LGPD), a SEMED assegura o livre acesso às contas públicas da educação e o tratamento ético dos dados
+                escolares.</p>
+            </div>
+            <span class="badge badge--neutral transparency__seal">
+              <span class="material-symbols-outlined icon-sm text-success">lock</span>
+              Ambiente Seguro Gov.BR
+            </span>
+          </div>
+
+          <div class="transparency__grid">
+            <a href="lgpd.html" class="transparency__card">
+              <div class="transparency__card-head">
+                <span class="icon-box icon-box--sm icon-box--white"><span
+                    class="material-symbols-outlined">info</span></span>
+                <h3>E-SIC</h3>
+              </div>
+              <p>Sistema Eletrônico do Serviço de Informação ao Cidadão. Solicite dados públicos em até 20 dias.</p>
+              <span class="transparency__card-link">Acessar SIC <span
+                  class="material-symbols-outlined icon-sm">open_in_new</span></span>
+            </a>
+
+            <a href="lgpd.html" class="transparency__card">
+              <div class="transparency__card-head">
+                <span class="icon-box icon-box--sm icon-box--white"><span
+                    class="material-symbols-outlined">account_balance_wallet</span></span>
+                <h3>Transparência</h3>
+              </div>
+              <p>Execução orçamentária, repasses do FUNDEB, folha de pagamento e compras públicas.</p>
+              <span class="transparency__card-link">Consultar Portal <span
+                  class="material-symbols-outlined icon-sm">open_in_new</span></span>
+            </a>
+
+            <a href="lgpd.html" class="transparency__card">
+              <div class="transparency__card-head">
+                <span class="icon-box icon-box--sm icon-box--white"><span
+                    class="material-symbols-outlined">shield_person</span></span>
+                <h3>Encarregado LGPD</h3>
+              </div>
+              <p>Canal direto com o DPO da SEMED para exercer direitos de privacidade e esclarecer dúvidas.</p>
+              <span class="transparency__card-link">Política de Privacidade <span
+                  class="material-symbols-outlined icon-sm">arrow_forward</span></span>
+            </a>
+
+            <a href="documentos.html" class="transparency__card">
+              <div class="transparency__card-head">
+                <span class="icon-box icon-box--sm icon-box--white"><span
+                    class="material-symbols-outlined">description</span></span>
+                <h3>Carta de Serviços</h3>
+              </div>
+              <p>Prazos, requisitos e formas de prestação de cada serviço educacional ofertado pelo município.</p>
+              <span class="transparency__card-link">Baixar Carta <span
+                  class="material-symbols-outlined icon-sm">download</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ATENDIMENTO / CONTATO ================= -->
+    <section class="section section--canvas contact" id="mapa">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="section-kicker">
+              <span class="material-symbols-outlined icon-sm">location_on</span>
+              Presencial &amp; ouvidoria
+            </span>
+            <h2 class="section-title">Atendimento na Sede da SEMED</h2>
+            <p class="section-subtitle">Venha nos visitar ou envie sua mensagem oficial para nossa equipe de gestão e
+              suporte educacional.</p>
+          </div>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__aside">
+            <div class="contact__address">
+              <span class="badge badge--sky"><span class="material-symbols-outlined icon-sm">apartment</span> Sede
+                administrativa</span>
+              <h3>Secretaria Municipal de Educação</h3>
+              <ul class="contact__list">
+                <li>
+                  <span class="material-symbols-outlined">place</span>
+                  <div>
+                    <strong>Endereço oficial</strong>
+                    <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL, CEP 57240-000</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">schedule</span>
+                  <div>
+                    <strong>Horário de atendimento</strong>
+                    <span>Segunda a sexta-feira, das 07h30 às 13h30</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">phone</span>
+                  <div>
+                    <strong>Telefone</strong>
+                    <span>(82) 3271-1234 · Ramal 204 (Ouvidoria)</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">mail</span>
+                  <div>
+                    <strong>E-mail institucional</strong>
+                    <span>semed@saomigueldoscampos.al.gov.br</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact__map">
+              <iframe title="Mapa da sede da SEMED em São Miguel dos Campos - AL"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-36.365%2C-9.795%2C-36.335%2C-9.770&amp;layer=mapnik&amp;marker=-9.7833%2C-36.35"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="contact__map-caption">
+                <span class="material-symbols-outlined icon-sm">pin_drop</span>
+                Rua Deputado José Medeiros, s/n — Centro
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__form-card">
+            <div class="contact__form-head">
+              <div>
+                <span class="section-kicker">Fale conosco</span>
+                <h3>Ouvidoria da Educação</h3>
+                <p>Envie sua mensagem, sugestão ou solicitação. A equipe responde em até 5 dias úteis.</p>
+              </div>
+              <span class="icon-box icon-box--blue"><span class="material-symbols-outlined">forum</span></span>
+            </div>
+
+            <form id="contact-form" class="contact__form" data-toast>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="contact-name">Nome completo</label>
+                  <input class="input" id="contact-name" name="nome" type="text" placeholder="Seu nome completo"
+                    required />
+                </div>
+                <div class="field">
+                  <label for="contact-email">E-mail</label>
+                  <input class="input" id="contact-email" name="email" type="email" placeholder="seu@email.com"
+                    required />
+                </div>
+                <div class="field">
+                  <label for="contact-phone">Telefone / WhatsApp</label>
+                  <input class="input" id="contact-phone" name="telefone" type="tel" placeholder="(82) 90000-0000" />
+                </div>
+                <div class="field">
+                  <label for="contact-subject">Assunto</label>
+                  <select class="select" id="contact-subject" name="assunto" required>
+                    <option value="">Selecione o assunto</option>
+                    <option value="matricula">Matrícula e renovação</option>
+                    <option value="transporte">Transporte escolar</option>
+                    <option value="alimentacao">Alimentação escolar (PNAE)</option>
+                    <option value="documentos">Documentos e editais</option>
+                    <option value="lgpd">LGPD / Proteção de dados</option>
+                    <option value="outro">Outro assunto</option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="contact-school">Escola de interesse <span class="optional">(opcional)</span></label>
+                  <input class="input" id="contact-school" name="escola" type="text"
+                    placeholder="Nome da unidade escolar" />
+                </div>
+                <div class="field field--full">
+                  <label for="contact-message">Mensagem</label>
+                  <textarea class="textarea" id="contact-message" name="mensagem"
+                    placeholder="Descreva sua solicitação com detalhes..." required></textarea>
+                </div>
+              </div>
+              <div class="checkbox-row">
+                <input type="checkbox" id="contact-consent" required />
+                <label for="contact-consent">Autorizo o tratamento dos meus dados pessoais pela SEMED, exclusivamente
+                  para atendimento desta solicitação, nos termos da LGPD (Lei nº 13.709/2018).</label>
+              </div>
+              <div class="contact__form-foot">
+                <span>* Campos obrigatórios</span>
+                <button type="submit" class="btn btn--primary">
+                  <span class="material-symbols-outlined icon-sm">send</span>
+                  Enviar mensagem
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <img class="brand__crest" src="assets/images/brasao.png" alt="" />
+          <span class="brand__text">
+            <strong>SEMED</strong>
+            <small>Secretaria Municipal de Educação<br />São Miguel dos Campos - AL</small>
+          </span>
+        </a>
+        <p>Promovendo uma educação pública, inclusiva e transformadora, valorizando os profissionais do magistério e
+          ampliando as oportunidades de aprendizagem para crianças, jovens e adultos miguelenses.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+          <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          <a href="#" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3>Ensino &amp; Ofertas</h3>
+        <ul>
+          <li><a href="index.html#programas">Educação Infantil</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental I</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental II</a></li>
+          <li><a href="index.html#programas">Educação de Jovens e Adultos</a></li>
+          <li><a href="index.html#programas">Educação Especial &amp; Inclusão</a></li>
+          <li><a href="index.html#programas">Programa Escola 10</a></li>
+          <li><a href="index.html#programas">IDEB</a></li>
+          <li><a href="index.html#programas">Grêmios Estudantis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Transparência</h3>
+        <ul>
+          <li><a href="lgpd.html">Serviço de Informação ao Cidadão (e-SIC)</a></li>
+          <li><a href="lgpd.html">Portal da Transparência</a></li>
+          <li><a href="lgpd.html">Ouvidoria Municipal</a></li>
+          <li><a href="documentos.html">Editais &amp; Licitações</a></li>
+          <li><a href="documentos.html">Prestação de Contas</a></li>
+          <li><a href="servidor.html">Contracheque</a></li>
+          <li><a href="lgpd.html">LGPD &amp; Privacidade</a></li>
+          <li><a href="documentos.html">Legislação</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__contact">
+        <h3>Sede &amp; Contato</h3>
+        <p>
+          <span class="material-symbols-outlined">place</span>
+          <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL<br />CEP 57240-000</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">schedule</span>
+          <span>Segunda a sexta, das 07h30 às 13h30</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">phone</span>
+          <span>(82) 3271-1234 | (82) 3271-1250</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">mail</span>
+          <span>semed@saomigueldoscampos.al.gov.br</span>
+        </p>
+        <a class="footer__access-btn" href="lgpd.html">
+          <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+          Acessibilidade Presencial e Digital
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__institutional">
+      <div class="container footer__institutional-inner">
+        <a class="footer__semed-logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img src="assets/images/semed_logo_branca.png"
+            alt="SEMED - Secretaria Municipal de Educação de São Miguel dos Campos" />
+        </a>
+        <div class="footer__gov-logos" aria-label="Governos parceiros">
+          <figure class="footer__gov-logo">
+            <img src="assets/images/brasil_logo.png" alt="Bandeira do Brasil" />
+            <figcaption>Governo Federal</figcaption>
+          </figure>
+          <figure class="footer__gov-logo">
+            <img src="assets/images/bandeira-alagoas.png" alt="Bandeira do Estado de Alagoas" />
+            <figcaption>Governo de Alagoas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 SEMED — Secretaria Municipal de Educação de São Miguel dos Campos - AL. Todos os direitos reservados.
+        </p>
+        <nav class="footer__bottom-links" aria-label="Links legais">
+          <a href="#">Portal Fale.BR</a><span>|</span>
+          <a href="termos-de-uso.html">Termos de Uso</a><span>|</span>
+          <a href="politica-privacidade.html">Política de Privacidade</a><span>|</span>
+          <a href="#mapa">Mapa do site</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= TOAST ================= -->
+  <div class="toast hidden" id="toast-notification" aria-live="polite" aria-atomic="true">
+    <div class="toast-content">
+      <span class="toast-icon">check_circle</span>
+      <div class="toast-body">
+        <span class="toast-title" id="toast-title">Aviso</span>
+        <span class="toast-msg" id="toast-msg"></span>
+      </div>
+      <button class="toast-close" aria-label="Fechar notificação"><span
+          class="material-symbols-outlined">close</span></button>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

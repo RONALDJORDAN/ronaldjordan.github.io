@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentos e Editais | SEMED São Miguel dos Campos - AL</title>
+  <meta name="description" content="Repositório oficial de documentos, editais, portarias, resoluções e legislação da Secretaria Municipal de Educação de São Miguel dos Campos - AL." />
+  <link rel="icon" type="image/png" href="assets/images/brasao.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/documentos.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= HEADER GOVERNAMENTAL ================= -->
+  <header class="gov-header" id="site-header">
+    <div class="gov-topbar">
+      <div class="container gov-topbar__inner">
+        <div class="gov-topbar__left">
+          <a class="gov-brand" href="index.html" aria-label="Governo Municipal de São Miguel dos Campos">
+            <img class="gov-brand__crest" src="assets/images/brasil_logo.png" alt="" />
+            <span>BRASIL<small>Governo Municipal</small></span>
+          </a>
+          <nav class="gov-links" aria-label="Links institucionais">
+            <a href="lgpd.html">Acesso à Informação</a>
+            <a href="noticias.html">Comunica BR</a>
+            <a href="documentos.html">Órgãos do Governo</a>
+          </nav>
+        </div>
+        <div class="gov-topbar__right">
+          <div class="gov-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          </div>
+          <div class="a11y-wrap">
+            <button class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel">
+              <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+              Acessibilidade
+            </button>
+            <div class="a11y-panel" id="a11y-panel" hidden>
+              <h2>Recursos de acessibilidade</h2>
+              <div class="a11y-row">
+                <span>Tamanho do texto</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="font-decrease" aria-label="Diminuir texto">A−</button>
+                  <button type="button" id="font-reset" aria-label="Texto normal">A</button>
+                  <button type="button" id="font-increase" aria-label="Aumentar texto">A+</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Alto contraste</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="contrast-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+              <div class="a11y-row">
+                <span>Links sublinhados</span>
+                <div class="a11y-buttons">
+                  <button type="button" id="underline-toggle" aria-pressed="false">Ativar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#mapa">Mapa do site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main__inner">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+
+        <form class="header-search" action="documentos.html" method="get" role="search">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <label class="sr-only" for="site-search">Buscar no portal</label>
+          <input type="search" id="site-search" name="q" placeholder="Buscar escolas, editais, documentos..." autocomplete="off" />
+          <kbd>Ctrl K</kbd>
+        </form>
+
+        <div class="header-actions">
+          <a href="servidor.html" class="btn btn--primary">
+            <span class="material-symbols-outlined icon-sm">account_circle</span>
+            Portal do Servidor
+          </a>
+          <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-drawer">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="container main-nav__inner">
+        <a href="index.html" class="main-nav__link">Início</a>
+        <a href="noticias.html" class="main-nav__link">Notícias</a>
+        <a href="institucional/institucional.html" class="main-nav__link">Institucional</a>
+        </div>
+        <a href="index.html#programas" class="main-nav__link">Educação</a>
+        <a href="index.html#servicos" class="main-nav__link">Estudante</a>
+        <a href="index.html#escola" class="main-nav__link">Escola</a>
+        <a href="documentos.html" class="main-nav__link is-active" aria-current="page">Documentos e Editais</a>
+        <a href="lgpd.html" class="main-nav__link">LGPD &amp; Transparência</a>
+        <a href="servidor.html" class="main-nav__link">Servidor</a>
+        <a href="noticias.html#avisos" class="main-nav__link">Avisos</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="mobile-drawer" id="mobile-drawer" hidden>
+    <div class="mobile-drawer__overlay" data-close-drawer></div>
+    <aside class="mobile-drawer__panel" aria-label="Menu de navegação móvel">
+      <div class="mobile-drawer__head">
+        <a class="brand brand--logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img class="brand__logo" src="assets/images/semed_logo.png" alt="SEMED - Secretaria Municipal de Educação" />
+        </a>
+        <button class="mobile-drawer__close" id="mobile-menu-close" aria-label="Fechar menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-drawer__nav" aria-label="Menu de navegação móvel">
+        <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+        <a href="noticias.html"><span class="material-symbols-outlined">newspaper</span>Notícias</a>
+                <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span>Institucional</a>
+        <div class="mobile-drawer__dropdown" aria-expanded="false">
+          <button class="mobile-drawer__dropdown-trigger" aria-label="Submódulos Institucionais" type="button">
+            
+          </button>
+          <div class="mobile-drawer__dropdown__menu" style="padding-left:1rem">
+            <a href="institucional/institucional.html"><span class="material-symbols-outlined">verified_user</span> Institucional</a>
+            <a href="institucional/quem-somos.html"><span class="material-symbols-outlined">info</span> Quem Somos</a>
+            <a href="institucional/galeria-funcionarios.html"><span class="material-symbols-outlined">people</span> Galeria de Funcionários</a>
+            <a href="institucional/contatos.html"><span class="material-symbols-outlined">contact_page</span> Contatos</a>
+            <a href="institucional/biblioteca.html"><span class="material-symbols-outlined">books</span> Biblioteca Digital</a>
+          </div>
+        </div>
+        <a href="index.html#programas"><span class="material-symbols-outlined">auto_stories</span>Educação</a>
+        <a href="index.html#servicos"><span class="material-symbols-outlined">backpack</span>Estudante</a>
+        <a href="index.html#escola"><span class="material-symbols-outlined">school</span>Escola</a>
+        <a href="documentos.html"><span class="material-symbols-outlined">folder_managed</span>Documentos e Editais</a>
+        <a href="lgpd.html"><span class="material-symbols-outlined">shield_person</span>LGPD &amp; Transparência</a>
+        <a href="servidor.html"><span class="material-symbols-outlined">account_circle</span>Servidor</a>
+        <a href="noticias.html#avisos"><span class="material-symbols-outlined">campaign</span>Avisos</a>
+      </nav>
+      <div class="mobile-drawer__footer">
+        <a href="servidor.html" class="btn btn--primary btn--block">
+          <span class="material-symbols-outlined icon-sm">login</span>
+          Acessar Portal do Servidor
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ================= HERO / BUSCA AVANÇADA ================= -->
+    <section class="docs-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação">
+          <a href="index.html"><span class="material-symbols-outlined">home</span>Início</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span aria-current="page">Documentos e Editais</span>
+        </nav>
+
+        <div class="docs-hero__head">
+          <div class="docs-hero__copy">
+            <span class="docs-pill">
+              <span class="material-symbols-outlined icon-sm">folder_managed</span>
+              Transparência Ativa · São Miguel dos Campos - AL
+            </span>
+            <h1>Repositório Oficial de Documentos, Editais e Legislação</h1>
+            <p>Acesse e consulte com transparência as portarias, editais de concursos e seleções, chamadas públicas, diretrizes curriculares e resoluções do Conselho Municipal de Educação (CME) de São Miguel dos Campos.</p>
+          </div>
+
+          <div class="docs-hero__seals" aria-label="Selos de autenticidade">
+            <span class="docs-seal">
+              <span class="material-symbols-outlined icon-sm">verified_user</span>
+              <span><strong>Autenticidade ICP-Brasil</strong><small>Documentos assinados digitalmente</small></span>
+            </span>
+            <span class="docs-seal docs-seal--muted">
+              <span class="material-symbols-outlined icon-sm">history</span>
+              <span><strong>Atualizado hoje</strong><small>Última publicação às 08:30</small></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Módulo de busca e filtros -->
+        <div class="docs-filter" role="search" aria-label="Filtrar documentos">
+          <div class="docs-filter__grid">
+            <div class="docs-field docs-field--search">
+              <span class="material-symbols-outlined docs-field__icon">search</span>
+              <label class="sr-only" for="doc-search-input">Buscar documentos</label>
+              <input type="search" id="doc-search-input" placeholder="Buscar por número, palavra-chave, cargo ou tema..." autocomplete="off" />
+            </div>
+
+            <div class="docs-field">
+              <span class="material-symbols-outlined docs-field__icon">category</span>
+              <label class="sr-only" for="doc-category-select">Categoria do documento</label>
+              <select id="doc-category-select">
+                <option value="todos">Todas as Categorias</option>
+                <option value="editais">Editais &amp; Chamadas Públicas</option>
+                <option value="portarias">Portarias &amp; Decretos</option>
+                <option value="resolucoes">Resoluções CME</option>
+                <option value="diretrizes">Diretrizes &amp; Manuais</option>
+                <option value="fundeb">Prestação de Contas &amp; FUNDEB</option>
+              </select>
+              <span class="material-symbols-outlined docs-field__caret">arrow_drop_down</span>
+            </div>
+
+            <div class="docs-field">
+              <span class="material-symbols-outlined docs-field__icon">calendar_today</span>
+              <label class="sr-only" for="doc-year-select">Ano de publicação</label>
+              <select id="doc-year-select">
+                <option value="todos">Todos os Anos</option>
+                <option value="2026">Ano 2026</option>
+                <option value="2025">Ano 2025</option>
+                <option value="2024">Ano 2024</option>
+                <option value="2023">Ano 2023</option>
+              </select>
+              <span class="material-symbols-outlined docs-field__caret">arrow_drop_down</span>
+            </div>
+
+            <button class="btn btn--primary docs-filter__btn" id="filter-trigger-btn" type="button">
+              <span class="material-symbols-outlined icon-sm">tune</span>
+              Filtrar
+            </button>
+          </div>
+
+          <div class="docs-filter__foot">
+            <div class="docs-terms">
+              <span class="docs-terms__label">Termos frequentes:</span>
+              <button type="button" data-term="FUNDEB">FUNDEB</button>
+              <button type="button" data-term="Transporte">Transporte Escolar</button>
+              <button type="button" data-term="Calendário">Calendário Letivo</button>
+              <button type="button" data-term="AEE">AEE &amp; Inclusão</button>
+            </div>
+            <button class="docs-reset" id="clear-filters-btn" type="button">
+              <span class="material-symbols-outlined icon-sm">refresh</span>
+              Redefinir Filtros
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-content section">
+      <div class="container">
+
+        <!-- ================= INDICADORES ================= -->
+        <div class="docs-stats" aria-label="Indicadores do repositório">
+          <article class="docs-stat">
+            <div class="docs-stat__top">
+              <span class="docs-stat__icon docs-stat__icon--success"><span class="material-symbols-outlined">campaign</span></span>
+              <span class="badge badge--success"><span class="dot dot--success"></span> Inscrições Abertas</span>
+            </div>
+            <div class="docs-stat__value">03</div>
+            <h2>Editais Abertos</h2>
+            <p>Processos seletivos e compras ativas na rede miguelense.</p>
+            <div class="docs-stat__bar"><span class="is-success" style="width: 75%"></span></div>
+          </article>
+
+          <article class="docs-stat">
+            <div class="docs-stat__top">
+              <span class="docs-stat__icon"><span class="material-symbols-outlined">gavel</span></span>
+              <span class="badge badge--neutral">Exercício 2026</span>
+            </div>
+            <div class="docs-stat__value">148</div>
+            <h2>Portarias Publicadas</h2>
+            <p>Atos normativos e delegações devidamente catalogadas.</p>
+            <div class="docs-stat__bar"><span style="width: 80%"></span></div>
+          </article>
+
+          <article class="docs-stat">
+            <div class="docs-stat__top">
+              <span class="docs-stat__icon docs-stat__icon--blue"><span class="material-symbols-outlined">school</span></span>
+              <span class="badge badge--neutral">Conselho Ativo</span>
+            </div>
+            <div class="docs-stat__value">32</div>
+            <h2>Resoluções CME</h2>
+            <p>Normativas pedagógicas e diretrizes escolares aprovadas.</p>
+            <div class="docs-stat__bar"><span class="is-blue" style="width: 66%"></span></div>
+          </article>
+
+          <article class="docs-stat">
+            <div class="docs-stat__top">
+              <span class="docs-stat__icon docs-stat__icon--tertiary"><span class="material-symbols-outlined">account_balance_wallet</span></span>
+              <span class="badge badge--success">100% Atualizado</span>
+            </div>
+            <div class="docs-stat__value">100%</div>
+            <h2>Contas FUNDEB</h2>
+            <p>Transparência financeira e valorização do magistério em dia.</p>
+            <div class="docs-stat__bar"><span class="is-success" style="width: 100%"></span></div>
+          </article>
+        </div>
+
+        <!-- ================= EDITAIS EM DESTAQUE ================= -->
+        <section class="featured-editais" id="editais-abertos" aria-labelledby="featured-title">
+          <div class="featured-editais__head">
+            <div class="featured-editais__title-wrap">
+              <span class="featured-editais__mark"></span>
+              <div>
+                <h2 id="featured-title">Editais e Chamadas Públicas com Inscrições Vigentes</h2>
+                <p>Oportunidades de seleção de pessoal e credenciamento com prazos em curso.</p>
+              </div>
+            </div>
+            <a href="#tabela-completa" class="featured-editais__all">
+              Ver todos os editais
+              <span class="material-symbols-outlined icon-sm">arrow_downward</span>
+            </a>
+          </div>
+
+          <div class="featured-editais__grid">
+            <article class="featured-edital">
+              <div class="featured-edital__badges">
+                <span class="badge badge--sky"><span class="material-symbols-outlined icon-sm">assignment</span> Edital SEMED Nº 04/2026</span>
+                <span class="badge badge--success"><span class="dot dot--success"></span> Inscrições Abertas</span>
+              </div>
+              <h3>Processo Seletivo Simplificado (PSS) para Monitores de Apoio à Educação Especial e Cuidadores</h3>
+              <p>Seleção pública temporária para composição de quadro de apoio pedagógico especializado nas unidades municipais urbanas e do campo de São Miguel dos Campos.</p>
+
+              <dl class="featured-edital__info">
+                <div>
+                  <dt><span class="material-symbols-outlined">event_available</span> Período de Inscrição</dt>
+                  <dd>10/03/2026 a 25/03/2026</dd>
+                </div>
+                <div>
+                  <dt><span class="material-symbols-outlined">payments</span> Taxa de Participação</dt>
+                  <dd class="text-success">Gratuita</dd>
+                </div>
+                <div>
+                  <dt><span class="material-symbols-outlined">group</span> Vagas + CR</dt>
+                  <dd>45 vagas imediatas</dd>
+                </div>
+                <div>
+                  <dt><span class="material-symbols-outlined">verified</span> Publicação no DOE</dt>
+                  <dd>Edição Ordinária Nº 4.102</dd>
+                </div>
+              </dl>
+
+              <div class="featured-edital__actions">
+                <button type="button" class="btn btn--primary btn-download" data-file="Edital SEMED 04/2026 (PDF 1.8 MB)">
+                  <span class="material-symbols-outlined icon-sm">download</span>
+                  Baixar Edital Completo (PDF 1.8 MB)
+                </button>
+                <button type="button" class="btn btn--soft" data-preview="Edital SEMED Nº 04/2026 — PSS Monitores e Cuidadores">
+                  <span class="material-symbols-outlined icon-sm">visibility</span>
+                  Acompanhamento &amp; Retificações
+                </button>
+              </div>
+            </article>
+
+            <article class="featured-edital featured-edital--tertiary">
+              <div class="featured-edital__badges">
+                <span class="badge badge--tertiary"><span class="material-symbols-outlined icon-sm">storefront</span> Chamada Pública Nº 02/2026</span>
+                <span class="badge badge--success"><span class="dot dot--success"></span> Prazo em Aberto</span>
+              </div>
+              <h3>Aquisição Direta de Gêneros Alimentícios da Agricultura Familiar para a Merenda Escolar (PNAE)</h3>
+              <p>Chamamento para cooperativas e produtores rurais familiares individuais para fornecimento de hortifrúti, raízes e polpas naturais para todas as escolas e creches municipais.</p>
+
+              <dl class="featured-edital__info">
+                <div>
+                  <dt><span class="material-symbols-outlined">alarm</span> Prazo de Entrega das Propostas</dt>
+                  <dd>Até 30/03/2026 às 13:00</dd>
+                </div>
+                <div>
+                  <dt><span class="material-symbols-outlined">nutrition</span> Programa Federal</dt>
+                  <dd>PNAE / FNDE 2026</dd>
+                </div>
+                <div>
+                  <dt><span class="material-symbols-outlined">apartment</span> Local de Entrega</dt>
+                  <dd>Sede da SEMED - Setor de Compras</dd>
+                </div>
+                <div>
+                  <dt><span class="material-symbols-outlined">attach_money</span> Valor Estimado</dt>
+                  <dd>R$ 680.000,00</dd>
+                </div>
+              </dl>
+
+              <div class="featured-edital__actions">
+                <button type="button" class="btn btn--tertiary btn-download" data-file="Chamada Pública 02/2026 (PDF 2.4 MB)">
+                  <span class="material-symbols-outlined icon-sm">download</span>
+                  Baixar Chamada Pública (PDF 2.4 MB)
+                </button>
+                <button type="button" class="btn btn--soft" data-preview="Chamada Pública Nº 02/2026 — Agricultura Familiar (PNAE)">
+                  <span class="material-symbols-outlined icon-sm">attachment</span>
+                  Anexos &amp; Modelos de Venda
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ================= TABELA OFICIAL ================= -->
+        <section class="docs-repo" id="tabela-completa" aria-labelledby="docs-table-title">
+          <div class="docs-repo__head">
+            <div>
+              <h2 id="docs-table-title">Tabela Oficial de Atos e Publicações</h2>
+              <p>Consulte, filtre e descarregue documentos oficiais em formato aberto e assinado digitalmente.</p>
+            </div>
+            <div class="docs-repo__tools">
+              <span id="doc-count">Exibindo 7 de 214 registros</span>
+              <button type="button" id="export-csv" title="Exportar CSV de documentos" aria-label="Exportar CSV de documentos">
+                <span class="material-symbols-outlined">file_download</span>
+              </button>
+              <button type="button" id="print-table" title="Imprimir listagem" aria-label="Imprimir listagem">
+                <span class="material-symbols-outlined">print</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="docs-tabs" id="doc-tabs" role="tablist" aria-label="Filtrar tabela por categoria">
+            <button type="button" class="docs-tab is-active" data-filter="todos" role="tab" aria-selected="true">Todos (214)</button>
+            <button type="button" class="docs-tab" data-filter="editais" role="tab" aria-selected="false">Editais &amp; Seleções (28)</button>
+            <button type="button" class="docs-tab" data-filter="portarias" role="tab" aria-selected="false">Portarias (96)</button>
+            <button type="button" class="docs-tab" data-filter="resolucoes" role="tab" aria-selected="false">Resoluções CME (42)</button>
+            <button type="button" class="docs-tab" data-filter="diretrizes" role="tab" aria-selected="false">Normas &amp; Manuais (24)</button>
+            <button type="button" class="docs-tab" data-filter="fundeb" role="tab" aria-selected="false">FUNDEB &amp; Finanças (24)</button>
+          </div>
+
+          <div class="docs-repo__card">
+            <div class="docs-repo__scroll">
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Tipo / Código</th>
+                    <th scope="col">Título &amp; Ementa Resumida</th>
+                    <th scope="col">Órgão Emissor</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Formato</th>
+                    <th scope="col" class="is-right">Ações</th>
+                  </tr>
+                </thead>
+                <tbody id="document-table-body">
+                  <tr data-category="portarias" data-year="2026">
+                    <td>
+                      <div class="doc-type">
+                        <span class="doc-type__icon"><span class="material-symbols-outlined">description</span></span>
+                        <div><strong>Portaria Nº 142/2026</strong><small>SEMED</small></div>
+                      </div>
+                    </td>
+                    <td class="doc-title-cell">
+                      <button type="button" class="doc-title-btn" data-preview="Portaria SEMED Nº 142/2026">Homologação do Calendário Oficial do Ano Letivo 2026 da Rede Municipal de Ensino</button>
+                      <p>Fixa 200 dias letivos, datas de jornadas pedagógicas, recessos e provas diagnósticas municipais.</p>
+                    </td>
+                    <td>Gabinete do Secretário</td>
+                    <td class="doc-date">12/01/2026</td>
+                    <td><span class="doc-format">PDF · 420 KB</span></td>
+                    <td>
+                      <div class="doc-actions">
+                        <button type="button" class="doc-icon-btn" data-preview="Portaria SEMED Nº 142/2026" title="Visualizar documento" aria-label="Visualizar Portaria 142/2026">
+                          <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button type="button" class="doc-download btn-download" data-file="Portaria SEMED Nº 142/2026 (PDF)">Baixar</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr data-category="resolucoes" data-year="2026">
+                    <td>
+                      <div class="doc-type">
+                        <span class="doc-type__icon doc-type__icon--indigo"><span class="material-symbols-outlined">policy</span></span>
+                        <div><strong>Resolução Nº 08/2026</strong><small>CME / SMC</small></div>
+                      </div>
+                    </td>
+                    <td class="doc-title-cell">
+                      <button type="button" class="doc-title-btn" data-preview="Resolução CME/SMC Nº 08/2026">Diretrizes Curriculares Municipais para o Ensino Fundamental e Recomposição de Aprendizagem</button>
+                      <p>Estabelece matriz de habilidades prioritárias e tutoria intensiva em alfabetização e matemática.</p>
+                    </td>
+                    <td>Conselho Municipal de Educação</td>
+                    <td class="doc-date">03/02/2026</td>
+                    <td><span class="doc-format">PDF · 1.2 MB</span></td>
+                    <td>
+                      <div class="doc-actions">
+                        <button type="button" class="doc-icon-btn" data-preview="Resolução CME/SMC Nº 08/2026" title="Visualizar documento" aria-label="Visualizar Resolução 08/2026">
+                          <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button type="button" class="doc-download btn-download" data-file="Resolução CME/SMC Nº 08/2026 (PDF)">Baixar</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr data-category="editais" data-year="2026">
+                    <td>
+                      <div class="doc-type">
+                        <span class="doc-type__icon doc-type__icon--success"><span class="material-symbols-outlined">campaign</span></span>
+                        <div><strong>Edital Nº 03/2026</strong><small>SEMED / Cultural</small></div>
+                      </div>
+                    </td>
+                    <td class="doc-title-cell">
+                      <button type="button" class="doc-title-btn" data-preview="Edital Nº 03/2026">Concurso Literário de Poesia e Redação da Rede Municipal Miguelense</button>
+                      <p>Regulamento e premiações para estudantes do 4º ao 9º ano e EJA das escolas da rede municipal.</p>
+                    </td>
+                    <td>Coordenação Pedagógica</td>
+                    <td class="doc-date">20/02/2026</td>
+                    <td><span class="doc-format">PDF · 780 KB</span></td>
+                    <td>
+                      <div class="doc-actions">
+                        <button type="button" class="doc-icon-btn" data-preview="Edital Nº 03/2026" title="Visualizar documento" aria-label="Visualizar Edital 03/2026">
+                          <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button type="button" class="doc-download btn-download" data-file="Edital Nº 03/2026 (PDF)">Baixar</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr data-category="portarias" data-year="2026">
+                    <td>
+                      <div class="doc-type">
+                        <span class="doc-type__icon"><span class="material-symbols-outlined">directions_bus</span></span>
+                        <div><strong>Portaria Nº 129/2026</strong><small>SEMED</small></div>
+                      </div>
+                    </td>
+                    <td class="doc-title-cell">
+                      <button type="button" class="doc-title-btn" data-preview="Portaria SEMED Nº 129/2026">Comissão Gestora do Programa Municipal de Transporte Escolar Rural</button>
+                      <p>Nomeação de servidores responsáveis pelo mapeamento de rotas, fiscalização de frotas e segurança.</p>
+                    </td>
+                    <td>Gabinete do Secretário</td>
+                    <td class="doc-date">18/01/2026</td>
+                    <td><span class="doc-format">PDF · 310 KB</span></td>
+                    <td>
+                      <div class="doc-actions">
+                        <button type="button" class="doc-icon-btn" data-preview="Portaria SEMED Nº 129/2026" title="Visualizar documento" aria-label="Visualizar Portaria 129/2026">
+                          <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button type="button" class="doc-download btn-download" data-file="Portaria SEMED Nº 129/2026 (PDF)">Baixar</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr data-category="fundeb" data-year="2026">
+                    <td>
+                      <div class="doc-type">
+                        <span class="doc-type__icon doc-type__icon--tertiary"><span class="material-symbols-outlined">query_stats</span></span>
+                        <div><strong>FUNDEB Bim. 01/2026</strong><small>Contabilidade</small></div>
+                      </div>
+                    </td>
+                    <td class="doc-title-cell">
+                      <button type="button" class="doc-title-btn" data-preview="Relatório Bimestral FUNDEB 01/2026">Demonstrativo de Aplicação dos Recursos e Valorização do Magistério</button>
+                      <p>Relatório oficial de receitas e despesas vinculadas, percentual aplicado (74,8% em valorização).</p>
+                    </td>
+                    <td>Coordenação de Finanças</td>
+                    <td class="doc-date">01/03/2026</td>
+                    <td><span class="doc-format">PDF · 3.1 MB</span></td>
+                    <td>
+                      <div class="doc-actions">
+                        <button type="button" class="doc-icon-btn" data-preview="Relatório Bimestral FUNDEB 01/2026" title="Visualizar documento" aria-label="Visualizar Relatório FUNDEB 01/2026">
+                          <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button type="button" class="doc-download btn-download" data-file="Relatório FUNDEB 01/2026 (PDF)">Baixar</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr data-category="diretrizes" data-year="2026">
+                    <td>
+                      <div class="doc-type">
+                        <span class="doc-type__icon doc-type__icon--rose"><span class="material-symbols-outlined">security</span></span>
+                        <div><strong>Instrução Nº 02/2026</strong><small>Gestão Escolar</small></div>
+                      </div>
+                    </td>
+                    <td class="doc-title-cell">
+                      <button type="button" class="doc-title-btn" data-preview="Instrução Normativa Nº 02/2026">Critérios de Segurança e Acolhimento nos Ambientes Escolares da SEMED</button>
+                      <p>Manual de procedimentos preventivos, fluxo de entrada e protocolos integrados de acolhimento social.</p>
+                    </td>
+                    <td>Gabinete &amp; Núcleo Psicossocial</td>
+                    <td class="doc-date">15/02/2026</td>
+                    <td><span class="doc-format">PDF · 950 KB</span></td>
+                    <td>
+                      <div class="doc-actions">
+                        <button type="button" class="doc-icon-btn" data-preview="Instrução Normativa Nº 02/2026" title="Visualizar documento" aria-label="Visualizar Instrução 02/2026">
+                          <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button type="button" class="doc-download btn-download" data-file="Instrução Normativa Nº 02/2026 (PDF)">Baixar</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr data-category="resolucoes" data-year="2025">
+                    <td>
+                      <div class="doc-type">
+                        <span class="doc-type__icon doc-type__icon--indigo"><span class="material-symbols-outlined">support</span></span>
+                        <div><strong>Resolução Nº 05/2025</strong><small>CME / SMC</small></div>
+                      </div>
+                    </td>
+                    <td class="doc-title-cell">
+                      <button type="button" class="doc-title-btn" data-preview="Resolução CME/SMC Nº 05/2025">Regulamentação das Salas de Recursos Multifuncionais (AEE) na Rede Municipal</button>
+                      <p>Parâmetros para atendimento educacional especializado, triagem pedagógica e laudos escolares.</p>
+                    </td>
+                    <td>Conselho Municipal de Educação</td>
+                    <td class="doc-date">18/11/2025</td>
+                    <td><span class="doc-format">PDF · 890 KB</span></td>
+                    <td>
+                      <div class="doc-actions">
+                        <button type="button" class="doc-icon-btn" data-preview="Resolução CME/SMC Nº 05/2025" title="Visualizar documento" aria-label="Visualizar Resolução 05/2025">
+                          <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button type="button" class="doc-download btn-download" data-file="Resolução CME/SMC Nº 05/2025 (PDF)">Baixar</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="docs-empty" id="docs-empty" hidden>Nenhum documento encontrado para os filtros selecionados.</p>
+
+            <div class="docs-repo__pag">
+              <span id="doc-page-info">Página <strong>1</strong> de <strong>31</strong> · Total de 214 atos</span>
+              <nav class="docs-pagination" aria-label="Paginação de documentos">
+                <button type="button" disabled>Anterior</button>
+                <button type="button" class="is-active" aria-current="page">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <span>...</span>
+                <button type="button">31</button>
+                <button type="button">Próxima</button>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= LEGISLAÇÃO & APOIO ================= -->
+        <section class="docs-aux">
+          <div class="docs-legis">
+            <span class="docs-legis__kicker"><span class="material-symbols-outlined icon-sm">account_balance</span> Marcos Legais &amp; Bases Normativas Complementares</span>
+            <h2>Legislação Federal, Estadual e Municipal de Referência</h2>
+            <p>Consulte os diplomas legais que fundamentam as diretrizes pedagógicas, financiamento e atos administrativos da educação pública em São Miguel dos Campos.</p>
+
+            <div class="docs-legis__grid">
+              <a href="https://planalto.gov.br" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined">menu_book</span>
+                <span><strong>LDB — Lei Federal Nº 9.394/1996</strong><small>Diretrizes e Bases da Educação Nacional compilada e atualizada.</small></span>
+              </a>
+              <a href="lgpd.html">
+                <span class="material-symbols-outlined">flag</span>
+                <span><strong>Plano Municipal de Educação (PME)</strong><small>Metas e estratégias decenais de São Miguel dos Campos - AL.</small></span>
+              </a>
+              <a href="documentos.html">
+                <span class="material-symbols-outlined">gavel</span>
+                <span><strong>Lei Orgânica Municipal</strong><small>Capítulo da Educação, Cultura e Desporto do Município.</small></span>
+              </a>
+              <a href="https://diariomunicipal.com.br/ama" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined">newspaper</span>
+                <span><strong>Diário Oficial dos Municípios (AMA)</strong><small>Veículo oficial de publicações dos atos administrativos de Alagoas.</small></span>
+              </a>
+            </div>
+
+            <div class="docs-legis__foot">
+              <span>Fonte: Gabinete Jurídico e CME / São Miguel dos Campos</span>
+              <span class="docs-legis__seal"><span class="material-symbols-outlined icon-sm">verified</span> Repositório Auditado</span>
+            </div>
+          </div>
+
+          <aside class="docs-support">
+            <span class="docs-support__icon"><span class="material-symbols-outlined">support_agent</span></span>
+            <h2>Dúvidas sobre Editais ou Legislação?</h2>
+            <p>A Comissão Permanente de Licitação (CPL) e a Ouvidoria Escolar da SEMED prestam esclarecimentos e recebem pedidos de impugnação formal nos prazos legais.</p>
+
+            <ul class="docs-support__contacts">
+              <li><span class="material-symbols-outlined icon-sm">mail</span> editais.semed@saomigueldoscampos.al.gov.br</li>
+              <li><span class="material-symbols-outlined icon-sm">call</span> (82) 3271-1234 · Ramal 204 (CPL)</li>
+              <li><span class="material-symbols-outlined icon-sm">schedule</span> Atendimento: 07:30 às 13:30 (dias úteis)</li>
+            </ul>
+
+            <div class="docs-support__actions">
+              <a href="lgpd.html" class="btn btn--light btn--block">
+                <span class="material-symbols-outlined icon-sm">forward_to_inbox</span>
+                Registrar Dúvida na Ouvidoria
+              </a>
+              <a href="lgpd.html" class="docs-support__link">Acessar Sistema E-SIC</a>
+            </div>
+          </aside>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- ================= MODAL DE PRÉVIA ================= -->
+    <div class="modal" id="doc-modal" hidden role="dialog" aria-modal="true" aria-labelledby="doc-modal-title">
+      <div class="modal__card">
+        <div class="modal__head">
+          <div>
+            <span class="docs-modal-kicker"><span class="material-symbols-outlined icon-sm">verified</span> Documento Homologado · SEMED SMC</span>
+            <h2 id="doc-modal-title">Título do Documento</h2>
+          </div>
+          <button type="button" class="modal__close" id="doc-modal-close" aria-label="Fechar prévia">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+
+        <p class="docs-modal-text">Este documento encontra-se registrado no Diário Oficial e arquivado sob chancela de conformidade pela Secretaria Municipal de Educação de São Miguel dos Campos - AL.</p>
+
+        <dl class="docs-modal-meta">
+          <div><dt>Hash SHA-256</dt><dd>7f8a91b...c401d</dd></div>
+          <div><dt>Chancela Digital</dt><dd class="text-primary">ICP-Brasil / Certificado Válido</dd></div>
+          <div><dt>Disponibilidade</dt><dd class="text-success">Acesso Público Irrestrito</dd></div>
+        </dl>
+
+        <div class="docs-modal-actions">
+          <button type="button" class="btn btn--secondary" id="doc-modal-cancel">Fechar</button>
+          <button type="button" class="btn btn--primary" id="doc-modal-download" data-file="Documento Oficial SEMED (PDF)">
+            <span class="material-symbols-outlined icon-sm">download</span>
+            Baixar Arquivo PDF
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <img class="brand__crest" src="assets/images/brasao.png" alt="" />
+          <span class="brand__text">
+            <strong>SEMED</strong>
+            <small>Secretaria Municipal de Educação<br />São Miguel dos Campos - AL</small>
+          </span>
+        </a>
+        <p>Promovendo uma educação pública, inclusiva e transformadora, valorizando os profissionais do magistério e ampliando as oportunidades de aprendizagem para crianças, jovens e adultos miguelenses.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+          <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+          <a href="#" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3>Ensino &amp; Ofertas</h3>
+        <ul>
+          <li><a href="index.html#programas">Educação Infantil</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental I</a></li>
+          <li><a href="index.html#programas">Ensino Fundamental II</a></li>
+          <li><a href="index.html#programas">Educação de Jovens e Adultos</a></li>
+          <li><a href="index.html#programas">Educação Especial &amp; Inclusão</a></li>
+          <li><a href="index.html#programas">Programa Escola 10</a></li>
+          <li><a href="index.html#programas">IDEB</a></li>
+          <li><a href="index.html#programas">Grêmios Estudantis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Transparência</h3>
+        <ul>
+          <li><a href="lgpd.html">Serviço de Informação ao Cidadão (e-SIC)</a></li>
+          <li><a href="lgpd.html">Portal da Transparência</a></li>
+          <li><a href="lgpd.html">Ouvidoria Municipal</a></li>
+          <li><a href="documentos.html">Editais &amp; Licitações</a></li>
+          <li><a href="documentos.html">Prestação de Contas</a></li>
+          <li><a href="servidor.html">Contracheque</a></li>
+          <li><a href="lgpd.html">LGPD &amp; Privacidade</a></li>
+          <li><a href="documentos.html">Legislação</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__contact">
+        <h3>Sede &amp; Contato</h3>
+        <p>
+          <span class="material-symbols-outlined">place</span>
+          <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL<br />CEP 57240-000</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">schedule</span>
+          <span>Segunda a sexta, das 07h30 às 13h30</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">phone</span>
+          <span>(82) 3271-1234 | (82) 3271-1250</span>
+        </p>
+        <p>
+          <span class="material-symbols-outlined">mail</span>
+          <span>semed@saomigueldoscampos.al.gov.br</span>
+        </p>
+        <a class="footer__access-btn" href="lgpd.html">
+          <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+          Acessibilidade Presencial e Digital
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__institutional">
+      <div class="container footer__institutional-inner">
+        <a class="footer__semed-logo" href="index.html" aria-label="SEMED - Página inicial">
+          <img src="assets/images/semed_logo_branca.png" alt="SEMED - Secretaria Municipal de Educação de São Miguel dos Campos" />
+        </a>
+        <div class="footer__gov-logos" aria-label="Governos parceiros">
+          <figure class="footer__gov-logo">
+            <img src="assets/images/brasil_logo.png" alt="Bandeira do Brasil" />
+            <figcaption>Governo Federal</figcaption>
+          </figure>
+          <figure class="footer__gov-logo">
+            <img src="assets/images/bandeira-alagoas.png" alt="Bandeira do Estado de Alagoas" />
+            <figcaption>Governo de Alagoas</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 SEMED — Secretaria Municipal de Educação de São Miguel dos Campos - AL. Todos os direitos reservados.</p>
+        <nav class="footer__bottom-links" aria-label="Links legais">
+          <a href="#">Portal Fale.BR</a><span>|</span>
+          <a href="termos-de-uso.html">Termos de Uso</a><span>|</span>
+          <a href="politica-privacidade.html">Política de Privacidade</a><span>|</span>
+          <a href="index.html#mapa">Mapa do site</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast hidden" id="toast-notification" aria-live="polite" aria-atomic="true">
+    <div class="toast-content">
+      <span class="toast-icon">check_circle</span>
+      <div class="toast-body">
+        <span class="toast-title" id="toast-title">Aviso</span>
+        <span class="toast-msg" id="toast-msg"></span>
+      </div>
+      <button class="toast-close" aria-label="Fechar notificação"><span class="material-symbols-outlined">close</span></button>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/documentos.js"></script>
+</body>
+</html>
+
+
+
+

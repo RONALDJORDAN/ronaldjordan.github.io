@@ -1,0 +1,626 @@
+/* ============================================================
+   SEMED São Miguel dos Campos — Página Institucional
+   Design moderno, seções com divisões claras e cores vibrantes
+   ============================================================ */
+
+/* ---------- Hero institucional com imagem de fundo ---------- */
+.inst-hero {
+  position: relative;
+  padding-block: 5rem 4rem;
+  overflow: hidden;
+}
+
+.inst-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/inst-fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.55;
+  z-index: 0;
+}
+
+.inst-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 72, 56, 0.92) 0%, rgba(0, 102, 79, 0.75) 60%, rgba(16, 185, 129, 0.45) 100%);
+  z-index: 1;
+}
+
+.inst-hero .container {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: left;
+}
+
+.inst-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.inst-hero__badge .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+.inst-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.25rem;
+}
+
+.inst-breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.inst-breadcrumb a:hover {
+  opacity: 0.7;
+}
+
+.inst-breadcrumb__sep {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.inst-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.inst-hero__text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 56rem;
+  margin-bottom: 2.5rem;
+}
+
+.inst-hero__stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  padding-top: 2rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat__number {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.stat__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- Divisor de seção ---------- */
+.section-divider {
+  position: relative;
+  margin: 0;
+}
+
+.section-divider__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neutral-border), transparent);
+  z-index: 0;
+}
+
+.section-divider__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 1.5rem;
+  background: var(--surface-card);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary-ink);
+}
+
+/* ---------- Submódulos Institucionais ---------- */
+.submodulos__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.submodulo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem;
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.submodulo-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--success-border);
+  box-shadow: var(--shadow-xl);
+  color: inherit;
+}
+
+.submodulo-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius);
+  background: var(--success-subtle);
+  color: var(--success-ink);
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  margin-bottom: 0.25rem;
+}
+
+.submodulo-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0;
+}
+
+.submodulo-card p {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+  margin-top: auto;
+}
+
+.submodulo-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: auto;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--success-ink);
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.submodulo-card__link:hover {
+  gap: 0.5rem;
+  color: var(--success);
+}
+
+/* ---------- Sobre a SEMED ---------- */
+.sobre__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.sobre-card {
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.sobre-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.sobre-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.sobre-card--mission .sobre-card__badge {
+  background: var(--success-subtle);
+  color: var(--success-ink);
+}
+
+.sobre-card--vision .sobre-card__badge {
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+}
+
+.sobre-card--values .sobre-card__badge {
+  background: var(--surface-container);
+  color: var(--primary-ink);
+}
+
+.sobre-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0;
+}
+
+.sobre-card p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--on-surface-variant);
+}
+
+/* ---------- Estrutura organizacional ---------- */
+.estrutura__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.estrutura-card {
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.estrutura-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.estrutura-card__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  background: var(--gov-sky-subtle);
+  color: var(--primary-ink);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.estrutura-chip {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.25rem;
+}
+
+.estrutura-chip--blue {
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+}
+
+.estrutura-chip--sky {
+  background: var(--gov-sky-subtle);
+  color: var(--primary-ink);
+}
+
+.estrutura-chip--neutral {
+  background: var(--surface-container);
+  color: var(--on-surface-variant);
+}
+
+.estrutura-card h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 0.5rem;
+}
+
+.estrutura-card p {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+  margin-top: auto;
+}
+
+/* ---------- Transparência ---------- */
+.transparencia__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.transparencia-card {
+  display: block;
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.transparencia-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gov-sky-border);
+}
+
+.transparencia-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.875rem;
+}
+
+.transparencia-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius);
+  background: var(--gov-sky-subtle);
+  color: var(--primary-ink);
+  flex-shrink: 0;
+}
+
+.transparencia-card h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 0.625rem;
+}
+
+.transparencia-card p {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+  margin-bottom: 1.25rem;
+}
+
+.transparencia-card__link {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--primary-ink);
+  transition: color 0.2s ease;
+}
+
+.transparencia-card__link:hover {
+  color: var(--primary);
+}
+
+/* ---------- Atendimento ---------- */
+.atendimento__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.atendimento__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.atendimento__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface-container-low);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--primary-ink);
+}
+
+.atendimento__badge .material-symbols-outlined {
+  font-size: 1rem;
+}
+
+.atendimento__address h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 0.75rem;
+}
+
+.atendimento__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.atendimento__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+}
+
+.atendimento__list li strong {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.atendimento__map {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--neutral-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.atendimento__map iframe {
+  width: 100%;
+  height: 15rem;
+  display: block;
+}
+
+.atendimento__map-caption {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.625rem 0.875rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  color: var(--on-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.atendimento__form-card {
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+}
+
+.atendimento__form-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.atendimento__form-head > div {
+  min-width: 0;
+}
+
+.atendimento__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.atendimento__form-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.atendimento__form-foot span {
+  font-size: 0.6875rem;
+  color: var(--neutral-muted);
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1100px) {
+  .estrutura__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .transparencia__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .submodulos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .estrutura__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .transparencia__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .atendimento__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inst-hero__stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .submodulos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .estrutura__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transparencia__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atendimento__form-card {
+    padding: 1.5rem;
+  }
+}
