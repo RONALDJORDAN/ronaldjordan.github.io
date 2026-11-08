@@ -978,12 +978,147 @@
   }
 }
 
+/* ---------- Intro box ---------- */
+.intro-box {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--gov-sky-subtle);
+  border: 1px solid var(--gov-sky-border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.intro-box__icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.intro-box__body {
+  color: var(--on-surface);
+  line-height: 1.6;
+}
+.intro-box code {
+  font-family: "Inter", monospace;
+  background: rgba(15, 23, 42, 0.06);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  color: var(--primary-ink);
+}
+
+/* ---------- Link grid (Censo Escolar Alagoas) ---------- */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.9rem 1rem;
+  background: var(--surface-container-high);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.link-card:hover {
+  border-color: var(--primary);
+  background: var(--surface-container-low);
+}
+.link-card__icon {
+  font-size: 1.375rem;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.link-card__title {
+  font-weight: 700;
+  color: var(--on-surface);
+  font-size: 0.9375rem;
+}
+.link-card__sub {
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.1rem;
+}
+.link-card__arrow {
+  font-size: 0.75rem;
+  color: var(--primary);
+  align-self: flex-end;
+  flex-shrink: 0;
+}
+
+/* ---------- Step list (Censo Escolar etapas) ---------- */
+.step-list {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+  display: grid;
+  gap: 0.625rem;
+}
+.step-list li {
+  position: relative;
+  padding-left: 2rem;
+  counter-increment: step;
+  line-height: 1.55;
+}
+.step-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1.375rem;
+  height: 1.375rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Tip list ---------- */
+.tip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  display: grid;
+  gap: 0.375rem;
+}
+.tip-list li::before {
+  content: "✓";
+  color: var(--primary);
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+.tip-list li strong {
+  font-weight: 700;
+}
+
+/* ---------- Contact row wide ---------- */
+.contact-row--wide {
+  margin-top: 1.25rem;
+}
+
 /* ---------- Offset para âncoras do menu principal ---------- */
 #servicos,
 #programas,
 #transparencia,
 #mapa,
-#escola {
+#escola,
+#ideb,
+#censo-basica,
+#censo-alagoas,
+#cem-miguel {
   scroll-margin-top: 10rem;
 }
 
