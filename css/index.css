@@ -1109,6 +1109,159 @@
   margin-top: 1.25rem;
 }
 
+/* ---------- Hero summary (Censo Escolar) ---------- */
+.section-hero {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding-block: 2rem;
+}
+.hero-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+.hero-summary__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.9rem 1.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(6px);
+}
+.hero-summary__card .stat__value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.hero-summary__card .stat__label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ---------- Tabs ---------- */
+.tabs {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  background: var(--surface-container-low);
+  border: 1px solid var(--neutral-border);
+  border-bottom: none;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-family: inherit;
+}
+.tab:hover {
+  background: var(--surface-container-high);
+  color: var(--on-surface);
+}
+.tab--active {
+  background: var(--primary-fixed);
+  color: #fff;
+  border-color: var(--primary-fixed);
+  position: relative;
+  z-index: 1;
+}
+.tab-panel {
+  border: 1px solid var(--neutral-border);
+  border-top: none;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  overflow: hidden;
+}
+.tab-panel--active {
+  display: block;
+}
+.tab-panel[hidden] {
+  display: none;
+}
+
+/* ---------- Accordion ---------- */
+.accordion {
+  display: grid;
+  gap: 0.625rem;
+  padding: 1rem 0 0;
+}
+.acc-item {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+.acc-item--open {
+  grid-template-rows: 1fr;
+}
+.acc-item > .acc-item__inner {
+  overflow: hidden;
+}
+.acc-item h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+}
+.acc-item h4::before {
+  content: "▸";
+  color: var(--primary);
+  font-size: 0.875rem;
+  transition: transform 0.35s ease;
+}
+.acc-item--open h4::before {
+  transform: rotate(90deg);
+}
+.acc-item h4:hover {
+  background: var(--surface-container-low);
+}
+.acc-item p,
+.acc-item li {
+  padding: 0 0.75rem 0.75rem;
+  line-height: 1.65;
+  color: var(--on-surface-variant);
+}
+.acc-item code {
+  display: inline-block;
+  font-family: "Inter", monospace;
+  background: rgba(15, 23, 42, 0.08);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8125rem;
+  color: var(--primary-ink);
+}
+.tip {
+  background: var(--gov-sky-subtle);
+  border-left: 3px solid var(--primary);
+  padding: 0.625rem 0.75rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--on-surface);
+}
+
+/* ---------- Tab links ---------- */
+.tab-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
 /* ---------- Offset para âncoras do menu principal ---------- */
 #servicos,
 #programas,
@@ -1117,8 +1270,7 @@
 #escola,
 #ideb,
 #censo-basica,
-#censo-alagoas,
-#cem-miguel {
+#censo-alagoas {
   scroll-margin-top: 10rem;
 }
 
@@ -1129,6 +1281,10 @@
   #mapa,
   #escola {
     scroll-margin-top: 7rem;
+  }
+
+  .hero-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Censo Escolar | SEMED São Miguel dos Campos - AL</title>
   <meta name="description"
-    content="Dados oficiais do IDEB, Censo Escolar da Educação Básica, Censo Escolar em Alagoas e Censo Escolar em São Miguel dos Campos - AL." />
+    content="Dados oficiais do IDEB, Censo Escolar da Educação Básica e Censo Escolar em Alagoas." />
   <link rel="icon" type="image/png" href="../assets/images/brasao.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -178,60 +178,101 @@
       </nav>
     </div>
 
-    <!-- ================= HEADER / HERO ================= -->
+    <!-- ================= HERO / HEADER ================= -->
     <section class="section section--canvas section-hero" id="censo">
       <div class="container">
-        <div class="section-head section-head--center">
-          <span class="section-kicker">
-            <span class="material-symbols-outlined icon-sm">insights</span>
-            Indicadores educacionais
-          </span>
-          <h1 class="section-title">Censo Escolar</h1>
-          <p class="section-subtitle">Dados oficiais do IDEB, Censo Escolar da Educação Básica, do município de São Miguel dos Campos e do Estado de Alagoas.</p>
+        <div class="hero-summary">
+          <div class="hero-summary__card">
+            <span class="stat__value big">4.2</span>
+            <span class="stat__label">IDEB Estadual</span>
+          </div>
+          <div class="hero-summary__card">
+            <span class="stat__value big">5.8</span>
+            <span class="stat__label">IDEB – São Miguel dos Campos</span>
+          </div>
+          <div class="hero-summary__card">
+            <span class="stat__value big">96%</span>
+            <span class="stat__label">Comparecimento municipal</span>
+          </div>
+          <div class="hero-summary__card">
+            <span class="stat__value big">2.557</span>
+            <span class="stat__label">Unidades – Alagoas</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============== ETAPA 1: IDEB ============== -->
-    <section class="section section--surface stage" id="ideb">
-      <div class="container">
-        <div class="stage__head">
-          <div class="stage__num">01</div>
-          <div class="stage__text">
-            <span class="section-kicker">
-              <span class="material-symbols-outlined icon-sm">insights</span>
-              Índice de Desempenho Educacional Básico (IDEB)
-            </span>
-            <h2 class="section-title">Como funciona o IDEB</h2>
-            <p class="section-subtitle">O IDEB une dois indicadores cruciais para a qualidade da educação: fluxo escolar (aprovação) e médias de desempenho nas avaliações do Inep.</p>
+    <!-- ================= TABS: O que é / Como funciona / Etapas ================= -->
+    <div class="tabs" id="censo-tabs">
+
+      <!-- TAB 1: O que é o Censo Escolar -->
+      <button class="tab tab--active" data-tab="tab-oque-e" aria-selected="true">
+        <span class="material-symbols-outlined">help</span>
+        O que é o Censo Escolar
+      </button>
+
+      <div class="tab-panel tab-panel--active" id="tab-oque-e">
+        <div class="accordion" data-accordion>
+
+          <div class="acc-item acc-item--open" data-accordion-item>
+            <h4>Quem declara o Censo Escolar</h4>
+            <p>O Decreto n° 6.425, de 4 de abril de 2008, que dispõe sobre a realização dos censos anuais da educação, estabelece no art. 4º que o fornecimento das informações solicitadas no Censo da Educação Básica é obrigatório para todas as escolas públicas e privadas. Os diretores e dirigentes dos estabelecimentos de ensino são os responsáveis pelas informações declaradas. A veracidade dessas informações é de responsabilidade solidária entre as escolas e os gestores dos entes federados (estados e municípios), sendo estes últimos responsáveis também pelo acompanhamento de todo o processo censitário no âmbito de sua esfera administrativa.</p>
+          </div>
+
+          <div class="acc-item" data-accordion-item>
+            <h4>Para que o Censo Escolar serve?</h4>
+            <p>O Censo Escolar é uma atividade de fundamental importância para a gestão governamental no âmbito da educação, tendo como principais objetivos fornecer informações estatísticas educacionais para realização de análises, diagnósticos e avaliações sobre a educação brasileira, orientar a definição de políticas educacionais e servir como instrumento de planejamento e acompanhamento de programas e ações do governo.</p>
+          </div>
+
+          <div class="acc-item" data-accordion-item>
+            <h4>Plano Nacional de Educação</h4>
+            <p>Em 2014, foi aprovado o Plano Nacional de Educação (PNE) – Lei n° 13.005, de 25 de junho de 2014 –, que atribuiu ao Inep a realização de estudos e pesquisas das metas do Plano, tendo como uma das referências os censos educacionais nacionais. O Censo Escolar é, portanto, ferramenta indispensável para que os diversos atores educacionais e a sociedade em geral possam conhecer a situação educacional do País, do Distrito Federal, dos estados e dos municípios, de modo a acompanhar a efetividade das políticas públicas.</p>
+          </div>
+
+          <div class="acc-item" data-accordion-item>
+            <h4>Situação do aluno – Docência</h4>
+            <p>Os responsáveis pela declaração são todos os diretores e dirigentes dos estabelecimentos de ensino. Para confirmar ou desconsiderar as matrículas duplicadas, o diretor/responsável pelo Censo Escolar deve verificar se existem casos de alunos com matrículas duplicadas na escola ou em outra escola e realizar a devida confirmação/desconsideração.</p>
           </div>
         </div>
+      </div>
 
-        <div class="stage__grid stage__grid--narrow">
-          <!-- Como funciona -->
-          <article class="stage-card stage-card--wide">
-            <span class="stage-card__badge badge--blue">Fórmula</span>
-            <h3>Como é calculado o IDEB</h3>
-            <p>O IDEB é calculado a partir de dois componentes: taxa de rendimento escolar (aprovação) e médias de desempenho nos exames padronizados aplicados pelo Inep. Os índices de aprovação vêm do Censo Escolar e as médias de desempenho são da Prova Brasil (para municípios) ou do Saeb (para estados e nacional).</p>
-            <p>A forma geral é dada por:</p>
+      <!-- TAB 2: Como funciona o IDEB -->
+      <button class="tab tab--active" data-tab="tab-como" aria-selected="true">
+        <span class="material-symbols-outlined">insights</span>
+        Como funciona o IDEB
+      </button>
+
+      <div class="tab-panel tab-panel--active" id="tab-como">
+        <div class="accordion" data-accordion>
+
+          <div class="acc-item acc-item--open" data-accordion-item>
+            <h4>O que é o IDEB</h4>
+            <p>O Índice de Desenvolvimento da Educação Básica (IDEB) foi criado pelo Inep em 2007 e representa a iniciativa pioneira de reunir num só indicador dois conceitos igualmente importantes para a qualidade da educação: fluxo escolar e médias de desempenho nas avaliações. Ele agrega ao enfoque pedagógico dos resultados das avaliações em larga escala do Inep a possibilidade de resultados sintéticos, facilmente assimiláveis, e que permitem traçar metas de qualidade educacional para os sistemas.</p>
+          </div>
+
+          <div class="acc-item" data-accordion-item>
+            <h4>Como o IDEB é calculado</h4>
+            <p>O IDEB é calculado a partir de dois componentes: taxa de rendimento escolar (aprovação) e médias de desempenho nos exames padronizados aplicados pelo Inep. Os índices de aprovação são obtidos a partir do Censo Escolar, realizado anualmente pelo Inep. As médias de desempenho utilizadas são as da Prova Brasil (para Idebs de escolas e municípios) e do Saeb (no caso dos Idebs dos estados e nacional).</p>
             <code class="formula">IDEB<sub>j,i</sub> = N<sub>j,i</sub> · P<sub>j,i</sub></code>
-            <p><strong>i</strong> = ano do exame e do Censo Escolar; <strong>j</strong> = unidade educacional (escola ou município).</p>
-          </article>
+            <p><strong>i</strong> = ano do exame (Saeb e Prova Brasil) e do Censo Escolar; <strong>j</strong> = unidade educacional (escola ou município).</p>
+          </div>
 
-          <!-- Metas -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--sky">Meta Nacional</span>
-            <h3>Metas educacionais</h3>
-            <p>O Plano de Desenvolvimento da Educação estipula que o Brasil atinja o IDEB de <strong>6,0</strong> na primeira fase do Ensino Fundamental, em 2022 — um patamar comparável aos países da OCDE. O Inep estabelece parâmetros técnicos de comparação entre a qualidade dos sistemas de ensino brasileiros e os países desenvolvidos.</p>
-          </article>
+          <div class="acc-item" data-accordion-item>
+            <h4>O que são as metas</h4>
+            <p>O IDEB é mais que um indicador estatístico. Ele nasceu como condutor de política pública pela melhoria da qualidade da educação, tanto no âmbito nacional, como nos estados, municípios e escolas. Sua composição possibilita não apenas o diagnóstico atualizado da situação educacional em todas essas esferas, mas também a projeção de metas individuais intermediárias rumo ao incremento da qualidade do ensino.</p>
+            <p>As metas são exatamente isso: o caminho traçado de evolução individual dos índices, para que o Brasil atinja o patamar educacional que têm hoje a média dos países da OCDE. Em termos numéricos, isso significa evoluir da média nacional 3,8, registrada em 2005, para um Ideb igual a 6,0, na primeira fase do Ensino Fundamental.</p>
+          </div>
 
-          <!-- Para que serve -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--neutral">Política pública</span>
-            <h3>Para que serve o IDEB</h3>
-            <p>O IDEB é condutor de política pública em prol da qualidade da educação. Ele amplia as possibilidades de mobilização da sociedade em favor da educação, sendo comparável nacionalmente e expressando valores dos resultados mais importantes: <strong>aprendizagem e fluxo escolar</strong>. Combina as duas dimensões para equilibrar diagnósticos e projeção de metas intermediárias rumo ao incremento da qualidade do ensino.</p>
-            <p>Mesmo quem já tem um bom índice deve evoluir. Redes e escolas com maior dificuldade recebem apoio específico do Ministério da Educação para diminuir a desigualdade entre as esferas.</p>
-          </article>
+          <div class="acc-item" data-accordion-item>
+            <h4>Metas são diferenciadas</h4>
+            <p>As metas são diferenciadas para todos, e são apresentadas bienalmente de 2007 a 2021. Estados, municípios e escolas deverão melhorar seus índices e contribuir, em conjunto, para que o Brasil chegue à meta 6,0 em 2022, ano do bicentenário da Independência. Mesmo quem já tem um bom índice deve continuar a evoluir. No caso das redes e escolas com maior dificuldade, as metas prevêem um esforço mais concentrado, para que elas melhorem mais rapidamente, diminuindo assim a desigualdade entre as esferas. O Ministério da Educação prevê apoio específico para reduzir essa desigualdade.</p>
+          </div>
+
+          <div class="acc-item" data-accordion-item>
+            <h4>Para que serve o IDEB</h4>
+            <p>Com o IDEB, ampliam-se as possibilidades de mobilização da sociedade em favor da educação, uma vez que o índice é comparável nacionalmente e expressa em valores os resultados mais importantes da educação: aprendizagem e fluxo. A combinação de ambos tem também o mérito de equilibrar as duas dimensões: se um sistema de ensino retiver seus alunos para obter resultados de melhor qualidade no Saeb ou Prova Brasil, o fator fluxo será alterado, indicando a necessidade de melhoria do sistema. Se, ao contrário, o sistema apressar a aprovação do aluno sem qualidade, o resultado das avaliações indicará igualmente a necessidade de melhoria do sistema.</p>
+            <p>O IDEB também é importante por ser condutor de política pública em prol da qualidade da educação. É a ferramenta para acompanhamento das metas de qualidade do PDE para a educação básica. O Plano de Desenvolvimento da Educação estabelece, como meta, que em 2022 o IDEB do Brasil seja 6,0 – média que corresponde a um sistema educacional de qualidade comparável a dos países desenvolvidos.</p>
+          </div>
         </div>
 
         <div class="stat-row">
@@ -247,471 +288,266 @@
             <span class="stat__value">3.8</span>
             <span class="stat__label">Média nacional 2005</span>
           </div>
-        </div>
-
-        <div class="stage__grid">
-          <!-- IDEB Municipal -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--blue">Município</span>
-            <h3>IDEB – São Miguel dos Campos</h3>
-            <div class="metric">
-              <span class="metric__value">5.8</span>
-              <span class="metric__label">IDEB 2019</span>
-            </div>
-            <p>Indicador de rendimento da rede municipal de ensino, que reflete o nível de proficiência em português e matemática.</p>
-            <a href="#" class="btn btn--soft btn--sm">Ver relatório</a>
-          </article>
-
-          <!-- IDEB Estado -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--sky">Estado</span>
-            <h3>IDEB – Alagoas</h3>
-            <div class="metric">
-              <span class="metric__value">4.2</span>
-              <span class="metric__label">IDEB 2019</span>
-            </div>
-            <p>Resultado estadual da Rede Estadual de Ensino de Alagoas, disponível para toda a comunidade educacional do estado.</p>
-            <a href="#" class="btn btn--soft btn--sm">Ver relatório</a>
-          </article>
-
-          <!-- Comparecimento -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--neutral">Comparecimento</span>
-            <h3>Comparecimento Escolar</h3>
-            <div class="metric">
-              <span class="metric__value">96%</span>
-              <span class="metric__label">Miguelense freqüentes</span>
-            </div>
-            <p>Porcentagem de alunos matriculados que compareceram à escola em pelo menos um trimestre do ano letivo.</p>
-            <a href="#" class="btn btn--soft btn--sm">Ver dados</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== ETAPA 2: CENSO ESCOLAR DA EDUCAÇÃO BÁSICA ============== -->
-    <section class="section section--surface stage" id="censo-basica">
-      <div class="container">
-        <div class="stage__head">
-          <div class="stage__num">02</div>
-          <div class="stage__text">
-            <span class="section-kicker">
-              <span class="material-symbols-outlined icon-sm">query_stats</span>
-              Censo Escolar da Educação Básica
-            </span>
-            <h2 class="section-title">O que é o Censo Escolar</h2>
-            <p class="section-subtitle">Pesquisa declaratória anual conduzida pelo Inep, obtendo dados sobre escolas, turmas, alunos e profissionais para análises, diagnósticos, avaliações e acompanhamento das políticas educacionais.</p>
-          </div>
-        </div>
-
-        <div class="stage__grid stage__grid--narrow">
-          <!-- O que é -->
-          <article class="stage-card stage-card--wide">
-            <span class="stage-card__badge badge--blue">Direito</span>
-            <h3>Quem declara o Censo Escolar</h3>
-            <p>O Decreto n° 6.425, de 4 de abril de 2008, obriga todas as escolas públicas e privadas a fornecer informações no Censo. Os diretores são os responsáveis solidariamente por todos os dados declarados — tanto pelas escolas como pelos gestores dos entes federados (estados e municípios), que também supervisionam o processo no âmbito de cada esfera administrativa.</p>
-            <p>Em 2014, o Plano Nacional de Educação (Lei n° 13.005) atribuiu ao Inep o papel de referência para o acompanhamento e pesquisa dos censos educacionais, tornando-o ferramenta indispensável para avaliar a efetividade das políticas públicas.</p>
-          </article>
-
-          <!-- Sistema Educacenso -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--sky">Eduacenso</span>
-            <h3>O Sistema Educacenso</h3>
-            <p>Para o acesso ao Educacenso, os usuários (escolas, secretarias estaduais e municipais e gestores) devem estar cadastrados. Os perfis de acesso são:</p>
-            <ul class="list-check">
-              <li>Inep</li>
-              <li>Secretaria Estadual</li>
-              <li>Setec</li>
-              <li>Órgão Regional</li>
-              <li>Secretaria Municipal</li>
-              <li>Escola</li>
-            </ul>
-            <p>Os níveis de acesso são:</p>
-            <ul class="list-check">
-              <li><strong>Leitor</strong>: apenas visualiza os dados informados;</li>
-              <li><strong>Executor</strong>: visualiza e altera os dados informados;</li>
-              <li><strong>Superusuário</strong>: visualiza, altera e cadastra novos usuários.</li>
-            </ul>
-            <p>A URL do sistema é <code>http://educacenso.inep.gov.br</code>.</p>
-          </article>
-        </div>
-
-        <div class="stage__grid stage__grid--narrow">
-          <!-- As etapas -->
-          <article class="stage-card stage-card--wide">
-            <span class="stage-card__badge badge--neutral">Etapas</span>
-            <h3>As duas etapas do Censo Escolar</h3>
-            <p>O Censo é realizado todos os anos em <strong>duas etapas</strong>. Os prazos são definidos pelo Inep, anualmente, por portaria de cronograma.</p>
-            <h4>Primeira etapa — Matrícula Inicial</h4>
-            <p>Coletam-se informações escolares relativas aos cadastros de escola, aluno, turma e profissional em sala de aula. Concluindo com a Publicação no DOU dos dados preliminares.</p>
-            <h4>Segunda etapa — Módulo Situação do Aluno</h4>
-            <p>Coletam-se informações de rendimento e movimento dos alunos, após a publicação dos dados preliminares no DOU.</p>
-          </article>
-        </div>
-
-        <div class="stage__grid stage__grid--wide">
-          <!-- Etapas detail -->
-          <article class="stage-card stage-card--block">
-            <span class="stage-card__badge badge--neutral">Primeira etapa</span>
-            <h3>Matrícula Inicial — passo a passo</h3>
-            <ol class="step-list">
-              <li><strong>Preenchimento das informações escolares</strong> — realizado pelo diretor/responsável. Período: 60 dias.</li>
-              <li><strong>Consolidação das informações</strong> — realizada pelo Inep.</li>
-              <li><strong>Retificação</strong> — 30 dias para correções. Sistema reaberto com relatórios de dados escolares.</li>
-              <li><strong>Verificação pelas coordenações estaduais</strong> — 10 dias para consultas e eventuais correções.</li>
-              <li><strong>Confirmação/desconsideração de matrículas duplicadas</strong> — diretor realiza confirmação ou descarte no módulo de confirmação de matrícula.</li>
-              <li><strong>Verificação final</strong> — Inep realiza últimas análises e correções de inconsistências.</li>
-              <li><strong>Publicação no DOU dos dados finais</strong> — realizada pelo Inep/MEC.</li>
-            </ol>
-          </article>
-
-          <article class="stage-card stage-card--block">
-            <span class="stage-card__badge badge--neutral">Segunda etapa</span>
-            <h3>Módulo Situação do Aluno — passo a passo</h3>
-            <ol class="step-list">
-              <li><strong>Preenchimento das informações</strong> — diretor informa rendimento ("aprovado"/"reprovado") e movimento ("transferido", "deixou de frequentar", "falecido").</li>
-              <li><strong>Verificação dos dados</strong> — gestores municipais e estaduais conferem os relatórios.</li>
-              <li><strong>Retificação</strong> — sistema reaberto por 15 dias para eventuais correções.</li>
-              <li><strong>Publicação final no DOU</strong>.</li>
-            </ol>
-            <p class="tip"><strong>⚠️ Importante:</strong> Após o encerramento dos períodos oficiais e a publicação dos dados finais no DOU, <strong>não poderá haver alteração</strong> nos dados escolares.</p>
-          </article>
-        </div>
-
-        <div class="stage__grid">
-          <article class="stage-card">
-            <span class="stage-card__badge badge--blue">Ensino Fundamental I</span>
-            <h3>Fundamental I – Matrículas</h3>
-            <p>Matrículas totais nos anos iniciais (1º a 5º), distribuídas entre escolas municipais e CEIs.</p>
-            <a href="#" class="btn btn--soft btn--sm">Ver fluxo</a>
-          </article>
-
-          <article class="stage-card">
-            <span class="stage-card__badge badge--sky">Ensino Fundamental II</span>
-            <h3>Fundamental II – Matrículas</h3>
-            <p>Matrículas totais nos anos finais (6º a 9º), com destaque para o segmento fundamental municipal.</p>
-            <a href="#" class="btn btn--soft btn--sm">Ver fluxo</a>
-          </article>
-
-          <article class="stage-card">
-            <span class="stage-card__badge badge--neutral">Educação Infantil</span>
-            <h3>CEIs e Creches</h3>
-            <p>Centros de Educação Infantil e creches municipais atendendo crianças de 0 a 5 anos.</p>
-            <a href="#" class="btn btn--soft btn--sm">Ver relação</a>
-          </article>
-        </div>
-
-        <div class="stage__grid">
-          <!-- Escolas com e sem internet -->
-          <article class="stage-card stage-card--block">
-            <span class="stage-card__badge badge--tertiary">Dúvidas</span>
-            <h3>Escolas com e sem acesso à internet</h3>
-            <h4>Com acesso à internet</h4>
-            <p>Acesse <code>http://educacenso.inep.gov.br</code>, utilize CPF e senha cadastrados para verificar e atualizar os dados cadastrais das escolas.</p>
-            <p>Depois conferir os dados cadastrais, informe os dados educacionais e turmas do ano letivo corrente, vinculando alunos e profissionais em sala de aula, referenciando o <strong>Dia Nacional do Censo Escolar</strong> — última quarta-feira do mês de maio.</p>
-            <h4>Sem acesso à internet</h4>
-            <p>Solicite impressão dos formulários do Censo Escolar do portal <code>http://portal.inep.gov.br/censo-escolar</code>. Os campos devem ser preenchidos com caneta de tinta azul.</p>
-          </article>
-
-          <!-- Orientações -->
-          <article class="stage-card stage-card--block">
-            <span class="stage-card__badge badge--sky">Dicas</span>
-            <h3>Orientações para o preenchimento</h3>
-            <ul class="tip-list">
-              <li>Campos marcados com <strong>*</strong> são obrigatórios.</li>
-              <li>Evite abreviaturas. Se necessário, coloque apenas um espaço em branco entre palavras — <code>Maria D da Fonseca</code>.</li>
-              <li>Informar tudo a refletir a realidade da escola na data de referência do Censo — última quarta-feira de maio.</li>
-              <li>Os formulários devem ser preenchidos na ordem: <strong>Escola → Turma → Aluno → Profissional escolar</strong>.</li>
-              <li>Use documentos confiáveis: ficha de matrícula, diário classe, livro frequência, histórico escolar, regimento escolar, PPP, entre outros.</li>
-            </ul>
-            <h4>Documentos orientadores</h4>
-            <p>Tais documentos incluem:</p>
-            <ul class="tip-list">
-              <li>Documento sobre programas e políticas federais (orienta sobre os dados do Censo usados nos programas do governo federal);</li>
-              <li>Navegação guiada (passo a passo das funcionalidades do Educacenso);</li>
-              <li>Vídeos tutoriais (orientam quanto à declaração adequada e ao uso do sistema);</li>
-              <li>Documentos sobre migração de dados.</li>
-            </ul>
-            <p>Esses materiais são essenciais para redes e instituições que possuem sistemas próprios de coleta.</p>
-          </article>
-        </div>
-
-        <div class="contact-row">
-          <a href="#" class="btn btn--soft btn--block" style="max-width:12rem">
-            <span class="material-symbols-outlined icon-sm">phone</span>
-            (82) 3315-1264 / 3315-1265 — Secretaria Estadual de Alagoas
-          </a>
-          <a href="#" class="btn btn--soft btn--block" style="max-width:12rem">
-            <span class="material-symbols-outlined icon-sm">support_agent</span>
-            Ouvidoria do Censo Escolar — Inep
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== ETAPA 3: CENSO ESCOLAR EM ALAGOAS ============== -->
-    <section class="section section--surface stage" id="censo-alagoas">
-      <div class="container">
-        <div class="stage__head">
-          <div class="stage__num">03</div>
-          <div class="stage__text">
-            <span class="section-kicker">
-              <span class="material-symbols-outlined icon-sm">public</span>
-              Censo Escolar em Alagoas
-            </span>
-            <h2 class="section-title">Situação educacional estadual</h2>
-            <p class="section-subtitle">O Censo Escolar é conduzido pelo Inep e fornece dados comparativos estaduais e federais para a rede estadual de ensino.</p>
-          </div>
-        </div>
-
-        <!-- Introdução -->
-        <div class="intro-box">
-          <div class="intro-box__icon">
-            <span class="material-symbols-outlined">public</span>
-          </div>
-          <div class="intro-box__body">
-            <p>Para acessar as informações oficiais do <strong>Censo Escolar em Alagoas</strong>, acesse o portal <code>https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/</code>, que organiza todos os dados públicos e orientações do estado de Alagoas. Nele, estão disponíveis os relatórios oficiais com matrículas, movimentações, fluxos escolares e indicadores educacionais estaduais.</p>
-          </div>
-        </div>
-
-        <!-- Links principais na página de apresentação -->
-        <div class="link-grid">
-          <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="link-card">
-            <span class="material-symbols-outlined link-card__icon">presentation</span>
-            <span class="link-card__title">Apresentação do Censo Escolar</span>
-            <span class="link-card__sub">Todos os dados e orientações oficiais de Alagoas</span>
-            <span class="material-symbols-outlined link-card__arrow chevron_right">></span>
-          </a>
-
-          <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="link-card">
-            <span class="material-symbols-outlined link-card__icon">insights</span>
-            <span class="link-card__title">Relatórios Matriciais</span>
-            <span class="link-card__sub">Fluxo, transferências e rematrículas do Ensino Fundamental</span>
-            <span class="material-symbols-outlined link-card__arrow chevron_right">></span>
-          </a>
-
-          <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="link-card">
-            <span class="material-symbols-outlined link-card__icon">school</span>
-            <span class="link-card__title">Rede Estadual</span>
-            <span class="link-card__sub">Instituições e perfis de usuários do Educacenso</span>
-            <span class="material-symbols-outlined link-card__arrow chevron_right">></span>
-          </a>
-
-          <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="link-card">
-            <span class="material-symbols-outlined link-card__icon">code</span>
-            <span class="link-card__title">Resultados e Indicadores</span>
-            <span class="link-card__sub">IDEB, comparecimento e desdobramento municípios</span>
-            <span class="material-symbols-outlined link-card__arrow chevron_right">></span>
-          </a>
-        </div>
-
-        <div class="stat-row">
           <div class="stat">
-            <span class="stat__value">2.557</span>
-            <span class="stat__label">Unidades estaduais</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">312.000</span>
-            <span class="stat__label">Matrículas totais</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">4.2</span>
-            <span class="stat__label">IDEB Estadual</span>
+            <span class="stat__value">96%</span>
+            <span class="stat__label">Comparecimento municipal</span>
           </div>
         </div>
 
-        <div class="stage__grid">
-          <article class="stage-card">
-            <span class="stage-card__badge badge--blue">Ensino Fundamental I</span>
-            <h3>Fundamental I – Fluxo de matrículas</h3>
-            <p>Relação de matrículas transferências e rematrículas entre os anos iniciais do Ensino Fundamental.</p>
-            <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="btn btn--soft btn--sm btn--light">Consultar relatório</a>
-          </article>
-
-          <article class="stage-card">
-            <span class="stage-card__badge badge--sky">Ensino Fundamental II</span>
-            <h3>Fundamental II – Fluxo de matrículas</h3>
-            <p>Movimentação de matrículas no segmento fundamental conclusivo e pré-vestibular.</p>
-            <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="btn btn--soft btn--sm btn--light">Consultar relatório</a>
-          </article>
-
-          <article class="stage-card">
-            <span class="stage-card__badge badge--neutral">EJA</span>
-            <h3>Educação de Jovens e Adultos</h3>
-            <p>Frequência e avaliação dos programas EJA nas redes estadual e municipal.</p>
-            <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="btn btn--soft btn--sm btn--light">Ver dados</a>
-          </article>
-        </div>
-
-        <div class="contact-row contact-row--wide">
-          <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="btn btn--soft btn--block" style="max-width:16rem">
-            <span class="material-symbols-outlined icon-sm">book</span>
+        <div class="tab-links">
+          <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="btn btn--soft">
+            <span class="material-symbols-outlined icon-sm">presentation</span>
             Ir para o site oficial — Censo Escolar de Alagoas
           </a>
+          <a href="https://educacenso.inep.gov.br" target="_blank" rel="noopener noreferrer" class="btn btn--soft">
+            <span class="material-symbols-outlined icon-sm">school</span>
+            Acessar o Educacenso (INEP)
+          </a>
         </div>
       </div>
-    </section>
 
-    <!-- ============== Página de São Miguel dos Campos ============== -->
-    <section class="section section--canvas stage" id="cem-miguel">
-      <div class="container">
-        <div class="stage__head">
-          <div class="stage__num stage__num--white">04</div>
-          <div class="stage__text stage__text--white">
-            <span class="section-kicker">
-              <span class="material-symbols-outlined icon-sm">location_city</span>
-              Censo Escolar em São Miguel dos Campos
+      <!-- TAB 3: Quais são as etapas e demais documentos -->
+      <button class="tab tab--active" data-tab="tab-etapas" aria-selected="true">
+        <span class="material-symbols-outlined">task_alt</span>
+        Quais são as etapas e demais documentos
+      </button>
+
+      <div class="tab-panel tab-panel--active" id="tab-etapas">
+        <div class="accordion" data-accordion>
+
+          <!-- Primeira etapa -->
+          <div class="acc-item acc-item--open" data-accordion-item>
+            <h4>Primeira etapa – Matrícula Inicial</h4>
+            <p>São coletadas as informações escolares referentes aos cadastros de escola, aluno, turma e profissional em sala de aula. Essa etapa inclui as seguintes atividades:</p>
+
+            <ol class="step-list">
+              <li><strong>Preenchimento das informações escolares</strong>, realizado pelo diretor/responsável pelo Censo Escolar da escola. O período geralmente tem duração de 60 dias.</li>
+              <li><strong>Consolidação das informações declaradas</strong>, realizada pelo Inep. Após o encerramento do período de coleta, o Inep reúne as informações recebidas para publicação dos dados preliminares do Censo Escolar no DOU.</li>
+              <li><strong>Retificação das informações fornecidas</strong>. Após a publicação dos dados preliminares no DOU, o sistema Educacenso é reaberto para a realização de eventuais correções e complementações. O período de retificação tem duração de 30 dias.</li>
+              <li><strong>Verificação das informações declaradas</strong>, realizada pelas coordenações estaduais do Censo Escolar. Após o período de retificações, o sistema permanece disponível para as coordenações estaduais, durante dez dias, também para consultas e eventuais correções.</li>
+              <li><strong>Confirmação ou desconsideração das matrículas duplicadas</strong>, realizada diretamente no sistema Educacenso, pelo diretor/responsável pelo Censo Escolar, no módulo de confirmação de matrícula.</li>
+              <li><strong>Verificação final dos dados declarados</strong>. Nesse período, são realizadas as últimas análises e correções de inconsistências no sistema Educacenso.</li>
+              <li><strong>Publicação no DOU dos dados finais do Censo Escolar</strong>, realizada pelo Inep/MEC.</li>
+            </ol>
+
+            <p class="tip">⚠️ Após o encerramento dos períodos oficiais e a publicação dos dados finais no DOU, <strong>não poderá haver alteração</strong> nos dados escolares.</p>
+          </div>
+
+          <!-- Segunda etapa -->
+          <div class="acc-item" data-accordion-item>
+            <h4>Segunda etapa – Módulo Situação do Aluno</h4>
+            <p>São coletadas as informações de rendimento e movimento dos alunos cadastrados no sistema Educacenso, a partir dos dados finais do Censo Escolar publicados no DOU. Nessa etapa, são realizadas as seguintes atividades:</p>
+            <ol class="step-list">
+              <li><strong>Preenchimento das informações</strong>, realizado pelo diretor/responsável pelo Censo Escolar. Nesse momento, devem ser informados o rendimento escolar ("aprovado" ou "reprovado") e o movimento ("transferido", "deixou de frequentar" ou "falecido") dos alunos. Ressaltando que a escola deve estar munida de documentos comprobatórios.</li>
+              <li><strong>Verificação das informações declaradas</strong>, realizada pelos gestores municipais e estaduais de educação. Após o período de coleta, relatórios com os dados escolares são disponibilizados para conferência das informações declaradas.</li>
+              <li><strong>Retificação das informações fornecidas</strong>. Em seguida, o sistema Educacenso é reaberto por 15 dias, para eventuais correções nos dados declarados.</li>
+            </ol>
+          </div>
+
+          <!-- Orientações para preenchimento -->
+          <div class="acc-item" data-accordion-item>
+            <h4>Orientações para o preenchimento dos formulários</h4>
+            <p>As informações declaradas nos formulários do Censo Escolar devem ter como referência documentos que garantam a confiabilidade delas, tais como ficha de matrícula do aluno, diário classe, livro frequência, histórico escolar, regimento escolar, documentos de enturmação de professores, projeto político-pedagógico (PPP), entre outros. Isso possibilita que, a qualquer momento, as informações declaradas ao Censo possam ser confirmadas pelo MEC, pelo Inep, pelos órgãos de controle, acompanhamento e fiscalização e pelo Ministério Público. O responsável pela escola responde administrativamente, civil e penalmente pela inclusão de informação inadequada, se comprovada a omissão ou comissão (obrigação ou incumbência), dolo ou culpa, nos termos da Lei n° 8.429, de 2 de junho de 1992, que dispõe sobre as sanções aplicáveis aos agentes públicos no exercício de mandato, cargo, emprego ou função na administração pública direta, indireta ou fundacional.</p>
+
+            <ul class="tip-list">
+              <li>Os campos marcados com asterisco (<strong>*</strong>) são de preenchimento obrigatório.</li>
+              <li>Deve-se evitar a abreviatura das palavras. Entretanto, se for necessário, não coloque ponto. Deixe apenas um espaço em branco antes da próxima palavra. Exemplo: <code>Maria D da Fonseca</code>.</li>
+              <li>As informações prestadas ao Censo Escolar devem refletir a realidade da escola na data de referência do Censo – última quarta-feira do mês de maio.</li>
+              <li>Os formulários devem ser preenchidos nesta ordem: <strong>Escola → Turma → Aluno → Profissional escolar</strong>.</li>
+            </ul>
+
+            <h4>Documentos orientadores</h4>
+            <p>Para auxiliar no preenchimento das informações do Censo, são elaborados anualmente textos e vídeos com orientações específicas sobre a coleta. Você pode acessar no site do INEP, na página do Censo Escolar (Área de atuação: Pesquisas estatísticas e indicadores educacionais).</p>
+            <ul class="tip-list">
+              <li>Documento sobre programas e políticas federais: documento que busca orientar o respondente sobre os dados do Censo utilizados em programas e políticas do governo federal;</li>
+              <li>Navegação guiada: documento que apresenta o passo a passo das funcionalidades do sistema;</li>
+              <li>Vídeos tutoriais: visam a orientar os usuários quanto à adequada declaração das informações do Censo e ao uso das ferramentas do Educacenso;</li>
+              <li>Documentos sobre migração: Orientações sobre a realização da migração de dados.</li>
+            </ul>
+            <p>Esses documentos são importantes para as redes e instituições de ensino que possuem sistemas próprios de coleta de dados.</p>
+          </div>
+
+          <!-- Escolas com e sem internet -->
+          <div class="acc-item" data-accordion-item>
+            <h4>Escolas com e sem acesso à internet</h4>
+            <h4>Com acesso à internet</h4>
+            <p>Os usuários dessas escolas devem acessar o sistema Educacenso pelo endereço eletrônico <code>http://educacenso.inep.gov.br</code>, utilizando o CPF e a senha cadastrada, para visualizar os dados cadastrais das escolas, os quais devem ser conferidos e, se for o caso, atualizados. Depois da conferência dos dados cadastrais, devem ser informados os dados educacionais e as turmas do ano letivo corrente e devem ser vinculados os alunos e os profissionais escolares que estão em sala de aula, tendo como referência o Dia Nacional do Censo Escolar, correspondente à última quarta-feira do mês de maio.</p>
+
+            <h4>Sem acesso à internet</h4>
+            <p>As escolas que não possuem acesso à internet devem procurar as secretarias de educação para solicitar a impressão dos formulários do Censo Escolar que estão disponíveis em <code>http://portal.inep.gov.br/censo-escolar</code>. Os campos devem ser preenchidos com caneta de tinta azul.</p>
+          </div>
+
+          <!-- Contato -->
+          <div class="acc-item" data-accordion-item>
+            <h4>Contato</h4>
+            <p>Em caso de dúvidas quanto ao preenchimento, entre em contato com a unidade de estatística da secretaria de educação do Estado de Alagoas (82) 3315-1264 / 3315-1265, ou com o INEP.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="../index.html">
+            <img class="brand__crest" src="../assets/images/brasao.png" alt="" />
+            <span class="brand__text">
+              <strong>SEMED</strong>
+              <small>Secretaria Municipal de Educação<br />São Miguel dos Campos - AL</small>
             </span>
-            <h2 class="section-title">Conteúdo específico do município</h2>
-            <p class="section-subtitle">Dados referentes ao município de São Miguel dos Campos - AL, informações institucionais e quadro funcional.</p>
+          </a>
+          <p>Promovendo uma educação pública, inclusiva e transformadora, valorizando os profissionais do magistério e ampliando as oportunidades de aprendizagem para crianças, jovens e adultos miguelenses.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
+            <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
+            <a href="#" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
           </div>
         </div>
 
-        <div class="stage__grid">
-          <!-- Quadro funcional -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--sky">Equipe Técnica</span>
-            <h3>Coordenação e Gestão</h3>
-            <p>Gestores pedagógicos responsáveis pelas áreas de gestão escolar, qualidade de ensino e transparência do IDEB municipal.</p>
-            <a href="#" class="btn btn--soft btn--sm">Ver equipe</a>
-          </article>
+        <div class="footer__col">
+          <h3>Ensino &amp; Ofertas</h3>
+          <ul>
+            <li><a href="../index.html#programas">Educação Infantil</a></li>
+            <li><a href="../index.html#programas">Ensino Fundamental I</a></li>
+            <li><a href="../index.html#programas">Ensino Fundamental II</a></li>
+            <li><a href="../index.html#programas">Educação de Jovens e Adultos</a></li>
+            <li><a href="../index.html#programas">Educação Especial &amp; Inclusão</a></li>
+            <li><a href="../index.html#programas">Programa Escola 10</a></li>
+            <li><a href="../index.html#programas">IDEB</a></li>
+            <li><a href="../index.html#programas">Grêmios Estudantis</a></li>
+          </ul>
+        </div>
 
-          <!-- Resultados -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--blue">Resultados</span>
-            <h3>Resultados e Indicadores</h3>
-            <p>Arquivos oficiais com demonstrações financeiras e indicadores educacionais do ano letivo vigente.</p>
-            <a href="#" class="btn btn--soft btn--sm">Consultar dados</a>
-          </article>
+        <div class="footer__col">
+          <h3>Transparência</h3>
+          <ul>
+            <li><a href="../lgpd.html">Serviço de Informação ao Cidadão (e-SIC)</a></li>
+            <li><a href="../lgpd.html">Portal da Transparência</a></li>
+            <li><a href="../lgpd.html">Ouvidoria Municipal</a></li>
+            <li><a href="../documentos.html">Editais &amp; Licitações</a></li>
+            <li><a href="../documentos.html">Prestação de Contas</a></li>
+            <li><a href="../servidor.html">Contracheque</a></li>
+            <li><a href="../lgpd.html">LGPD &amp; Privacidade</a></li>
+            <li><a href="../documentos.html">Legislação</a></li>
+          </ul>
+        </div>
 
-          <!-- Escolas -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--neutral">Rede Municipal</span>
-            <h3>Rede Municipal de Escolas</h3>
-            <p>Lista de unidades educacionais municipais com status operacional e Quadro Funcional (anexo).</p>
-            <a href="../for-index/escolas.html" class="btn btn--soft btn--sm">Localizar unidades</a>
-          </article>
-
-          <!-- Carta de serviços -->
-          <article class="stage-card">
-            <span class="stage-card__badge badge--tertiary">Transparência</span>
-            <h3>Carta de Serviços</h3>
-            <p>Documento com os prazos e requisitos de prestação de todos os serviços educacionais ofertados ao cidadão.</p>
-            <a href="../documentos.html" class="btn btn--soft btn--sm">Baixar carta</a>
-          </article>
+        <div class="footer__col footer__contact">
+          <h3>Sede &amp; Contato</h3>
+          <p>
+            <span class="material-symbols-outlined">place</span>
+            <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL<br />CEP 57240-000</span>
+          </p>
+          <p>
+            <span class="material-symbols-outlined">schedule</span>
+            <span>Segunda a sexta, das 07h30 às 13h30</span>
+          </p>
+          <p>
+            <span class="material-symbols-outlined">phone</span>
+            <span>(82) 3271-1234 | (82) 3271-1250</span>
+          </p>
+          <p>
+            <span class="material-symbols-outlined">mail</span>
+            <span>semed@saomigueldoscampos.al.gov.br</span>
+          </p>
+          <a class="footer__access-btn" href="../lgpd.html">
+            <span class="material-symbols-outlined icon-sm">accessibility_new</span>
+            Acessibilidade Presencial e Digital
+          </a>
         </div>
       </div>
-    </section>
+
+      <div class="footer__institutional">
+        <div class="container footer__institutional-inner">
+          <a class="footer__semed-logo" href="../index.html" aria-label="SEMED - Página inicial">
+            <img src="../assets/images/semed_logo_branca.png"
+              alt="SEMED - Secretaria Municipal de Educação de São Miguel dos Campos" />
+          </a>
+          <div class="footer__gov-logos" aria-label="Governos parceiros">
+            <figure class="footer__gov-logo">
+              <img src="../assets/images/brasil_logo.png" alt="Bandeira do Brasil" />
+              <figcaption>Governo Federal</figcaption>
+            </figure>
+            <figure class="footer__gov-logo">
+              <img src="../assets/images/bandeira-alagoas.png" alt="Bandeira do Estado de Alagoas" />
+              <figcaption>Governo de Alagoas</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <p>© 2026 SEMED — Secretaria Municipal de Educação de São Miguel dos Campos - AL. Todos os direitos reservados.</p>
+          <nav class="footer__bottom-links" aria-label="Links legais">
+            <a href="#">Portal Fale.BR</a><span>|</span>
+            <a href="../termos-de-uso.html">Termos de Uso</a><span>|</span>
+            <a href="../politica-privacidade.html">Política de Privacidade</a><span>|</span>
+            <a href="../index.html#mapa">Mapa do site</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a class="brand" href="../index.html">
-          <img class="brand__crest" src="../assets/images/brasao.png" alt="" />
-          <span class="brand__text">
-            <strong>SEMED</strong>
-            <small>Secretaria Municipal de Educação<br />São Miguel dos Campos - AL</small>
-          </span>
-        </a>
-        <p>Promovendo uma educação pública, inclusiva e transformadora, valorizando os profissionais do magistério e ampliando as oportunidades de aprendizagem para crianças, jovens e adultos miguelenses.</p>
-        <div class="footer__social">
-          <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
-          <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">public</span></a>
-          <a href="#" aria-label="YouTube"><span class="material-symbols-outlined">play_circle</span></a>
-          <a href="#" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
-        </div>
-      </div>
-
-      <div class="footer__col">
-        <h3>Ensino &amp; Ofertas</h3>
-        <ul>
-          <li><a href="../index.html#programas">Educação Infantil</a></li>
-          <li><a href="../index.html#programas">Ensino Fundamental I</a></li>
-          <li><a href="../index.html#programas">Ensino Fundamental II</a></li>
-          <li><a href="../index.html#programas">Educação de Jovens e Adultos</a></li>
-          <li><a href="../index.html#programas">Educação Especial &amp; Inclusão</a></li>
-          <li><a href="../index.html#programas">Programa Escola 10</a></li>
-          <li><a href="../index.html#programas">IDEB</a></li>
-          <li><a href="../index.html#programas">Grêmios Estudantis</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h3>Transparência</h3>
-        <ul>
-          <li><a href="../lgpd.html">Serviço de Informação ao Cidadão (e-SIC)</a></li>
-          <li><a href="../lgpd.html">Portal da Transparência</a></li>
-          <li><a href="../lgpd.html">Ouvidoria Municipal</a></li>
-          <li><a href="../documentos.html">Editais &amp; Licitações</a></li>
-          <li><a href="../documentos.html">Prestação de Contas</a></li>
-          <li><a href="../servidor.html">Contracheque</a></li>
-          <li><a href="../lgpd.html">LGPD &amp; Privacidade</a></li>
-          <li><a href="../documentos.html">Legislação</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col footer__contact">
-        <h3>Sede &amp; Contato</h3>
-        <p>
-          <span class="material-symbols-outlined">place</span>
-          <span>Rua Deputado José Medeiros, s/n, Centro<br />São Miguel dos Campos - AL<br />CEP 57240-000</span>
-        </p>
-        <p>
-          <span class="material-symbols-outlined">schedule</span>
-          <span>Segunda a sexta, das 07h30 às 13h30</span>
-        </p>
-        <p>
-          <span class="material-symbols-outlined">phone</span>
-          <span>(82) 3271-1234 | (82) 3271-1250</span>
-        </p>
-        <p>
-          <span class="material-symbols-outlined">mail</span>
-          <span>semed@saomigueldoscampos.al.gov.br</span>
-        </p>
-        <a class="footer__access-btn" href="../lgpd.html">
-          <span class="material-symbols-outlined icon-sm">accessibility_new</span>
-          Acessibilidade Presencial e Digital
-        </a>
-      </div>
-    </div>
-
-    <div class="footer__institutional">
-      <div class="container footer__institutional-inner">
-        <a class="footer__semed-logo" href="../index.html" aria-label="SEMED - Página inicial">
-          <img src="../assets/images/semed_logo_branca.png"
-            alt="SEMED - Secretaria Municipal de Educação de São Miguel dos Campos" />
-        </a>
-        <div class="footer__gov-logos" aria-label="Governos parceiros">
-          <figure class="footer__gov-logo">
-            <img src="../assets/images/brasil_logo.png" alt="Bandeira do Brasil" />
-            <figcaption>Governo Federal</figcaption>
-          </figure>
-          <figure class="footer__gov-logo">
-            <img src="../assets/images/bandeira-alagoas.png" alt="Bandeira do Estado de Alagoas" />
-            <figcaption>Governo de Alagoas</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p>© 2026 SEMED — Secretaria Municipal de Educação de São Miguel dos Campos - AL. Todos os direitos reservados.</p>
-        <nav class="footer__bottom-links" aria-label="Links legais">
-          <a href="#">Portal Fale.BR</a><span>|</span>
-          <a href="../termos-de-uso.html">Termos de Uso</a><span>|</span>
-          <a href="../politica-privacidade.html">Política de Privacidade</a><span>|</span>
-          <a href="../index.html#mapa">Mapa do site</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
   <script src="../js/common.js"></script>
-  <script src="../js/index.js"></script>
+  <script>
+    /* Censo Escolar — Tabs e Accordion */
+    (function () {
+      // ---------- Tabs ----------
+      var tabs = document.querySelectorAll('.tabs');
+      if (!tabs.length) return;
+      var activeTab = document.querySelector('.tab--active');
+
+      tabs.forEach(function (panelGroup) {
+        var buttons = panelGroup.querySelectorAll('.tab');
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var target = btn.getAttribute('data-tab');
+            buttons.forEach(function (b) {
+              b.classList.remove('tab--active');
+              b.setAttribute('aria-selected', 'false');
+            });
+            btn.classList.add('tab--active');
+            btn.setAttribute('aria-selected', 'true');
+
+            document.querySelectorAll('.tab-panel').forEach(function (p) {
+              p.classList.remove('tab-panel--active');
+              p.hidden = true;
+            });
+            var targetPanel = document.getElementById(target);
+            if (targetPanel) {
+              targetPanel.classList.add('tab-panel--active');
+              targetPanel.hidden = false;
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        });
+      });
+
+      // ---------- Accordion ----------
+      var items = document.querySelectorAll('[data-accordion-item]');
+      if (!items.length) return;
+      items.forEach(function (item) {
+        item.addEventListener('click', function () {
+          var isOpen = item.classList.contains('acc-item--open');
+          // Claro de abrir apenas um por vez
+          document.querySelectorAll('[data-accordion-item]').forEach(function (other) {
+            other.classList.remove('acc-item--open');
+            other.setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('acc-item--open');
+            item.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 
 </html>
