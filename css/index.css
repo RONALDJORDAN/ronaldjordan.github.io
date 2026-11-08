@@ -1111,7 +1111,7 @@
 
 /* ---------- Hero summary (Censo Escolar) ---------- */
 .section-hero {
-  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, #2d6e3a 0%, #3f8e4d 40%, #1c5e2d 100%);
   padding-block: 2rem;
 }
 .hero-summary {
@@ -1125,20 +1125,21 @@
   flex-direction: column;
   gap: 0.25rem;
   padding: 0.9rem 1.25rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(20, 40, 25, 0.75);
+  border: 1px solid rgba(104, 180, 92, 0.5);
+  border-left: 5px solid var(--primary);
   border-radius: var(--radius-md);
-  backdrop-filter: blur(6px);
 }
 .hero-summary__card .stat__value {
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   font-weight: 800;
   color: #fff;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 .hero-summary__card .stat__label {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: #c8e6cb;
 }
 
 /* ---------- Tabs ---------- */
