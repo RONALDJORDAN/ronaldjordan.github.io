@@ -6,19 +6,22 @@
 /* ---------- Hero institucional com imagem de fundo ---------- */
 .inst-hero {
   position: relative;
-  padding-block: 5rem 4rem;
+  min-height: 65vh;
+  padding-block: 4rem 2rem;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .inst-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/inst-fundo.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../assets/images/SEMED_/semed_corrigida.png');
+  background-size: 100%;
+  background-position: center 35%;
   background-repeat: no-repeat;
-  opacity: 0.55;
+  opacity: 1;
   z-index: 0;
 }
 
@@ -26,7 +29,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 72, 56, 0.92) 0%, rgba(0, 102, 79, 0.75) 60%, rgba(16, 185, 129, 0.45) 100%);
+  background: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
 
@@ -86,6 +89,7 @@
   line-height: 1.1;
   margin-bottom: 1.25rem;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .inst-hero__text {
@@ -94,6 +98,7 @@
   color: rgba(255, 255, 255, 0.95);
   max-width: 56rem;
   margin-bottom: 2.5rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .inst-hero__stats {
@@ -538,7 +543,7 @@
   margin-bottom: 1.5rem;
 }
 
-.atendimento__form-head > div {
+.atendimento__form-head>div {
   min-width: 0;
 }
 
