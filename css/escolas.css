@@ -9,6 +9,11 @@
   border-bottom: 1px solid var(--neutral-border);
 }
 
+/* Ajuste de posicionamento do breadcrumb */
+.escola-hero .breadcrumb {
+  margin-top: 10px;
+}
+
 .escola-head {
   display: flex;
   flex-direction: column;
