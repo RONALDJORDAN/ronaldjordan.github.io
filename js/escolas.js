@@ -59,7 +59,9 @@
   function abrirModal(card) {
     const tipo = card.querySelector('.escola-card__tipo')?.textContent || '';
     const nome = card.querySelector('h3')?.textContent || '';
-    const enderecoEl = card.querySelector('.escola-card__body p');
+    const corpo = card.querySelector('.escola-card__body');
+    const enderecos = corpo ? Array.from(corpo.querySelectorAll('p')) : [];
+    const enderecoEl = enderecos[enderecos.length - 1] || null;
     let endereco = '';
     if (enderecoEl) {
       // Concatena apenas os nós de texto, ignorando o ícone (span.material-symbols-outlined)
