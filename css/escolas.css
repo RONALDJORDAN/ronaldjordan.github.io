@@ -70,6 +70,7 @@
   gap: 0.75rem;
   padding: 1.5rem;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
 }
 
 .escola-card:hover {
@@ -100,9 +101,39 @@
 .escola-card h3 {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--on-surface);
+  color: var(--primary-ink);
   margin: 0;
   flex: 1;
+}
+
+/* Botão circular de informações (ícone "i") */
+.escola-card__info-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-border);
+  background: var(--surface-card);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  z-index: 5;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.escola-card__info-btn:hover {
+  background: var(--primary-fixed);
+  color: var(--primary-ink);
+  transform: scale(1.05);
+}
+
+.escola-card__info-btn .material-symbols-outlined {
+  font-size: 1.25rem;
 }
 
 .escola-card__body p {
@@ -187,7 +218,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 42rem;
+  max-width: 54rem;
   max-height: 85vh;
   background: var(--surface-card);
   border-radius: var(--radius-lg);
@@ -230,6 +261,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-wrap: wrap;
   margin-bottom: 1.5rem;
 }
 
@@ -252,8 +284,8 @@
 }
 
 .escola-modal__info {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   gap: 0.75rem;
   margin-bottom: 1.5rem;
 }
