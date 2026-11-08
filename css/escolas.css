@@ -1,0 +1,344 @@
+/* ============================================================
+   SEMED São Miguel dos Campos — Página Localize uma Escola
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.escola-hero {
+  padding-block: 4rem 2rem;
+  background: var(--surface-card);
+  border-bottom: 1px solid var(--neutral-border);
+}
+
+.escola-head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.escola-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 42rem;
+  position: relative;
+}
+
+.escola-search span {
+  font-size: 1.25rem;
+  color: var(--on-surface-variant);
+  flex-shrink: 0;
+}
+
+.escola-search input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+}
+
+.escola-search input::placeholder {
+  color: var(--on-surface-variant);
+  opacity: 0.6;
+}
+
+.escola-search input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(104, 180, 92, 0.15);
+}
+
+/* ---------- Lista de escolas ---------- */
+.escola-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.escola-card {
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.escola-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.escola-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.escola-card__tipo {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  color: var(--primary-ink);
+  background: var(--primary-fixed);
+  white-space: nowrap;
+}
+
+.escola-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0;
+  flex: 1;
+}
+
+.escola-card__body p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.escola-resultados {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  max-width: 42rem;
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  z-index: 100;
+  max-height: 24rem;
+  overflow-y: auto;
+  margin-top: 0.25rem;
+}
+
+.escola-resultados[hidden] {
+  display: none;
+}
+
+.escola-resultado-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  color: var(--on-surface);
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid var(--neutral-border);
+  text-align: left;
+}
+
+.escola-resultado-item:last-child {
+  border-bottom: none;
+}
+
+.escola-resultado-item:hover {
+  background: var(--surface-container-low);
+  color: var(--primary);
+}
+
+/* ---------- Modal ---------- */
+.escola-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.escola-modal:not([hidden]) {
+  display: block;
+}
+
+.escola-modal[hidden] {
+  display: none;
+}
+
+.escola-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.escola-modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 42rem;
+  max-height: 85vh;
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.escola-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--surface-container-low);
+  border: none;
+  border-radius: var(--radius-full);
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  color: var(--on-surface-variant);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.escola-modal__close:hover {
+  background: var(--neutral-border);
+  color: var(--on-surface);
+}
+
+.escola-modal__body {
+  padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.escola-modal__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.escola-modal__tipo {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  color: var(--primary-ink);
+  background: var(--primary-fixed);
+}
+
+.escola-modal__header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--on-surface);
+  margin: 0;
+}
+
+.escola-modal__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.escola-modal__dado {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--on-surface);
+}
+
+.escola-modal__dado .material-symbols-outlined {
+  font-size: 1.25rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.escola-modal__dado strong {
+  color: var(--on-surface-variant);
+}
+
+.escola-modal__mapa {
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.escola-modal__mapa h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.escola-modal__mapa iframe {
+  width: 100%;
+  height: 15rem;
+  display: block;
+  border: none;
+}
+
+/* ---------- Card clicável ---------- */
+.escola-card {
+  cursor: pointer;
+}
+
+.escola-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Estados vazios / busca ---------- */
+.escola-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: var(--on-surface-variant);
+}
+
+.escola-empty.hidden {
+  display: none;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+  .escola-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .escola-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .escola-card__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .escola-card__tipo {
+    align-self: flex-start;
+  }
+}
