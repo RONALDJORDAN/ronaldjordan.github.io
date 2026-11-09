@@ -888,16 +888,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-nav__inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.375rem;
+  row-gap: 0.25rem;
   padding-block: 0.375rem;
-  overflow-x: auto;
-  overflow-y: visible;
-  scrollbar-width: none;
-}
-
-.main-nav__inner::-webkit-scrollbar {
-  display: none;
 }
 
 .main-nav__link {
@@ -933,20 +928,34 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
 }
 
-/* Botão trigger da seta do dropdown */
+/* O link forma o pill inteiro e reserva espaço interno para a seta */
+.main-nav__dropdown > .main-nav__link {
+  padding-right: 2rem;
+}
+
+/* Hover no conjunto destaca o pill, inclusive quando o cursor está na seta */
+.main-nav__dropdown:hover > .main-nav__link:not(.is-active) {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Botão trigger da seta, posicionado dentro do pill do Institucional */
 .main-nav__dropdown-trigger {
+  position: absolute;
+  right: 0.125rem;
+  top: 50%;
+  transform: translateY(-50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: var(--radius);
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: calc(var(--radius) - 0.125rem);
   background: transparent;
   border: 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
   font-size: 0.7rem;
   line-height: 1;
@@ -955,18 +964,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-nav__dropdown-trigger:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: transparent;
   color: #ffffff;
 }
 
+/* Quando o Institucional está ativo, a seta acompanha o texto escuro do pill */
+.main-nav__dropdown:has(> .main-nav__link.is-active) > .main-nav__dropdown-trigger {
+  color: var(--on-primary);
+}
+
+.main-nav__dropdown-trigger .material-symbols-outlined {
+  transition: transform 0.2s ease;
+}
+
+.main-nav__dropdown.is-open .main-nav__dropdown-trigger .material-symbols-outlined {
+  transform: rotate(180deg);
+}
+
 .main-nav__dropdown-trigger:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
 }
 
 .main-nav__dropdown__menu {
   position: absolute;
-  top: calc(100% + 0.5rem);
+  top: calc(100% + 0.375rem);
   left: 0;
   min-width: 14rem;
   background: var(--surface-card);
@@ -976,14 +998,29 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 50;
   display: none;
   flex-direction: column;
-  overflow: hidden;
 }
 
-.main-nav__dropdown:hover .main-nav__dropdown__menu,
-.main-nav__dropdown:focus-within .main-nav__dropdown__menu,
-.main-nav__dropdown[aria-expanded="true"] .main-nav__dropdown__menu,
+/* Ponte invisível para o cursor atravessar o espaço entre o menu e o submenu */
+.main-nav__dropdown__menu::before {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+}
+
+.main-nav__dropdown__item:first-child {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.main-nav__dropdown__item:last-child {
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.main-nav__dropdown.is-open .main-nav__dropdown__menu,
 .main-nav__dropdown__menu.is-open {
-  display: flex !important;
+  display: flex;
 }
 
 /* Link Institucional ativo no dropdown (pai) */
@@ -1026,44 +1063,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-nav__dropdown__item.is-active .material-symbols-outlined {
-  color: #ffffff;
-}
-
-.main-nav__dropdown__item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.625rem 0.875rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--on-surface);
-  text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  border: 0;
-  background: transparent;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-}
-
-.main-nav__dropdown__item:hover {
-  background: var(--gov-sky-subtle);
-  color: var(--primary-ink);
-}
-
-.main-nav__dropdown__item.is-active {
-  background: var(--primary-fixed);
   color: var(--on-primary-fixed);
-  font-weight: 600;
-}
-
-.main-nav__dropdown__item .material-symbols-outlined {
-  font-size: 0.875rem;
-  color: var(--primary-ink);
-}
-
-.main-nav__dropdown__item.is-active .material-symbols-outlined {
-  color: #ffffff;
 }
 
 /* ---------- Dropdown no mobile drawer ---------- */

@@ -16,9 +16,11 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
 </head>
 
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
@@ -108,7 +110,30 @@
       <div class="container main-nav__inner">
         <a href="../index.html" class="main-nav__link">Início</a>
         <a href="../noticias.html" class="main-nav__link">Notícias</a>
-        <a href="../institucional/institucional.html" class="main-nav__link">Institucional</a>
+        <div class="main-nav__dropdown">
+          <a href="../institucional/institucional.html" class="main-nav__link">Institucional</a>
+          <button type="button" class="main-nav__dropdown-trigger" aria-label="Abrir submenu Institucional"
+            aria-haspopup="true" aria-expanded="false" aria-controls="institucional-menu">
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_drop_down</span>
+          </button>
+          <div class="main-nav__dropdown__menu" id="institucional-menu">
+            <a href="../institucional/institucional.html" class="main-nav__dropdown__item">
+              <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>Institucional
+            </a>
+            <a href="../institucional/quem-somos.html" class="main-nav__dropdown__item">
+              <span class="material-symbols-outlined" aria-hidden="true">info</span>Quem Somos
+            </a>
+            <a href="../institucional/galeria-funcionarios.html" class="main-nav__dropdown__item">
+              <span class="material-symbols-outlined" aria-hidden="true">people</span>Galeria de Funcionários
+            </a>
+            <a href="../institucional/contatos.html" class="main-nav__dropdown__item">
+              <span class="material-symbols-outlined" aria-hidden="true">contact_page</span>Contatos
+            </a>
+            <a href="../institucional/biblioteca.html" class="main-nav__dropdown__item">
+              <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Biblioteca Digital
+            </a>
+          </div>
+        </div>
         <a href="../index.html#programas" class="main-nav__link">Educação</a>
         <a href="../index.html#servicos" class="main-nav__link">Estudante</a>
         <a href="../index.html#escola" class="main-nav__link">Escola</a>
@@ -167,229 +192,15 @@
 
   <main id="conteudo">
 
-    <!-- ================= BREADCRUMB ================= -->
-    <div class="container">
-      <nav class="breadcrumb" aria-label="Trilha de navegação">
-        <a href="../index.html"><span class="material-symbols-outlined">home</span>Início</a>
-        <span class="material-symbols-outlined">chevron_right</span>
-        <a href="../index.html#servicos">Serviços</a>
-        <span class="material-symbols-outlined">chevron_right</span>
-        <span aria-current="page">Censo Escolar</span>
-      </nav>
-    </div>
-
-    <!-- ================= HERO / HEADER ================= -->
-    <section class="section section--canvas section-hero" id="censo">
+    <!-- ================= BOX PRODUZINDO ================= -->
+    <section class="produzindo">
       <div class="container">
-        <div class="hero-title">
-          <span class="section-kicker">
-            <span class="material-symbols-outlined icon-sm">insights</span>
-            Indicadores educacionais
-          </span>
-          <h1 class="section-title">Censo Escolar</h1>
-          <p class="section-subtitle">Dados oficiais do IDEB, Censo Escolar da Educação Básica e Censo Escolar em Alagoas.</p>
-        </div>
-
-        <div class="stat-row">
-          <div class="stat stat--wide">
-            <span class="stat__value">4.2</span>
-            <span class="stat__label">IDEB Estadual</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">5.8</span>
-            <span class="stat__label">IDEB – São Miguel dos Campos</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">96%</span>
-            <span class="stat__label">Comparecimento municipal</span>
-          </div>
-          <div class="stat stat--wide">
-            <span class="stat__value">2.557</span>
-            <span class="stat__label">Unidades – Alagoas</span>
-          </div>
+        <div class="prod-content">
+          <span class="material-symbols-outlined prod-pulse">fiber_manual_record</span>
+          <p>Produzindo conteúdo educacional oficial — clique nos links abaixo para acessar os dados publicados do INEP e da rede municipal.</p>
         </div>
       </div>
     </section>
-
-    <!-- ================= TABS ================= -->
-    <div class="tabs" id="censo-tabs">
-
-      <!-- TAB 1 -->
-      <button class="tab tab--active" data-tab="tab-oque-e" aria-selected="true">
-        <span class="material-symbols-outlined tab-tab__icon">help</span>
-        O que é o Censo Escolar
-      </button>
-
-      <div class="tab-panel tab-panel--active" id="tab-oque-e">
-        <div class="accordion" data-accordion>
-
-          <div class="acc-item acc-item--open" data-accordion-item>
-            <h4>Quem declara o Censo Escolar</h4>
-            <p>O Decreto n° 6.425, de 4 de abril de 2008, que dispõe sobre a realização dos censos anuais da educação, estabelece no art. 4º que o fornecimento das informações solicitadas no Censo da Educação Básica é obrigatório para todas as escolas públicas e privadas. Os diretores e dirigentes dos estabelecimentos de ensino são os responsáveis pelas informações declaradas. A veracidade dessas informações é de responsabilidade solidária entre as escolas e os gestores dos entes federados (estados e municípios), sendo estes últimos responsáveis também pelo acompanhamento de todo o processo censitário no âmbito de sua esfera administrativa.</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Para que o Censo Escolar serve?</h4>
-            <p>O Censo Escolar é uma atividade de fundamental importância para a gestão governamental no âmbito da educação, tendo como principais objetivos fornecer informações estatísticas educacionais para realização de análises, diagnósticos e avaliações sobre a educação brasileira, orientar a definição de políticas educacionais e servir como instrumento de planejamento e acompanhamento de programas e ações do governo.</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Plano Nacional de Educação</h4>
-            <p>Em 2014, foi aprovado o Plano Nacional de Educação (PNE) – Lei n° 13.005, de 25 de junho de 2014 –, que atribuiu ao Inep a realização de estudos e pesquisas das metas do Plano, tendo como uma das referências os censos educacionais nacionais. O Censo Escolar é, portanto, ferramenta indispensável para que os diversos atores educacionais e a sociedade em geral possam conhecer a situação educacional do País, do Distrito Federal, dos estados e dos municípios, de modo a acompanhar a efetividade das políticas públicas.</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Situação do aluno – Docência</h4>
-            <p>Os responsáveis pela declaração são todos os diretores e dirigentes dos estabelecimentos de ensino. Para confirmar ou desconsiderar as matrículas duplicadas, o diretor/responsável pelo Censo Escolar deve verificar se existem casos de alunos com matrículas duplicadas na escola ou em outra escola e realizar a devida confirmação/desconsideração.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB 2 -->
-      <button class="tab tab--active" data-tab="tab-como" aria-selected="true">
-        <span class="material-symbols-outlined tab-tab__icon">insights</span>
-        Como funciona o IDEB
-      </button>
-
-      <div class="tab-panel tab-panel--active" id="tab-como">
-        <div class="accordion" data-accordion>
-
-          <div class="acc-item acc-item--open" data-accordion-item>
-            <h4>O que é o IDEB</h4>
-            <p>O Índice de Desenvolvimento da Educação Básica (IDEB) foi criado pelo Inep em 2007 e representa a iniciativa pioneira de reunir num só indicador dois conceitos igualmente importantes para a qualidade da educação: fluxo escolar e médias de desempenho nas avaliações. Ele agrega ao enfoque pedagógico dos resultados das avaliações em larga escala do Inep a possibilidade de resultados sintéticos, facilmente assimiláveis, e que permitem traçar metas de qualidade educacional para os sistemas.</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Como o IDEB é calculado</h4>
-            <p>O IDEB é calculado a partir de dois componentes: taxa de rendimento escolar (aprovação) e médias de desempenho nos exames padronizados aplicados pelo Inep. Os índices de aprovação são obtidos a partir do Censo Escolar, realizado anualmente pelo Inep. As médias de desempenho utilizadas são as da Prova Brasil (para Idebs de escolas e municípios) e do Saeb (no caso dos Idebs dos estados e nacional).</p>
-            <code class="formula">IDEB<sub>j,i</sub> = N<sub>j,i</sub> · P<sub>j,i</sub></code>
-            <p><strong>i</strong> = ano do exame (Saeb e Prova Brasil) e do Censo Escolar; <strong>j</strong> = unidade educacional (escola ou município).</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>O que são as metas</h4>
-            <p>O IDEB é mais que um indicador estatístico. Ele nasceu como condutor de política pública pela melhoria da qualidade da educação, tanto no âmbito nacional, como nos estados, municípios e escolas. Sua composição possibilita não apenas o diagnóstico atualizado da situação educacional em todas essas esferas, mas também a projeção de metas individuais intermediárias rumo ao incremento da qualidade do ensino.</p>
-            <p>As metas são exatamente isso: o caminho traçado de evolução individual dos índices, para que o Brasil atinja o patamar educacional que têm hoje a média dos países da OCDE. Em termos numéricos, isso significa evoluir da média nacional 3,8, registrada em 2005, para um Ideb igual a 6,0, na primeira fase do Ensino Fundamental.</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Metas são diferenciadas</h4>
-            <p>As metas são diferenciadas para todos, e são apresentadas bienalmente de 2007 a 2021. Estados, municípios e escolas deverão melhorar seus índices e contribuir, em conjunto, para que o Brasil chegue à meta 6,0 em 2022, ano do bicentenário da Independência. Mesmo quem já tem um bom índice deve continuar a evoluir. No caso das redes e escolas com maior dificuldade, as metas prevêem um esforço mais concentrado, para que elas melhorem mais rapidamente, diminuindo assim a desigualdade entre as esferas. O Ministério da Educação prevê apoio específico para reduzir essa desigualdade.</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Para que serve o IDEB</h4>
-            <p>Com o IDEB, ampliam-se as possibilidades de mobilização da sociedade em favor da educação, uma vez que o índice é comparável nacionalmente e expressa em valores os resultados mais importantes da educação: aprendizagem e fluxo. A combinação de ambos tem também o mérito de equilibrar as duas dimensões: se um sistema de ensino retiver seus alunos para obter resultados de melhor qualidade no Saeb ou Prova Brasil, o fator fluxo será alterado, indicando a necessidade de melhoria do sistema. Se, ao contrário, o sistema apressar a aprovação do aluno sem qualidade, o resultado das avaliações indicará igualmente a necessidade de melhoria do sistema.</p>
-            <p>O IDEB também é importante por ser condutor de política pública em prol da qualidade da educação. É a ferramenta para acompanhamento das metas de qualidade do PDE para a educação básica. O Plano de Desenvolvimento da Educação estabelece, como meta, que em 2022 o IDEB do Brasil seja 6,0 – média que corresponde a um sistema educacional de qualidade comparável a dos países desenvolvidos.</p>
-          </div>
-        </div>
-
-        <div class="stat-row">
-          <div class="stat">
-            <span class="stat__value">5.8</span>
-            <span class="stat__label">IDEB 2019 – São Miguel dos Campos</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">4.2</span>
-            <span class="stat__label">IDEB 2019 – Alagoas</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">3.8</span>
-            <span class="stat__label">Média nacional 2005</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">96%</span>
-            <span class="stat__label">Comparecimento municipal</span>
-          </div>
-        </div>
-
-        <div class="tab-links">
-          <a href="../index.html#programas" class="btn btn--soft">
-            <span class="material-symbols-outlined icon-sm">insights</span>
-            Ver – Programas
-          </a>
-          <a href="../lgpd.html" class="btn btn--soft">
-            <span class="material-symbols-outlined icon-sm">shield_person</span>
-            Legislação e Transparência
-          </a>
-        </div>
-      </div>
-
-      <!-- TAB 3 -->
-      <button class="tab tab--active" data-tab="tab-etapas" aria-selected="true">
-        <span class="material-symbols-outlined tab-tab__icon">task_alt</span>
-        Quais são as etapas e demais documentos
-      </button>
-
-      <div class="tab-panel tab-panel--active" id="tab-etapas">
-        <div class="accordion" data-accordion>
-
-          <div class="acc-item acc-item--open" data-accordion-item>
-            <h4>Primeira etapa – Matrícula Inicial</h4>
-            <p>São coletadas as informações escolares referentes aos cadastros de escola, aluno, turma e profissional em sala de aula. Essa etapa inclui as seguintes atividades:</p>
-
-            <ol class="step-list">
-              <li><strong>Preenchimento das informações escolares</strong>, realizado pelo diretor/responsável pelo Censo Escolar da escola. O período geralmente tem duração de 60 dias.</li>
-              <li><strong>Consolidação das informações declaradas</strong>, realizada pelo Inep. Após o encerramento do período de coleta, o Inep reúne as informações recebidas para publicação dos dados preliminares do Censo Escolar no DOU.</li>
-              <li><strong>Retificação das informações fornecidas</strong>. Após a publicação dos dados preliminares no DOU, o sistema Educacenso é reaberto para a realização de eventuais correções e complementações. O período de retificação tem duração de 30 dias.</li>
-              <li><strong>Verificação das informações declaradas</strong>, realizada pelas coordenações estaduais do Censo Escolar. Após o período de retificações, o sistema permanece disponível para as coordenações estaduais, durante dez dias, também para consultas e eventuais correções.</li>
-              <li><strong>Confirmação ou desconsideração das matrículas duplicadas</strong>, realizada diretamente no sistema Educacenso, pelo diretor/responsável pelo Censo Escolar, no módulo de confirmação de matrícula.</li>
-              <li><strong>Verificação final dos dados declarados</strong>. Nesse período, são realizadas as últimas análises e correções de inconsistências no sistema Educacenso.</li>
-              <li><strong>Publicação no DOU dos dados finais do Censo Escolar</strong>, realizada pelo Inep/MEC.</li>
-            </ol>
-
-            <p class="tip">⚠️ Após o encerramento dos períodos oficiais e a publicação dos dados finais no DOU, <strong>não poderá haver alteração</strong> nos dados escolares.</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Segunda etapa – Módulo Situação do Aluno</h4>
-            <p>São coletadas as informações de rendimento e movimento dos alunos cadastrados no sistema Educacenso, a partir dos dados finais do Censo Escolar publicados no DOU. Nessa etapa, são realizadas as seguintes atividades:</p>
-            <ol class="step-list">
-              <li><strong>Preenchimento das informações</strong>, realizado pelo diretor/responsável pelo Censo Escolar. Nesse momento, devem ser informados o rendimento escolar ("aprovado" ou "reprovado") e o movimento ("transferido", "deixou de frequentar" ou "falecido") dos alunos. Ressaltando que a escola deve estar munida de documentos comprobatórios.</li>
-              <li><strong>Verificação das informações declaradas</strong>, realizada pelos gestores municipais e estaduais de educação. Após o período de coleta, relatórios com os dados escolares são disponibilizados para conferência das informações declaradas.</li>
-              <li><strong>Retificação das informações fornecidas</strong>. Em seguida, o sistema Educacenso é reaberto por 15 dias, para eventuais correções nos dados declarados.</li>
-            </ol>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Orientações para o preenchimento dos formulários</h4>
-            <p>As informações declaradas nos formulários do Censo Escolar devem ter como referência documentos que garantam a confiabilidade delas, tais como ficha de matrícula do aluno, diário classe, livro frequência, histórico escolar, regimento escolar, documentos de enturmação de professores, projeto político-pedagógico (PPP), entre outros. Isso possibilita que, a qualquer momento, as informações declaradas ao Censo possam ser confirmadas pelo MEC, pelo Inep, pelos órgãos de controle, acompanhamento e fiscalização e pelo Ministério Público. O responsável pela escola responde administrativamente, civil e penalmente pela inclusão de informação inadequada, se comprovada a omissão ou comissão (obrigação ou incumbência), dolo ou culpa, nos termos da Lei n° 8.429, de 2 de junho de 1992, que dispõe sobre as sanções aplicáveis aos agentes públicos no exercício de mandato, cargo, emprego ou função na administração pública direta, indireta ou fundacional.</p>
-
-            <ul class="tip-list">
-              <li>Os campos marcados com asterisco (<strong>*</strong>) são de preenchimento obrigatório.</li>
-              <li>Deve-se evitar a abreviatura das palavras. Entretanto, se for necessário, não coloque ponto. Deixe apenas um espaço em branco antes da próxima palavra. Exemplo: <code>Maria D da Fonseca</code>.</li>
-              <li>As informações prestadas ao Censo Escolar devem refletir a realidade da escola na data de referência do Censo – última quarta-feira do mês de maio.</li>
-              <li>Os formulários devem ser preenchidos nesta ordem: <strong>Escola → Turma → Aluno → Profissional escolar</strong>.</li>
-            </ul>
-
-            <h4>Documentos orientadores</h4>
-            <p>Para auxiliar no preenchimento das informações do Censo, são elaborados anualmente textos e vídeos com orientações específicas sobre a coleta. Você pode acessar no site do INEP, na página do Censo Escolar (Área de atuação: Pesquisas estatísticas e indicadores educacionais).</p>
-            <ul class="tip-list">
-              <li>Documento sobre programas e políticas federais: documento que busca orientar o respondente sobre os dados do Censo utilizados em programas e políticas do governo federal;</li>
-              <li>Navegação guiada: documento que apresenta o passo a passo das funcionalidades do sistema;</li>
-              <li>Vídeos tutoriais: visam a orientar os usuários quanto à adequada declaração das informações do Censo e ao uso das ferramentas do Educacenso;</li>
-              <li>Documentos sobre migração: Orientações sobre a realização da migração de dados.</li>
-            </ul>
-            <p>Esses documentos são importantes para as redes e instituições de ensino que possuem sistemas próprios de coleta de dados.</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Escolas com e sem acesso à internet</h4>
-            <h4>Com acesso à internet</h4>
-            <p>Os usuários dessas escolas devem acessar o sistema Educacenso pelo endereço eletrônico <code>http://educacenso.inep.gov.br</code>, utilizando o CPF e a senha cadastrada, para visualizar os dados cadastrais das escolas, os quais devem ser conferidos e, se for o caso, atualizados. Depois da conferência dos dados cadastrais, devem ser informados os dados educacionais e as turmas do ano letivo corrente e devem ser vinculados os alunos e os profissionais escolares que estão em sala de aula, tendo como referência o Dia Nacional do Censo Escolar, correspondente à última quarta-feira do mês de maio.</p>
-
-            <h4>Sem acesso à internet</h4>
-            <p>As escolas que não possuem acesso à internet devem procurar as secretarias de educação para solicitar a impressão dos formulários do Censo Escolar que estão disponíveis em <code>http://portal.inep.gov.br/censo-escolar</code>. Os campos devem ser preenchidos com caneta de tinta azul.</p>
-          </div>
-
-          <div class="acc-item" data-accordion-item>
-            <h4>Contato</h4>
-            <p>Em caso de dúvidas quanto ao preenchimento, entre em contato com a unidade de estatística da secretaria de educação do Estado de Alagoas (82) 3315-1264 / 3315-1265, ou com o INEP.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
 
     <!-- ================= FOOTER ================= -->
     <footer class="site-footer">
@@ -499,46 +310,7 @@
   </main>
 
   <script src="../js/common.js"></script>
-  <script>
-    (function () {
-      var tabsGroups = document.querySelectorAll('.tabs');
-      if (!tabsGroups.length) return;
-      tabsGroups.forEach(function (group) {
-        group.querySelectorAll('.tab').forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var target = btn.getAttribute('data-tab');
-            group.querySelectorAll('.tab').forEach(function (b) {
-              b.classList.remove('tab--active');
-              b.setAttribute('aria-selected', 'false');
-            });
-            btn.classList.add('tab--active');
-            btn.setAttribute('aria-selected', 'true');
-            document.querySelectorAll('.tab-panel').forEach(function (p) {
-              p.hidden = true;
-            });
-            var panel = document.getElementById(target);
-            if (panel) {
-              panel.hidden = false;
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          });
-        });
-      });
-      document.querySelectorAll('[data-accordion-item]').forEach(function (item) {
-        item.addEventListener('click', function () {
-          var open = item.classList.contains('acc-item--open');
-          document.querySelectorAll('[data-accordion-item]').forEach(function (other) {
-            other.classList.remove('acc-item--open');
-            other.setAttribute('aria-expanded', 'false');
-          });
-          if (!open) {
-            item.classList.add('acc-item--open');
-            item.setAttribute('aria-expanded', 'true');
-          }
-        });
-      });
-    })();
-  </script>
+  <script src="../js/ui.js"></script>
 </body>
 
 </html>

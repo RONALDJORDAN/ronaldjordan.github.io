@@ -1199,34 +1199,42 @@
   flex-wrap: wrap;
 }
 
-/* ---------- Offset para âncoras do menu principal ---------- */
-#servicos,
-#programas,
-#transparencia,
-#mapa,
-#escola,
-#ideb,
-#censo-basica,
-#censo-alagoas {
-  scroll-margin-top: 10rem;
+/* ---------- Tip list ---------- */
+.tip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  display: grid;
+  gap: 0.375rem;
+}
+.tip-list li::before {
+  content: "✓";
+  color: var(--primary);
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+.tip-list li strong {
+  font-weight: 700;
 }
 
-@media (max-width: 900px) {
-  #servicos,
-  #programas,
-  #transparencia,
-  #mapa,
-  #escola {
-    scroll-margin-top: 7rem;
-  }
-
-  .stat-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .tab {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
+/* ---------- Produzindo box ---------- */
+.produzindo {
+  padding: 2rem 2rem 1rem;
+}
+.prod-content {
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.prod-pulse {
+  font-size: 2rem;
+  color: var(--primary);
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+}
+.prod-content p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--on-surface-variant);
 }
 

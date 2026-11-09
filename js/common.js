@@ -227,41 +227,88 @@
 
   /* ---------------------------------------------------------
      8. Dropdown de submódulos (Institucional)
-     --------------------------------------------------------- */
+     Abre por hover, clique na seta ou foco de teclado.
+  --------------------------------------------------------- */
   $$('.main-nav__dropdown').forEach((dropdown) => {
     const trigger = dropdown.querySelector('.main-nav__dropdown-trigger');
     const menu = dropdown.querySelector('.main-nav__dropdown__menu');
 
     if (!trigger || !menu) return;
 
-    function toggle(open) {
-      dropdown.setAttribute('aria-expanded', String(open));
-      menu.setAttribute('aria-hidden', String(!open));
+    function setOpen(open) {
+      dropdown.classList.toggle('is-open', open);
       menu.classList.toggle('is-open', open);
-      menu.style.display = open ? 'flex' : 'none';
+      trigger.setAttribute('aria-expanded', String(open));
     }
 
-    // Abre/fecha apenas pelo botão trigger
     trigger.addEventListener('click', (e) => {
       e.stopPropagation();
-      const expanded = dropdown.getAttribute('aria-expanded') === 'true';
-      toggle(!expanded);
+      const expanded = trigger.getAttribute('aria-expanded') === 'true';
+      setOpen(!expanded);
       trigger.focus();
     });
 
-    // Fecha ao clicar fora do dropdown
+    // Abre o submenu com a seta para baixo e leva o foco ao primeiro item
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowDown') return;
+      e.preventDefault();
+      setOpen(true);
+      const firstItem = menu.querySelector('a');
+      if (firstItem) firstItem.focus();
+    });
+
+    // Abre ao passar o cursor sobre o item "Institucional" ou sobre o submenu
+    dropdown.addEventListener('mouseenter', () => setOpen(true));
+    dropdown.addEventListener('mouseleave', () => {
+      if (!dropdown.contains(document.activeElement)) setOpen(false);
+    });
+
+    // Mantém aberto enquanto o foco estiver dentro do dropdown.
+    // Só abre no foco por teclado (focus-visible), para não conflitar com o clique/toque.
+    dropdown.addEventListener('focusin', (e) => {
+      if (e.target !== trigger && !menu.contains(e.target)) return;
+
+      let keyboardFocus = true;
+      try {
+        keyboardFocus = e.target.matches(':focus-visible');
+      } catch (err) {
+        keyboardFocus = true;
+      }
+
+      if (keyboardFocus || menu.contains(e.target)) setOpen(true);
+    });
+
+    dropdown.addEventListener('focusout', (e) => {
+      if (!dropdown.contains(e.relatedTarget)) setOpen(false);
+    });
+
+    // Fecha ao clicar fora
     document.addEventListener('click', (e) => {
-      if (!dropdown.contains(e.target)) {
-        toggle(false);
+      if (!dropdown.contains(e.target)) setOpen(false);
+    });
+
+    // Fecha com ESC e devolve o foco para a seta
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && trigger.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        trigger.focus();
       }
     });
 
-    // Fecha com ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && dropdown.getAttribute('aria-expanded') === 'true') {
-        toggle(false);
-        trigger.focus();
-      }
+    // Navegação entre os submenus com as setas do teclado
+    menu.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+
+      const items = Array.from(menu.querySelectorAll('a'));
+      const index = items.indexOf(document.activeElement);
+      if (index === -1) return;
+
+      e.preventDefault();
+      const nextIndex = e.key === 'ArrowDown'
+        ? (index + 1) % items.length
+        : (index - 1 + items.length) % items.length;
+
+      items[nextIndex].focus();
     });
   });
 

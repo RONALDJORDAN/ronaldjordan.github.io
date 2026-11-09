@@ -1,0 +1,205 @@
+/* ============================================================
+   SEMED São Miguel dos Campos — Animações e micro-interações
+   Identidade visual: Modern Civic Minimalism (gov.br + Material 3)
+   ============================================================ */
+
+/* ---------- Tokens de animação ---------- */
+:root {
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 0.15s;
+  --dur-base: 0.35s;
+  --dur-slow: 0.7s;
+}
+
+/* ---------- Reveal ao scroll (entrada dos elementos) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal--fade {
+  transform: none;
+}
+.reveal--slide-left {
+  transform: translateX(-28px);
+}
+.reveal--slide-right {
+  transform: translateX(28px);
+}
+.reveal--zoom {
+  transform: scale(0.92);
+}
+
+.reveal--stagger-1 { transition-delay: 0.06s; }
+.reveal--stagger-2 { transition-delay: 0.12s; }
+.reveal--stagger-3 { transition-delay: 0.18s; }
+.reveal--stagger-4 { transition-delay: 0.24s; }
+.reveal--stagger-5 { transition-delay: 0.3s; }
+.reveal--stagger-6 { transition-delay: 0.36s; }
+.reveal--stagger-7 { transition-delay: 0.42s; }
+.reveal--stagger-8 { transition-delay: 0.48s; }
+
+/* ---------- Keyframes ---------- */
+@keyframes semed-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes semed-slide-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes semed-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.05); }
+}
+@keyframes semed-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes semed-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes semed-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Utilitários de animação ---------- */
+.animate-fade-in {
+  animation: semed-fade-in var(--dur-base) var(--ease-out) both;
+}
+.animate-slide-up {
+  animation: semed-slide-up var(--dur-base) var(--ease-out) both;
+}
+.animate-pulse {
+  animation: semed-pulse 2s ease-in-out infinite;
+}
+.animate-shimmer {
+  animation: semed-shimmer 2s infinite linear;
+}
+.animate-float {
+  animation: semed-float 5s ease-in-out infinite;
+}
+.animate-spin {
+  animation: semed-spin 1s linear infinite;
+}
+
+/* ---------- Skeleton (estado de carregamento) ---------- */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--surface-container-low) 25%,
+    var(--surface-container) 50%,
+    var(--surface-container-low) 75%
+  );
+  background-size: 200% 100%;
+  animation: semed-shimmer 1.6s infinite;
+  border-radius: var(--radius);
+  color: transparent;
+}
+.skeleton--circle { border-radius: 50%; }
+.skeleton--text { height: 1rem; }
+.skeleton--title { height: 1.25rem; width: 45%; }
+
+/* ---------- Botão com estado de carregamento ---------- */
+.btn--loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.btn--loading::after {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: -0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: semed-spin 0.8s linear infinite;
+}
+
+/* ---------- Hero carousel aprimorado ---------- */
+.hero__slide {
+  transition:
+    opacity var(--dur-slow) var(--ease-out-expo),
+    transform var(--dur-slow) var(--ease-out-expo),
+    visibility var(--dur-slow);
+}
+.hero__slide.is-active .hero__copy > * {
+  animation: semed-slide-up var(--dur-slow) var(--ease-out-expo) both;
+}
+.hero__slide.is-active .hero__copy > :nth-child(2) { animation-delay: 0.08s; }
+.hero__slide.is-active .hero__copy > :nth-child(3) { animation-delay: 0.16s; }
+.hero__slide.is-active .hero__copy > :nth-child(4) { animation-delay: 0.24s; }
+.hero__slide.is-active .hero__figure img {
+  animation: semed-float 7s ease-in-out infinite;
+}
+
+/* ---------- Cards com entrada animada ---------- */
+.service-card,
+.news-card,
+.program-card,
+.transparency__card,
+.contact__address,
+.contact__form-card {
+  transition:
+    transform var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+
+.service-card:hover,
+.news-card:hover,
+.program-card:hover,
+.transparency__card:hover {
+  transform: translateY(-4px);
+}
+
+/* ---------- Barra de progresso de leitura (scroll) ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--primary);
+  transform-origin: 0 0;
+  transform: scalex(0);
+  z-index: 100;
+  transition: transform 0.05s linear;
+}
+
+/* ---------- Redução de movimento (acessibilidade) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible,
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-pulse,
+  .animate-shimmer,
+  .animate-float,
+  .animate-spin,
+  .hero__slide,
+  .hero__slide.is-active .hero__copy > *,
+  .service-card,
+  .news-card,
+  .program-card,
+  .transparency__card {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .btn--loading::after { display: none; }
+}
