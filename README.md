@@ -5,9 +5,11 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[![No Frameworks](https://img.shields.io/badge/Frameworks-None-68b45c?style=for-the-badge)](#)
-[![Static Site](https://img.shields.io/badge/Site-Est%C3%A1tico-00664f?style=for-the-badge)](#)
-[![Accessibility](https://img.shields.io/badge/Acessibilidade-WCAG-2f6b2f?style=for-the-badge)](#)
+[![Sem frameworks](https://img.shields.io/badge/Frameworks-Nenhum-68b45c?style=for-the-badge)](#)
+[![Site estático](https://img.shields.io/badge/Site-Est%C3%A1tico-00664f?style=for-the-badge)](#)
+[![Acessibilidade WCAG](https://img.shields.io/badge/Acessibilidade-WCAG-2f6b2f?style=for-the-badge)](#)
+[![Licença MIT](https://img.shields.io/badge/Licen%C3%A7a-MIT-00664f?style=for-the-badge)](LICENSE)
+[![Português do Brasil](https://img.shields.io/badge/Idioma-Portugu%C3%AAs_do_Brasil-00664f?style=for-the-badge)](#)
 
 Site institucional estático da Secretaria Municipal de Educação de São Miguel dos Campos (Alagoas), construído em **HTML, CSS e JavaScript puros**, sem frameworks, bundlers ou etapa de build.
 
@@ -31,8 +33,8 @@ Cada página possui seu próprio arquivo CSS (em `css/`) e seu próprio arquivo 
 
 ## Estrutura
 
-```
-portal_semed/
+```text
+SEMED-SMC-AL/
 ├── index.html
 ├── noticias.html
 ├── documentos.html
@@ -45,6 +47,10 @@ portal_semed/
 ├── biblioteca.html
 ├── 404.html
 ├── SKILL_PADRAO_PAGINA.md
+├── robots.txt
+├── .nojekyll
+├── LICENSE
+├── README.md
 ├── css/
 │   ├── base.css
 │   ├── index.css
@@ -70,18 +76,15 @@ portal_semed/
 │   ├── galeria-funcionarios.js
 │   ├── contatos.js
 │   └── biblioteca.js
-├── assets/
-│   └── images/
-├── robots.txt
-└── .nojekyll
+└── assets/
+    └── images/
 ```
 
 ## Executar localmente
 
-Não há dependências. Basta servir a pasta como site estático:
+Não há dependências. Basta servir a pasta raiz como site estático:
 
 ```bash
-cd portal_semed
 python -m http.server 8090
 ```
 
@@ -91,12 +94,12 @@ Também é possível abrir `index.html` diretamente no navegador, mas um servido
 
 ## Deploy
 
-Publique **o conteúdo da pasta `portal_semed/`** como raiz do site. Não há comando de build.
+Publique **o conteúdo da pasta raiz** como raiz do site. Não há comando de build.
 
-- **Netlify / Cloudflare Pages:** diretório de publicação `portal_semed`, sem build command.
-- **Vercel:** framework “Other”, output directory `portal_semed`.
+- **Netlify / Cloudflare Pages:** diretório de publicação = raiz do repositório, sem build command.
+- **Vercel:** framework “Other”, output directory = raiz do repositório.
 - **GitHub Pages:** envie o conteúdo para a branch de publicação. O arquivo `.nojekyll` já está incluído para impedir o processamento pelo Jekyll.
-- **Apache / Nginx / IIS:** aponte o document root para a pasta `portal_semed`.
+- **Apache / Nginx / IIS:** aponte o document root para a pasta raiz do repositório.
 
 ### Página 404
 
@@ -153,10 +156,22 @@ O menu principal e o drawer mobile contêm dez módulos:
 
 ## Licença
 
-Este projeto está licenciado sob a **Licença MIT** — veja o arquivo [LICENSE](LICENSE) para detalhes.
+O **código-fonte** deste projeto está licenciado sob a **Licença MIT** — veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-Todos os direitos de propriedade intelectual sobre o código-fonte pertencem à **Secretaria Municipal de Educação de São Miguel dos Campos - AL**. O uso, cópia, modificação ou distribuição do código sem autorização prévia poderá ensejar medidas judiciais cabíveis.
+Os **conteúdos institucionais** (textos, logos, imagens, telefones, e-mails e dados da Secretaria Municipal de Educação de São Miguel dos Campos - AL) são de propriedade da SEMED e não estão cobertos pela licença MIT. Sua reprodução ou uso externo exige autorização prévia da SEMED.
 
-## Personalização
+## Como contribuir
 
-As cores, tipografia, espaçamentos e sombras estão centralizados nos tokens de `css/base.css` (`:root`).
+Contribuições são bem-vindas. Para propor alterações:
+
+1. Faça um fork do repositório.
+2. Crie uma branch a partir de `main`: `git checkout -b sua-melhoria`.
+3. Faça suas alterações e commite: `git commit -m "feat: descreva a mudança"`.
+4. Envie a branch: `git push origin sua-melhoria`.
+5. Abra um Pull Request descrevendo o que foi alterado e por favor.
+
+Mantenha o padrão de cada página (veja `SKILL_PADRAO_PAGINA.md`) e os tokens de cor definidos em `css/base.css` (`:root`).
+
+## Autoria
+
+Desenvolvido para a **Secretaria Municipal de Educação de São Miguel dos Campos - AL**.

@@ -14,19 +14,54 @@
   const drawer = $('#mobile-drawer');
   const menuBtn = $('#mobile-menu-btn');
   const closeBtn = $('#mobile-menu-close');
+  let lastFocused = null;
+  let closeTimer = null;
 
   function openDrawer() {
     if (!drawer) return;
+    lastFocused = document.activeElement;
     drawer.hidden = false;
+    // Força reflow para que a animação de entrada seja reproduzida
+    void drawer.offsetHeight;
+    drawer.classList.add('is-open');
+    document.body.classList.add('drawer-open');
     document.body.style.overflow = 'hidden';
     if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+    // Move o foco para o painel do drawer (acessibilidade)
+    const panel = drawer.querySelector('.mobile-drawer__panel');
+    if (panel) {
+      panel.setAttribute('tabindex', '-1');
+      panel.focus();
+    }
+    clearTimeout(closeTimer);
+    closeTimer = null;
   }
 
   function closeDrawer() {
     if (!drawer) return;
-    drawer.hidden = true;
+    drawer.classList.remove('is-open');
+    document.body.classList.remove('drawer-open');
     document.body.style.overflow = '';
     if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+
+    const finish = () => {
+      drawer.hidden = true;
+      drawer.removeEventListener('transitionend', finish, false);
+      // Restaura o foco ao elemento que abriu o menu
+      if (lastFocused && typeof lastFocused.focus === 'function') {
+        lastFocused.focus();
+      }
+      lastFocused = null;
+      closeTimer = null;
+    };
+
+    // Aguarda o fim da animação de saída antes de ocultar completamente
+    drawer.addEventListener('transitionend', finish, { once: true });
+    closeTimer = setTimeout(() => {
+      if (!drawer.classList.contains('is-open')) {
+        finish();
+      }
+    }, 350);
   }
 
   if (menuBtn) menuBtn.addEventListener('click', openDrawer);
@@ -40,6 +75,17 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && drawer && !drawer.hidden) closeDrawer();
   });
+
+  // Fecha o drawer automaticamente ao redimensionar para desktop (>900px)
+  window.addEventListener(
+    'resize',
+    () => {
+      if (drawer && !drawer.hidden && window.innerWidth > 900) {
+        closeDrawer();
+      }
+    },
+    { passive: true }
+  );
 
   /* ---------------------------------------------------------
      2. Header com sombra ao rolar
@@ -313,7 +359,7 @@
   });
 
   /* ---------------------------------------------------------
-     8b. Dropdown no mobile drawer - toggle
+     8b. Dropdown no mobile drawer - o próprio item Institucional abre/fecha
      --------------------------------------------------------- */
   $$('.mobile-drawer__dropdown').forEach((dropdown) => {
     const trigger = dropdown.querySelector('.mobile-drawer__dropdown-trigger');
@@ -321,19 +367,47 @@
 
     if (!trigger || !menu) return;
 
+    function setOpen(open) {
+      dropdown.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-hidden', String(!open));
+    }
+
+    // Clique no item Institucional abre/fecha os submódulos
     trigger.addEventListener('click', (e) => {
+      e.preventDefault();
       e.stopPropagation();
       const expanded = dropdown.getAttribute('aria-expanded') === 'true';
-      dropdown.setAttribute('aria-expanded', String(!expanded));
-      menu.setAttribute('aria-hidden', String(expanded));
-      trigger.focus();
+      setOpen(!expanded);
+      if (!expanded) trigger.focus();
     });
 
+    // Fecha ao clicar fora
     document.addEventListener('click', (e) => {
-      if (!dropdown.contains(e.target)) {
-        dropdown.setAttribute('aria-expanded', 'false');
-        menu.setAttribute('aria-hidden', 'true');
+      if (!dropdown.contains(e.target)) setOpen(false);
+    });
+
+    // Fecha com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && dropdown.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        trigger.focus();
       }
+    });
+
+    // Navegação entre os submenus com as setas do teclado
+    menu.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+
+      const items = Array.from(menu.querySelectorAll('a'));
+      const index = items.indexOf(document.activeElement);
+      if (index === -1) return;
+
+      e.preventDefault();
+      const nextIndex = e.key === 'ArrowDown'
+        ? (index + 1) % items.length
+        : (index - 1 + items.length) % items.length;
+
+      items[nextIndex].focus();
     });
   });
 
