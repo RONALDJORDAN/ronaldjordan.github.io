@@ -1,3 +1,4 @@
+/* Jordan Araujo */
 /**
  * SEMED São Miguel dos Campos — Página Contatos
  * Comportamento específico da página Contatos (vanilla JS)

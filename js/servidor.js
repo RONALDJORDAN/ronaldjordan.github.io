@@ -1,3 +1,4 @@
+/* Jordan Araujo */
 /**
  * Portal do Servidor — abas, busca, modal e subnavegação
  */

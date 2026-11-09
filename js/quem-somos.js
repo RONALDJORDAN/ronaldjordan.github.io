@@ -1,3 +1,4 @@
+/* Jordan Araujo */
 /**
  * SEMED São Miguel dos Campos — Página Quem Somos
  * Comportamento específico da página Quem Somos (vanilla JS)

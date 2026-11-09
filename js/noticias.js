@@ -1,3 +1,4 @@
+/* Jordan Araujo */
 /**
  * Página de Notícias — carrossel de destaques, filtros, ordenação e compartilhamento
  */

@@ -344,3 +344,4 @@
     el.textContent = String(new Date().getFullYear());
   });
 })();
+// Jordan Araujo

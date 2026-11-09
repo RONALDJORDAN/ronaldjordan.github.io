@@ -1,3 +1,4 @@
+/* Jordan Araujo */
 /**
  * Página LGPD & Transparência — subnavegação, FAQ, formulário do titular
  */

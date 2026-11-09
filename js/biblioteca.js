@@ -1,3 +1,4 @@
+/* Jordan Araujo */
 /**
  * SEMED São Miguel dos Campos — Página Biblioteca Digital
  * Comportamento da página Biblioteca Digital (vanilla JS)

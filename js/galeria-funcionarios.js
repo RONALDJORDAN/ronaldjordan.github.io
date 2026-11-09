@@ -1,3 +1,4 @@
+/* Jordan Araujo */
 /**
  * SEMED São Miguel dos Campos — Página Galeria de Funcionários
  * Comportamento específico da página Galeria de Funcionários (vanilla JS)

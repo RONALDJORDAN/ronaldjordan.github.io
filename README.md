@@ -151,6 +151,12 @@ O menu principal e o drawer mobile contêm dez módulos:
 | Servidor | `servidor.html` |
 | Avisos | `noticias.html#avisos` |
 
+## Licença
+
+Este projeto está licenciado sob a **Licença MIT** — veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+Todos os direitos de propriedade intelectual sobre o código-fonte pertencem à **Secretaria Municipal de Educação de São Miguel dos Campos - AL**. O uso, cópia, modificação ou distribuição do código sem autorização prévia poderá ensejar medidas judiciais cabíveis.
+
 ## Personalização
 
 As cores, tipografia, espaçamentos e sombras estão centralizados nos tokens de `css/base.css` (`:root`).

@@ -1,3 +1,4 @@
+/* Jordan Araujo */
 /**
  * SEMED São Miguel dos Campos — Página Institucional
  * Comportamento específico da página institucional (vanilla JS)
