@@ -181,33 +181,42 @@
     <!-- ================= HERO / HEADER ================= -->
     <section class="section section--canvas section-hero" id="censo">
       <div class="container">
-        <div class="hero-summary">
-          <div class="hero-summary__card">
-            <span class="stat__value big">4.2</span>
+        <div class="hero-title">
+          <span class="section-kicker">
+            <span class="material-symbols-outlined icon-sm">insights</span>
+            Indicadores educacionais
+          </span>
+          <h1 class="section-title">Censo Escolar</h1>
+          <p class="section-subtitle">Dados oficiais do IDEB, Censo Escolar da Educação Básica e Censo Escolar em Alagoas.</p>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat stat--wide">
+            <span class="stat__value">4.2</span>
             <span class="stat__label">IDEB Estadual</span>
           </div>
-          <div class="hero-summary__card">
-            <span class="stat__value big">5.8</span>
+          <div class="stat">
+            <span class="stat__value">5.8</span>
             <span class="stat__label">IDEB – São Miguel dos Campos</span>
           </div>
-          <div class="hero-summary__card">
-            <span class="stat__value big">96%</span>
+          <div class="stat">
+            <span class="stat__value">96%</span>
             <span class="stat__label">Comparecimento municipal</span>
           </div>
-          <div class="hero-summary__card">
-            <span class="stat__value big">2.557</span>
+          <div class="stat stat--wide">
+            <span class="stat__value">2.557</span>
             <span class="stat__label">Unidades – Alagoas</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= TABS: O que é / Como funciona / Etapas ================= -->
+    <!-- ================= TABS ================= -->
     <div class="tabs" id="censo-tabs">
 
-      <!-- TAB 1: O que é o Censo Escolar -->
+      <!-- TAB 1 -->
       <button class="tab tab--active" data-tab="tab-oque-e" aria-selected="true">
-        <span class="material-symbols-outlined">help</span>
+        <span class="material-symbols-outlined tab-tab__icon">help</span>
         O que é o Censo Escolar
       </button>
 
@@ -236,9 +245,9 @@
         </div>
       </div>
 
-      <!-- TAB 2: Como funciona o IDEB -->
+      <!-- TAB 2 -->
       <button class="tab tab--active" data-tab="tab-como" aria-selected="true">
-        <span class="material-symbols-outlined">insights</span>
+        <span class="material-symbols-outlined tab-tab__icon">insights</span>
         Como funciona o IDEB
       </button>
 
@@ -295,27 +304,26 @@
         </div>
 
         <div class="tab-links">
-          <a href="https://sites.google.com/educ.al.gov.br/censo-escolar-alagoas/" target="_blank" rel="noopener noreferrer" class="btn btn--soft">
-            <span class="material-symbols-outlined icon-sm">presentation</span>
-            Ir para o site oficial — Censo Escolar de Alagoas
+          <a href="../index.html#programas" class="btn btn--soft">
+            <span class="material-symbols-outlined icon-sm">insights</span>
+            Ver – Programas
           </a>
-          <a href="https://educacenso.inep.gov.br" target="_blank" rel="noopener noreferrer" class="btn btn--soft">
-            <span class="material-symbols-outlined icon-sm">school</span>
-            Acessar o Educacenso (INEP)
+          <a href="../lgpd.html" class="btn btn--soft">
+            <span class="material-symbols-outlined icon-sm">shield_person</span>
+            Legislação e Transparência
           </a>
         </div>
       </div>
 
-      <!-- TAB 3: Quais são as etapas e demais documentos -->
+      <!-- TAB 3 -->
       <button class="tab tab--active" data-tab="tab-etapas" aria-selected="true">
-        <span class="material-symbols-outlined">task_alt</span>
+        <span class="material-symbols-outlined tab-tab__icon">task_alt</span>
         Quais são as etapas e demais documentos
       </button>
 
       <div class="tab-panel tab-panel--active" id="tab-etapas">
         <div class="accordion" data-accordion>
 
-          <!-- Primeira etapa -->
           <div class="acc-item acc-item--open" data-accordion-item>
             <h4>Primeira etapa – Matrícula Inicial</h4>
             <p>São coletadas as informações escolares referentes aos cadastros de escola, aluno, turma e profissional em sala de aula. Essa etapa inclui as seguintes atividades:</p>
@@ -333,7 +341,6 @@
             <p class="tip">⚠️ Após o encerramento dos períodos oficiais e a publicação dos dados finais no DOU, <strong>não poderá haver alteração</strong> nos dados escolares.</p>
           </div>
 
-          <!-- Segunda etapa -->
           <div class="acc-item" data-accordion-item>
             <h4>Segunda etapa – Módulo Situação do Aluno</h4>
             <p>São coletadas as informações de rendimento e movimento dos alunos cadastrados no sistema Educacenso, a partir dos dados finais do Censo Escolar publicados no DOU. Nessa etapa, são realizadas as seguintes atividades:</p>
@@ -344,7 +351,6 @@
             </ol>
           </div>
 
-          <!-- Orientações para preenchimento -->
           <div class="acc-item" data-accordion-item>
             <h4>Orientações para o preenchimento dos formulários</h4>
             <p>As informações declaradas nos formulários do Censo Escolar devem ter como referência documentos que garantam a confiabilidade delas, tais como ficha de matrícula do aluno, diário classe, livro frequência, histórico escolar, regimento escolar, documentos de enturmação de professores, projeto político-pedagógico (PPP), entre outros. Isso possibilita que, a qualquer momento, as informações declaradas ao Censo possam ser confirmadas pelo MEC, pelo Inep, pelos órgãos de controle, acompanhamento e fiscalização e pelo Ministério Público. O responsável pela escola responde administrativamente, civil e penalmente pela inclusão de informação inadequada, se comprovada a omissão ou comissão (obrigação ou incumbência), dolo ou culpa, nos termos da Lei n° 8.429, de 2 de junho de 1992, que dispõe sobre as sanções aplicáveis aos agentes públicos no exercício de mandato, cargo, emprego ou função na administração pública direta, indireta ou fundacional.</p>
@@ -367,7 +373,6 @@
             <p>Esses documentos são importantes para as redes e instituições de ensino que possuem sistemas próprios de coleta de dados.</p>
           </div>
 
-          <!-- Escolas com e sem internet -->
           <div class="acc-item" data-accordion-item>
             <h4>Escolas com e sem acesso à internet</h4>
             <h4>Com acesso à internet</h4>
@@ -377,7 +382,6 @@
             <p>As escolas que não possuem acesso à internet devem procurar as secretarias de educação para solicitar a impressão dos formulários do Censo Escolar que estão disponíveis em <code>http://portal.inep.gov.br/censo-escolar</code>. Os campos devem ser preenchidos com caneta de tinta azul.</p>
           </div>
 
-          <!-- Contato -->
           <div class="acc-item" data-accordion-item>
             <h4>Contato</h4>
             <p>Em caso de dúvidas quanto ao preenchimento, entre em contato com a unidade de estatística da secretaria de educação do Estado de Alagoas (82) 3315-1264 / 3315-1265, ou com o INEP.</p>
@@ -496,51 +500,38 @@
 
   <script src="../js/common.js"></script>
   <script>
-    /* Censo Escolar — Tabs e Accordion */
     (function () {
-      // ---------- Tabs ----------
-      var tabs = document.querySelectorAll('.tabs');
-      if (!tabs.length) return;
-      var activeTab = document.querySelector('.tab--active');
-
-      tabs.forEach(function (panelGroup) {
-        var buttons = panelGroup.querySelectorAll('.tab');
-        buttons.forEach(function (btn) {
+      var tabsGroups = document.querySelectorAll('.tabs');
+      if (!tabsGroups.length) return;
+      tabsGroups.forEach(function (group) {
+        group.querySelectorAll('.tab').forEach(function (btn) {
           btn.addEventListener('click', function () {
             var target = btn.getAttribute('data-tab');
-            buttons.forEach(function (b) {
+            group.querySelectorAll('.tab').forEach(function (b) {
               b.classList.remove('tab--active');
               b.setAttribute('aria-selected', 'false');
             });
             btn.classList.add('tab--active');
             btn.setAttribute('aria-selected', 'true');
-
             document.querySelectorAll('.tab-panel').forEach(function (p) {
-              p.classList.remove('tab-panel--active');
               p.hidden = true;
             });
-            var targetPanel = document.getElementById(target);
-            if (targetPanel) {
-              targetPanel.classList.add('tab-panel--active');
-              targetPanel.hidden = false;
+            var panel = document.getElementById(target);
+            if (panel) {
+              panel.hidden = false;
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
           });
         });
       });
-
-      // ---------- Accordion ----------
-      var items = document.querySelectorAll('[data-accordion-item]');
-      if (!items.length) return;
-      items.forEach(function (item) {
+      document.querySelectorAll('[data-accordion-item]').forEach(function (item) {
         item.addEventListener('click', function () {
-          var isOpen = item.classList.contains('acc-item--open');
-          // Claro de abrir apenas um por vez
+          var open = item.classList.contains('acc-item--open');
           document.querySelectorAll('[data-accordion-item]').forEach(function (other) {
             other.classList.remove('acc-item--open');
             other.setAttribute('aria-expanded', 'false');
           });
-          if (!isOpen) {
+          if (!open) {
             item.classList.add('acc-item--open');
             item.setAttribute('aria-expanded', 'true');
           }
