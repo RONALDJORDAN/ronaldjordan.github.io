@@ -1,0 +1,339 @@
+/* ============================================================
+   SEMED São Miguel dos Campos — Páginas de Educação (for-education)
+   Identidade visual: Modern Civic Minimalism (gov.br + Material 3)
+   ============================================================ */
+
+/* ---------- Hero Educação ---------- */
+.edu-hero {
+  background: var(--surface-card);
+  border-bottom: 1px solid var(--neutral-border);
+  padding-block: 3.5rem 4rem;
+}
+
+.edu-hero .section-head {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.edu-hero .section-kicker {
+  color: var(--primary-ink);
+}
+
+.edu-hero .section-title {
+  color: var(--on-surface);
+}
+
+.edu-hero .section-subtitle {
+  color: var(--on-surface-variant);
+  max-width: 56rem;
+  margin-inline: auto;
+}
+
+/* ---------- Grid de Cards ---------- */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-block: 2rem;
+}
+
+.edu-card {
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-card__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  height: 12rem;
+}
+
+.edu-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.edu-card:hover .edu-card__media img {
+  transform: scale(1.05);
+}
+
+.edu-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 102, 79, 0.1) 100%);
+}
+
+.edu-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: linear-gradient(90deg, var(--primary), var(--brand-dark));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-out);
+  pointer-events: none;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gov-sky-border);
+}
+
+.edu-card:hover::before {
+  opacity: 1;
+}
+
+.edu-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius);
+  background: var(--gov-sky-subtle);
+  color: var(--primary-ink);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  transition: transform var(--dur-base) var(--ease-out), background-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+}
+
+.edu-card:hover .edu-card__icon {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.edu-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edu-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.edu-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.edu-card p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--on-surface-variant);
+  margin: 0;
+}
+
+.edu-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: auto;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--primary-ink);
+  transition: color var(--dur-base) var(--ease-out), gap var(--dur-base) var(--ease-out);
+  text-decoration: none;
+}
+
+.edu-card__link:hover {
+  color: var(--brand-dark);
+  gap: 0.625rem;
+}
+
+.edu-card__link .material-symbols-outlined {
+  font-size: 0.9rem;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.edu-card__link:hover .material-symbols-outlined {
+  transform: translateX(4px);
+}
+
+/* ---------- Variações de cor dos ícones ---------- */
+.edu-card--infantil .edu-card__icon { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+.edu-card--infantil .edu-card__badge { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+
+.edu-card--fundamental .edu-card__icon { background: var(--surface-container); color: var(--on-surface); }
+.edu-card--fundamental .edu-card__badge { background: var(--surface-container-high); color: var(--on-surface-variant); }
+
+.edu-card--qualificacao .edu-card__icon { background: var(--tertiary-fixed); color: var(--on-tertiary-fixed); }
+.edu-card--qualificacao .edu-card__badge { background: var(--tertiary-fixed); color: var(--on-tertiary-fixed); }
+
+.edu-card--tec .edu-card__icon { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+.edu-card--tec .edu-card__badge { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+
+.edu-card--parceiros .edu-card__icon { background: var(--surface-container); color: var(--on-surface); }
+.edu-card--parceiros .edu-card__badge { background: var(--surface-container-high); color: var(--on-surface-variant); }
+
+.edu-card--enem .edu-card__icon { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+.edu-card--enem .edu-card__badge { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+
+.edu-card--bolsas .edu-card__icon { background: var(--success-soft); color: var(--success-dark); }
+.edu-card--bolsas .edu-card__badge { background: var(--success-soft); color: var(--success-dark); }
+
+.edu-card--transicao .edu-card__icon { background: var(--surface-container); color: var(--on-surface); }
+.edu-card--transicao .edu-card__badge { background: var(--surface-container-high); color: var(--on-surface-variant); }
+
+.edu-card--aee .edu-card__icon { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+.edu-card--aee .edu-card__badge { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+
+.edu-card--incluir .edu-card__icon { background: var(--tertiary-fixed); color: var(--on-tertiary-fixed); }
+.edu-card--incluir .edu-card__badge { background: var(--tertiary-fixed); color: var(--on-tertiary-fixed); }
+
+.edu-card--equipe .edu-card__icon { background: var(--surface-container); color: var(--on-surface); }
+.edu-card--equipe .edu-card__badge { background: var(--surface-container-high); color: var(--on-surface-variant); }
+
+.edu-card--cultura .edu-card__icon { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+.edu-card--cultura .edu-card__badge { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+
+.edu-card--lingua .edu-card__icon { background: var(--success-soft); color: var(--success-dark); }
+.edu-card--lingua .edu-card__badge { background: var(--success-soft); color: var(--success-dark); }
+
+.edu-card--territorio .edu-card__icon { background: var(--surface-container); color: var(--on-surface); }
+.edu-card--territorio .edu-card__badge { background: var(--surface-container-high); color: var(--on-surface-variant); }
+
+.edu-card--eja .edu-card__icon { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+.edu-card--eja .edu-card__badge { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+
+.edu-card--turno .edu-card__icon { background: var(--tertiary-fixed); color: var(--on-tertiary-fixed); }
+.edu-card--turno .edu-card__badge { background: var(--tertiary-fixed); color: var(--on-tertiary-fixed); }
+
+.edu-card--cert .edu-card__icon { background: var(--surface-container); color: var(--on-surface); }
+.edu-card--cert .edu-card__badge { background: var(--surface-container-high); color: var(--on-surface-variant); }
+
+.edu-card--dias .edu-card__icon { background: var(--success-soft); color: var(--success-dark); }
+.edu-card--dias .edu-card__badge { background: var(--success-soft); color: var(--success-dark); }
+
+.edu-card--bimestres .edu-card__icon { background: var(--surface-container); color: var(--on-surface); }
+.edu-card--bimestres .edu-card__badge { background: var(--surface-container-high); color: var(--on-surface-variant); }
+
+.edu-card--jornada .edu-card__icon { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+.edu-card--jornada .edu-card__badge { background: var(--primary-fixed); color: var(--on-primary-fixed); }
+
+/* ---------- Conteúdo Detalhado ---------- */
+.edu-conteudo {
+  margin-block: 3rem;
+}
+
+.edu-conteudo__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-block: 2rem;
+}
+
+.edu-item {
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+
+.edu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.edu-item h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0 0 0.75rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edu-item h3::before {
+  content: "";
+  width: 4px;
+  height: 1.125rem;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.edu-item p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--on-surface-variant);
+  margin: 0;
+}
+
+/* ---------- Destaque ---------- */
+.edu-destaque {
+  background: linear-gradient(135deg, var(--primary-fixed) 0%, var(--surface-container-low) 100%);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-top: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.edu-destaque h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--on-primary-fixed);
+  margin: 0 0 0.75rem 0;
+}
+
+.edu-destaque p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--on-primary-fixed);
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* ---------- Reveal ---------- */
+.edu-card.reveal, .edu-item.reveal, .edu-destaque.reveal {
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+
+.edu-card.reveal.is-visible, .edu-item.reveal.is-visible, .edu-destaque.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 640px) {
+  .edu-hero { padding-block: 2.5rem 3rem; }
+  .edu-card { padding: 1.5rem; }
+  .edu-item { padding: 1.5rem; }
+}
