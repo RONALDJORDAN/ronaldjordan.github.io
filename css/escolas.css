@@ -11,6 +11,11 @@
 }
 
 /* Ajuste de posicionamento do breadcrumb */
+.breadcrumb-bar {
+  padding-block: 1.125rem 0.75rem;
+  background: var(--surface);
+}
+
 .escola-hero .breadcrumb {
   margin-top: 10px;
 }
@@ -90,6 +95,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
+  padding-right: 2.75rem;
 }
 
 .escola-card__tipo {
@@ -110,6 +116,8 @@
   color: var(--primary-ink);
   margin: 0;
   flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 /* Botão circular de informações (ícone "i") */

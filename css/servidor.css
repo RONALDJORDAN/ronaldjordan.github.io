@@ -55,8 +55,8 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 60% 100% at 0% 100%, rgba(104, 180, 92, 0.28), transparent 60%),
-    linear-gradient(105deg, var(--primary) 0%, var(--primary-container) 52%, var(--secondary) 100%);
+    radial-gradient(ellipse 60% 100% at 0% 100%, rgba(104, 180, 92, 0.22), transparent 60%),
+    linear-gradient(105deg, var(--primary-ink) 0%, var(--primary-container) 55%, var(--brand-dark) 100%);
   color: var(--on-primary);
   padding-block: 3rem 3.25rem;
 }
@@ -179,7 +179,7 @@
 .srv-quick {
   padding: 1.25rem;
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(7, 31, 23, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(14px);
   box-shadow: var(--shadow-md);

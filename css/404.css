@@ -7,8 +7,8 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 55% 90% at 85% 20%, rgba(104, 180, 92, 0.24), transparent 60%),
-    linear-gradient(110deg, var(--primary) 0%, var(--primary-container) 55%, var(--secondary) 100%);
+    radial-gradient(ellipse 55% 90% at 85% 20%, rgba(104, 180, 92, 0.18), transparent 60%),
+    linear-gradient(110deg, var(--primary-ink) 0%, var(--primary-container) 55%, var(--brand-dark) 100%);
   color: var(--on-primary);
   padding-block: 4.5rem 5rem;
 }

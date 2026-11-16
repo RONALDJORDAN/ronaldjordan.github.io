@@ -65,8 +65,9 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1.25rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
 }
 
 .inst-breadcrumb a {

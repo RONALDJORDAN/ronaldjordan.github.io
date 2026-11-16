@@ -147,7 +147,7 @@
   padding: 0.625rem 2.25rem 0.625rem 2.4rem;
   border: 1px solid transparent;
   border-radius: var(--radius);
-  background: var(--surface-canvas);
+  background: var(--surface-field);
   font-size: 0.8125rem;
   color: var(--on-surface);
   transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
